@@ -129,3 +129,8 @@ class Net(nn.Module):
         self.fc1 = nn.Linear(784, 128)
         self.fc2 = nn.Linear(128, 10)
 ```
+---
+
+<img src="/img/ml/pt_icon.svg" style="position: absolute; top: 18%; left: 52.1%; width: 2.5%;">
+
+# <span style="font-size: 5.0rem; font-variant: small-caps">Questions?</span>
