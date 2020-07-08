@@ -43,9 +43,15 @@ $heading5Size: 2.4rem;
 $heading6Size: 2.0rem;
 
 // Links and actions
-$linkColor: #538cc6;
-$linkColorVisited: #264d73;
-$linkColorHover: lighten( $linkColor, 20% );
+// $linkColor: #679bcc;
+$linkColor: #547cc6;
+// $linkColor: #6699cc;
+// $linkColor: #8ca7d9;
+// $linkColorVisited: #3973ac;
+$linkColorVisited: #4a40bf;
+// $linkColorVisited: #3962ac;
+$linkColorHover: lighten( $linkColor, 15% );
+$linkColorVisitedHover: lighten( $linkColorVisited, 15% );
 
 // Text selection
 $selectionBackgroundColor: #282a36;
