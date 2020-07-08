@@ -71,9 +71,24 @@ loss = (predicted - real).pow(2).sum()
 
 Within `torch.nn.functional`, you can select from a large range of loss functions:
 
-- `F.binary_cross_entropy` to calculate the binary cross entropy between the target and the output
-- `F.binary_cross_entropy_with_logits` to calculate the binary cross entropy between target and output logits
-- `F.poisson_nll_loss` for Poisson negative log likelihood loss
+- `binary_cross_entropy` to calculate the binary cross entropy between the target and the output
+- `binary_cross_entropy_with_logits` to calculate the binary cross entropy between target and output logits
+- `poisson_nll_loss` for Poisson negative log likelihood loss
 - ...
 
 Go to [the documentation](https://pytorch.org/docs/stable/nn.functional.html#loss-functions) for a full list.
+
+---
+
+### Loss functions
+<br>
+
+*Example:*
+<br>
+<br>
+If we want to use the negative log likelihood loss function, we can run:
+<br>
+<br>
+```python
+loss = F.nll_loss(predicted, real)
+```
