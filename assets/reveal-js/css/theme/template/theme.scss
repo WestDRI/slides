@@ -275,6 +275,11 @@ body {
 .reveal a:visited {
   color: $linkColorVisited;
 }
+.reveal a:visited:hover {
+  color: $linkColorVisitedHover;
+  text-shadow: none;
+  border: none;
+}
 
 .reveal .roll span:after {
   color: #fff;
