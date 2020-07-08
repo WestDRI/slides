@@ -21,7 +21,7 @@ custom_theme_compile = true
 
 ---
 
-### PyTorch's packages
+## PyTorch's packages
 <br>
 
 PyTorch comes with several packages that make working with neural nets easy.<br><br>
@@ -32,14 +32,7 @@ This lesson introduces `torch.nn` and `torch.optim`.
 
 ---
 
-### torch.nn.Module
-<br>
-
-`nn.Module` is the base class for all neural net modules.
-
----
-
-### torch.nn.functional
+## torch.nn.functional
 <br>
 
 The `torch.nn.functional` module contains all the functions of the `torch.nn` package. By convention, it is imported as `F`:
@@ -91,4 +84,48 @@ If we want to use the negative log likelihood loss function, we can run:
 <br>
 ```python
 loss = F.nll_loss(predicted, real)
+```
+
+---
+
+### Activation functions
+<br>
+
+As mentioned earlier, `torch.nn.functional` also has activation functions.
+<br><br>
+*Examples:*
+<br><br>
+[ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) can be called with `torch.nn.functional.relu()`<br>
+[Softmax](https://en.wikipedia.org/wiki/Softmax_function) with `torch.nn.functional.softmax()`
+
+---
+
+## torch.nn.Module
+<br>
+
+`torch.nn.Module` is the base class for all neural net modules.
+
+
+
+---
+
+## Our first NN to classify the MNIST
+
+Let's start with the simplest possible neural net: a [multilayer perceptron (MLP)](https://en.wikipedia.org/wiki/Multilayer_perceptron).<br><br>
+It is a feed-forward (i.e. no loop), fully-connected (i.e. each neuron of one layer is connected to all the neurons of the adjacent layers) neural network with a single hidden layer.
+
+{{<img src="/img/ml/mlp_nw.png" title="" width="50%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+## 
+<br>
+
+```python
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.fc1 = nn.Linear(784, 128)
+        self.fc2 = nn.Linear(128, 10)
 ```
