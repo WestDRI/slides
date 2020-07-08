@@ -4,7 +4,7 @@ outputs = ["Reveal"]
 [logowg]
 src = "/img/wg_white_removed_medium.png"
 [logopt]
-src = "/img/ml/pytorch_icon.svg"
+src = "/img/ml/pt_icon.svg"
 [reveal_hugo]
 custom_theme = "mh.scss"
 custom_theme_compile = true
@@ -12,7 +12,7 @@ custom_theme_compile = true
 
 <br>
 <br>
-# Our first neural network <br>with <span style="vertical-align: middle"><img src="/img/ml/pytorch_icon.svg" alt="" height="" width="100"></span> PyTorch
+# Our first neural network <br>with <span style="vertical-align: middle"><img src="/img/ml/pt_icon.svg" alt="" height="" width="100"></span> PyTorch
 <br>
 ##### WestGrid Summer School
 ###### Marie-Hélène Burle
