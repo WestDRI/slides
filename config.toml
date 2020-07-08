@@ -1,0 +1,42 @@
+baseURL = "/"
+languageCode = "en"
+title = "WestGrid slides"
+theme = "reveal-hugo"
+footnotereturnlinkcontents = "↩"
+relativeURLs = true
+uglyURLs = true
+
+[outputFormats.Reveal]
+  baseName = "index"
+  mediaType = "text/html"
+  isHTML = true
+
+[params.reveal_hugo]
+  load_default_plugins = false
+  plugins = [
+    "reveal-js/plugin/zoom-js/zoom.js",
+    "reveal-js/plugin/notes/notes.js",
+  ]
+  controls = false
+  transition = 'none'
+  background_transition = 'none'
+
+[params]
+  favicon_32 = "/img/favicon.png"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup]
+  defaultMarkdownHandler = "blackfriday"
+  [markup.highlight]
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4
+
+pygmentsCodefencesGuessSyntax = true
+pygmentsCodefences = true

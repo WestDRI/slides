@@ -1,0 +1,3 @@
+Repo for reveal.js presentations for the 3 WestGrid training material websites for [[https://westgrid-ml.netlify.com/][machine learning]], [[https://westgrid-julia.netlify.com/][Julia programming language]], and [[https://westgrid-cli.netlify.com/][command line tools, Git, et al.]] with alternative config.
+
+Note that the presentations should be accessed from these sites.
