@@ -2,18 +2,13 @@
 // be overridden by the super-theme
 
 // Background of the presentation
-// $backgroundColor: #fffaf6;
-// $backgroundColor: #fcfcfc;
-// $backgroundColor: #f3f3fc;
-// $backgroundColor: #f5f5fd;
 $backgroundColor: #f8f8fd;
-// $backgroundColor: #fcfcfc !default;
 
 // Primary/body text
 $mainFont: 'Amiri', serif;
-// $mainFont: 'Crimson Text', serif;
-// $mainFont: 'Ibarra Real Nova', serif;
+
 $mainFontSize: 29px;
+
 $mainColor: #272a2a;
 
 // Vertical spacing between blocks of text
@@ -21,28 +16,22 @@ $blockMargin: 20px;
 
 // Headings
 $headingMargin: 0 0 $blockMargin 0;
-// $headingFont: 'Amiri', serif;
+
 $headingFont: 'Crimson Text', serif;
-// $headingFont: 'Ibarra Real Nova', serif;
-// $heading1Color: #22232a;
-// $heading2Color: #383D3D;
-// $heading3Color: #584f1e;
-// $heading4Color: #426456;
-// $heading5Color: #644f67;
-// $heading6Color: #435069;
+
 $heading1Color: #22232a;
 $heading2Color: #383D3D;
 $heading3Color: #435069;
 $heading4Color: #4c4d67;
 $heading5Color: #644f67;
 $heading6Color: #556464;
+
 $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
+
 $headingTextTransform: none;
-// $headingTextTransform: uppercase;
 $headingTextAlign: center;
 $headingTextShadow: none;
-// $headingFontWeight: normal;
 $headingFontWeight: bold;
 $heading1TextShadow: $headingTextShadow;
 
@@ -60,6 +49,7 @@ $linkColorHover: lighten( $linkColor, 20% );
 
 // Text selection
 $selectionBackgroundColor: #26351C;
+
 $selectionColor: #fff;
 
 // Generates the presentation background, can be overridden
