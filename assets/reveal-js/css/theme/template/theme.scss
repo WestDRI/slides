@@ -189,15 +189,16 @@ body {
   font-family: 'Source Code Pro', 'Lucida Console', monospace;
   text-transform: none;
   font-size: 1.2rem;
-  // background-color: #c4c7d4;
-  background-color: #d3d5de;
   padding: 0.1rem;
   border-radius: 1px;
-  // color: #ffffff;
+  // background-color: #c4c7d4;
+  background-color: #d3d5de;
+  color: #000000;
 }
 
 .reveal pre code {
   background-color: #282a36;
+  color: #f8f8f2;
   // display: block;
   padding: 5px;
   overflow: auto;
