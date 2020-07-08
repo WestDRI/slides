@@ -105,11 +105,13 @@ As mentioned earlier, `torch.nn.functional` also has activation functions.
 
 `torch.nn.Module` is the base class for all neural net modules.
 
+---
 
+# Our first NN to classify the MNIST
 
 ---
 
-## Our first NN to classify the MNIST
+## Our first MLP
 
 Let's start with the simplest possible neural net: a [multilayer perceptron (MLP)](https://en.wikipedia.org/wiki/Multilayer_perceptron).<br><br>
 It is a feed-forward (i.e. no loop), fully-connected (i.e. each neuron of one layer is connected to all the neurons of the adjacent layers) neural network with a single hidden layer.
@@ -129,6 +131,70 @@ class Net(nn.Module):
         self.fc1 = nn.Linear(784, 128)
         self.fc2 = nn.Linear(128, 10)
 ```
+
+---
+
+## 
+<br>
+
+```python
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.fc1 = nn.Linear(784, 128)
+        self.fc2 = nn.Linear(128, 10)
+
+    def forward(self, x):
+        x = torch.flatten(x, 1)
+        x = self.fc1(x)
+        x = F.relu(x)
+        x = self.fc2(x)
+        output = F.log_softmax(x, dim=1)
+        return output
+```
+
+---
+
+## Our first CNN
+<br>
+Let's step this up and build a CNN instead.
+<br>
+<br>
+{{<img src="/img/ml/cnn_nw.png" title="" width="80%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+## 
+<br>
+
+```python
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(1, 32, 3, 1)
+        self.conv2 = nn.Conv2d(32, 64, 3, 1)
+        self.dropout1 = nn.Dropout2d(0.25)
+        self.dropout2 = nn.Dropout2d(0.5)
+        self.fc1 = nn.Linear(9216, 128)
+        self.fc2 = nn.Linear(128, 10)
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = F.relu(x)
+        x = self.conv2(x)
+        x = F.relu(x)
+        x = F.max_pool2d(x, 2)
+        x = self.dropout1(x)
+        x = torch.flatten(x, 1)
+        x = self.fc1(x)
+        x = F.relu(x)
+        x = self.dropout2(x)
+        x = self.fc2(x)
+        output = F.log_softmax(x, dim=1)
+        return output
+```
+
 ---
 
 <img src="/img/ml/pt_icon.svg" style="position: absolute; top: 18%; left: 52.1%; width: 2.5%;">
