@@ -13,7 +13,7 @@ custom_theme_compile = true
 <br>
 <br>
 # Our first neural network <br>with <span style="vertical-align: middle"><img src="/img/ml/pt_icon.svg" alt="" height="" width="100"></span> PyTorch
-<br>
+
 ##### WestGrid Summer School
 ###### Marie-Hélène Burle
 <br>
@@ -21,7 +21,7 @@ custom_theme_compile = true
 
 ---
 
-## PyTorch's packages
+# PyTorch's packages
 <br>
 
 PyTorch comes with several packages that make working with neural nets easy.<br><br>
@@ -43,7 +43,7 @@ import torch.nn.functional as F
 ```
 
 <br>
-These functions include loss functions, activation functions, pooling functions ... i.e. all the functions that are used in the building and training of a neural net.
+These functions include loss functions, activation functions, pooling functions ... i.e. all the functions that are used in the building and training of a neural net. Since `torch.autograd` can be used on any callable object, you can also create and use your own functions.
 
 ---
 
@@ -107,11 +107,41 @@ As mentioned earlier, `torch.nn.functional` also has activation functions.
 
 ---
 
-# Our first NN to classify the MNIST
+## torch.optim
+<br>
+
+The package `torch.optim` contains optimization algorithms
+
 
 ---
 
-## Our first MLP
+# Let's try to build an NN <br> to classify the MNIST
+
+---
+
+# Our script
+
+ssh into the training cluster:
+
+```sh
+ssh userxxx@uu.c3.ca
+```
+<br>
+Create a directory for this project and `cd` into it:
+
+```sh
+mkdir mnist; cd mnist
+```
+<br>
+Start a first Python script:
+
+```sh
+nano mnist.py   # use the text editor of your choice
+```
+
+---
+
+## Let's start with an MLP
 
 Let's start with the simplest possible neural net: a [multilayer perceptron (MLP)](https://en.wikipedia.org/wiki/Multilayer_perceptron).<br><br>
 It is a feed-forward (i.e. no loop), fully-connected (i.e. each neuron of one layer is connected to all the neurons of the adjacent layers) neural network with a single hidden layer.
@@ -155,12 +185,42 @@ class Net(nn.Module):
 
 ---
 
-## Our first CNN
+# Let's try our script
 <br>
-Let's step this up and build a CNN instead.
-<br>
-<br>
-{{<img src="/img/ml/cnn_nw.png" title="" width="80%" line-height="0.5rem">}}
+
+<center>Now is the time to submit our script to Slurm to test it!</center>
+
+---
+
+## Slurm script
+
+```sh
+#!/bin/bash
+#SBATCH --time=0:5:0
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=3G
+#SBATCH --output=<%x_%j.out>*
+#SBATCH --error=<%x_%j.err>*
+
+# Activate your virtual env
+source ~/env/bin/activate
+# Copy the data to the compute node
+mkdir $SLURM_TMPDIR/data
+cp -r ~/projects/def-sponsor00/data/MNIST $SLURM_TMPDIR/data
+# Run your Python script
+python ~/mnist/mnist.py
+```
+
+---
+
+## On to a CNN
+
+Let's step this up and build a CNN. Convolutional Neural Networks are particularly well-suited to image data.
+<br><br>
+The figure below is not an exact scheme of the model we will build, but it represents a similar model made of convolution, pooling, and fully-connected layers.
+
+{{<img src="/img/ml/cnn_nw.png" title="" width="80%" line-height="0rem">}}
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;From <a href="https://codetolight.wordpress.com/2017/11/29/getting-started-with-pytorch-for-deep-learning-part-3-neural-network-basics/">Programming Journeys by Rensu Theart</a>
 {{</img>}}
 
 ---
@@ -197,6 +257,6 @@ class Net(nn.Module):
 
 ---
 
-<img src="/img/ml/pt_icon.svg" style="position: absolute; top: 18%; left: 52.1%; width: 2.5%;">
+<img src="/img/ml/pt_icon.svg" style="position: absolute; top: 22%; left: 52.1%; width: 2.5%;">
 
 # <span style="font-size: 5.0rem; font-variant: small-caps">Questions?</span>
