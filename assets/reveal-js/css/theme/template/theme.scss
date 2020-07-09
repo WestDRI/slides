@@ -48,6 +48,9 @@ body {
   text-shadow: $headingTextShadow;
   word-wrap: break-word;
 }
+.reveal h1 {
+  line-height: $heading1LineHeight;
+}
 
 .reveal h1 {
   font-size: $heading1Size;
