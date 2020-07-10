@@ -323,11 +323,11 @@ def main():
     ])
 
     train_data = datasets.MNIST(
-        '$SLURM_TMPDIR/data',
+        '~/projects/def-sponsor00/data',
         train=True, download=True, transform=transform)
 
     test_data = datasets.MNIST(
-        '$SLURM_TMPDIR/data',
+        '~/projects/def-sponsor00/data',
         train=False, transform=transform)
 
     train_loader = torch.utils.data.DataLoader(train_data, batch_size=64)
@@ -383,9 +383,7 @@ main()
 
 # Activate your virtual env
 source ~/env/bin/activate
-# Copy the data to the compute node
-mkdir $SLURM_TMPDIR/data
-cp -r ~/projects/def-sponsor00/data/MNIST $SLURM_TMPDIR/data
+
 # Run your Python script
 python ~/mnist/mlp.py
 ```
@@ -447,9 +445,7 @@ class Net(nn.Module):
 
 # Activate your virtual env
 source ~/env/bin/activate
-# Copy the data to the compute node
-mkdir $SLURM_TMPDIR/data
-cp -r ~/projects/def-sponsor00/data/MNIST $SLURM_TMPDIR/data
+
 # Run your Python script
 python ~/mnist/cnn.py
 ```
