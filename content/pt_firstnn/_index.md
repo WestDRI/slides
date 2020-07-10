@@ -373,19 +373,35 @@ main()
 
 ## Slurm script
 
+Write an `mlp.sh` script:
+
 ```sh
 #!/bin/bash
 #SBATCH --time=0:5:0
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=3G
-#SBATCH --output=<%x_%j.out>*
-#SBATCH --error=<%x_%j.err>*
+#SBATCH --output=%x_%j.out
+#SBATCH --error=%x_%j.err
 
 # Activate your virtual env
 source ~/env/bin/activate
 
 # Run your Python script
 python ~/mnist/mlp.py
+```
+
+---
+
+## Submit the job to Slurm
+<br>
+```sh
+sbatch mlp.sh
+```
+<br>
+Monitor its status with:
+<br>
+```sh
+sq
 ```
 
 ---
@@ -435,9 +451,11 @@ class Net(nn.Module):
 
 ## Slurm script
 
+Write a `cnn.sh` script. We need more time here as a CNN will take longer to run.
+
 ```sh
 #!/bin/bash
-#SBATCH --time=0:5:0
+#SBATCH --time=0:15:0
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=3G
 #SBATCH --output=%x_%j.out
@@ -448,6 +466,20 @@ source ~/env/bin/activate
 
 # Run your Python script
 python ~/mnist/cnn.py
+```
+
+---
+
+## Submit the job to Slurm
+<br>
+```sh
+sbatch cnn.sh
+```
+<br>
+Monitor its status with:
+<br>
+```sh
+sq
 ```
 
 ---
