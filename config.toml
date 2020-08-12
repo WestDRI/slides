@@ -4,7 +4,6 @@ title = "WestGrid slides"
 theme = "reveal-hugo"
 footnotereturnlinkcontents = "↩"
 relativeURLs = true
-uglyURLs = true
 
 [outputFormats.Reveal]
   baseName = "index"
