@@ -9,5 +9,8 @@ custom_theme = "mh.scss"
 custom_theme_compile = true
 +++
 
-# <span style="vertical-align: middle"><img src="/img/julia-logo-color.svg" alt="" height="" width="250"></span> & <span style="vertical-align: middle"><img src="/img/jupyter_logo.svg.png" alt="" height="" width="250"></span>
 
+# <div style="color: #000041; font-size: 6.0rem; font-variant: small-caps">Julia & Jupyter</div>
+
+<img src="/img/jl_dots.png" style="position: absolute; top: 14.5%; left: 18.5%; width: 5%;">
+<img src="/img/jupyter_logo.svg.png" style="position: absolute; top: 14.5%; left: 50.5%; width: 5%;">
