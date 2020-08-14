@@ -27,12 +27,14 @@ custom_theme_compile = true
 ### <b><font color="#b30059">Ju</font></b>lia is one of the main languages in Project <b><font color="#b30059">Ju</font></b>pyter
 <br>
 
+{{<fragment>}}
 <div class="debugbox-block">
 To install the Julia kernel: <br>
 <br>
 - Install <a href="https://julialang.org/" target="_blank">Julia</a> <br>
 - Install the Julia package <a href="https://github.com/JuliaLang/IJulia.jl" target="_blank">IJulia</a>
 </div>
+{{</fragment>}}
 
 ---
 
@@ -47,6 +49,8 @@ jupyter notebook
 jupyter lab
 ```
 <br>
+
+{{%fragment%}}
 Alternatively, you can launch them from within Julia with one of:
 
 ```julia
@@ -57,6 +61,7 @@ notebook()
 using IJulia
 jupyterlab()
 ```
+{{%/fragment%}}
 
 ---
 
@@ -78,31 +83,50 @@ syzygy does not have the Julia kernel installed at this point, so I will show a 
 
 #### From Julia notebook to script
 <br>
-###### <div align="left"><a href="https://github.com/jupyter/nbconvert" target="_blank">nbconvert</a>: convert nb to `.jl` script</div>
+
+{{%fragment%}}
+###### <div align="left"><a href="https://github.com/jupyter/nbconvert" target="_blank">nbconvert</a>: convert a Jupyter notebook to a Julia `.jl` script</div>
 
 ```sh
 jupyter nbconvert --to script julia_notebook.ipynb
 ```
+{{%/fragment%}}
+
 <br>
-###### <div align="left"><a href="https://github.com/stevengj/NBInclude.jl" target="_blank">NBInclude</a>: source a nb within a `.jl` script</div>
+
+{{%fragment%}}
+###### <div align="left"><a href="https://github.com/stevengj/NBInclude.jl" target="_blank">NBInclude</a>: source a Jupyter notebook within a Julia `.jl` script</div>
 
 ```julia
 using NBInclude
 @nbinclude("julia_notebook.ipynb")
 ```
+{{%/fragment%}}
 
 ---
 
-#### Julia's version of literate programming
+#### Julia's version of literate programming:<br>the Literate package
 <br>
 
+{{%fragment%}}
 ###### <div align="left"><a href="https://github.com/fredrikekre/Literate.jl" target="_blank">Literate</a> is Julia's take at literate programming</div>
 
-Julia scripts written with the proper syntax can be converted to any of: markdown pages (e.g. for package documentation), Julia code cleaned of all metadata, and <b>Jupyter notebooks</b>.
-<br>
+Julia scripts written with the proper syntax can be converted to any of: markdown pages (e.g. for package documentation), Julia code cleaned of all metadata, and <b>Jupyter notebooks</b>
+{{%/fragment%}}
+
+{{%fragment%}}
+Let's have a look at <a href="https://fredrikekre.github.io/Literate.jl/v2/generated/example/" target="_blank">their demo example</a>
+{{%/fragment%}}
+
 <br>
 
+{{%fragment%}}
 ###### <div align="left"><a href="https://github.com/oxinabox/ipynb2LiterateJulia" target="_blank">ipynb2LiterateJulia</a> converts from Jupyter nb to Literate scripts</div>
+{{%/fragment%}}
+
+{{%fragment%}}
+Let's look at their demo example
+{{%/fragment%}}
 
 ---
 
