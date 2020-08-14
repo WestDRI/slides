@@ -62,7 +62,17 @@ jupyterlab()
 
 #### Example Jupyter notebook with Julia
 <br>
-syzygy does not have the Julia kernel installed at this point, so I will show a basic Jupyter notebook with Julia from my machine.
+syzygy does not have the Julia kernel installed at this point, so I will show a basic example of a Jupyter notebook with Julia from my machine.
+<br>
+
+{{<fragment>}}
+<span style="font-size: 1.3rem;">(Ah ... and um ... yes ... it is about Covid-19 ...)</span>
+<br>
+<br>
+{{<img src="https://imgs.xkcd.com/comics/coronavirus_charts.png" title="" width="80%" line-height="0rem">}}
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;From <a href="https://xkcd.com/">xkcd</a>
+{{</img>}}
+{{</fragment>}}
 
 ---
 
