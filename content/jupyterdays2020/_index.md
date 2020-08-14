@@ -30,8 +30,8 @@ custom_theme_compile = true
 <div class="debugbox-block">
 To install the Julia kernel: <br>
 <br>
-- Install <a href="https://julialang.org/">Julia</a> <br>
-- Install the Julia package <a href="https://github.com/JuliaLang/IJulia.jl">IJulia</a>
+- Install <a href="https://julialang.org/" target="_blank">Julia</a> <br>
+- Install the Julia package <a href="https://github.com/JuliaLang/IJulia.jl" target="_blank">IJulia</a>
 </div>
 
 ---
@@ -68,13 +68,13 @@ syzygy does not have the Julia kernel installed at this point, so I will show a 
 
 #### From Julia notebook to script
 <br>
-###### <div align="left">[nbconvert](https://github.com/jupyter/nbconvert): convert nb to `.jl` script</div>
+###### <div align="left"><a href="https://github.com/jupyter/nbconvert" target="_blank">nbconvert</a>: convert nb to `.jl` script</div>
 
 ```sh
 jupyter nbconvert --to script julia_notebook.ipynb
 ```
 <br>
-###### <div align="left">[NBInclude](https://github.com/stevengj/NBInclude.jl): source a nb within a `.jl` script</div>
+###### <div align="left"><a href="https://github.com/stevengj/NBInclude.jl" target="_blank">NBInclude</a>: source a nb within a `.jl` script</div>
 
 ```julia
 using NBInclude
@@ -86,13 +86,13 @@ using NBInclude
 #### Julia's version of literate programming
 <br>
 
-###### <div align="left">[Literate](https://github.com/fredrikekre/Literate.jl) is Julia's take at literate programming</div>
+###### <div align="left"><a href="https://github.com/fredrikekre/Literate.jl" target="_blank">Literate</a> is Julia's take at literate programming</div>
 
 Julia scripts written with the proper syntax can be converted to any of: markdown pages (e.g. for package documentation), Julia code cleaned of all metadata, and <b>Jupyter notebooks</b>.
 <br>
 <br>
 
-###### <div align="left">[ipynb2LiterateJulia](https://github.com/oxinabox/ipynb2LiterateJulia) converts from Jupyter nb to Literate scripts</div>
+###### <div align="left"><a href="https://github.com/oxinabox/ipynb2LiterateJulia" target="_blank">ipynb2LiterateJulia</a> converts from Jupyter nb to Literate scripts</div>
 
 ---
 
