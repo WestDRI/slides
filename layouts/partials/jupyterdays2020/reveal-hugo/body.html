@@ -1,0 +1,59 @@
+<!-- LOGO -->
+
+<!-- jupyterdays2020 logo -->
+<img id="logojupyterdays" src="{{ .Param "logojupyterdays.src" }}">
+<style>
+  #logojupyterdays {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 16%;
+  }
+</style>
+
+<!-- jupyterdays2020 BACK TO HOMEPAGE -->
+<div id="jupyterdays"><a style="font-size: 1.0rem; color: #000041; text-decoration: none; font-family: 'Crimson Text', serif; font-variant: small-caps" href="https://ubc-dsci.github.io/jupyterdays/schedule/day3.html">Back to Schedule Day 3 &nbsp;<i class="fas fa-level-up-alt"></i></a></div>
+<style>
+  #jupyterdays {
+    position: absolute;
+    top: 2.0%;
+    right: 1%;
+  }
+</style>
+
+<!-- RECTANGLE for pregression bar -->
+<div id="rectangle"></div>
+
+<!-- INFO about navigation arrows -->
+<div id="navinfo">
+  Use left/right keys to change slide
+</div>
+
+<!-- js to make INFO disappear at slide transition -->
+<script type="text/javascript">
+  Reveal.addEventListener('slidechanged', function(event) {
+      document.getElementById('navinfo').style.display='none'
+  });
+</script>
+
+<!-- allow mathjax in all files for rendering of latex math expressions -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+<script>
+  MathJax = {
+      tex: {
+          inlineMath: [
+              ['$', '$'], ['\\(', '\\)']
+          ],
+          processEscapes: true,
+          processEnvironments: true
+      },
+      options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+  };
+</script>
+
+<!-- font-awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
