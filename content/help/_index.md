@@ -10,8 +10,8 @@ custom_theme_compile = true
 
 <br>
 <br>
-## <font color="#22232a">You need help with your code? <br>No problem: ask online!</font>
-###### <font color="#22232a">… but make sure you know how to ask</font>
+## <font color="#22232a">Need help with your code? Ask online!</font>
+##### <font color="#22232a">… but make sure you know how to ask</font>
 <br>
 #### Marie-Hélène Burle
 ##### training@westgrid.ca
