@@ -17,6 +17,6 @@ custom_theme_compile = true
 ##### training@westgrid.ca
 ###### October 14, 2020
 <br>
-<center><div style="font-size: 1.2rem"><a href="https://westgrid-ml.netlify.app/schoolremake/pt-14-firstnn">Back to webinar page &nbsp;<i class="fas fa-level-up-alt"></i></a></div></center>
+<center><div style="font-size: 1.2rem"><a href="https://westgrid-cli.netlify.app/webinars/getting_help/">Back to webinar page &nbsp;<i class="fas fa-level-up-alt"></i></a></div></center>
 
 ---
