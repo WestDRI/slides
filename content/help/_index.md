@@ -21,8 +21,18 @@ custom_theme_compile = true
 
 ---
 
-## What to do when you get stuck?
+# So, you are stuck ...
 <br>
+
+{{%fragment%}}
+<span style="font-size: 2.5rem;">**1. Look for information that is already out there**</span>
+{{%/fragment%}}
+
+<br>
+
+{{%fragment%}}
+<span style="font-size: 2.5rem;">**2. Ask for help**</span>
+{{%/fragment%}}
 
 1. Read carefully any **error message**
 2. Read the **documentation** (local or online)
