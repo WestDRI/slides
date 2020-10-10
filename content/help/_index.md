@@ -34,6 +34,11 @@ custom_theme_compile = true
 <span style="font-size: 2.5rem;">**2. Ask for help**</span>
 {{%/fragment%}}
 
+---
+
+## Look for information
+<br>
+
 1. Read carefully any **error message**
 2. Read the **documentation** (local or online)
 3. Make sure you have an **up-to-date version**
@@ -44,15 +49,22 @@ custom_theme_compile = true
 
 ### Error messages
 <br>
-**Read it**
 
-Warnings ≠ Errors
+{{%fragment%}}
+<span style="font-size: 2.5rem;">**Read them!**</span>
+{{%/fragment%}}
 
-Identify the location of the error
+{{%fragment%}}
+Warnings ≠ errors
+{{%/fragment%}}
 
+{{%fragment%}}
+Look for bits you understand (don't get put off by what you don't understand)
+{{%/fragment%}}
 
-
-
+{{%fragment%}}
+Identify the locations of the errors to go investigate that part of the code
+{{%/fragment%}}
 
 ---
 
