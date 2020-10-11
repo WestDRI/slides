@@ -75,9 +75,41 @@ Identify the locations of the errors to go investigate that part of the code
 
 ### Documentation
 <br>
-There is often a lot of resources available, but people new to programming are not good (because nobody taught them) at making use of it.
 
-Let's look at a few examples.
+{{%fragment%}}
+&emsp;&emsp;&emsp;&emsp;You need to find it
+{{%/fragment%}}
+
+<br>
+
+{{%fragment%}}
+&emsp;&emsp;&emsp;&emsp;You need to understand it
+{{%/fragment%}}
+
+---
+
+#### Finding documentation <font color="#e67300">online</font>
+<br>
+Take the time to look for the official documentation & other high quality sources for the languages & tools you use.<br><br>
+
+{{%fragment%}}
+*Examples:*
+
+Python: [Reference manual](https://docs.python.org/3/reference/index.html), [Standard library manual](https://docs.python.org/3/library/index.html), [Tutorial](https://docs.python.org/3/tutorial/index.html) \\
+NumPy: [Tutorial](https://numpy.org/devdocs/user/tutorials_index.html) \\
+R: [Open source book "R for Data Science"](https://r4ds.had.co.nz/index.html), [Open source book "Advanced R"](https://adv-r.hadley.nz/) \\
+Julia: [Documentation](https://docs.julialang.org/en/v1/) \\
+Bash: [Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) \\
+Git: [Manual](https://git-scm.com/docs), [Open source book](https://git-scm.com/book/en/v2)
+{{%/fragment%}}
+
+---
+
+#### Finding documentation <font color="#e67300">locally</font>
+<br>
+<br>
+<br>
+<br>
 
 ---
 
