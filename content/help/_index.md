@@ -121,32 +121,42 @@ Git: [Manual](https://git-scm.com/docs), [Open source book](https://git-scm.com/
 
 ### Up-to-date versions
 <br>
-**First, you need to know what needs to be updated.**
 
+{{%fragment%}}
+**First, you need to know what needs to be updated.**
+{{%/fragment%}}
+
+{{%fragment%}}
 Keeping a system up to date includes updating:
 
 - the OS
 - the program
 - (any potential IDE)
 - packages
+{{%/fragment%}}
 
+{{%fragment%}}
 **Then, you need to update regularly.**
+{{%/fragment%}}
 
 ---
 
 ### Google
 <br>
-Google's algorithms are great at guessing what we are looking for.
+Google's algorithms are great at guessing what we are looking for.<br><br>
 
 {{%fragment%}}
-**But** there is a number problem:
+**But** there is a frequency problem:
 
-&emsp;&emsp;&emsp;&emsp;Searches relating to programming-specific questions represent too small &emsp;&emsp;&emsp;&emsp;a fraction of the overall searches for results to be relevant unless you use &emsp;&emsp;&emsp;&emsp;**key vocabulary**.
+&emsp;&emsp;&emsp;Searches relating to programming-specific questions represent too small &emsp;&emsp;&emsp;a fraction of the overall searches for results to be relevant unless you use &emsp;&emsp;&emsp;**key vocabulary**.<br><br>
 {{%/fragment%}}
 
 {{%fragment%}}
-- Be precise
-- Learn the vocabulary of your language/tool to know what to search for
+Be precise.<br>
+{{%/fragment%}}
+
+{{%fragment%}}
+Learn the vocabulary of your language/tool to know what to search for.
 {{%/fragment%}}
 
 ---
@@ -174,19 +184,23 @@ When everything has failed and you have to ask for help, you need to know: <br><
 
 ## <font color="#e67300">Where</font> to ask
 
+{{%fragment%}}
 #### <div align="left">Q&A sites</div>
 
 Mostly, **[Stack Overflow](https://en.wikipedia.org/wiki/Stack_Overflow)** & **[the Stack Exchange network](https://en.wikipedia.org/wiki/Stack_Exchange)**.
 
-Co-founded in 2008 & 2009 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood) & [Joel Spolsky](https://en.wikipedia.org/wiki/Joel_Spolsky).
-<br><br>
+Co-founded in 2008 & 2009 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood) & [Joel Spolsky](https://en.wikipedia.org/wiki/Joel_Spolsky).<br><br>
+{{%/fragment%}}
+
+{{%fragment%}}
 #### <div align="left">Forums</div>
 
 Mostly, **[Discourse](https://en.wikipedia.org/wiki/Discourse_(software))**.
 
 Co-founded in 2013 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood), Robin Ward & Sam Saffron.
 
-Other older forums.
+A few other older forums.
+{{%/fragment%}}
 
 ---
 
