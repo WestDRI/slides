@@ -133,9 +133,18 @@ Keeping a system up to date includes updating:
 
 ### Google
 <br>
-We all turn to Google all the time. Google's algorithms are powerful and good at guessing what we want.
+Google's algorithms are great at guessing what we are looking for.
 
-But there is a number problem: searches looking for programming-specific answers represent too small a fraction of the overall searches for results to be relevant unless you use **key vocabulary**.
+{{%fragment%}}
+**But** there is a number problem:
+
+&emsp;&emsp;&emsp;&emsp;Searches relating to programming-specific questions represent too small &emsp;&emsp;&emsp;&emsp;a fraction of the overall searches for results to be relevant unless you use &emsp;&emsp;&emsp;&emsp;**key vocabulary**.
+{{%/fragment%}}
+
+{{%fragment%}}
+- Be precise
+- Learn the vocabulary of your language/tool to know what to search for
+{{%/fragment%}}
 
 ---
 
