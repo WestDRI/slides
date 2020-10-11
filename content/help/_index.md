@@ -153,8 +153,7 @@ Google's algorithms are great at guessing what we are looking for.
 
 ### Open issues and bug reports
 <br>
-
-
+If the tool you are using is open source, look for issues matching your problem in the source repository (e.g. on GitHub or GitLab).
 
 ---
 
