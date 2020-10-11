@@ -112,11 +112,13 @@ Git: [Manual](https://git-scm.com/docs), [Open source book](https://git-scm.com/
 ---
 
 <br>
-### Up-to-date version
 <br>
-First, you need to know what needs to be updated.
 
-There can be a lot of confusion between a program and the IDE in which it is commonly used (typical example: R vs RStudio).
+---
+
+### Up-to-date versions
+<br>
+**First, you need to know what needs to be updated.**
 
 Keeping a system up to date includes updating:
 
@@ -124,6 +126,8 @@ Keeping a system up to date includes updating:
 - the program
 - (any potential IDE)
 - packages
+
+**Then, you need to update regularly.**
 
 ---
 
