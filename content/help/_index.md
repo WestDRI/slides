@@ -41,7 +41,7 @@ custom_theme_compile = true
 
 1. Read carefully any **error message**
 2. Read the **documentation** (local or online)
-3. Make sure you have an **up-to-date version**
+3. Make sure you have **up-to-date versions**
 4. **Google** (using carefully selected keywords or the error message)
 5. Look for **open issues** and **bug reports**
 
