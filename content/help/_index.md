@@ -77,18 +77,16 @@ Identify the locations of the errors to go investigate that part of the code
 <br>
 
 {{%fragment%}}
-&emsp;&emsp;&emsp;&emsp;You need to find it
+&emsp;&emsp;&emsp;&emsp;**You need to <font color="#e67300">find</font> it**<br><br>
 {{%/fragment%}}
 
-<br>
-
 {{%fragment%}}
-&emsp;&emsp;&emsp;&emsp;You need to understand it
+&emsp;&emsp;&emsp;&emsp;**You need to <font color="#e67300">understand</font> it**
 {{%/fragment%}}
 
 ---
 
-#### Finding documentation <font color="#e67300">online</font>
+#### <font color="#e67300">Finding</font> documentation <font color="#e67300">online</font>
 <br>
 Take the time to look for the official documentation & other high quality sources for the languages & tools you use.<br><br>
 
@@ -105,7 +103,7 @@ Git: [Manual](https://git-scm.com/docs), [Open source book](https://git-scm.com/
 
 ---
 
-#### Finding documentation <font color="#e67300">locally</font>
+#### <font color="#e67300">Finding</font> documentation <font color="#e67300">locally</font>
 <br>
 <br>
 <br>
