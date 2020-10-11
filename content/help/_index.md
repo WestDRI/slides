@@ -270,6 +270,16 @@ Programming.
 - Avoid cross-posting. If you really have to, make sure to cross-reference
 
 ---
+
+### <font color="#e67300">How</font> to ask: <font color="#e67300">SO & co</font>
+<br>
+
+- **Don't ask opinion-based questions**
+- **Don't ask for package, tool, or service recommendations**
+- **Don't ask more than one question in a single post**
+- Avoid greetings, signatures, thank-yous
+- Avoid apologies about being a beginner, this being your first post, the question being stupid, etc.
+
 ---
 
 #### Additional considerations
