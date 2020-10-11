@@ -258,7 +258,18 @@ Programming.
 
 ---
 
-## How to ask
+## <font color="#e67300">How</font> to ask
+
+- **Familiarize yourself with the site by reading posts**
+- Read the "Tour" page (SO/SE) or take the "New user tutorial" (Discourse)
+- **Make sure the question has not already been asked**
+- **Format the question properly**
+- **Give a minimum reproducible example**
+- **Do not share sensitive data**
+- **Show your attempts**
+- Avoid cross-posting. If you really have to, make sure to cross-reference
+
+---
 ---
 
 #### Additional considerations
