@@ -111,6 +111,9 @@ Git: [Manual](https://git-scm.com/docs), [Open source book](https://git-scm.com/
 
 ---
 
+#### <font color="#e67300">Understanding</font> the documentation
+<br>
+<br>
 <br>
 <br>
 
