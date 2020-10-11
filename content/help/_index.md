@@ -243,10 +243,28 @@ Programming.
 ---
 
 ## How to ask
+---
+
+#### Additional considerations
 <br>
 
+{{%fragment%}}
+Even if you always find answers to your questions without having to post yourself, **consider signing up** to these sites:
+{{%/fragment%}}
 
+<br>
 
+{{%fragment%}}
+It allows you to upvote (SO/SE) or like (Discourse) the questions and answers that help you—why not thank those that are making your life easier by upvoting/liking their posts?
+{{%/fragment%}}
+
+{{%fragment%}}
+It makes you a part of these communities.
+{{%/fragment%}}
+
+{{%fragment%}}
+Once you are signed up, maybe you will start being more involved & contribute with questions and/or answers :)
+{{%/fragment%}}
 
 ---
 
