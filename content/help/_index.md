@@ -55,6 +55,11 @@ custom_theme_compile = true
 {{%/fragment%}}
 
 {{%fragment%}}
+Familiarise yourself with the error types in the languages you use\\
+&emsp;&emsp;&emsp;&emsp;Example: Python's **syntax errors** vs **exceptions**.
+{{%/fragment%}}
+
+{{%fragment%}}
 Warnings ≠ errors
 {{%/fragment%}}
 
