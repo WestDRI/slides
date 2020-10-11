@@ -157,17 +157,17 @@ If the tool you are using is open source, look for issues matching your problem 
 
 ---
 
-## What if the information you need just isn't out there?
+## What if the answer <font color="#e67300">isn't</font> out there?
 <br>
 
-When everything has failed and you have to ask for help, you need to figure out: <br><br>
+When everything has failed and you have to ask for help, you need to know: <br><br>
 
 {{% fragment %}}
-<span style="font-size: 2.7rem; color: #e67300"><b>Where to ask</b></span><br>
+<span style="font-size: 2.7rem">**<font color="#e67300">Where</font> to ask**</span><br><br>
 {{% /fragment %}}
 
 {{% fragment %}}
-<span style="font-size: 2.7rem; color: #e67300"><b>How to ask</b></span>
+<span style="font-size: 2.7rem">**<font color="#e67300">How</font> to ask**</span>
 {{% /fragment %}}
 
 ---
