@@ -172,18 +172,21 @@ When everything has failed and you have to ask for help, you need to know: <br><
 
 ---
 
-## Where to ask
-<br>
+## <font color="#e67300">Where</font> to ask
 
-#### <div align="left">Q&A</div>
+#### <div align="left">Q&A sites</div>
 
-Mostly, **Stack Exchange network**.
+Mostly, **[Stack Overflow](https://en.wikipedia.org/wiki/Stack_Overflow)** & **[the Stack Exchange network](https://en.wikipedia.org/wiki/Stack_Exchange)**.
 
-Co-founded by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood) and [Joel Spolsky](https://en.wikipedia.org/wiki/Joel_Spolsky).
+Co-founded in 2008 & 2009 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood) & [Joel Spolsky](https://en.wikipedia.org/wiki/Joel_Spolsky).
 <br><br>
-#### <div align="left">Forum</div>
+#### <div align="left">Forums</div>
 
-Mostly, **Discourse**.
+Mostly, **[Discourse](https://en.wikipedia.org/wiki/Discourse_(software))**.
+
+Co-founded in 2013 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood), Robin Ward & Sam Saffron.
+
+Other older forums.
 
 ---
 
