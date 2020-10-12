@@ -19,8 +19,6 @@ custom_theme_compile = true
 
 ##### WestGrid Summer School
 ###### Marie-Hélène Burle
-<br>
-<center><div style="font-size: 1.2rem"><a href="https://westgrid-ml.netlify.app/schoolremake/pt-14-firstnn">Back to the course page &nbsp;<i class="fas fa-level-up-alt"></i></a></div></center>
 
 ---
 
