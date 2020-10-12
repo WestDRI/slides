@@ -344,6 +344,22 @@ img[alt=logo] {
   font-style: italic;
 }
 
+#backlink {
+  position: absolute;
+  bottom: 3%;
+  left: 1%;
+  font-style: italic;
+  // font-size: 1.2rem;
+  a {
+    color: $linkColor;
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    color: $linkColorHover;
+  }
+}
+
 .reveal .progress span {
   display: block;
   height: 100%;
