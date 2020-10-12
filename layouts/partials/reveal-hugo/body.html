@@ -92,6 +92,18 @@
   });
 </script>
 
+<!-- LINK back to webinar page -->
+<div id="backlink">
+  <a href="{{ .Param "backlink.href" }}">Back to webinar page &nbsp;<i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- js to make LINK disappear at slide transition -->
+<script type="text/javascript">
+  Reveal.addEventListener('slidechanged', function(event) {
+      document.getElementById('backlink').style.display='none'
+  });
+</script>
+
 <!-- allow mathjax in all files for rendering of latex math expressions -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
