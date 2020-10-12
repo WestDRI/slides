@@ -3,6 +3,9 @@ title = "jupyterdays2020"
 outputs = ["Reveal"]
 [logojupyterdays]
 src = "/img/jupyterdays/jupyterdays.png"
+[backlink]
+href = "https://ubc-dsci.github.io/jupyterdays/schedule/day3.html"
+txt = "Back to Schedule Day 3"
 [reveal_hugo]
 custom_theme = "mh.scss"
 custom_theme_compile = true
