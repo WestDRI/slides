@@ -19,21 +19,23 @@ custom_theme_compile = true
 
 ---
 
+<br>
 # So, you are stuck ...
 <br>
 
 {{%fragment%}}
-<span style="font-size: 2.5rem;">**1. Look for information that is already out there**</span>
+<span style="font-size: 2.5rem;">*First,* **look** for information that is already out there</span>
+{{%/fragment%}}
+
+{{%fragment%}}
+<span style="font-size: 2.5rem;">*Then,* **ask** for help</span>
 {{%/fragment%}}
 
 <br>
 
-{{%fragment%}}
-<span style="font-size: 2.5rem;">**2. Ask for help**</span>
-{{%/fragment%}}
-
 ---
 
+<br>
 ## Look for information
 <br>
 
@@ -144,7 +146,7 @@ Keeping a system up to date includes updating:
 Google's algorithms are great at guessing what we are looking for.<br><br>
 
 {{%fragment%}}
-**But** there is a frequency problem:
+*But* there is a frequency problem:
 
 &emsp;&emsp;&emsp;Searches relating to programming-specific questions represent too small &emsp;&emsp;&emsp;a fraction of the overall searches for results to be relevant unless you use &emsp;&emsp;&emsp;**key vocabulary**.<br><br>
 {{%/fragment%}}
@@ -271,27 +273,66 @@ Programming.
 ---
 
 ## <font color="#e67300">How</font> to ask
+<br>
 
-- **Familiarize yourself with the site by reading posts**
-- Read the "Tour" page (SO/SE) or take the "New user tutorial" (Discourse)
-- **Make sure the question has not already been asked**
-- **Format the question properly**
-- **Give a minimum reproducible example**
-- **Do not share sensitive data**
-- **Show your attempts**
-- Avoid cross-posting. If you really have to, make sure to cross-reference
+{{%fragment%}}
+**Familiarize yourself with the site by reading posts**
+{{%/fragment%}}
+
+{{%fragment%}}
+Read the "Tour" page (SO/SE) or take the "New user tutorial" (Discourse)
+{{%/fragment%}}
+
+{{%fragment%}}
+**Make sure the question has not already been asked**
+{{%/fragment%}}
+
+{{%fragment%}}
+**Format the question properly**
+{{%/fragment%}}
+
+{{%fragment%}}
+**Give a minimum reproducible example**
+{{%/fragment%}}
+
+{{%fragment%}}
+**Do not share sensitive data**
+{{%/fragment%}}
+
+{{%fragment%}}
+**Show your attempts**
+{{%/fragment%}}
+
+{{%fragment%}}
+Avoid cross-posting. If you really have to, make sure to cross-reference
+{{%/fragment%}}
 
 ---
 
 ### <font color="#e67300">How</font> to ask: <font color="#e67300">SO & co</font>
 <br>
 
-- **Don't ask opinion-based questions**
-- **Don't ask for package, tool, or service recommendations**
-- **Don't ask more than one question in a single post**
-- Avoid greetings, signatures, thank-yous
-- Avoid apologies about being a beginner, this being your first post, the question being stupid, etc.
+{{%fragment%}}
+**Don't ask opinion-based questions**
+{{%/fragment%}}
 
+{{%fragment%}}
+**Don't ask for package, tool, or service recommendations**
+{{%/fragment%}}
+
+{{%fragment%}}
+**Don't ask more than one question in a single post**
+{{%/fragment%}}
+
+{{%fragment%}}
+Avoid greetings, signatures, thank-yous
+{{%/fragment%}}
+
+{{%fragment%}}
+Avoid apologies about being a beginner, this being your first post, the question being stupid, etc.
+{{%/fragment%}}
+
+---
 ---
 
 #### Additional considerations
