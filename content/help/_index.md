@@ -11,15 +11,11 @@ custom_theme_compile = true
 +++
 
 <br>
-<br>
-## <font color="#22232a">Need help with your code? Ask online!</font>
-##### <font color="#22232a">… but make sure you know how to ask</font>
+# So, you are stuck ... now what?
 <br>
 #### Marie-Hélène Burle
 ##### training@westgrid.ca
 ###### October 14, 2020
-<br>
-<center><div style="font-size: 1.2rem"><a href="https://westgrid-cli.netlify.app/webinars/getting_help/">Back to webinar page &nbsp;<i class="fas fa-level-up-alt"></i></a></div></center>
 
 ---
 
