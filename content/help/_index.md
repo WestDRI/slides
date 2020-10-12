@@ -3,6 +3,8 @@ title = "Tips and tricks to get help in any programming language"
 outputs = ["Reveal"]
 [logowg]
 src = "/img/wg_white_removed_medium.png"
+[backlink]
+href = "https://westgrid-cli.netlify.app/webinars/getting_help/"
 [reveal_hugo]
 custom_theme = "mh.scss"
 custom_theme_compile = true
