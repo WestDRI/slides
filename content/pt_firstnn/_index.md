@@ -5,6 +5,9 @@ outputs = ["Reveal"]
 src = "/img/wg_white_removed_medium.png"
 [logopt]
 src = "/img/ml/pt_icon.svg"
+[backlink]
+href = "https://westgrid-ml.netlify.app/summerschool2020remake/pt-14-firstnn/"
+txt = "Back to the course page"
 [reveal_hugo]
 custom_theme = "mh.scss"
 custom_theme_compile = true
