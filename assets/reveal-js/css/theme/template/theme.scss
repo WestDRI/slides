@@ -346,17 +346,25 @@ img[alt=logo] {
 
 #backlink {
   position: absolute;
-  bottom: 3%;
-  left: 1%;
-  font-style: italic;
-  // font-size: 1.2rem;
+  top: 2.0%;
+  right: 1%;
+  // bottom: 3%;
+  // left: 1%;
+  // font-style: italic;
+  font-size: 1.2rem;
+  // font-size: 1.0rem;
+  font-family: 'Crimson Text', serif;
+  font-variant: small-caps;
   a {
-    color: $linkColor;
+    // color: $linkColor;
+    color: #000041;
+    // color: #58585a;
     text-decoration: none;
   }
   a:hover,
   a:focus {
-    color: $linkColorHover;
+    // color: $linkColorHover;
+    color: $linkColor;
   }
 }
 
