@@ -7,7 +7,7 @@ src = "/img/wg_white_removed_medium.png"
 src = "/img/ml/pt_icon.svg"
 [backlink]
 href = "https://westgrid-ml.netlify.app/summerschool2020remake/pt-14-firstnn/"
-txt = "Back to the course page"
+txt = "Back to Course Page"
 [reveal_hugo]
 custom_theme = "mh.scss"
 custom_theme_compile = true
