@@ -5,6 +5,7 @@ outputs = ["Reveal"]
 src = "/img/wg_white_removed_medium.png"
 [backlink]
 href = "https://westgrid-cli.netlify.app/webinars/getting_help/"
+txt = "Back to the webinar page"
 [reveal_hugo]
 custom_theme = "mh.scss"
 custom_theme_compile = true
