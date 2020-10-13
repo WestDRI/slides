@@ -359,4 +359,4 @@ Once you are signed up, maybe you will start being more involved & contribute wi
 
 ---
 
-# <span style="font-size: 5.0rem; font-variant: small-caps">Questions?</span>
+# <span style="font-size: 5.0rem">Questions?</span>
