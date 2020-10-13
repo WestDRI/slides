@@ -7,7 +7,7 @@ src = "/img/jupyterdays/jupyterdays.png"
 href = "https://ubc-dsci.github.io/jupyterdays/schedule/day3.html"
 txt = "Back to Schedule Day 3"
 [reveal_hugo]
-custom_theme = "mh.scss"
+custom_theme = "mh2.scss"
 custom_theme_compile = true
 +++
 
