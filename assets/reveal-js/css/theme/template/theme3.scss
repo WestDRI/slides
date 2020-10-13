@@ -48,8 +48,21 @@ body {
   text-shadow: $headingTextShadow;
   word-wrap: break-word;
 }
+
 .reveal h1 {
   line-height: $heading1LineHeight;
+}
+
+.reveal h2 {
+  line-height: $heading2LineHeight;
+}
+
+.reveal h3 {
+  line-height: $heading3LineHeight;
+}
+
+.reveal h4 {
+  line-height: $heading4LineHeight;
 }
 
 .reveal h1 {
@@ -83,7 +96,7 @@ body {
 
 .reveal p {
   margin: $blockMargin 0;
-  line-height: 1.3;
+  line-height: 2.7rem;
   text-align: left;
 }
 
