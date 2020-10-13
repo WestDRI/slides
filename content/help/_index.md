@@ -359,4 +359,15 @@ Once you are signed up, maybe you will start being more involved & contribute wi
 
 ---
 
+#### WestGrid Autumn School 2020
+
+{{<imgslink href="https://autumnschool.netlify.app/" src="/img/ad/autumn_school2020.png" title="" width="80%" line-height="1.0rem">}}
+{{</imgslink>}}
+
+<center>**Every Mondays and Tuesdays this November**</center>
+
+<center>**Check the website at: https://autumnschool.netlify.app/**</center>
+
+---
+
 # <span style="font-size: 5.0rem">Questions?</span>
