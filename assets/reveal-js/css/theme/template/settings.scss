@@ -45,7 +45,8 @@ $heading6Size: 2.0rem;
 
 // Links and actions
 $linkColor: #547cc6;
-$linkColorVisited: #4a40bf;
+// $linkColorVisited: #4a40bf;
+$linkColorVisited: #547cc6;
 $linkColorHover: lighten( $linkColor, 15% );
 $linkColorVisitedHover: lighten( $linkColorVisited, 15% );
 
