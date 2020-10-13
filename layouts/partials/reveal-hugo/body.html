@@ -1,4 +1,6 @@
+<!-- ##################################################################### -->
 <!-- LOGO -->
+<!-- ##################################################################### -->
 
 <!-- wg logo which does not change size -->
 <img id="logowg" src="{{ .Param "logowg.src" }}">
@@ -77,32 +79,48 @@
   }
 </style>
 
-<!-- RECTANGLE for pregression bar -->
+<!-- ##################################################################### -->
+<!-- RECTANGLE -->
+<!-- ##################################################################### -->
+
+<!-- rectangle for pregression bar -->
 <div id="rectangle"></div>
 
-<!-- INFO about navigation arrows -->
+<!-- ##################################################################### -->
+<!-- INFO -->
+<!-- ##################################################################### -->
+
+<!-- info about navigation arrows -->
 <div id="navinfo">
   Use left/right keys to change slide
 </div>
 
-<!-- js to make INFO disappear at slide transition -->
+<!-- js to make info disappear at slide transition -->
 <script type="text/javascript">
   Reveal.addEventListener('slidechanged', function(event) {
       document.getElementById('navinfo').style.display='none'
   });
 </script>
 
-<!-- LINK back to webinar page -->
+<!-- ##################################################################### -->
+<!-- LINK -->
+<!-- ##################################################################### -->
+
+<!-- link back to webinar page -->
 <div id="backlink">
   <a href="{{ .Param "backlink.href" }}">{{ .Param "backlink.txt" }} &nbsp;<i class="fas fa-level-up-alt"></i></a>
 </div>
 
-<!-- js to make LINK disappear at slide transition -->
+<!-- js to make link disappear at slide transition -->
 <script type="text/javascript">
   Reveal.addEventListener('slidechanged', function(event) {
       document.getElementById('backlink').style.display='none'
   });
 </script>
+
+<!-- ##################################################################### -->
+<!-- MATHJAX -->
+<!-- ##################################################################### -->
 
 <!-- allow mathjax in all files for rendering of latex math expressions -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -122,6 +140,10 @@
       }
   };
 </script>
+
+<!-- ##################################################################### -->
+<!-- FONT-AWESOME -->
+<!-- ##################################################################### -->
 
 <!-- font-awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
