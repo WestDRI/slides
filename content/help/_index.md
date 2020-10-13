@@ -13,16 +13,13 @@ custom_theme_compile = true
 
 <br>
 # So, you are stuck ... now what?
-<br>
-#### Marie-Hélène Burle
-##### training@westgrid.ca
-###### October 14, 2020
+#### <div style="line-height: 2.8rem">Marie-Hélène Burle</div>
+##### <div style="line-height: 2.8rem">[training@westgrid.ca](mailto:training@westgrid.ca)</div>
+##### <div style="line-height: 2.8rem">October 14, 2020</div>
 
 ---
 
-<br>
 # So, you are stuck ...
-<br>
 
 {{%fragment%}}
 <span style="font-size: 2.5rem;">*First,* **look** for information that is already out there</span>
@@ -36,9 +33,7 @@ custom_theme_compile = true
 
 ---
 
-<br>
 ## Look for information
-<br>
 
 1. Read carefully any **error message**
 2. Read the **documentation** (local or online)
@@ -49,7 +44,6 @@ custom_theme_compile = true
 ---
 
 ### Error messages
-<br>
 
 {{%fragment%}}
 <span style="font-size: 2.5rem;">**Read them!**</span>
@@ -86,28 +80,28 @@ Identify the locations of the errors to go investigate that part of the code
 <br>
 
 {{%fragment%}}
-&emsp;&emsp;&emsp;&emsp;**You need to <font color="#e67300">find</font> it**<br><br>
+##### You need to <font color="#e67300">find</font> it<br>
 {{%/fragment%}}
 
 {{%fragment%}}
-&emsp;&emsp;&emsp;&emsp;**You need to <font color="#e67300">understand</font> it**
+##### You need to <font color="#e67300">understand</font> it<br>
 {{%/fragment%}}
 
 ---
 
 #### <font color="#e67300">Finding</font> documentation <font color="#e67300">online</font>
-<br>
-Take the time to look for the official documentation & other high quality sources for the languages & tools you use.<br><br>
+
+Take the time to look for the official documentation & other high quality sources for the languages & tools you use.
 
 {{%fragment%}}
-*Examples:*
+&emsp;*Examples:*
 
-Python: [Reference manual](https://docs.python.org/3/reference/index.html), [Standard library manual](https://docs.python.org/3/library/index.html), [Tutorial](https://docs.python.org/3/tutorial/index.html) \\
-NumPy: [Tutorial](https://numpy.org/devdocs/user/tutorials_index.html) \\
-R: [Open source book "R for Data Science"](https://r4ds.had.co.nz/index.html), [Open source book "Advanced R"](https://adv-r.hadley.nz/) \\
-Julia: [Documentation](https://docs.julialang.org/en/v1/) \\
-Bash: [Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) \\
-Git: [Manual](https://git-scm.com/docs), [Open source book](https://git-scm.com/book/en/v2)
+&emsp;&emsp;Python: [Reference manual](https://docs.python.org/3/reference/index.html), [Standard library manual](https://docs.python.org/3/library/index.html), [Tutorial](https://docs.python.org/3/tutorial/index.html) \\
+&emsp;&emsp;NumPy: [Tutorial](https://numpy.org/devdocs/user/tutorials_index.html) \\
+&emsp;&emsp;R: [Open source book "R for Data Science"](https://r4ds.had.co.nz/index.html), [Open source book "Advanced R"](https://adv-r.hadley.nz/) \\
+&emsp;&emsp;Julia: [Documentation](https://docs.julialang.org/en/v1/) \\
+&emsp;&emsp;Bash: [Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) \\
+&emsp;&emsp;Git: [Manual](https://git-scm.com/docs), [Open source book](https://git-scm.com/book/en/v2)
 {{%/fragment%}}
 
 ---
@@ -129,7 +123,6 @@ Git: [Manual](https://git-scm.com/docs), [Open source book](https://git-scm.com/
 ---
 
 ### Up-to-date versions
-<br>
 
 {{%fragment%}}
 **First, you need to know what needs to be updated.**
@@ -151,7 +144,7 @@ Keeping a system up to date includes updating:
 ---
 
 ### Google
-<br>
+
 Google's algorithms are great at guessing what we are looking for.<br><br>
 
 {{%fragment%}}
@@ -171,30 +164,29 @@ Learn the vocabulary of your language/tool to know what to search for.
 ---
 
 ### Open issues and bug reports
-<br>
+
 If the tool you are using is open source, look for issues matching your problem in the source repository (e.g. on GitHub or GitLab).
 
 ---
 
 ## What if the answer <font color="#e67300">isn't</font> out there?
-<br>
 
 When everything has failed and you have to ask for help, you need to know: <br><br>
 
 {{% fragment %}}
-<span style="font-size: 2.7rem">**<font color="#e67300">Where</font> to ask**</span><br><br>
+### <font color="#e67300">Where</font> to ask
 {{% /fragment %}}
 
 {{% fragment %}}
-<span style="font-size: 2.7rem">**<font color="#e67300">How</font> to ask**</span>
+### <font color="#e67300">How</font> to ask
 {{% /fragment %}}
 
 ---
 
-## <font color="#e67300">Where</font> to ask
+### <div style="line-height: 4.0rem"><font color="#e67300">Where</font> to ask</div>
 
 {{%fragment%}}
-#### <div align="left">Q&A sites</div>
+#### <div align="left" style="line-height: 3.0rem">Q&A sites</div>
 
 Mostly, **[Stack Overflow](https://en.wikipedia.org/wiki/Stack_Overflow)** & **[the Stack Exchange network](https://en.wikipedia.org/wiki/Stack_Exchange)**.
 
@@ -202,7 +194,7 @@ Co-founded in 2008 & 2009 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_At
 {{%/fragment%}}
 
 {{%fragment%}}
-#### <div align="left">Forums</div>
+#### <div align="left" style="line-height: 3.0rem">Forums</div>
 
 Mostly, **[Discourse](https://en.wikipedia.org/wiki/Discourse_(software))**.
 
