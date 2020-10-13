@@ -9,7 +9,7 @@ src = "/img/git/git_icon.png"
 href = "https://westgrid-cli.netlify.app/summerschool2020/git-05-basics/"
 txt = "Back to Course Page"
 [reveal_hugo]
-custom_theme = "mh.scss"
+custom_theme = "mh1.scss"
 custom_theme_compile = true
 +++
 

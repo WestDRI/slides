@@ -9,7 +9,7 @@ src = "/img/ml/flux_icon.png"
 href = "https://westgrid-ml.netlify.app/webinars/flux/"
 txt = "Back to Webinar Page"
 [reveal_hugo]
-custom_theme = "mh.scss"
+custom_theme = "mh1.scss"
 custom_theme_compile = true
 +++
 

@@ -7,7 +7,7 @@ src = "/img/wg_white_removed_medium.png"
 href = "https://westgrid-cli.netlify.app/webinars/cli_tools/"
 txt = "Back to Webinar Page"
 [reveal_hugo]
-custom_theme = "mh.scss"
+custom_theme = "mh1.scss"
 custom_theme_compile = true
 +++
 

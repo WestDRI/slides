@@ -9,7 +9,7 @@ src = "/img/jl/jl_dots.png"
 href = "https://westgrid-julia.netlify.app/webinars/intro/"
 txt = "Back to Webinar Page"
 [reveal_hugo]
-custom_theme = "mh.scss"
+custom_theme = "mh1.scss"
 custom_theme_compile = true
 +++
 

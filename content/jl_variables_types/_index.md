@@ -9,7 +9,7 @@ src = "/img/jl/jl_dots.png"
 href = "https://westgrid-julia.netlify.app/summerschool2020/jl-08-var/"
 txt = "Back to Course Page"
 [reveal_hugo]
-custom_theme = "mh.scss"
+custom_theme = "mh1.scss"
 custom_theme_compile = true
 +++
 
