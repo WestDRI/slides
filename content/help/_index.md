@@ -72,6 +72,14 @@ Look for bits you understand (don't get put off by what you don't understand)
 Identify the locations of the errors to go investigate that part of the code
 {{%/fragment%}}
 
+<!-- --- -->
+
+<!-- ### Error messages -->
+<!-- <br> -->
+<!-- Python invalid syntax: -->
+
+<!-- found during the parsing stage: when the interpreter parse the code to convert it to Python byte code. -->
+
 ---
 
 ### Documentation
@@ -180,6 +188,28 @@ When everything has failed and you have to ask for help, you need to know: <br><
 {{% fragment %}}
 <span style="font-size: 2.7rem">**<font color="#e67300">How</font> to ask**</span>
 {{% /fragment %}}
+
+---
+
+## <font color="#e67300">Where</font> to ask
+
+{{%fragment%}}
+#### <div align="left">Q&A sites</div>
+
+Mostly, **[Stack Overflow](https://en.wikipedia.org/wiki/Stack_Overflow)** & **[the Stack Exchange network](https://en.wikipedia.org/wiki/Stack_Exchange)**.
+
+Co-founded in 2008 & 2009 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood) & [Joel Spolsky](https://en.wikipedia.org/wiki/Joel_Spolsky).<br><br>
+{{%/fragment%}}
+
+{{%fragment%}}
+#### <div align="left">Forums</div>
+
+Mostly, **[Discourse](https://en.wikipedia.org/wiki/Discourse_(software))**.
+
+Co-founded in 2013 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood), Robin Ward & Sam Saffron.
+
+A few other older forums.
+{{%/fragment%}}
 
 ---
 
@@ -334,6 +364,18 @@ Avoid apologies about being a beginner, this being your first post, the question
 {{%/fragment%}}
 
 ---
+
+#### Formatting your question
+<br>
+
+
+
+---
+
+#### Creating a reproducible minimum example
+<br>
+
+
 ---
 
 #### Additional considerations
@@ -364,7 +406,17 @@ Once you are signed up, maybe you will start being more involved & contribute wi
 {{<imgslink href="https://autumnschool.netlify.app/" src="/img/ad/autumn_school2020.png" title="" width="80%" line-height="1.0rem">}}
 {{</imgslink>}}
 
-<center>**Every Mondays and Tuesdays this November**</center>
+<center>**Every Monday and Tuesday this November**</center>
+
+<center>**Check the website at: https://autumnschool.netlify.app/**</center>
+
+---
+
+#### WestGrid Autumn School 2020
+
+
+
+<center>**Every Monday and Tuesday this November**</center>
 
 <center>**Check the website at: https://autumnschool.netlify.app/**</center>
 
