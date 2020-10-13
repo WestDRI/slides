@@ -1,0 +1,62 @@
+// Base settings for all themes that can optionally
+// be overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: #f8f8fd;
+
+// Primary/body text
+$mainFont: 'Amiri', serif;
+
+$mainFontSize: 29px;
+
+$mainColor: #272a2a;
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+
+$headingFont: 'Crimson Text', serif;
+
+$heading1Color: #22232a;
+$heading2Color: #383D3D;
+$heading3Color: #435069;
+$heading4Color: #4c4d67;
+$heading5Color: #644f67;
+$heading6Color: #556464;
+
+$heading1LineHeight: 1.6;
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+
+$headingTextTransform: none;
+$headingTextAlign: center;
+$headingTextShadow: none;
+$headingFontWeight: bold;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 4.5rem;
+$heading2Size: 3.6rem;
+$heading3Size: 3.2rem;
+$heading4Size: 2.8rem;
+$heading5Size: 2.4rem;
+$heading6Size: 2.0rem;
+
+// Links and actions
+$linkColor: #547cc6;
+// $linkColorVisited: #4a40bf;
+$linkColorVisited: #547cc6;
+$linkColorHover: lighten( $linkColor, 15% );
+$linkColorVisitedHover: lighten( $linkColorVisited, 15% );
+
+// Text selection
+$selectionBackgroundColor: #282a36;
+
+$selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+  background: $backgroundColor;
+}
