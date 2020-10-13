@@ -4,7 +4,7 @@ outputs = ["Reveal"]
 [logowg]
 src = "/img/wg_white_removed_medium.png"
 [logogit]
-src = "/img/git/git_icon.png"
+src = "/img/git/git_img/git_icon.png"
 [backlink]
 href = "https://westgrid-cli.netlify.app/summerschool2020/git-07-first/"
 txt = "Back to Course Page"
@@ -497,7 +497,7 @@ You can also look up the [Git book](https://git-scm.com/book/en/v2) and countles
 
 ---
 
-<img src="/img/git/git_icon_black.png" style="position: absolute; top: 15%; left: 52%; width: 2%;">
+<img src="/img/git/git_img/git_icon_black.png" style="position: absolute; top: 15%; left: 52%; width: 2%;">
 
 # <center><span style="font-variant: small-caps;">Questions?</span></center>
 <br><br>

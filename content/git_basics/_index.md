@@ -4,7 +4,7 @@ outputs = ["Reveal"]
 [logowg]
 src = "/img/wg_white_removed_medium.png"
 [logogit]
-src = "/img/git/git_icon.png"
+src = "/img/git/git_img/git_icon.png"
 [backlink]
 href = "https://westgrid-cli.netlify.app/summerschool2020/git-05-basics/"
 txt = "Back to Course Page"
