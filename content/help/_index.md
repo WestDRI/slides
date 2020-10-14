@@ -420,6 +420,18 @@ Even if you always find answers to your questions without having to post yoursel
 
 ---
 
+#### A last word
+
+While it takes some work to ask a good question, do not let this discourage you from posting on Stack Overflow: if you ask a good question, you will get many great answers.
+
+You will learn in the process of developing your question (you may actually find the answer in that process) & you will learn from the answers.
+
+It is forth the effort.
+
+[Here](https://stackoverflow.com/help/how-to-ask) is the Stack Overflow documentation on how to ask a good question.
+
+---
+
 #### WestGrid Autumn School 2020
 
 {{<imgslink href="https://autumnschool.netlify.app/" src="/img/ad/autumn_school2020.png" title="" width="80%" line-height="1.0rem">}}
