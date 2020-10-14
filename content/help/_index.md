@@ -236,7 +236,6 @@ A few of the Stack Exchange network sites:
 ---
 
 ## <font color="#e67300">How</font> to ask
-<br>
 
 {{%fragment%}}
 **Familiarize yourself with the site by reading posts**
@@ -273,7 +272,6 @@ Avoid cross-posting. If you really have to, make sure to cross-reference
 ---
 
 ### <font color="#e67300">How</font> to ask: <font color="#e67300">SO & co</font>
-<br>
 
 {{%fragment%}}
 **Don't ask opinion-based questions**
@@ -303,9 +301,11 @@ Avoid apologies about being a beginner, this being your first post, the question
 
 #### Formatting your question
 
-Nowadays, most sites (including Stack Overflow and Discourse) allow [markdown rendering](https://daringfireball.net/projects/markdown/syntax).
+Nowadays, most sites (including Stack Overflow & Discourse) allow [markdown](https://en.wikipedia.org/wiki/Markdown) rendering.
 
-Some older forums have a markup of their own. The information is always easy to find. **Spend the time to format your question properly.** People will be much less inclined to help you if you don't show any effort & if your question is a nightmare to read.
+Some older forums implement other markup languages (e.g. [BBCode](https://en.wikipedia.org/wiki/BBCode)).
+
+The information is always easy to find. **Spend the time to format your question properly.** People will be much less inclined to help you if you don't show any effort & if your question is a nightmare to read.
 
 ---
 
@@ -343,14 +343,13 @@ What am I doing wrong?
 
 ---
 
-#### Still not a good question anyway :)
+#### Still not good enough
 
-This is a duplicate as the question was already asked [here](https://stackoverflow.com/q/30983013/9210961) which is itself a duplicate of [this question](https://stackoverflow.com/q/31038636/9210961).
+This question is actually a duplicate of [a question asked](https://stackoverflow.com/q/30983013/9210961) which is itself a duplicate of [another question](https://stackoverflow.com/q/31038636/9210961).
 
 ---
 
-#### Creating a reproducible minimum example
-<br>
+#### Creating a minimal reproducible example
 
 
 ---
