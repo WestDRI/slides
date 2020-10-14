@@ -351,6 +351,60 @@ This question is actually a duplicate of [a question asked](https://stackoverflo
 
 #### Creating a minimal reproducible example
 
+There are great posts on how to create a good minimal reproducible example. In particular:
+
+&emsp;[How to create a Minimal, Reproducible Example](https://stackoverflow.com/help/minimal-reproducible-example)
+<br><br>
+For R (but concepts apply to any language):
+
+&emsp;[How to make a great R reproducible example](https://stackoverflow.com/q/5963269/9210961) \\
+&emsp;[What's a reproducible example (`reprex`) and how do I do one?](https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219?u=prosoitos)
+<!-- [](https://github.com/tidyverse/reprex) -->
+<!-- `reprex::reprex()` -->
+
+---
+
+#### Creating a minimal reproducible example
+
+- Load all necessary packages
+- Load or create necessary data
+- Simplify the data & the code as much as possible while still reproducing the problem
+- Use simple variable names
+
+---
+
+##### Data for your reproducible example: your own data
+
+Do not upload data somewhere on the web to be downloaded.
+
+Make sure that the data is anonymised.
+
+Don't keep more variables & more data points than are necessary to reproduce the problem.
+
+Simplify the variable names.
+
+In R, you can use functions such as `dput()` to turn your reduced, anonymised data into text that is easy to copy/paste & can then be used to recreate the data.
+
+---
+
+##### Data for your reproducible example: create a toy dataset
+
+You can also create a toy dataset.
+
+Functions that create random data, series, or repetitions are very useful here.
+
+---
+
+##### Data for your reproducible example: pre-packaged datasets
+
+Some languages and/or packages come with pre-packaged datasets. If your code involves such languages/packages, you can make use of these datasets to create your reproducible example.
+
+For example, R comes with many datasets directly available, including `iris`, `mtcars`, `trees`, `airquality`. In the R console, try:
+
+```r
+?iris
+?mtcars
+```
 
 ---
 
