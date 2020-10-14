@@ -207,8 +207,15 @@ A few other older forums.
 
 ### <font color="#e67300">Where</font> to ask
 
+**Which one to choose is a matter of personal preference.**
 
+Possible considerations:
 
+- Some niche topics have very active communities on Discourse
+- Stack Overflow & some older forums can be intimidating with higher expectations for the questions quality & a more direct handling of mistakes
+- For conversations, advice, or multiple step questions, go to Discourse
+- Stack Overflow has over 13 million users
+- Stack Overflow & co have a very efficient approach
 
 ---
 
