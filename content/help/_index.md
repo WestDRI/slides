@@ -356,24 +356,21 @@ This is a duplicate as the question was already asked [here](https://stackoverfl
 ---
 
 #### Additional considerations
-<br>
 
 {{%fragment%}}
 Even if you always find answers to your questions without having to post yourself, **consider signing up** to these sites:
 {{%/fragment%}}
 
-<br>
-
 {{%fragment%}}
-It allows you to upvote (SO/SE) or like (Discourse) the questions & answers that help you—why not thank those that are making your life easier by upvoting/liking their posts?
+- It allows you to upvote (SO/SE) or like (Discourse) the questions & answers that help you—and why not thank in this fashion those that are making your life easier?
 {{%/fragment%}}
 
 {{%fragment%}}
-It makes you a part of these communities.
+- It makes you a part of these communities
 {{%/fragment%}}
 
 {{%fragment%}}
-Once you are signed up, maybe you will start being more involved & contribute with questions and/or answers :)
+- Once you are signed up, maybe you will start being more involved & contribute with questions & answers of your own
 {{%/fragment%}}
 
 ---
