@@ -288,6 +288,10 @@ Avoid cross-posting. If you really have to, make sure to cross-reference
 {{%/fragment%}}
 
 {{%fragment%}}
+Check your spelling, grammar, punctuation, capitalized sentences, etc.
+{{%/fragment%}}
+
+{{%fragment%}}
 Avoid greetings, signatures, thank-yous; keep it to the point
 {{%/fragment%}}
 
