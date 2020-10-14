@@ -19,7 +19,7 @@ custom_theme_compile = true
 
 ---
 
-# So, you are stuck ...
+# <div style="line-height: 12rem">When you are stuck</div>
 
 {{%fragment%}}
 <span style="font-size: 2.5rem;">*First,* **look** for information that is already out there</span>
