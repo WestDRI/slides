@@ -445,7 +445,26 @@ It is forth the effort.
 
 #### WestGrid Autumn School 2020
 
-
+<center>
+<u>Topics:</u>
+<br><br><br>
+**Bash** command line
+<br><br>
+Version control with **Git**
+<br><br>
+**HPC**
+<br><br>
+Basics of **Python**
+<br><br>
+Deep learning with **PyTorch**
+<br><br>
+Parallel programming in **Chapel**
+<br><br>
+Scientific programming in **Julia**
+<br><br>
+3D scientific **visualization**
+</center>
+<br><br>
 
 <center>**Every Monday & Tuesday this November**</center>
 
