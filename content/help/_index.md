@@ -11,8 +11,8 @@ custom_theme = "mh3.scss"
 custom_theme_compile = true
 +++
 
+# <span style="font-size: 5rem;">So, you are stuck ... now what?</span>
 <br>
-# So, you are stuck ... now what?
 #### <div style="line-height: 2.8rem">Marie-Hélène Burle</div>
 ##### <div style="line-height: 2.8rem">[training@westgrid.ca](mailto:training@westgrid.ca)</div>
 ##### <div style="line-height: 2.8rem">October 14, 2020</div>
