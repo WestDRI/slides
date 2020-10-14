@@ -183,7 +183,7 @@ When everything has failed & you have to ask for help, you need to know: <br><br
 
 ---
 
-### <div style="line-height: 4.0rem"><font color="#e67300">Where</font> to ask</div>
+### <div style="line-height: 4.5rem"><font color="#e67300">Where</font> to ask</div>
 
 {{%fragment%}}
 #### <div align="left" style="line-height: 3.0rem">Q&A sites</div>
@@ -205,7 +205,7 @@ A few other older forums.
 
 ---
 
-## <font color="#e67300">Where</font> to ask
+### <font color="#e67300">Where</font> to ask
 
 {{%fragment%}}
 #### <div align="left">Q&A sites</div>
@@ -307,7 +307,7 @@ Read the "Tour" page (SO/SE) or take the "New user tutorial" (Discourse)
 {{%/fragment%}}
 
 {{%fragment%}}
-**Make sure the question has not already been asked**
+Make sure the question has not already been asked
 {{%/fragment%}}
 
 {{%fragment%}}
@@ -348,11 +348,11 @@ Avoid cross-posting. If you really have to, make sure to cross-reference
 {{%/fragment%}}
 
 {{%fragment%}}
-Avoid greetings, signatures, thank-yous
+Avoid greetings, signatures, thank-yous; keep it to the point
 {{%/fragment%}}
 
 {{%fragment%}}
-Avoid apologies about being a beginner, this being your first post, the question being stupid, etc.
+Avoid apologies about being a beginner, this being your first post, the question being stupid, etc: do the best you can & skip the personal, self-judgmental & irrelevant bits
 {{%/fragment%}}
 
 ---
