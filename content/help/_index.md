@@ -1,5 +1,5 @@
 +++
-title = "Tips and tricks to get help in any programming language"
+title = "Tips & tricks to get help in any programming language"
 outputs = ["Reveal"]
 [logowg]
 src = "/img/wg_white_removed_medium.png"
@@ -39,7 +39,7 @@ custom_theme_compile = true
 2. Read the **documentation** (local or online)
 3. Make sure you have **up-to-date versions**
 4. **Google** (using carefully selected keywords or the error message)
-5. Look for **open issues** and **bug reports**
+5. Look for **open issues** & **bug reports**
 
 ---
 
@@ -163,7 +163,7 @@ Learn the vocabulary of your language/tool to know what to search for.
 
 ---
 
-### Open issues and bug reports
+### Open issues & bug reports
 
 If the tool you are using is open source, look for issues matching your problem in the source repository (e.g. on GitHub or GitLab).
 
@@ -171,7 +171,7 @@ If the tool you are using is open source, look for issues matching your problem 
 
 ## What if the answer <font color="#e67300">isn't</font> out there?
 
-When everything has failed and you have to ask for help, you need to know: <br><br>
+When everything has failed & you have to ask for help, you need to know: <br><br>
 
 {{% fragment %}}
 ### <font color="#e67300">Where</font> to ask
@@ -380,7 +380,7 @@ Even if you always find answers to your questions without having to post yoursel
 <br>
 
 {{%fragment%}}
-It allows you to upvote (SO/SE) or like (Discourse) the questions and answers that help you—why not thank those that are making your life easier by upvoting/liking their posts?
+It allows you to upvote (SO/SE) or like (Discourse) the questions & answers that help you—why not thank those that are making your life easier by upvoting/liking their posts?
 {{%/fragment%}}
 
 {{%fragment%}}
@@ -398,7 +398,7 @@ Once you are signed up, maybe you will start being more involved & contribute wi
 {{<imgslink href="https://autumnschool.netlify.app/" src="/img/ad/autumn_school2020.png" title="" width="80%" line-height="1.0rem">}}
 {{</imgslink>}}
 
-<center>**Every Monday and Tuesday this November**</center>
+<center>**Every Monday & Tuesday this November**</center>
 
 <center>**Check the website at: https://autumnschool.netlify.app/**</center>
 
@@ -408,7 +408,7 @@ Once you are signed up, maybe you will start being more involved & contribute wi
 
 
 
-<center>**Every Monday and Tuesday this November**</center>
+<center>**Every Monday & Tuesday this November**</center>
 
 <center>**Check the website at: https://autumnschool.netlify.app/**</center>
 
