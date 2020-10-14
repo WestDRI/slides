@@ -207,91 +207,24 @@ A few other older forums.
 
 ### <font color="#e67300">Where</font> to ask
 
-{{%fragment%}}
-#### <div align="left">Q&A sites</div>
 
-Mostly, **[Stack Overflow](https://en.wikipedia.org/wiki/Stack_Overflow)** & **[the Stack Exchange network](https://en.wikipedia.org/wiki/Stack_Exchange)**.
 
-Co-founded in 2008 & 2009 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood) & [Joel Spolsky](https://en.wikipedia.org/wiki/Joel_Spolsky).<br><br>
-{{%/fragment%}}
-
-{{%fragment%}}
-#### <div align="left">Forums</div>
-
-Mostly, **[Discourse](https://en.wikipedia.org/wiki/Discourse_(software))**.
-
-Co-founded in 2013 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood), Robin Ward & Sam Saffron.
-
-A few other older forums.
-{{%/fragment%}}
 
 ---
 
-### Stack Overflow and co
-<br>
+### Stack Overflow & co
 
-*Here again, you need to choose carefully where you ask your question.*
+Pick the best site to ask your question. \\
+A few of the Stack Exchange network sites:
 
----
-
-### [Stack Overflow](https://stackoverflow.com/)
-<br>
-Programming.
-
----
-
-### [Super User](https://superuser.com)
-<br>
-> computer hardware \\
-> computer software \\
-> personal and home computer networking
-
----
-
-### [Unix & Linux](https://unix.stackexchange.com/)
-<br>
-> For users of Linux, FreeBSD and other Un*x-like operating systems.
-
----
-
-### [TEX](https://tex.stackexchange.com/)
-<br>
-
----
-
-### [Cross Validated](https://stats.stackexchange.com/)
-<br>
-> For statisticians, data miners, and anyone else doing data analysis or interested in it as a discipline.
-
-> statistical analysis, applied or theoretical \\
-> designing experiments \\
-> collecting data \\
-> data mining \\
-> machine learning \\
-> visualizing data \\
-> probability theory \\
-> mathematical statistics \\
-> statistical and data-driven computing
-
----
-
-### [Open Data](https://opendata.stackexchange.com/)
-<br>
-> Developers, researchers, and anyone else interested in open data.
-
----
-
-### [Data Science](https://datascience.stackexchange.com/)
-<br>
-> Questions are most appropriate here if they are concerned with putting statistical concepts into practice, focus on implementation and (business) processes.
-
----
-
-### [GIS](https://gis.stackexchange.com/)
-<br>
-> GIS, Remote Sensing, Photogrammetry, Geodesy and Surveying, as well as Programming/Databases specific to the aforementioned.
-
-
+[Stack Overflow](https://stackoverflow.com/): programming \\
+[Super User](https://superuser.com): computer hardware & software \\
+[Unix & Linux](https://unix.stackexchange.com/): *nix OS
+[TEX](https://tex.stackexchange.com/): TeX/LaTeX \\
+[Cross Validated](https://stats.stackexchange.com/): stats; data mining, collecting, analysis & visualization; ML \\
+[Data Science](https://datascience.stackexchange.com/): focus on implementation & processes \\
+[Open Data](https://opendata.stackexchange.com/) \\
+[GIS](https://gis.stackexchange.com/)
 
 ---
 
