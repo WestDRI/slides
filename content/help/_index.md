@@ -298,9 +298,50 @@ Avoid apologies about being a beginner, this being your first post, the question
 ---
 
 #### Formatting your question
-<br>
 
+Nowadays, most sites (including Stack Overflow and Discourse) allow [markdown rendering](https://daringfireball.net/projects/markdown/syntax).
 
+Some older forums have a markup of their own. The information is always easy to find. **Spend the time to format your question properly.** People will be much less inclined to help you if you don't show any effort & if your question is a nightmare to read.
+
+---
+
+#### Example of a typical downvoted question
+
+<pre>
+howdy!!
+i am new to R sorry for a very silly question.i looked all oever the itnernwet, but i dint find
+anyanswer. i tried to use ggplot i get the error: Error in loadNamespace(i, c(lib.loc, .libPaths()),
+versionCheck = vI[[i]]) : there is no package called 'stringi'
+thank youu very much!!!!!
+marie
+</pre>
+
+{{<img src="/img/help/so_question_pre.png" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+#### <div style="line-height: 2rem">Same question, fixed</div>
+
+<pre>
+When I try to load the package `ggplot2` with:
+```r
+library(ggplot2)
+```
+I get the error:
+> Error in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]) : there is no package called
+'stringi'
+What am I doing wrong?
+</pre>
+
+{{<img src="/img/help/so_question_post.png" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+#### Still not a good question anyway :)
+
+This is a duplicate as the question was already asked [here](https://stackoverflow.com/q/30983013/9210961) which is itself a duplicate of [this question](https://stackoverflow.com/q/31038636/9210961).
 
 ---
 
