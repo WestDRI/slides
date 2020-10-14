@@ -356,21 +356,13 @@ This question is actually a duplicate of [a question asked](https://stackoverflo
 
 #### Additional considerations
 
-{{%fragment%}}
 Even if you always find answers to your questions without having to post yourself, **consider signing up** to these sites:
-{{%/fragment%}}
 
-{{%fragment%}}
 - It allows you to upvote (SO/SE) or like (Discourse) the questions & answers that help you—and why not thank in this fashion those that are making your life easier?
-{{%/fragment%}}
 
-{{%fragment%}}
-- It makes you a part of these communities
-{{%/fragment%}}
+- It makes you a part of these communities.
 
-{{%fragment%}}
-- Once you are signed up, maybe you will start being more involved & contribute with questions & answers of your own
-{{%/fragment%}}
+- Once you are signed up, maybe you will start being more involved & contribute with questions & answers of your own.
 
 ---
 
