@@ -366,15 +366,15 @@ img[alt=logo] {
   // bottom: 3%;
   // left: 1%;
   // font-style: italic;
-  font-size: 1.2rem;
-  // font-size: 1.0rem;
-  font-family: 'Crimson Text', serif;
+  font-size: 1.1rem;
+  // font-family: 'Alegreya', serif;
+  font-family: $mainFont;
   font-variant: small-caps;
   a {
     // color: $linkColor;
     // color: #000041;
     // color: #323234;
-    color: #203660;
+    color: #252527;
     // color: #58585a;
     text-decoration: none;
   }
