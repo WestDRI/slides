@@ -15,7 +15,7 @@ custom_theme_compile = true
 <br>
 #### <div style="line-height: 2.8rem">Marie-Hélène Burle</div>
 ##### <div style="line-height: 2.8rem">[training@westgrid.ca](mailto:training@westgrid.ca)</div>
-##### <div style="line-height: 2.8rem">October 14, 2020</div>
+##### <div style="line-height: 2.8rem">November 13, 2020</div>
 
 ---
 
