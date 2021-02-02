@@ -78,3 +78,19 @@ library(mapview)
 library(grid)  # part of base R
 ```
 
+---
+
+### <center>Reading in data</center>
+
+Download and unzip `02_rgi60_WesternCanadaUS` & `01_rgi60_Alaska` from the [Randolph Glacier Inventory](http://www.glims.org/RGI/) version 6.0.
+
+Data get imported and turned into `sf` objects with the function `sf::st_read()`:
+
+```r
+ak <- st_read("01_rgi60_Alaska")
+wes <- st_read("02_rgi60_WesternCanadaUS")
+```
+{{<note>}}
+Make sure to use the absolute paths or the paths relative to your working directory (which can be obtained with {{%c%}}getwd(){{%/c%}})
+{{</note>}}
+
