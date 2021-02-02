@@ -360,8 +360,8 @@ img[alt=logo] {
   // color: #252527;
   color: #58585a;
   // font-weight: bold;
-  font-family: $mainFont;
-  font-size: 1.5rem;
+  font-family: $headingFont;
+  font-size: 1.2rem;
   // font-weight: 600;
 }
 
@@ -372,10 +372,12 @@ img[alt=logo] {
   // bottom: 3%;
   // left: 1%;
   // font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   // font-family: 'Alegreya', serif;
-  font-family: $mainFont;
-  font-variant: small-caps;
+  font-family: $headingFont;
+  // font-family: $mainFont;
+  // font-variant: small-caps;
+  font-style: italic;
   a {
     // color: $linkColor;
     // color: #000041;
