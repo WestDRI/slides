@@ -25,14 +25,14 @@ custom_theme_compile = true
 **Open GIS data** \\
 [Free GIS Data](https://freegisdata.rtwilson.com/): list of free GIS datasets \\
 **Books** \\
-[Geocomputation with R](https://geocompr.robinlovelace.net/) by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow\\
-[Spatial Data Science](https://keen-swartz-3146c4.netlify.app/) by Edzer Pebesma, Roger Bivand\\
+[Geocomputation with R](https://geocompr.robinlovelace.net/) by Robin Lovelace, Jakub Nowosad & Jannes Muenchow\\
+[Spatial Data Science](https://keen-swartz-3146c4.netlify.app/) by Edzer Pebesma & Roger Bivand\\
 [Spatial Data Science with R](https://rspatial.org/) by Robert J. Hijmans\\
 [Using Spatial Data with R](https://cengel.github.io/R-spatial/) by Claudia A. Engel \\
 **Tutorial** \\
 [An Introduction to Spatial Data Analysis and Visualisation in R](https://data.cdrc.ac.uk/dataset/introduction-spatial-data-analysis-and-visualisation-r) by the CDRC \\
 **Website** \\
-[r-spatial](https://www.r-spatial.org/) by Edzer Pebesma, Marius Appel, and Daniel Nüst \\
+[r-spatial](https://www.r-spatial.org/) by Edzer Pebesma, Marius Appel & Daniel Nüst \\
 **CRAN package list** \\
 [Analysis of Spatial Data](https://cran.r-project.org/web/views/Spatial.html) \\
 **Mailing list** \\
