@@ -38,3 +38,19 @@ custom_theme_compile = true
 **Mailing list** \\
 [R Special Interest Group on using Geographical data and Mapping](https://stat.ethz.ch/mailman/listinfo/r-sig-geo)
 
+---
+
+### <center>Data</center>
+
+For this webinar, we will use:
+
+- the Alaska as well as the Western Canada & USA subsets of the [Randolph Glacier Inventory](http://www.glims.org/RGI/) version 6.0<sup>1</sup>
+- the [USGS time series of the named glaciers of Glacier National Park](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542)<sup>2</sup>
+
+The datasets can be downloaded as zip files from these websites.
+
+{{<fn>}}
+{{<fr n="1" text="RGI Consortium (2017). Randolph Glacier Inventory – A Dataset of Global Glacier Outlines: Version 6.0: Technical Report, Global Land Ice Measurements from Space, Colorado, USA. Digital Media. DOI: https://doi.org/10.7265/N5-RGI-60.">}}
+{{<fr n="2" text="Fagre, D.B., McKeon, L.A., Dick, K.A. & Fountain, A.G., 2017, Glacier margin time series (1966, 1998, 2005, 2015) of the named glaciers of Glacier National Park, MT, USA: U.S. Geological Survey data release, https://doi.org/10.5066/F7P26WB1.">}}
+{{</fn>}}
+
