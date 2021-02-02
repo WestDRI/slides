@@ -62,3 +62,19 @@ We will use data from:
 
 - [Natural Earth](https://www.naturalearthdata.com/): this dataset can be accessed direction from within R thanks to the packages `rnaturalearth` (provides the functions) & `rnaturalearthdata` (provides the data)
 
+---
+
+### <center>Packages</center>
+
+```r
+library(sf)
+library(tmap)
+library(dplyr)
+library(magrittr)
+library(purrr)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(mapview)
+library(grid)  # part of base R
+```
+
