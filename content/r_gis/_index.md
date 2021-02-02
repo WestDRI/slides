@@ -54,3 +54,11 @@ The datasets can be downloaded as zip files from these websites.
 {{<fr n="2" text="Fagre, D.B., McKeon, L.A., Dick, K.A. & Fountain, A.G., 2017, Glacier margin time series (1966, 1998, 2005, 2015) of the named glaciers of Glacier National Park, MT, USA: U.S. Geological Survey data release, https://doi.org/10.5066/F7P26WB1.">}}
 {{</fn>}}
 
+---
+
+### <center>Basemaps</center>
+<br>
+We will use data from:
+
+- [Natural Earth](https://www.naturalearthdata.com/): this dataset can be accessed direction from within R thanks to the packages `rnaturalearth` (provides the functions) & `rnaturalearthdata` (provides the data)
+
