@@ -1,0 +1,76 @@
+// Base settings for all themes that can optionally
+// be overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: #f8f8fd;
+
+// Primary/body text
+// $mainFont: 'Amiri', serif;
+// $mainFont: 'Peddana', serif;
+// $mainFont: 'Source Serif Pro', serif;
+// $mainFont: 'Cormorant Garamond', serif;
+// $mainFont: 'Neuton', serif;
+// $mainFont: 'Old Standard TT', serif;
+// $mainFont: 'Alegreya', sans-serif;
+// $mainFont: 'Alegreya', serif;
+// $mainFont: 'Crimson Text', serif;
+$mainFont: 'Crimson Pro', serif;
+
+$mainFontSize: 28px;
+
+$mainColor: #272a2a;
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+
+// $headingFont: 'Crimson Text', serif;
+$headingFont: 'Comfortaa', cursive;
+// $headingFont: 'Concert One', cursive;
+
+$heading1Color: #22232a;
+$heading2Color: #383D3D;
+$heading3Color: #435069;
+$heading4Color: #4c4d67;
+$heading5Color: #644f67;
+$heading6Color: #556464;
+
+$heading1LineHeight: 8.0rem;
+$heading2LineHeight: 7.0rem;
+$heading3LineHeight: 6.0rem;
+$heading4LineHeight: 4.5rem;
+$headingLineHeight: 3.5rem;
+$headingLetterSpacing: normal;
+
+$headingTextTransform: none;
+$headingTextAlign: left;
+$headingTextShadow: none;
+$headingFontWeight: bold;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 3.8rem;
+$heading2Size: 3.3rem;
+$heading3Size: 2.8rem;
+$heading4Size: 2.3rem;
+$heading5Size: 1.8rem;
+$heading6Size: 1.3rem;
+
+// Links and actions
+$linkColor: #547cc6;
+// $linkColorVisited: #4a40bf;
+$linkColorVisited: #547cc6;
+$linkColorHover: lighten( $linkColor, 15% );
+$linkColorVisitedHover: lighten( $linkColorVisited, 15% );
+
+// Text selection
+$selectionBackgroundColor: #282a36;
+
+$selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+  background: $backgroundColor;
+}
