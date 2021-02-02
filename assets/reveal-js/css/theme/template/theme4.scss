@@ -682,5 +682,10 @@ figcaption {
 }
 
 .footnote-definition {
-  font-size: 90%;
+  font-size: 65%;
+  color: #404040;
+  margin-left: 1rem;
+  p {
+    line-height: 1.5rem;
+  }
 }
