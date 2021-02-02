@@ -1,0 +1,183 @@
+<!-- ##################################################################### -->
+<!-- LOGO -->
+<!-- ##################################################################### -->
+<!-- <style> -->
+<!-- @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans:wght@300&display=swap'); -->
+<!-- </style> -->
+
+<!--  -->
+<!-- hide logo front slide -->
+<!--  -->
+<!-- when page is refreshed or for first display -->
+<script type="text/javascript">
+  Reveal.addEventListener('ready', function(event) {
+      if (event.indexh == 0) {
+  	  document.getElementById('logowgnofront').style.display = 'none';
+      }
+  });
+</script>
+<!-- when moving backward to front slide -->
+<script type="text/javascript">
+    Reveal.addEventListener('slidechanged', function(event) {
+        if (event.indexh == 0) {
+  	  document.getElementById('logowgnofront').style.display = 'none';
+        }
+    });
+</script>
+
+<!--  -->
+<!-- show logo 2nd slide -->
+<!--  -->
+<script type="text/javascript">
+    Reveal.addEventListener('slidechanged', function(event) {
+        if (event.indexh == 1) {
+  	  document.getElementById('logowgnofront').style.display = 'block';
+        }
+    });
+</script>
+
+<!-- wg logo which does not change size -->
+<img id="logowgnofront" src="{{ .Param "logowgnofront.src" }}">
+<style>
+  #logowgnofront {
+    position: absolute;
+    top: 1%;
+    left: 0;
+    width: 13%;
+  }
+</style>
+
+<!-- jl logo -->
+<img id="logojl" src="{{ .Param "logojl.src" }}">
+<style>
+  #logojl {
+    position: absolute;
+    top: 3.0%;
+    left: 11.1%;
+    width: 0.9%;
+  }
+</style>
+
+<!-- jl logo for presentations that I show in half page (with cli on other half) -->
+<img id="logojlhalfpage" src="{{ .Param "logojlhalfpage.src" }}">
+<style>
+  #logojlhalfpage {
+    position: absolute;
+    top: 3.4%;
+    left: 14.11%;
+    width: 0.8%;
+  }
+</style>
+
+<!-- git logo -->
+<img id="logogit" src="{{ .Param "logogit.src" }}">
+<style>
+  #logogit {
+    position: absolute;
+    top: 3.2%;
+    left: 10.9%;
+    width: 0.8%;
+  }
+</style>
+
+<!-- git logo for presentations that I show in half page (with cli on other half) -->
+<img id="logogithalfpage" src="{{ .Param "logogithalfpage.src" }}">
+<style>
+  #logogithalfpage {
+    position: absolute;
+    top: 2.1%;
+    left: 10.9%;
+    width: 0.8%;
+  }
+</style>
+
+<!-- pytorch logo -->
+<img id="logopt" src="{{ .Param "logopt.src" }}">
+<style>
+  #logopt {
+    position: absolute;
+    top: 2.8%;
+    left: 10.9%;
+    width: 0.8%;
+  }
+</style>
+
+<!-- flux logo -->
+<img id="logoflux" src="{{ .Param "logoflux.src" }}">
+<style>
+  #logoflux {
+    position: absolute;
+    top: 3.1%;
+    left: 10.8%;
+    width: 1.1%;
+  }
+</style>
+
+<!-- ##################################################################### -->
+<!-- RECTANGLE -->
+<!-- ##################################################################### -->
+
+<!-- rectangle for pregression bar -->
+<div id="rectangle"></div>
+
+<!-- ##################################################################### -->
+<!-- INFO -->
+<!-- ##################################################################### -->
+
+<!-- info about navigation arrows -->
+<div id="navinfo">
+  Use left/right keys to change slide
+</div>
+
+<!-- js to make info disappear at slide transition -->
+<script type="text/javascript">
+  Reveal.addEventListener('slidechanged', function(event) {
+      document.getElementById('navinfo').style.display='none'
+  });
+</script>
+
+<!-- ##################################################################### -->
+<!-- LINK -->
+<!-- ##################################################################### -->
+
+<!-- link back to webinar page -->
+<div id="backlink">
+  <a href="{{ .Param "backlink.href" }}">{{ .Param "backlink.txt" }} &nbsp;<i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- js to make link disappear at slide transition -->
+<script type="text/javascript">
+  Reveal.addEventListener('slidechanged', function(event) {
+      document.getElementById('backlink').style.display='none'
+  });
+</script>
+
+<!-- ##################################################################### -->
+<!-- MATHJAX -->
+<!-- ##################################################################### -->
+
+<!-- allow mathjax in all files for rendering of latex math expressions -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+<script>
+  MathJax = {
+      tex: {
+          inlineMath: [
+              ['$', '$'], ['\\(', '\\)']
+          ],
+          processEscapes: true,
+          processEnvironments: true
+      },
+      options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+  };
+</script>
+
+<!-- ##################################################################### -->
+<!-- FONT-AWESOME -->
+<!-- ##################################################################### -->
+
+<!-- font-awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
