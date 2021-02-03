@@ -461,3 +461,131 @@ tm_shape(gnp) +
 {{<imgshadow src="/img/r_gis/gnp.png" title="" width="40%" line-height="1.0rem">}}
 {{</imgshadow>}}
 
+---
+
+### <center>Inset map</center>
+<br>
+Let's plot our GNP map as an inset of our Western North America map.
+<br><br>
+As always, first we check that the CRS are the same:
+
+```r
+> st_crs(ak) == st_crs(gnp)
+[1] FALSE
+```
+<br>
+
+{{%fragment%}}
+<b><center>:(</center></b>
+{{%/fragment%}}
+
+---
+
+### <center>CRS transformation</center>
+
+We need to reproject `gnp`:
+```r
+gnp <- st_transform(gnp, st_crs(ak))
+```
+
+We can verify that the CRS of both our maps are now the same:
+
+```r
+> st_crs(ak) == st_crs(gnp)
+[1] TRUE
+```
+
+---
+
+### <center>Inset map</center>
+
+**First step: add a rectangle showing the bounding box of `gnp` in the `nwa` map.**
+
+This will show the location of the GNP map in the main North America map.
+
+We add a new `sfc_POLYGON` from the `gnp` bounding box as a new layer:
+
+```r
+gnp_zone <- st_bbox(gnp) %>%
+  st_as_sfc()
+```
+
+We will use it as the following layer within the new map:
+
+```r
+tm_shape(gnp_zone) +
+  tm_borders(lwd = 1.5, col = "#ff9900")
+```
+
+---
+
+### <center>Inset map</center>
+
+**Second step: create a `tmap` object for our main map:**
+
+```r
+main_map <- tm_shape(ak, bbox = nwa_bbox) +
+  tm_polygons() +
+  tm_shape(wes) +
+  tm_polygons() +
+  tm_shape(gnp_zone) +
+  tm_borders(lwd = 1.5, col = "#ff9900") +
+  tm_layout(
+    title = "Glaciers of Glacier National Park",
+    title.position = c("center", "top"),
+    title.size = 1.1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.06, 0.01, 0.09, 0.01),
+    outer.margins = 0,
+    frame.lwd = 0.2
+  ) +
+  tm_compass(
+    type = "arrow",
+    position = c("right", "top"),
+    size = 1.2,
+    text.size = 0.6
+  ) +
+  tm_scale_bar(
+    breaks = c(0, 500, 1000),
+    position = c("right", "BOTTOM")
+  )
+```
+
+---
+
+### <center>Inset map</center>
+
+**Third step: create a `tmap` object for the inset map.**
+
+Matching colors and edited layouts will help with readability:
+
+```r
+inset_map <- tm_shape(gnp) +
+  tm_polygons("year", palette = "Blues") +
+  tm_layout(
+    legend.title.color = "#fcfcfc",
+    legend.text.size = 0.7,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.03, 0.03, 0.03, 0.03),
+    outer.margins = 0,
+    frame = "#ff9900",
+    frame.lwd = 3
+  )
+```
+
+---
+
+### <center>Inset map</center>
+<br>
+**Final step: we combine the two `tmap` objects with `grid::viewport()`:**
+
+```r
+main_map
+print(inset_map, vp = viewport(0.41, 0.26, width = 0.5, height = 0.5))
+```
+
+---
+
+{{<imgshadow src="/img/r_gis/inset.png" title="" width="70%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
