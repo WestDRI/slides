@@ -1225,3 +1225,65 @@ tm_shape(agras) +
 {{</imgshadow>}}
 
 ---
+
+### <center>Combining with Randolph data</center>
+
+As always, we check whether the CRS are the same:
+
+```r
+> st_crs(ag) == st_crs(agras)
+[1] FALSE
+```
+
+We need to reproject `ag` (easier than reprojecting the `raster` object):
+```r
+ag %<>% st_transform(st_crs(agras))
+```
+
+We can verify that the CRS of both our maps are now the same:
+
+```r
+> st_crs(ag) == st_crs(agras)
+[1] TRUE
+```
+
+---
+
+#### <center>Combining with Randolph data</center>
+
+The retreat and ice thickness layers will hide each other (the order matters!).\\
+One option is to use `tm_borders()` only for one of them, or we can use transparency (alpha):
+
+```r
+tm_shape(agras) +
+  tm_raster() +
+  tm_shape(ag) +
+  tm_polygons("year", palette = "Blues", alpha = 0.2) +
+  tm_layout(
+	title = "Ice thickness (m) and retreat of Agassiz Glacier",
+	title.position = c("center", "top"),
+	legend.position = c("left", "bottom"),
+	legend.bg.color = "#e6e6e6",
+	legend.title.color = "#e6e6e6",
+	legend.text.size = 0.7,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.07, 0.03, 0.07, 0.03),
+	outer.margins = 0
+  ) +
+  tm_compass(
+	type = "arrow",
+	position = c("right", "top"),
+	text.size = 0.7
+  ) +
+  tm_scale_bar(
+	breaks = c(0, 0.5, 1),
+	position = c("right", "BOTTOM"),
+	text.size = 1
+  )
+```
+
+---
+
+{{<imgshadow src="/img/r_gis/ag_combined.png" title="" width="50%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
