@@ -1065,3 +1065,163 @@ map <- leaflet()
 addTiles(map)
 ```
 
+---
+
+## <center>Raster data</center>
+
+---
+
+### <center>Ice thickness</center>
+
+The nomenclature for glaciers and regions in the ice thickness dataset follows the Randolph Glacier Inventory (RGI) version 6.0.
+
+Let's look for the Agassiz Glacier data.
+
+---
+
+### <center>RGIId for Agassiz Glacier</center>
+
+```r
+> wes %>%
+	filter(Name == "Agassiz Glacier MT") %>%
+	select(RGIId)
+Simple feature collection with 1 feature and 1 field
+geometry type:  MULTIPOLYGON
+dimension:      XY
+bbox:           xmin: -114.1673 ymin: 48.92498 xmax: -114.1442 ymax: 48.94501
+geographic CRS: WGS 84
+RGIId                       geometry
+1 RGI60-02.16664 MULTIPOLYGON (((-114.1487 4...
+```
+
+Now we now which file we need to look for in the ice thickness dataset: `RGI60-02.16664_thickness.tif`.
+
+---
+
+### <center>Load raster data for Agassiz Glacier</center>
+
+First, we want to see how many bands are available:
+
+```r
+> nlayers(stack("RGI60-02/RGI60-02.16664_thickness.tif"))
+[1] 1
+```
+
+This is not a multi-layer band (such as an RGB file), so we don't have to worry about band selection:
+
+```r
+agras <- raster("RGI60-02/RGI60-02.16664_thickness.tif")
+```
+
+---
+
+### <center>Inspect raster data</center>
+
+```r
+> agras
+class      : RasterLayer
+dimensions : 93, 74, 6882  (nrow, ncol, ncell)
+resolution : 25, 25  (x, y)
+extent     : 707362.5, 709212.5, 5422962, 5425288  (xmin, xmax, ymin, ymax)
+crs        : +proj=utm +zone=11 +datum=WGS84 +units=m +no_defs
+source     : /RGI60-02/RGI60-02.16664_thickness.tif
+names      : RGI60.02.16664_thickness
+```
+
+---
+
+### <center>Inspect raster data</center>
+
+```r
+> str(agras)
+Formal class 'RasterLayer' [package "raster"] with 12 slots
+  ..@ file    :Formal class '.RasterFile' [package "raster"] with 13 slots
+  .. .. ..@ name        : chr "RGI60-02/RGI60-02.16664_thickness.tif"
+  .. .. ..@ datanotation: chr "FLT4S"
+  .. .. ..@ byteorder   : chr "little"
+.. .. ..@ nodatavalue : num -Inf
+.. .. ..@ NAchanged   : logi FALSE
+.. .. ..@ nbands      : int 1
+.. .. ..@ bandorder   : chr "BIL"
+.. .. ..@ offset      : int 0
+.. .. ..@ toptobottom : logi TRUE
+.. .. ..@ blockrows   : int 27
+.. .. ..@ blockcols   : int 74
+.. .. ..@ driver      : chr "gdal"
+.. .. ..@ open        : logi FALSE
+..@ data    :Formal class '.SingleLayerData' [package "raster"] with 13 slots
+.. .. ..@ values    : logi(0)
+.. .. ..@ offset    : num 0
+.. .. ..@ gain      : num 1
+.. .. ..@ inmemory  : logi FALSE
+.. .. ..@ fromdisk  : logi TRUE
+.. .. ..@ isfactor  : logi FALSE
+.. .. ..@ attributes: list()
+.. .. ..@ haveminmax: logi FALSE
+.. .. ..@ min       : num Inf
+.. .. ..@ max       : num -Inf
+.. .. ..@ band      : int 1
+.. .. ..@ unit      : chr ""
+.. .. ..@ names     : chr "RGI60.02.16664_thickness"
+..@ legend  :Formal class '.RasterLegend' [package "raster"] with 5 slots
+.. .. ..@ type      : chr(0)
+.. .. ..@ values    : logi(0)
+.. .. ..@ color     : logi(0)
+.. .. ..@ names     : logi(0)
+.. .. ..@ colortable: logi(0)
+..@ title   : chr(0)
+..@ extent  :Formal class 'Extent' [package "raster"] with 4 slots
+.. .. ..@ xmin: num 707362
+.. .. ..@ xmax: num 709212
+.. .. ..@ ymin: num 5422962
+.. .. ..@ ymax: num 5425288
+..@ rotated : logi FALSE
+..@ rotation:Formal class '.Rotation' [package "raster"] with 2 slots
+.. .. ..@ geotrans: num(0)
+.. .. ..@ transfun:function ()
+  ..@ ncols   : int 74
+  ..@ nrows   : int 93
+  ..@ crs     :Formal class 'CRS' [package "sp"] with 1 slot
+  .. .. ..@ projargs: chr "+proj=utm +zone=11 +datum=WGS84 +units=m +no_defs"
+  ..@ history : list()
+  ..@ z       : list()
+```
+
+---
+
+### <center>Map of ice thickness Agassiz Glacier</center>
+
+This time, we use `tm_raster()`:
+
+```r
+tm_shape(agras) +
+  tm_raster() +
+  tm_layout(
+	title = "Ice thickness (m) of Agassiz Glacier",
+	title.position = c("center", "top"),
+	legend.position = c("left", "bottom"),
+	legend.bg.color = "#d9d9d9",
+	legend.title.color = "#d9d9d9",
+	legend.text.size = 1,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.07, 0.03, 0.07, 0.03),
+	outer.margins = 0
+  ) +
+  tm_compass(
+	type = "arrow",
+	position = c("right", "top"),
+	text.size = 0.7
+  ) +
+  tm_scale_bar(
+	breaks = c(0, 0.5, 1),
+	position = c("right", "BOTTOM"),
+	text.size = 1
+  )
+```
+
+---
+
+{{<imgshadow src="/img/r_gis/ag_thickness.png" title="" width="50%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
+---
