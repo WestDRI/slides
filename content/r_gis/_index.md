@@ -76,6 +76,8 @@ library(rnaturalearth)      # basemap data access functions
 library(rnaturalearthdata)  # basemap data
 library(mapview)            # tiled web map
 library(grid)               # (part of base R) used to create inset map
+library(ggmap)              # download basemap data
+library(basemaps)           # download basemap data
 library(ggplot2)            # alternative to tmap for map production
 ```
 
