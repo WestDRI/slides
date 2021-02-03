@@ -193,7 +193,7 @@ body {
   display: block;
   position: relative;
   max-width: 100%;
-  margin: $blockMargin auto;
+  margin: 1.5rem auto 1.8rem auto;
   padding: 0.4rem 0.5rem 0.4rem 1.5rem;
   text-align: left;
   line-height: 2.2rem;
@@ -508,7 +508,7 @@ figcaption {
 }
 
 .note-block {
-  margin: 45px 10px 10px 50px;
+  margin: 45px 10px 45px 50px;
   border-left: 5px solid #636f83;
   padding-left: 1.5rem;
   line-height: 1.8rem;
