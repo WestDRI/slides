@@ -743,7 +743,13 @@ inset_map <- tm_shape(gnp) +
 {{<imgshadow src="/img/r_gis/inset_bg3.png" title="" width="70%" line-height="1.0rem">}}
 {{</imgshadow>}}
 
+---
+
 ## <center>Mapping a subset of the data</center>
+
+{{%fragment%}}
+To see the retreat of the glaciers, we need to zoom in on this map. So let's focus on a single glacier: the Agassiz Glacier.
+{{%/fragment%}}
 
 ---
 
