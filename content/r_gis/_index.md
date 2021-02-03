@@ -642,7 +642,7 @@ tm_shape(ag) +
 
 ---
 
-### <center>Faceted map of the Agassiz Glacier</center>
+#### <center>Faceted map of the retreat of Agassiz Glacier</center>
 
 ```r
 tm_shape(ag) +
@@ -682,5 +682,67 @@ tm_shape(ag) +
 ---
 
 {{<imgshadow src="/img/r_gis/agfacet.png" title="" width="%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
+---
+
+## <center>Animated map</center>
+
+---
+
+#### <center>Animated map of the Retreat of Agassiz Glacier</center>
+
+First, we need to create a `tmap` object with facets:
+
+```r
+agassiz_anim <- tm_shape(ag) +
+  tm_borders() +
+  tm_fill(col = "#86baff") +
+  tm_layout(
+    title = "Agassiz Glacier",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom"),
+    legend.title.color = "#fcfcfc",
+    legend.text.size = 1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.08, 0, 0.08, 0),
+    outer.margins = 0
+  ) +
+  tm_compass(
+    type = "arrow",
+    position = c("right", "top"),
+    text.size = 0.7
+  ) +
+  tm_scale_bar(
+    breaks = c(0, 0.5, 1),
+    position = c("right", "BOTTOM"),
+    text.size = 1
+  ) +
+  tm_facets(
+    along = "year",
+    free.coords = F
+  )
+
+```
+
+---
+
+#### <center>Animated map of the Retreat of Agassiz Glacier</center>
+<br>
+Then we can pass that object to `tmap_animation()`:
+
+```r
+tmap_animation(
+  agassiz_anim,
+  filename = "ag.gif",
+  dpi = 300,
+  inner.margins = c(0.08, 0, 0.08, 0),
+  delay = 100
+)
+```
+
+---
+
+{{<imgshadow src="/img/r_gis/ag.gif" title="" width="70%" line-height="1.0rem">}}
 {{</imgshadow>}}
 
