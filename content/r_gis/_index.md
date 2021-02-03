@@ -202,3 +202,85 @@ $ geometry:sfc_POLYGON of length 27108; first list element: List of 1
 ..- attr(*, "names")= chr [1:22] "RGIId" "GLIMSId" "BgnDate" "EndDate" ...
 ```
 
+---
+
+# <center>Mapping with tmap</center>
+
+---
+
+### <center>Combining datasets</center>
+
+{{<note>}}
+The Coordinate Reference Systems (CRS) must be the same
+{{</note>}}
+
+```r
+> st_crs(ak) == st_crs(wes)
+[1] TRUE
+```
+
+The spatial bounding boxes (`bbox`) however are different\\
+(of course, since the 2 datasets cover different geographic areas)
+
+```r
+> st_bbox(ak) == st_bbox(wes)
+ xmin  ymin  xmax  ymax 
+FALSE FALSE FALSE FALSE 
+```
+
+---
+
+### <center>Union of bounding boxes</center>
+
+```r
+nwa_bbox <- st_bbox(
+  st_union(
+    st_as_sfc(st_bbox(wes)),
+    st_as_sfc(st_bbox(ak))
+  )
+)
+```
+
+Our new bounding box for the map of Western North America:
+
+```r
+> nwa_bbox
+      xmin       ymin       xmax       ymax 
+-176.14247   36.38625 -105.60821   69.35167 
+```
+
+---
+
+### <center>Glaciers of Western North America</center>
+
+```r
+tm_shape(ak, bbox = nwa_bbox) +
+  tm_polygons() +
+  tm_shape(wes) +
+  tm_polygons() +
+  tm_layout(
+    title = "Glaciers of Western North America",
+    title.position = c("center", "top"),
+    title.size = 1.1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.06, 0.01, 0.09, 0.01),
+    outer.margins = 0,
+    frame.lwd = 0.2
+  ) +
+  tm_compass(
+    type = "arrow",
+    position = c("right", "top"),
+    size = 1.2,
+    text.size = 0.6
+  ) +
+  tm_scale_bar(
+    breaks = c(0, 1000, 2000),
+    position = c("right", "BOTTOM")
+  )
+```
+
+---
+
+{{<imgshadow src="/img/r_gis/nwa.png" title="" width="70%" line-height="0.5rem">}}
+{{</imgshadow>}}
+
