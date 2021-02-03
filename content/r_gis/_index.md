@@ -67,15 +67,15 @@ We will use data from:
 ### <center>Packages</center>
 
 ```r
-library(sf)
-library(tmap)
-library(dplyr)
-library(magrittr)
-library(purrr)
-library(rnaturalearth)
-library(rnaturalearthdata)
-library(mapview)
-library(grid)  # part of base R
+library(sf)                 # spatial vector data manipulation
+library(tmap)               # map production & tiled web map
+library(dplyr)              # non GIS specific (tabular data manipulation)
+library(magrittr)           # non GIS specific (pipes)
+library(purrr)              # non GIS specific (functional programming)
+library(rnaturalearth)      # basemap data access functions
+library(rnaturalearthdata)  # basemap data
+library(mapview)            # tiled web map
+library(grid)               # (part of base R) used to create inset map
 ```
 
 ---
