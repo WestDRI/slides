@@ -648,30 +648,35 @@ tm_shape(gnp_zone) +
 **Second step: create a `tmap` object for our main map:**
 
 ```r
-main_map <- tm_shape(ak, bbox = nwa_bbox) +
-  tm_polygons() +
+main_map <- tm_shape(states, bbox = nwa_bbox) +
+  tm_polygons(col = "#f2f2f2",
+              lwd = 0.2) +
+  tm_shape(ak) +
+  tm_borders(col = "#3399ff") +
+  tm_fill(col = "#86baff") +
   tm_shape(wes) +
-  tm_polygons() +
+  tm_borders(col = "#3399ff") +
+  tm_fill(col = "#86baff") +
   tm_shape(gnp_zone) +
   tm_borders(lwd = 1.5, col = "#ff9900") +
   tm_layout(
-	title = "Glaciers of Glacier National Park",
-	title.position = c("center", "top"),
-	title.size = 1.1,
-	bg.color = "#fcfcfc",
-	inner.margins = c(0.06, 0.01, 0.09, 0.01),
-	outer.margins = 0,
-	frame.lwd = 0.2
+    title = "Glaciers of Glacier National Park",
+    title.position = c("center", "top"),
+    title.size = 1.1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.06, 0.01, 0.09, 0.01),
+    outer.margins = 0,
+    frame.lwd = 0.2
   ) +
   tm_compass(
-	type = "arrow",
-	position = c("right", "top"),
-	size = 1.2,
-	text.size = 0.6
+    type = "arrow",
+    position = c("right", "top"),
+    size = 1.2,
+    text.size = 0.6
   ) +
   tm_scale_bar(
-	breaks = c(0, 500, 1000),
-	position = c("right", "BOTTOM")
+    breaks = c(0, 500, 1000),
+    position = c("right", "BOTTOM")
   )
 ```
 
@@ -710,11 +715,12 @@ print(inset_map, vp = viewport(0.41, 0.26, width = 0.5, height = 0.5))
 
 ---
 
-{{<imgshadow src="/img/r_gis/inset.png" title="" width="70%" line-height="1.0rem">}}
+{{<imgshadow src="/img/r_gis/inset_bg.png" title="" width="70%" line-height="1.0rem">}}
 {{</imgshadow>}}
 
 ---
 
+#### <center>Variation of the inset</center>
 ## <center>Mapping a subset of the data</center>
 
 ---
