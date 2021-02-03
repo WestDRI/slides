@@ -847,3 +847,68 @@ tmap_animation(
 {{<imgshadow src="/img/r_gis/ag.gif" title="" width="70%" line-height="1.0rem">}}
 {{</imgshadow>}}
 
+---
+
+## <center>Tiled web maps with Leaflet</center>
+
+---
+
+##### <center>Tiled web maps with Leaflet</center>
+### <center>mapview</center>
+
+```r
+mapview(gnp)
+```
+
+---
+
+##### <center>Tiled web maps with Leaflet</center>
+### <center>mapview</center>
+
+<figure style="display: table;">
+  <div class="row">
+	<div class="column">
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview4.png">
+	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
+	<figcaption>
+	  <em>
+		CartoDB.Positron
+	  </em>
+	</figcaption>
+	  </div>
+	</div>
+	<div class="column">
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview1.png"  >
+	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
+	<figcaption>
+	  <em>
+		OpenTopoMap
+	  </em>
+	</figcaption>
+	  </div>
+	</div>
+  </div>
+  <div class="row">
+	<div class="column">
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview3.png" margin="5rem" >
+	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
+	<figcaption>
+	  <em>
+		OpenStreetMap
+	  </em>
+	</figcaption>
+	  </div>
+	</div>
+	<div class="column">
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview2.png" margin="5rem" >
+	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
+	<figcaption>
+	  <em>
+		Esri.WorldImagery
+	  </em>
+	</figcaption>
+	  </div>
+	</div>
+  </div>
+</figure>
+
