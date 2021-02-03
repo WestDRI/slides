@@ -337,18 +337,20 @@ states_all <- ne_states(
 ```r
 states <- states_all %>%
   filter(name_en == "Alaska" |
-		   name_en == "British Columbia" |
-		   name_en == "Yukon" |
-		   name_en == "Northwest Territories" |
-		   name_en ==  "Alberta" |
-		   name_en == "California" |
-		   name_en == "Washington" |
-		   name_en == "Oregon" |
-		   name_en == "Idaho" |
-		   name_en == "Montana" |
-		   name_en == "Wyoming" |
-		   name_en == "Colorado"
-		 )
+           name_en == "British Columbia" |
+           name_en == "Yukon" |
+           name_en == "Northwest Territories" |
+           name_en ==  "Alberta" |
+           name_en == "California" |
+           name_en == "Washington" |
+           name_en == "Oregon" |
+           name_en == "Idaho" |
+           name_en == "Montana" |
+           name_en == "Wyoming" |
+           name_en == "Colorado" |
+           name_en == "Nevada" |
+           name_en == "Utah"
+         )
 ```
 
 ---
