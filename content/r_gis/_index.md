@@ -1287,3 +1287,6 @@ tm_shape(agras) +
 {{<imgshadow src="/img/r_gis/ag_combined.png" title="" width="50%" line-height="1.0rem">}}
 {{</imgshadow>}}
 
+---
+
+# <center><span style="font-size: 5.0rem">Questions?</span></center>
