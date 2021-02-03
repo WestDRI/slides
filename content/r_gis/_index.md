@@ -1053,3 +1053,15 @@ Re-plot the last map we plotted with **tmap**:
 tmap_last()
 ```
 
+---
+
+##### <center>Tiled web maps with Leaflet</center>
+### <center>leaflet</center>
+
+`leaflet()` creates a map widget to which you add layers.
+
+```r
+map <- leaflet()
+addTiles(map)
+```
+
