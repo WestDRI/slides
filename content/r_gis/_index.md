@@ -66,7 +66,7 @@ This dataset can be accessed direction from within R thanks to the packages `rna
 
 ---
 
-### <center>Load packages</center>
+#### <center>Load packages</center>
 
 ```r
 library(sf)                 # spatial vector data manipulation
@@ -81,6 +81,7 @@ library(grid)               # (part of base R) used to create inset map
 library(ggmap)              # download basemap data
 library(basemaps)           # download basemap data
 library(ggplot2)            # alternative to tmap for map production
+library(raster)             # gridded spatial data manipulation
 ```
 
 {{<note>}}
