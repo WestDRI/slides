@@ -56,11 +56,11 @@ The datasets can be downloaded as zip files from these websites.
 
 ---
 
-### <center>Basemaps</center>
+### <center>Basemap</center>
 <br>
-We will use data from:
+We will use data from [Natural Earth](https://www.naturalearthdata.com/), a public domain map dataset.
 
-- [Natural Earth](https://www.naturalearthdata.com/): this dataset can be accessed direction from within R thanks to the packages `rnaturalearth` (provides the functions) & `rnaturalearthdata` (provides the data)
+This dataset can be accessed direction from within R thanks to the packages `rnaturalearth` (provides the functions) & `rnaturalearthdata` (provides the data).
 
 ---
 
@@ -130,7 +130,7 @@ dimension:      XY
 bbox:           xmin: -176.1425 ymin: 52.05727 xmax: -126.8545 ymax: 69.35167
 geographic CRS: WGS 84
 First 10 features:
-           RGIId        GLIMSId  BgnDate  EndDate    CenLon   CenLat O1Region
+		   RGIId        GLIMSId  BgnDate  EndDate    CenLon   CenLat O1Region
 1  RGI60-01.00001 G213177E63689N 20090703 -9999999 -146.8230 63.68900        1
 2  RGI60-01.00002 G213332E63404N 20090703 -9999999 -146.6680 63.40400        1
 3  RGI60-01.00003 G213920E63376N 20090703 -9999999 -146.0800 63.37600        1
@@ -224,8 +224,8 @@ The spatial bounding boxes (`bbox`) however are different\\
 
 ```r
 > st_bbox(ak) == st_bbox(wes)
- xmin  ymin  xmax  ymax 
-FALSE FALSE FALSE FALSE 
+ xmin  ymin  xmax  ymax
+FALSE FALSE FALSE FALSE
 ```
 
 ---
@@ -235,8 +235,8 @@ FALSE FALSE FALSE FALSE
 ```r
 nwa_bbox <- st_bbox(
   st_union(
-    st_as_sfc(st_bbox(wes)),
-    st_as_sfc(st_bbox(ak))
+	st_as_sfc(st_bbox(wes)),
+	st_as_sfc(st_bbox(ak))
   )
 )
 ```
@@ -245,8 +245,8 @@ Our new bounding box for the map of Western North America:
 
 ```r
 > nwa_bbox
-      xmin       ymin       xmax       ymax 
--176.14247   36.38625 -105.60821   69.35167 
+	  xmin       ymin       xmax       ymax
+-176.14247   36.38625 -105.60821   69.35167
 ```
 
 ---
@@ -259,23 +259,23 @@ tm_shape(ak, bbox = nwa_bbox) +
   tm_shape(wes) +
   tm_polygons() +
   tm_layout(
-    title = "Glaciers of Western North America",
-    title.position = c("center", "top"),
-    title.size = 1.1,
-    bg.color = "#fcfcfc",
-    inner.margins = c(0.06, 0.01, 0.09, 0.01),
-    outer.margins = 0,
-    frame.lwd = 0.2
+	title = "Glaciers of Western North America",
+	title.position = c("center", "top"),
+	title.size = 1.1,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.06, 0.01, 0.09, 0.01),
+	outer.margins = 0,
+	frame.lwd = 0.2
   ) +
   tm_compass(
-    type = "arrow",
-    position = c("right", "top"),
-    size = 1.2,
-    text.size = 0.6
+	type = "arrow",
+	position = c("right", "top"),
+	size = 1.2,
+	text.size = 0.6
   ) +
   tm_scale_bar(
-    breaks = c(0, 1000, 2000),
-    position = c("right", "BOTTOM")
+	breaks = c(0, 1000, 2000),
+	position = c("right", "BOTTOM")
   )
 ```
 
@@ -305,15 +305,15 @@ prep <- function(dir) {
   g <- st_read(dir)
   g %<>% rename_with(~ tolower(gsub("Area....", "area", .x)))
   g %<>% select(
-    year,
-    objectid,
-    glacname,
-    area,
-    shape_leng,
-    x_coord,
-    y_coord,
-    source_sca,
-    source
+	year,
+	objectid,
+	glacname,
+	area,
+	shape_leng,
+	x_coord,
+	y_coord,
+	source_sca,
+	source
   )
 }
 
@@ -368,7 +368,7 @@ First 10 features:
 8  1966        8     Dixon Glacier  291142.05  4290.1178 279133.259744622
 9  1966        9       Gem Glacier   29140.12   729.2132 299428.059935107
 10 1966       10     Grant Glacier  347753.17  3566.9214 296042.327952401
-            y_coord source_sca                                           source
+			y_coord source_sca                                           source
 1  5424909.85602688    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
 2  5413721.34271866    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
 3  5421759.44177687    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
@@ -379,7 +379,7 @@ First 10 features:
 8  5423939.24915264    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
 9  5402885.93646811    1:24000 USGS Orthorectified Aerial Image from 08/24/1966
 10  5356015.8412555    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
-                         geometry
+						 geometry
 1  MULTIPOLYGON (((269058 5425...
 2  MULTIPOLYGON (((296217 5413...
 3  MULTIPOLYGON (((269177.9 54...
@@ -436,23 +436,23 @@ $ geometry  :sfc_MULTIPOLYGON of length 156; first list element: List of 1
 tm_shape(gnp) +
   tm_polygons("year", palette = "Blues") +
   tm_layout(
-    title = "Glaciers of Glacier National Park",
-    title.position = c("center", "top"),
-    legend.title.color = "#fcfcfc",
-    legend.text.size = 1,
-    bg.color = "#fcfcfc",
-    inner.margins = c(0.07, 0.03, 0.07, 0.03),
-    outer.margins = 0
+	title = "Glaciers of Glacier National Park",
+	title.position = c("center", "top"),
+	legend.title.color = "#fcfcfc",
+	legend.text.size = 1,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.07, 0.03, 0.07, 0.03),
+	outer.margins = 0
   ) +
   tm_compass(
-    type = "arrow",
-    position = c("right", "top"),
-    text.size = 0.7
+	type = "arrow",
+	position = c("right", "top"),
+	text.size = 0.7
   ) +
   tm_scale_bar(
-    breaks = c(0, 10, 20),
-    position = c("right", "BOTTOM"),
-    text.size = 1
+	breaks = c(0, 10, 20),
+	position = c("right", "BOTTOM"),
+	text.size = 1
   )
 ```
 
@@ -530,23 +530,23 @@ main_map <- tm_shape(ak, bbox = nwa_bbox) +
   tm_shape(gnp_zone) +
   tm_borders(lwd = 1.5, col = "#ff9900") +
   tm_layout(
-    title = "Glaciers of Glacier National Park",
-    title.position = c("center", "top"),
-    title.size = 1.1,
-    bg.color = "#fcfcfc",
-    inner.margins = c(0.06, 0.01, 0.09, 0.01),
-    outer.margins = 0,
-    frame.lwd = 0.2
+	title = "Glaciers of Glacier National Park",
+	title.position = c("center", "top"),
+	title.size = 1.1,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.06, 0.01, 0.09, 0.01),
+	outer.margins = 0,
+	frame.lwd = 0.2
   ) +
   tm_compass(
-    type = "arrow",
-    position = c("right", "top"),
-    size = 1.2,
-    text.size = 0.6
+	type = "arrow",
+	position = c("right", "top"),
+	size = 1.2,
+	text.size = 0.6
   ) +
   tm_scale_bar(
-    breaks = c(0, 500, 1000),
-    position = c("right", "BOTTOM")
+	breaks = c(0, 500, 1000),
+	position = c("right", "BOTTOM")
   )
 ```
 
@@ -562,13 +562,13 @@ Matching colors and edited layouts will help with readability:
 inset_map <- tm_shape(gnp) +
   tm_polygons("year", palette = "Blues") +
   tm_layout(
-    legend.title.color = "#fcfcfc",
-    legend.text.size = 0.7,
-    bg.color = "#fcfcfc",
-    inner.margins = c(0.03, 0.03, 0.03, 0.03),
-    outer.margins = 0,
-    frame = "#ff9900",
-    frame.lwd = 3
+	legend.title.color = "#fcfcfc",
+	legend.text.size = 0.7,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.03, 0.03, 0.03, 0.03),
+	outer.margins = 0,
+	frame = "#ff9900",
+	frame.lwd = 3
   )
 ```
 
@@ -610,24 +610,24 @@ ag <- g %>% filter(glacname == "Agassiz Glacier")
 tm_shape(ag) +
   tm_polygons("year", palette = "Blues") +
   tm_layout(
-    title = "Agassiz Glacier",
-    title.position = c("center", "top"),
-    legend.position = c("left", "bottom"),
-    legend.title.color = "#fcfcfc",
-    legend.text.size = 1,
-    bg.color = "#fcfcfc",
-    inner.margins = c(0.07, 0.03, 0.07, 0.03),
-    outer.margins = 0
+	title = "Agassiz Glacier",
+	title.position = c("center", "top"),
+	legend.position = c("left", "bottom"),
+	legend.title.color = "#fcfcfc",
+	legend.text.size = 1,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.07, 0.03, 0.07, 0.03),
+	outer.margins = 0
   ) +
   tm_compass(
-    type = "arrow",
-    position = c("right", "top"),
-    text.size = 0.7
+	type = "arrow",
+	position = c("right", "top"),
+	text.size = 0.7
   ) +
   tm_scale_bar(
-    breaks = c(0, 0.5, 1),
-    position = c("right", "BOTTOM"),
-    text.size = 1
+	breaks = c(0, 0.5, 1),
+	position = c("right", "BOTTOM"),
+	text.size = 1
   )
 ```
 
@@ -648,34 +648,34 @@ tm_shape(ag) +
 tm_shape(ag) +
   tm_polygons(col = "#86baff") +
   tm_layout(
-    main.title = "Agassiz Glacier",
-    main.title.position = c("center", "top"),
-    main.title.size = 1.2,
-    legend.position = c("left", "bottom"),
-    legend.title.color = "#fcfcfc",
-    legend.text.size = 1,
-    bg.color = "#fcfcfc",
-    ## inner.margins = c(0, 0.03, 0, 0.03),
-    outer.margins = 0,
-    panel.label.bg.color = "#fcfcfc",
-    frame = F,
-    asp = 0.6
+	main.title = "Agassiz Glacier",
+	main.title.position = c("center", "top"),
+	main.title.size = 1.2,
+	legend.position = c("left", "bottom"),
+	legend.title.color = "#fcfcfc",
+	legend.text.size = 1,
+	bg.color = "#fcfcfc",
+	## inner.margins = c(0, 0.03, 0, 0.03),
+	outer.margins = 0,
+	panel.label.bg.color = "#fcfcfc",
+	frame = F,
+	asp = 0.6
   ) +
   tm_compass(
-    type = "arrow",
-    position = c("right", "top"),
-    size = 1,
-    text.size = 0.6
+	type = "arrow",
+	position = c("right", "top"),
+	size = 1,
+	text.size = 0.6
   ) +
   tm_scale_bar(
-    breaks = c(0, 0.5, 1),
-    position = c("right", "BOTTOM"),
-    text.size = 0.6
+	breaks = c(0, 0.5, 1),
+	position = c("right", "BOTTOM"),
+	text.size = 0.6
   ) +
   tm_facets(
-    by = "year",
-    free.coords = F,
-    ncol = 4
+	by = "year",
+	free.coords = F,
+	ncol = 4
   )
 ```
 
@@ -699,28 +699,28 @@ agassiz_anim <- tm_shape(ag) +
   tm_borders() +
   tm_fill(col = "#86baff") +
   tm_layout(
-    title = "Agassiz Glacier",
-    title.position = c("center", "top"),
-    legend.position = c("left", "bottom"),
-    legend.title.color = "#fcfcfc",
-    legend.text.size = 1,
-    bg.color = "#fcfcfc",
-    inner.margins = c(0.08, 0, 0.08, 0),
-    outer.margins = 0
+	title = "Agassiz Glacier",
+	title.position = c("center", "top"),
+	legend.position = c("left", "bottom"),
+	legend.title.color = "#fcfcfc",
+	legend.text.size = 1,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.08, 0, 0.08, 0),
+	outer.margins = 0
   ) +
   tm_compass(
-    type = "arrow",
-    position = c("right", "top"),
-    text.size = 0.7
+	type = "arrow",
+	position = c("right", "top"),
+	text.size = 0.7
   ) +
   tm_scale_bar(
-    breaks = c(0, 0.5, 1),
-    position = c("right", "BOTTOM"),
-    text.size = 1
+	breaks = c(0, 0.5, 1),
+	position = c("right", "BOTTOM"),
+	text.size = 1
   ) +
   tm_facets(
-    along = "year",
-    free.coords = F
+	along = "year",
+	free.coords = F
   )
 
 ```
