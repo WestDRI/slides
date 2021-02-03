@@ -473,7 +473,6 @@ As always, first we check that the CRS are the same:
 > st_crs(ak) == st_crs(gnp)
 [1] FALSE
 ```
-<br>
 
 {{%fragment%}}
 <b><center>:(</center></b>
@@ -587,5 +586,53 @@ print(inset_map, vp = viewport(0.41, 0.26, width = 0.5, height = 0.5))
 ---
 
 {{<imgshadow src="/img/r_gis/inset.png" title="" width="70%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
+---
+
+## <center>Mapping a subset of the data</center>
+
+---
+
+### <center>Map of the Agassiz Glacier</center>
+<br>
+Select the data points corresponding to the Agassiz Glacier:
+
+```r
+ag <- g %>% filter(glacname == "Agassiz Glacier")
+```
+
+---
+
+### <center>Map of the Agassiz Glacier</center>
+
+```r
+tm_shape(ag) +
+  tm_polygons("year", palette = "Blues") +
+  tm_layout(
+    title = "Agassiz Glacier",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom"),
+    legend.title.color = "#fcfcfc",
+    legend.text.size = 1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.07, 0.03, 0.07, 0.03),
+    outer.margins = 0
+  ) +
+  tm_compass(
+    type = "arrow",
+    position = c("right", "top"),
+    text.size = 0.7
+  ) +
+  tm_scale_bar(
+    breaks = c(0, 0.5, 1),
+    position = c("right", "BOTTOM"),
+    text.size = 1
+  )
+```
+
+---
+
+{{<imgshadow src="/img/r_gis/ag.png" title="" width="45%" line-height="1.0rem">}}
 {{</imgshadow>}}
 
