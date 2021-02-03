@@ -284,3 +284,180 @@ tm_shape(ak, bbox = nwa_bbox) +
 {{<imgshadow src="/img/r_gis/nwa.png" title="" width="70%" line-height="0.5rem">}}
 {{</imgshadow>}}
 
+---
+
+### <center>Maps based on an attribute variable</center>
+
+#### <center>Retreat of glaciers over time</center>
+#### <center>in Glacier National Park</center>
+<br>
+We will use the [USGS time series of the named glaciers of Glacier National Park](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542)
+
+These 4 datasets have the contour lines of 39 glaciers for the years `1966`, `1998`, `2005`, and `2015`
+
+---
+
+### <center>Cleaning datasets</center>
+
+```r
+## create a function that reads and cleans the data
+prep <- function(dir) {
+  g <- st_read(dir)
+  g %<>% rename_with(~ tolower(gsub("Area....", "area", .x)))
+  g %<>% select(
+    year,
+    objectid,
+    glacname,
+    area,
+    shape_leng,
+    x_coord,
+    y_coord,
+    source_sca,
+    source
+  )
+}
+
+## create a vector of dataset names
+dirs <- grep("GNPglaciers_.*", list.dirs(), value = T)
+
+## pass each element of that vector through prep() thanks to map()
+gnp <- map(dirs, prep)
+```
+
+---
+
+### <center>Combining datasets into one sf object</center>
+
+Checking that the CRS are the same:
+
+```r
+> st_crs(gnp[[1]]) == st_crs(gnp[[2]])
+[1] TRUE
+> st_crs(gnp[[1]]) == st_crs(gnp[[3]])
+[1] TRUE
+> st_crs(gnp[[1]]) == st_crs(gnp[[4]])
+[1] TRUE
+```
+
+We can `rbind` our lists:
+
+```r
+gnp <- do.call("rbind", gnp)
+```
+
+---
+
+### <center>The Glacier National Park data</center>
+
+```r
+> gnp
+Simple feature collection with 156 features and 9 fields
+geometry type:  MULTIPOLYGON
+dimension:      XY
+bbox:           xmin: 263221.4 ymin: 5355550 xmax: 314490 ymax: 5430612
+projected CRS:  NAD83 / UTM zone 12N
+First 10 features:
+   year objectid          glacname       area shape_leng          x_coord
+1  1966        1   Agassiz Glacier 1600559.73 15177.8599 268743.351899585
+2  1966        2     Ahern Glacier  589185.63  3435.4477 295758.255307284
+3  1966        3      Baby Glacier  117171.13  1615.1598 268883.636523344
+4  1966        4 Blackfoot Glacier 1832451.35 13980.9680 303273.800396565
+5  1966        5   Boulder Glacier  231017.73  2847.2854 273967.708607631
+6  1966        6    Carter Glacier  355743.44  3797.6787 276453.100195484
+7  1966        7    Chaney Glacier  563819.03  4574.1331 292401.981825031
+8  1966        8     Dixon Glacier  291142.05  4290.1178 279133.259744622
+9  1966        9       Gem Glacier   29140.12   729.2132 299428.059935107
+10 1966       10     Grant Glacier  347753.17  3566.9214 296042.327952401
+            y_coord source_sca                                           source
+1  5424909.85602688    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
+2  5413721.34271866    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
+3  5421759.44177687    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
+4  5385742.56009277    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
+5  5427330.78714926    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
+6  5419732.76738801    1:24000  USGS 7.5 minute quadrangle map, 66-68/NAIP 2005
+7  5414857.32230536    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
+8  5423939.24915264    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
+9  5402885.93646811    1:24000 USGS Orthorectified Aerial Image from 08/24/1966
+10  5356015.8412555    1:24000        USGS 7.5 minute quadrangle map, 1966-1968
+                         geometry
+1  MULTIPOLYGON (((269058 5425...
+2  MULTIPOLYGON (((296217 5413...
+3  MULTIPOLYGON (((269177.9 54...
+4  MULTIPOLYGON (((304232.1 53...
+5  MULTIPOLYGON (((274147.3 54...
+6  MULTIPOLYGON (((276305.8 54...
+7  MULTIPOLYGON (((291893.1 54...
+8  MULTIPOLYGON (((279083.7 54...
+9  MULTIPOLYGON (((299492.6 54...
+10 MULTIPOLYGON (((295555.1 53...
+```
+
+---
+
+### <center>Structure of Glacier National Park data</center>
+
+```r
+> str(gnp)
+Classes ‘sf’ and 'data.frame':	156 obs. of  10 variables:
+$ year      : chr  "1966" "1966" "1966" "1966" ...
+$ objectid  : num  1 2 3 4 5 6 7 8 9 10 ...
+$ glacname  : chr  "Agassiz Glacier" "Ahern Glacier" "Baby Glacier" ...
+$ area      : num  1600560 589186 117171 1832451 231018 ...
+$ shape_leng: num  15178 3435 1615 13981 2847 ...
+$ x_coord   : chr  "268743.351899585" "295758.255307284" ...
+$ y_coord   : chr  "5424909.85602688" "5413721.34271866" ...
+$ source_sca: chr  "1:24000" "1:24000" "1:24000" "1:24000" ...
+$ source    : chr  "USGS 7.5 minute quadrangle map, 1966-1968" ...
+$ geometry  :sfc_MULTIPOLYGON of length 156; first list element: List of 1
+..$ :List of 12
+.. ..$ : num [1:214, 1:2] 269058 269075 269117 269165 269205 ...
+.. ..$ : num [1:14, 1:2] 268591 268591 268603 268620 268630 ...
+.. ..$ : num [1:9, 1:2] 268658 268692 268723 268726 268737 ...
+.. ..$ : num [1:10, 1:2] 269256 269234 269239 269272 269348 ...
+.. ..$ : num [1:10, 1:2] 268996 269003 269049 269154 269163 ...
+.. ..$ : num [1:19, 1:2] 269402 269470 269486 269487 269509 ...
+.. ..$ : num [1:10, 1:2] 269084 269122 269141 269152 269116 ...
+.. ..$ : num [1:12, 1:2] 269464 269487 269559 269580 269576 ...
+.. ..$ : num [1:8, 1:2] 268893 268923 268939 268925 268884 ...
+.. ..$ : num [1:9, 1:2] 269525 269485 269446 269435 269442 ...
+.. ..$ : num [1:13, 1:2] 269064 269065 269077 269098 269140 ...
+.. ..$ : num [1:10, 1:2] 269074 269054 269066 269095 269135 ...
+..- attr(*, "class")= chr [1:3] "XY" "MULTIPOLYGON" "sfg"
+- attr(*, "sf_column")= chr "geometry"
+- attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: NA NA NA ...
+..- attr(*, "names")= chr [1:9] "year" "objectid" "glacname" "area" ...
+```
+
+---
+
+### <center>Map of Glacier National Park</center>
+
+```r
+tm_shape(gnp) +
+  tm_polygons("year", palette = "Blues") +
+  tm_layout(
+    title = "Glaciers of Glacier National Park",
+    title.position = c("center", "top"),
+    legend.title.color = "#fcfcfc",
+    legend.text.size = 1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.07, 0.03, 0.07, 0.03),
+    outer.margins = 0
+  ) +
+  tm_compass(
+    type = "arrow",
+    position = c("right", "top"),
+    text.size = 0.7
+  ) +
+  tm_scale_bar(
+    breaks = c(0, 10, 20),
+    position = c("right", "BOTTOM"),
+    text.size = 1
+  )
+```
+
+---
+
+{{<imgshadow src="/img/r_gis/gnp.png" title="" width="40%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
