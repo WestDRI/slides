@@ -286,6 +286,107 @@ tm_shape(ak, bbox = nwa_bbox) +
 
 ---
 
+## <center>Basemaps</center>
+
+{{%fragment%}}
+#### <center>Let's add one to our map of the glaciers of WNA</center>
+{{%/fragment%}}
+
+---
+
+#### <center>Getting a basemap from rnaturalearth</center>
+<br>
+```r
+states_all <- ne_states(
+  country = c("canada", "united states of america"),
+  returnclass = "sf"
+)
+```
+
+---
+
+#### <center>Selection of relevant states/provinces</center>
+
+```r
+states <- states_all %>%
+  filter(name_en == "Alaska" |
+		   name_en == "British Columbia" |
+		   name_en == "Yukon" |
+		   name_en == "Northwest Territories" |
+		   name_en ==  "Alberta" |
+		   name_en == "California" |
+		   name_en == "Washington" |
+		   name_en == "Oregon" |
+		   name_en == "Idaho" |
+		   name_en == "Montana" |
+		   name_en == "Wyoming" |
+		   name_en == "Colorado"
+		 )
+```
+
+---
+
+#### <center>Adding a basemap to our map: a few notes</center>
+
+Always make sure the CRS match!
+
+```r
+> st_crs(states) == st_crs(ak)
+[1] TRUE
+```
+
+The bounding boxes are different and we are only interested in the basemap within the bounding box of our data, so this is the only part of the basemap that we will plot.
+
+```r
+> st_bbox(states) == nwa_bbox
+xmin  ymin  xmax  ymax
+FALSE FALSE FALSE FALSE
+```
+
+Play with colors of borders and fill, as well as the width of the borders.
+
+---
+
+#### <center>Add the basemap to our map</center>
+
+```r
+tm_shape(states, bbox = nwa_bbox) +
+  tm_polygons(col = "#f2f2f2",
+			  lwd = 0.2) +
+  tm_shape(ak) +
+  tm_borders(col = "#3399ff") +
+  tm_fill(col = "#86baff") +
+  tm_shape(wes) +
+  tm_borders(col = "#3399ff") +
+  tm_fill(col = "#86baff") +
+  tm_layout(
+	title = "Glaciers of Western North America",
+	title.position = c("center", "top"),
+	title.size = 1.1,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.06, 0.01, 0.09, 0.01),
+	outer.margins = 0,
+	frame.lwd = 0.2
+  ) +
+  tm_compass(
+	type = "arrow",
+	position = c("right", "top"),
+	size = 1.2,
+	text.size = 0.6
+  ) +
+  tm_scale_bar(
+	breaks = c(0, 1000, 2000),
+	position = c("right", "BOTTOM")
+  )
+```
+
+---
+
+{{<imgshadow src="/img/r_gis/nwa_bg.png" title="" width="70%" line-height="0.5rem">}}
+{{</imgshadow>}}
+
+---
+
 ### <center>Maps based on an attribute variable</center>
 
 #### <center>Retreat of glaciers over time</center>
