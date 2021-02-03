@@ -721,6 +721,28 @@ print(inset_map, vp = viewport(0.41, 0.26, width = 0.5, height = 0.5))
 ---
 
 #### <center>Variation of the inset</center>
+
+The scale is too small to show the retreat of the glaciers on this map. So it might be better to remove the legend and the palette per year and to make the borders and fill of the same colors as in the main map instead:
+
+```r
+inset_map <- tm_shape(gnp) +
+  tm_borders(col = "#3399ff") +
+  tm_fill(col = "#86baff") +
+  tm_layout(
+    legend.show = F,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.03, 0.03, 0.03, 0.03),
+    outer.margins = 0,
+    frame = "#ff9900",
+    frame.lwd = 3
+  )
+```
+
+---
+
+{{<imgshadow src="/img/r_gis/inset_bg3.png" title="" width="70%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
 ## <center>Mapping a subset of the data</center>
 
 ---
