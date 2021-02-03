@@ -689,3 +689,17 @@ figcaption {
     line-height: 1.5rem;
   }
 }
+
+/* Two image containers (use 25% for four, 33.33% for three, etc) */
+.column {
+  float: left;
+  width: 41%;
+  padding: 10px 43px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
