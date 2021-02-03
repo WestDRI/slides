@@ -912,3 +912,26 @@ mapview(gnp)
   </div>
 </figure>
 
+---
+
+##### <center>Tiled web maps with Leaflet</center>
+### <center>tmap</center>
+
+So far, we have used the `plot` mode of `tmap`. There is also a `view` mode which allows interactive viewing in a browser through [Leaflet](https://leafletjs.com/).
+<br><br>
+Change to `view` mode:
+
+```r
+tmap_mode("view")
+```
+
+{{<note>}}
+you can also toggle between modes with {{%c%}}ttm(){{%/c%}}
+{{</note>}}
+
+Re-plot the last map we plotted with tmap:
+
+```r
+tmap_last()
+```
+
