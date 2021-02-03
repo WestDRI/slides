@@ -421,9 +421,9 @@ tm_shape(states, bbox = nwa_bbox) +
 #### <center>Retreat of glaciers over time</center>
 #### <center>in Glacier National Park</center>
 <br>
-We will use the [USGS time series of the named glaciers of Glacier National Park](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542)
+We will use the [USGS time series of the named glaciers of Glacier National Park](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542).
 
-These 4 datasets have the contour lines of 39 glaciers for the years `1966`, `1998`, `2005`, and `2015`
+These 4 datasets have the contour lines of 39 glaciers for the years `1966`, `1998`, `2005`, and `2015`.
 
 ---
 
@@ -1069,7 +1069,8 @@ addTiles(map)
 
 ---
 
-## <center>Raster data</center>
+# <center>raster</center>
+### <center>Great package for spatial raster (gridded) data</center>
 
 ---
 
