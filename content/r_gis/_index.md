@@ -797,6 +797,27 @@ basemap <- get_map(
 <b>ggmap</b> is a powerful package, but Google now requires an API key obtained through registration.
 {{</note>}}
 
+---
+
+### <center>Basemap with basemaps</center>
+<br>
+The package **basemaps** allows to download open source basemap data from several sources, but those cannot easily be combined with `sf` objects.
+<br><br>
+This plots a satellite image of the Agassiz Glacier:
+
+```r
+basemap_plot(ag, map_service = "esri", map_type = "world_imagery")
+```
+
+---
+
+#### <center>Satellite image of the Agassiz Glacier</center>
+
+{{<imgshadow src="/img/r_gis/ag_magick.png" title="" width="80%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
+---
+
 ## <center>Faceted map</center>
 
 ---
