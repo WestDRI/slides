@@ -636,3 +636,51 @@ tm_shape(ag) +
 {{<imgshadow src="/img/r_gis/ag.png" title="" width="45%" line-height="1.0rem">}}
 {{</imgshadow>}}
 
+---
+
+## <center>Faceted map</center>
+
+---
+
+### <center>Faceted map of the Agassiz Glacier</center>
+
+```r
+tm_shape(ag) +
+  tm_polygons(col = "#86baff") +
+  tm_layout(
+    main.title = "Agassiz Glacier",
+    main.title.position = c("center", "top"),
+    main.title.size = 1.2,
+    legend.position = c("left", "bottom"),
+    legend.title.color = "#fcfcfc",
+    legend.text.size = 1,
+    bg.color = "#fcfcfc",
+    ## inner.margins = c(0, 0.03, 0, 0.03),
+    outer.margins = 0,
+    panel.label.bg.color = "#fcfcfc",
+    frame = F,
+    asp = 0.6
+  ) +
+  tm_compass(
+    type = "arrow",
+    position = c("right", "top"),
+    size = 1,
+    text.size = 0.6
+  ) +
+  tm_scale_bar(
+    breaks = c(0, 0.5, 1),
+    position = c("right", "BOTTOM"),
+    text.size = 0.6
+  ) +
+  tm_facets(
+    by = "year",
+    free.coords = F,
+    ncol = 4
+  )
+```
+
+---
+
+{{<imgshadow src="/img/r_gis/agfacet.png" title="" width="%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
