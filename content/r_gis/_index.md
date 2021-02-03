@@ -653,7 +653,7 @@ tm_shape(gnp_zone) +
 ```r
 main_map <- tm_shape(states, bbox = nwa_bbox) +
   tm_polygons(col = "#f2f2f2",
-              lwd = 0.2) +
+			  lwd = 0.2) +
   tm_shape(ak) +
   tm_borders(col = "#3399ff") +
   tm_fill(col = "#86baff") +
@@ -663,23 +663,23 @@ main_map <- tm_shape(states, bbox = nwa_bbox) +
   tm_shape(gnp_zone) +
   tm_borders(lwd = 1.5, col = "#ff9900") +
   tm_layout(
-    title = "Glaciers of Glacier National Park",
-    title.position = c("center", "top"),
-    title.size = 1.1,
-    bg.color = "#fcfcfc",
-    inner.margins = c(0.06, 0.01, 0.09, 0.01),
-    outer.margins = 0,
-    frame.lwd = 0.2
+	title = "Glaciers of Glacier National Park",
+	title.position = c("center", "top"),
+	title.size = 1.1,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.06, 0.01, 0.09, 0.01),
+	outer.margins = 0,
+	frame.lwd = 0.2
   ) +
   tm_compass(
-    type = "arrow",
-    position = c("right", "top"),
-    size = 1.2,
-    text.size = 0.6
+	type = "arrow",
+	position = c("right", "top"),
+	size = 1.2,
+	text.size = 0.6
   ) +
   tm_scale_bar(
-    breaks = c(0, 500, 1000),
-    position = c("right", "BOTTOM")
+	breaks = c(0, 500, 1000),
+	position = c("right", "BOTTOM")
   )
 ```
 
@@ -732,12 +732,12 @@ inset_map <- tm_shape(gnp) +
   tm_borders(col = "#3399ff") +
   tm_fill(col = "#86baff") +
   tm_layout(
-    legend.show = F,
-    bg.color = "#fcfcfc",
-    inner.margins = c(0.03, 0.03, 0.03, 0.03),
-    outer.margins = 0,
-    frame = "#ff9900",
-    frame.lwd = 3
+	legend.show = F,
+	bg.color = "#fcfcfc",
+	inner.margins = c(0.03, 0.03, 0.03, 0.03),
+	outer.margins = 0,
+	frame = "#ff9900",
+	frame.lwd = 3
   )
 ```
 
@@ -808,7 +808,7 @@ The previous map can be reproduced (with some tweaking of style and layout) with
 
 ```r
 ggplot(ag)+
-  geom_sf(aes(fill = year)) + 
+  geom_sf(aes(fill = year)) +
   scale_fill_brewer(palette = "Blues")
 ```
 
@@ -823,10 +823,10 @@ ggplot(ag)+
 ```r
 basemap <- get_map(
   bbox = c(
-    left = st_bbox(ag)[1],
-    bottom = st_bbox(ag)[2],
-    right = st_bbox(ag)[3],
-    top = st_bbox(ag)[4]
+	left = st_bbox(ag)[1],
+	bottom = st_bbox(ag)[2],
+	right = st_bbox(ag)[3],
+	top = st_bbox(ag)[4]
   ),
   source = "osm"
 )
