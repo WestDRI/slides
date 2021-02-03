@@ -773,6 +773,30 @@ ggplot(ag)+
   scale_fill_brewer(palette = "Blues")
 ```
 
+---
+
+## <center>Other ways to add a basemap</center>
+
+---
+
+### <center>Basemap with ggmap</center>
+
+```r
+basemap <- get_map(
+  bbox = c(
+    left = st_bbox(ag)[1],
+    bottom = st_bbox(ag)[2],
+    right = st_bbox(ag)[3],
+    top = st_bbox(ag)[4]
+  ),
+  source = "osm"
+)
+```
+
+{{<note>}}
+<b>ggmap</b> is a powerful package, but Google now requires an API key obtained through registration.
+{{</note>}}
+
 ## <center>Faceted map</center>
 
 ---
