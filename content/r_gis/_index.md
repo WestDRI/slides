@@ -64,7 +64,7 @@ This dataset can be accessed direction from within R thanks to the packages `rna
 
 ---
 
-### <center>Packages</center>
+### <center>Load packages</center>
 
 ```r
 library(sf)                 # spatial vector data manipulation
@@ -76,9 +76,29 @@ library(rnaturalearth)      # basemap data access functions
 library(rnaturalearthdata)  # basemap data
 library(mapview)            # tiled web map
 library(grid)               # (part of base R) used to create inset map
+library(ggplot2)            # alternative to tmap for map production
 ```
 
+{{<note>}}
+Packages need to be installed before they can be loaded in a session.
+{{</note>}}
+
 ---
+
+### <center>Note on installing packages</center>
+
+Packages on CRAN can be installed with:
+
+```r
+install.packages("<package-name>")
+```
+<br>
+`basemaps` is not on CRAN and needs to be installed from GitHub thanks to `devtools`:
+
+```r
+install.packages("devtools")
+devtools::install_github("16EAGLE/basemaps")
+```
 
 # <center>sf</center>
 ### <center>Great package for spatial vector data</center>
