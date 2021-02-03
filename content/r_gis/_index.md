@@ -100,6 +100,8 @@ install.packages("devtools")
 devtools::install_github("16EAGLE/basemaps")
 ```
 
+---
+
 # <center>sf</center>
 ### <center>Great package for spatial vector data</center>
 
@@ -758,6 +760,18 @@ tm_shape(ag) +
 {{</imgshadow>}}
 
 ---
+
+### <center>Using ggplot2 instead of tmap</center>
+<br>
+As an alternative to the **tmap** package, **ggplot2** can plot maps with the `geom_sf()` function.
+
+The previous map can be reproduced (with some tweaking of style and layout) with:
+
+```r
+ggplot(ag)+
+  geom_sf(aes(fill = year)) + 
+  scale_fill_brewer(palette = "Blues")
+```
 
 ## <center>Faceted map</center>
 
