@@ -1075,7 +1075,7 @@ addTiles(map)
 ---
 
 # <center>raster</center>
-### <center>Great package for spatial raster (gridded) data</center>
+### <center>Package for spatial raster (gridded) data</center>
 
 ---
 
