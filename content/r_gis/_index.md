@@ -434,7 +434,7 @@ These 4 datasets have the contour lines of 39 glaciers for the years `1966`, `19
 prep <- function(dir) {
   g <- st_read(dir)
   g %<>% rename_with(~ tolower(gsub("Area....", "area", .x)))
-  g %<>% select(
+  g %<>% dplyr::select(
 	year,
 	objectid,
 	glacname,
@@ -453,6 +453,11 @@ dirs <- grep("GNPglaciers_.*", list.dirs(), value = T)
 ## pass each element of that vector through prep() thanks to map()
 gnp <- map(dirs, prep)
 ```
+
+{{<note>}}
+We use {{%c%}}dplyr::select(){{%/c%}} because <b>raster</b> also has a {{%c%}}select(){{%/c%}} function.
+{{</note>}}
+
 
 ---
 
