@@ -42,3 +42,8 @@ fastai's advantages:
 - a fast and efficient approach
 - the low-level functionality of PyTorch remains accessible for those who need it
 
+---
+
+---
+
+# <center><span style="font-size: 5.0rem">Questions?</span></center>
