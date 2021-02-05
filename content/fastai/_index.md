@@ -30,6 +30,7 @@ PyTorch's advantages:
 
 - written in Python
 - excellent low-level highly customizable functionalities
+<br><br>
 
 ---
 
@@ -42,9 +43,10 @@ fastai's advantages:
 
 - a fast and efficient approach
 - the low-level functionality of PyTorch remains accessible for those who need it
+<br><br>
 
 ---
 
 ---
 
-# <center><span style="font-size: 5.0rem">Questions?</span></center>
+### <center><span style="font-size: 5.0rem">Questions?</span></center>
