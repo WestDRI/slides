@@ -18,6 +18,16 @@ custom_theme_compile = true
 {{<imgright src="/img/wg_white_removed_medium.png" title="" width="60%" line-height="rem">}}
 {{</imgright>}}
 
+---
+
+# PyTorch
+
+PyTorch is the fastest growing machine learning library and is now used for most research papers on the subject.
+
 <br>
+PyTorch's advantages:
+
+- written in Python
+- excellent low-level highly customizable functionalities
 
 ---
