@@ -1,0 +1,48 @@
+<!-- ##################################################################### -->
+<!-- LOGO -->
+<!-- ##################################################################### -->
+<!-- <style> -->
+<!-- @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans:wght@300&display=swap'); -->
+<!-- </style> -->
+
+<!--  -->
+<!-- hide logo front slide -->
+<!--  -->
+<!-- when page is refreshed or for first display -->
+<script type="text/javascript">
+  Reveal.addEventListener('ready', function(event) {
+      if (event.indexh == 0) {
+  	  document.getElementById('logowgnofront').style.display = 'none';
+      }
+  });
+</script>
+<!-- when moving backward to front slide -->
+<script type="text/javascript">
+    Reveal.addEventListener('slidechanged', function(event) {
+        if (event.indexh == 0) {
+  	  document.getElementById('logowgnofront').style.display = 'none';
+        }
+    });
+</script>
+
+<!--  -->
+<!-- show logo 2nd slide -->
+<!--  -->
+<script type="text/javascript">
+    Reveal.addEventListener('slidechanged', function(event) {
+        if (event.indexh == 1) {
+  	  document.getElementById('logowgnofront').style.display = 'block';
+        }
+    });
+</script>
+
+<!-- wg logo which does not change size -->
+<img id="logowgnofront" src="{{ .Param "logowgnofront.src" }}">
+<style>
+  #logowgnofront {
+    position: absolute;
+    top: 1%;
+    left: 0;
+    width: 13%;
+  }
+</style>
