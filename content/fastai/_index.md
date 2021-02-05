@@ -7,7 +7,7 @@ src = "/img/wg_white_removed_medium.png"
 href = "https://westgrid-ml.netlify.app/webinars/fastai/"
 txt = "Back to Webinar Page"
 [reveal_hugo]
-custom_theme = "mh3.scss"
+custom_theme = "mh4.scss"
 custom_theme_compile = true
 +++
 
