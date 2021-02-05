@@ -47,6 +47,20 @@ fastai's advantages:
 
 ---
 
+### Resources
+<br>
+###### Documentation
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[fastai](https://docs.fast.ai/)
+<br><br>
+###### Course
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[fast.ai](https://course.fast.ai/)
+<br><br>
+###### Getting help
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Discourse forum](https://forums.fast.ai/)
+
 ---
 
 ### <center><span style="font-size: 5.0rem">Questions?</span></center>
