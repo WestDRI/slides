@@ -43,7 +43,6 @@ body {
   margin: $headingMargin;
   font-family: $headingFont;
   font-weight: $headingFontWeight;
-  line-height: $headingLineHeight;
   letter-spacing: $headingLetterSpacing;
   text-transform: $headingTextTransform;
   text-shadow: $headingTextShadow;
@@ -64,6 +63,14 @@ body {
 
 .reveal h4 {
   line-height: $heading4LineHeight;
+}
+
+.reveal h5 {
+  line-height: $heading5LineHeight;
+}
+
+.reveal h6 {
+  line-height: $heading6LineHeight;
 }
 
 .reveal h1 {
