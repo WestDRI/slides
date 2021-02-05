@@ -31,3 +31,14 @@ PyTorch's advantages:
 - excellent low-level highly customizable functionalities
 
 ---
+
+# fastai
+
+fastai is a library that builds on top of PyTorch, adding a higher-level of functionality.
+
+<br>
+fastai's advantages:
+
+- a fast and efficient approach
+- the low-level functionality of PyTorch remains accessible for those who need it
+
