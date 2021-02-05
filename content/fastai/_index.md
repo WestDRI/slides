@@ -1,7 +1,7 @@
 +++
 title = "fastai"
 outputs = ["Reveal"]
-[logowg]
+[logowgnofront]
 src = "/img/wg_white_removed_medium.png"
 [backlink]
 href = "https://westgrid-ml.netlify.app/webinars/fastai/"
