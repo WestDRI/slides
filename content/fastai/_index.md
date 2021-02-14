@@ -38,6 +38,10 @@ PyTorch's advantages:
 
 fastai is a library that builds on top of PyTorch, adding a higher-level of functionality.
 
+High level API for PyTorch.
+
+Layered API: allows for very low level research, production model, super easy world class model for beginners
+
 <br>
 fastai's advantages:
 
@@ -57,9 +61,30 @@ fastai's advantages:
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[fast.ai](https://course.fast.ai/)
 <br><br>
+###### Book
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[fast.ai](https://course.fast.ai/)
+Also available as free Jupyter notebooks.
+<br><br>
 ###### Getting help
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Discourse forum](https://forums.fast.ai/)
+
+---
+
+### History
+
+1943: Warren McCulloch & Walter Pitts — mathematical model of artificial neuron
+1961: Frank Rosenblatt — perceptron
+1986: James McClelland, David Rumelhart & PDP Research Group — book "Parallel Distributed Processing"
+
+---
+
+### Neural networks
+
+Single layer of artificial neurons: unable to learn even some of the simple math functions (Marvin Minsky & Seymour Papert)
+Two layers: theoretically can approximate any math model, but in practice very big and slow
+More layers: deeper networks → deep learning
 
 ---
 
