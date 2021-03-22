@@ -1,0 +1,18 @@
+/**
+ * mh2 theme for reveal.js.
+ *
+*/
+
+// * import mixins and settings
+
+@import "reveal-js/css/theme/template/mixins";
+@import "reveal-js/css/theme/template/settings2";
+
+// * import fonts
+
+@import url(https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata&display=swap);
+
+// * import theme
+
+@import "reveal-js/css/theme/template/theme2";
