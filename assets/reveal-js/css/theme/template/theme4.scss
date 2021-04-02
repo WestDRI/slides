@@ -50,60 +50,55 @@ body {
 }
 
 .reveal h1 {
-  line-height: $heading1LineHeight;
-}
-
-.reveal h2 {
-  line-height: $heading2LineHeight;
-}
-
-.reveal h3 {
-  line-height: $heading3LineHeight;
-}
-
-.reveal h4 {
-  line-height: $heading4LineHeight;
-}
-
-.reveal h5 {
-  line-height: $heading5LineHeight;
-}
-
-.reveal h6 {
-  line-height: $heading6LineHeight;
-}
-
-.reveal h1 {
   font-size: $heading1Size;
   color: $heading1Color;
+  line-height: $heading1LineHeight;
+  text-shadow: $heading1TextShadow;
+  margin-bottom: 0.3rem;
 }
+
 .reveal h2 {
   font-size: $heading2Size;
   color: $heading2Color;
+  line-height: $heading2LineHeight;
+  margin-top: 1.6rem;
+  margin-bottom: 0.2rem;
 }
+
 .reveal h3 {
   font-size: $heading3Size;
   color: $heading3Color;
+  line-height: $heading3LineHeight;
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
 }
+
 .reveal h4 {
   font-size: $heading4Size;
   color: $heading4Color;
+  line-height: $heading4LineHeight;
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
 }
+
 .reveal h5 {
   font-size: $heading5Size;
   color: $heading5Color;
+  line-height: $heading5LineHeight;
+  margin-top: 1.4rem;
+  margin-bottom: 0.1rem;
 }
+
 .reveal h6 {
   font-size: $heading6Size;
   color: $heading6Color;
-}
-
-.reveal h1 {
-  text-shadow: $heading1TextShadow;
+  line-height: $heading6LineHeight;
+  margin-top: 1.4rem;
+  margin-bottom: 0.1rem;
 }
 
 .reveal p {
-  margin: $blockMargin 0;
+  margin: 0.15rem 0 0 0;
   line-height: 2.3rem;
   text-align: left;
 }

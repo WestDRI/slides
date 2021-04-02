@@ -21,11 +21,8 @@ $mainFontSize: 25px;
 
 $mainColor: #272a2a;
 
-// Vertical spacing between blocks of text
-$blockMargin: 10px;
-
 // Headings
-$headingMargin: 0 0 $blockMargin 0;
+$headingMargin: 0 0 0.1rem 0;
 
 // $headingFont: 'Crimson Text', serif;
 $headingFont: 'Comfortaa', cursive;
@@ -38,11 +35,11 @@ $heading4Color: #4c4d67;
 $heading5Color: #644f67;
 $heading6Color: #556464;
 
-$heading1LineHeight: 8.0rem;
-$heading2LineHeight: 7.0rem;
-$heading3LineHeight: 6.0rem;
-$heading4LineHeight: 4.5rem;
-$heading5LineHeight: 3.5rem;
+$heading1LineHeight: 7rem;
+$heading2LineHeight: 6rem;
+$heading3LineHeight: 5rem;
+$heading4LineHeight: 4rem;
+$heading5LineHeight: 3rem;
 $heading6LineHeight: 1.5rem;
 $headingLetterSpacing: normal;
 
