@@ -1,8 +1,8 @@
-<figure style="display: table; margin: 0 auto">
+<figure style="display: table; margin: {{ .Get "margin" }} auto">
   <center>
     <img src="{{ .Get "src" }}" title="{{ .Get "title" }}" width="{{ .Get "width" }}">
   </center>
-  <div align="right" style="font-size: 1.3rem; color: #6f5d5d; line-height: {{ .Get "line-height" }}">
+  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: {{ .Get "line-height" }}">
     <figcaption>
       <em>
  	{{ .Inner }}
