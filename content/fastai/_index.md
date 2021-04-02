@@ -21,6 +21,26 @@ custom_theme_compile = true
 
 ---
 
+# <center>What is fastai?</center>
+
+{{<img src="/img/ml/fastai/fastai4_nw.png" margin="2rem" title="" width="60%" line-height="0rem">}}
+{{</img>}}
+
+---
+
+# <center>What is fastai?</center>
+
+{{<img src="/img/ml/fastai/fastai3_nw.png" margin="2rem" title="" width="60%" line-height="0rem">}}
+{{</img>}}
+
+---
+
+# <center>What is fastai?</center>
+
+{{<img src="/img/ml/fastai/fastai2_nw.png" margin="2rem" title="" width="60%" line-height="0rem">}}
+{{</img>}}
+
+---
 # PyTorch
 
 PyTorch is the fastest growing machine learning library and is now used for most research papers on the subject.
