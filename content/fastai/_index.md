@@ -41,6 +41,27 @@ custom_theme_compile = true
 {{</img>}}
 
 ---
+
+## Resources
+
+##### Documentation
+
+[fastai](https://docs.fast.ai/)
+
+##### Course
+
+[fast.ai](https://course.fast.ai/)
+
+##### Book
+
+[fastbook](https://github.com/fastai/fastbook/)
+
+##### Getting help
+
+[Discourse forum](https://forums.fast.ai/)
+
+---
+
 # PyTorch
 
 PyTorch is the fastest growing machine learning library and is now used for most research papers on the subject.
@@ -71,27 +92,6 @@ fastai's advantages:
 
 ---
 
-### Resources
-<br>
-###### Documentation
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[fastai](https://docs.fast.ai/)
-<br><br>
-###### Course
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[fast.ai](https://course.fast.ai/)
-<br><br>
-###### Book
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[fast.ai](https://course.fast.ai/)
-Also available as free Jupyter notebooks.
-<br><br>
-###### Getting help
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Discourse forum](https://forums.fast.ai/)
-
----
-
 ### History
 
 1943: Warren McCulloch & Walter Pitts — mathematical model of artificial neuron
@@ -111,7 +111,6 @@ More layers: deeper networks → deep learning
 ### 
 
 Use Linux.
-
 
 ---
 
