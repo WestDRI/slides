@@ -178,11 +178,7 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 
 ---
 
-### History
 
-1943: Warren McCulloch & Walter Pitts — mathematical model of artificial neuron
-1961: Frank Rosenblatt — perceptron
-1986: James McClelland, David Rumelhart & PDP Research Group — book "Parallel Distributed Processing"
 
 ---
 
