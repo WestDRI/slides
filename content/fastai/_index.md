@@ -290,4 +290,132 @@ From <a href="https://commons.wikimedia.org/w/index.php?curid=1474927">fdeloche,
 
 ---
 
+---
+
+#### <center>*Building* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_01_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+Our model will be made of an architecture (size, depth, types of layers, etc.). \\
+We set this before training and it will not change.
+
+---
+
+#### <center>*Building* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_02_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+Our model will also comprise parameters. Those are set to some initial values, but will change during training. Only at the end of training will they have reached their final values.
+
+---
+
+#### <center>*Training* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_03_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+To train the model, we need labelled data in the form of input/output pairs.
+<br>
+<br>
+
+---
+
+#### <center>*Training* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_04_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+Inputs and parameters are fed to the architecture.
+<br>
+<br>
+
+---
+
+#### <center>*Training* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_05_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+We get predictions as outputs.
+<br>
+<br>
+
+---
+
+#### <center>*Training* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_06_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+These can then be compared with the labels (or true outputs).
+<br>
+<br>
+
+---
+
+#### <center>*Training* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_07_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+The distance between them is the loss.
+<br>
+<br>
+
+---
+
+#### <center>*Training* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_08_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+Of course, we want to minimize the loss. Parameters get adjusted slightly through backpropagation to that effect. This cycle gets repeated at each xxx.
+
+---
+
+#### <center>*Using* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_09_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+At the end of the training process, what we are interested in are the architecture and the parameters.
+<br>
+
+---
+
+#### <center>*Using* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_10_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+The rest was only necessary to train and evaluate our model.
+<br>
+<br>
+
+---
+
+#### <center>*Using* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_11_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+Now our model can be considered as a regular program.
+<br>
+<br>
+
+---
+
+#### <center>*Using* our model</center>
+
+{{<img src="/img/ml/fastai/dl_schematics_12_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
+{{</img>}}
+
+Which means that we can use it to obtain outputs from inputs.
+<br>
+<br>
+
+---
+
 ### <center><span style="font-size: 5.0rem">Questions?</span></center>
