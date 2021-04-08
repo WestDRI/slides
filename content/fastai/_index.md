@@ -37,7 +37,16 @@ custom_theme_compile = true
 
 ---
 
+## PyTorch
 
+PyTorch is currently the fastest growing machine learning library and is now used for most research papers on the subject.
+
+<br>
+PyTorch's advantages:
+
+- written in Python
+- excellent low-level highly customizable functionalities
+<br><br>
 
 ---
 
@@ -78,16 +87,10 @@ fastai's advantages:
 
 ---
 
-# PyTorch
 
-PyTorch is the fastest growing machine learning library and is now used for most research papers on the subject.
 
 <br>
-PyTorch's advantages:
 
-- written in Python
-- excellent low-level highly customizable functionalities
-<br><br>
 
 ---
 
