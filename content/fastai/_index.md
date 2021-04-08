@@ -300,6 +300,10 @@ From <a href="https://commons.wikimedia.org/w/index.php?curid=1474927">fdeloche,
 
 ---
 
+# <center>General principles</center>
+
+---
+
 #### <center>*Building* our model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_01_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
@@ -423,6 +427,10 @@ Now our model can be considered as a regular program.
 Which means that we can use it to obtain outputs from inputs.
 <br>
 <br>
+
+---
+
+# <center>Let's dive in</center>
 
 ---
 
