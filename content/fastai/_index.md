@@ -174,11 +174,7 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 </figure>
 
 <br>
-fastai's advantages:
 
-- a fast and efficient approach
-- the low-level functionality of PyTorch remains accessible for those who need it
-<br><br>
 
 ---
 
