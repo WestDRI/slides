@@ -87,10 +87,30 @@ fastai's advantages:
 
 ---
 
+# <center>Machine learning</center>
+<br>
 
+{{%fragment%}}
+{{<emph>}}
+<center>Computer programs whose performance at a task improves with experience</center>
+{{</emph>}}
+{{%/fragment%}}
 
 <br>
 
+---
+
+#### <center>Dominant approach:</center>
+
+{{%fragment%}}
+{{<emph>}}
+<center>Feeding vast amounts of data to algorithms</center>
+{{</emph>}}
+
+{{<img src="https://imgs.xkcd.com/comics/machine_learning.png" title="" width="%" line-height="1rem">}}
+From <a href="https://xkcd.com/">xkcd.com</a>
+{{</img>}}
+{{%/fragment%}}
 
 ---
 
