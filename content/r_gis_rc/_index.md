@@ -20,6 +20,11 @@ custom_theme_compile = true
 
 ---
 
+{{<img src="/img/r_gis/gis-r-workshop_ubc-brc_2021.png" margin="0rem" title="" width="55%" line-height="rem">}}
+{{</img>}}
+
+---
+
 #### <center><div style="line-height: 1.8rem">Great resources</div></center>
 
 ###### Open GIS data
