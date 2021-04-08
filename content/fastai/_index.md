@@ -131,6 +131,8 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">1986:</span>&nbsp; James McClelland, David Rumelhart & PDP Research Group—book: "Parallel Distributed &emsp;&emsp;&ensp;Processing".
 {{%/fragment%}}
 
+<br>
+
 ---
 
 #### <center>Neurons</center>
@@ -154,6 +156,8 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 
 ---
 
+{{<br size="3">}}
+
 #### <center>Neural networks</center>
 
 <figure style="display: table; margin: 1rem auto">
@@ -175,6 +179,8 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 
 ---
 
+{{<br size="3">}}
+
 #### <center>Neural networks</center>
 {{<br size="4.2">}}
 
@@ -193,6 +199,8 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 {{<br size="9.7">}}
 
 ---
+
+{{<br size="3">}}
 
 #### <center>Neural networks</center>
 {{<br size="4.2">}}
