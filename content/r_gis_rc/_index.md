@@ -165,7 +165,7 @@ geographic CRS: WGS 84
 
 ---
 
-### <center>First look at the data</center>
+## <center>First look at the data</center>
 
 ```r
 > ak
@@ -212,7 +212,7 @@ TermType Surging Linkages Name                       geometry
 
 ---
 
-### <center>Structure of the data</center>
+## <center>Structure of the data</center>
 
 ```r
 > str(ak)
@@ -253,7 +253,7 @@ $ geometry:sfc_POLYGON of length 27108; first list element: List of 1
 
 ---
 
-### <center>Combining datasets</center>
+## <center>Combining datasets</center>
 
 {{<note>}}
 The Coordinate Reference Systems (CRS) must be the same
@@ -275,7 +275,7 @@ FALSE FALSE FALSE FALSE
 
 ---
 
-### <center>Union of bounding boxes</center>
+## <center>Union of bounding boxes</center>
 
 ```r
 nwa_bbox <- st_bbox(
@@ -296,7 +296,7 @@ Our new bounding box for the map of Western North America:
 
 ---
 
-### <center>Glaciers of Western North America</center>
+## <center>Glaciers of Western North America</center>
 
 ```r
 tm_shape(ak, bbox = nwa_bbox) +
@@ -339,7 +339,7 @@ tm_shape(ak, bbox = nwa_bbox) +
 
 ---
 
-#### <center>Getting a basemap from rnaturalearth</center>
+### <center>Getting a basemap from rnaturalearth</center>
 <br>
 ```r
 states_all <- ne_states(
@@ -350,8 +350,8 @@ states_all <- ne_states(
 
 ---
 
-#### <center>Selection of relevant states/provinces</center>
-
+### <center>Selection of relevant data</center>
+<br>
 ```r
 states <- states_all %>%
   filter(name_en == "Alaska" |
@@ -373,7 +373,7 @@ states <- states_all %>%
 
 ---
 
-#### <center>Adding a basemap to our map: a few notes</center>
+### <center>A few notes</center>
 <br>
 Always make sure the CRS match!
 
@@ -394,7 +394,7 @@ Play with colors of borders and fill, as well as the width of the borders.
 
 ---
 
-#### <center>Add the basemap to our map</center>
+### <center>Add the basemap to our map</center>
 
 ```r
 tm_shape(states, bbox = nwa_bbox) +
@@ -632,6 +632,8 @@ As always, first we check that the CRS are the same:
 ```
 {{%/fragment%}}
 
+<br>
+
 {{%fragment%}}
 <b><center>:(</center></b>
 {{%/fragment%}}
@@ -753,7 +755,7 @@ print(inset_map, vp = viewport(0.41, 0.26, width = 0.5, height = 0.5))
 
 ---
 
-#### <center>Adjustments</center>
+### <center>Adjustments</center>
 <br>
 The scale is too small to show the retreat of the glaciers on this map. So it might be better to remove the legend and the palette per year and to make the borders and fill of the same colors as in the main map instead:
 
@@ -882,8 +884,8 @@ basemap_plot(ag, map_service = "esri", map_type = "world_imagery")
 ---
 
 #### <center>Satellite image of the Agassiz Glacier</center>
-
-{{<imgshadow src="/img/r_gis/ag_magick.png" title="" width="80%" line-height="1.0rem">}}
+<br>
+{{<imgshadow src="/img/r_gis/ag_magick.png" title="" width="75%" line-height="1.0rem">}}
 {{</imgshadow>}}
 
 ---
