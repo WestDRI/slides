@@ -209,18 +209,84 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 
 ---
 
-
-
----
-
-
+# <center>Types of NN</center>
 
 ---
 
+#### <center>Fully-connected, feedforward, single-layer NN</center><br>
 
+{{<img src="/img/ml/nn_1layer.png" title="" width="%" line-height="1.5rem">}}
+From <a href="http://neuralnetworksanddeeplearning.com/chap5.html">"Neural Networks and Deep Learning" free online book, Chapter 5</a>
+{{</img>}}
+<br>
+<br>
+
+{{%fragment%}}
+<center>Each neuron receives input from every element of the previous layer.</center>
+{{%/fragment%}}
 
 ---
 
+#### <center>Fully-connected, feedforward, deep NN</center><br>
+
+{{<img src="/img/ml/nn_3layers.png" title="" width="%" line-height="1.5rem">}}
+From <a href="http://neuralnetworksanddeeplearning.com/chap5.html">"Neural Networks and Deep Learning" free online book, Chapter 5</a>
+{{</img>}}
+<br>
+<br>
+
+{{%fragment%}}
+<center>Data with large input sizes (e.g. images) would require a huge number of neurons.</center>
+{{%/fragment%}}
+
+---
+
+#### <center>Convolutional neural network (CNN)</center>
+{{<br size="2.5">}}
+
+{{<img src="/img/ml/cnn_nw.png" title="" width="80%" line-height="2rem">}}
+From <a href="https://codetolight.wordpress.com/2017/11/29/getting-started-with-pytorch-for-deep-learning-part-3-neural-network-basics/">Programming Journeys by Rensu Theart</a>
+{{</img>}}
+
+{{<br size="1.5">}}
+
+{{%fragment%}}
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Used for spatially structured data.</span>
+{{<br size="0.5">}}
+{{%/fragment%}}
+
+{{%fragment%}}
+**Convolution layers** &nbsp;&nbsp;→ &nbsp; each neuron receives input only from a subarea of the previous layer.
+
+**Pooling** &nbsp;&nbsp;→ &nbsp; combines the outputs of neurons in a subarea to reduce the data dimensions.
+{{%/fragment%}}
+
+{{<br size="0.5">}}
+
+{{%fragment%}}
+<em>Not fully connected.</em>
+{{%/fragment%}}
+
+---
+
+#### <center>Recurrent neural network (RNN)</center>
+{{<br size="1.8">}}
+
+{{<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Recurrent_neural_network_unfold.svg" title="" width="%" line-height="0rem">}}
+From <a href="https://commons.wikimedia.org/w/index.php?curid=1474927">fdeloche, Wikipedia</a>
+{{</img>}}
+
+{{<br size="1.3">}}
+
+{{%fragment%}}
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Used for chain structured data (e.g. text).</span>
+{{%/fragment%}}
+
+{{<br size="0.5">}}
+
+{{%fragment%}}
+<em>Not feedforward.</em>
+{{%/fragment%}}
 
 ---
 
