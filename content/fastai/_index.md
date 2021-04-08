@@ -23,15 +23,10 @@ custom_theme_compile = true
 
 # <center>What is fastai?</center>
 
-{{<img src="/img/ml/fastai/fastai4_nw.png" margin="2rem" title="" width="60%" line-height="0rem">}}
-{{</img>}}
-
----
-
-# <center>What is fastai?</center>
-
+{{%fragment%}}
 {{<img src="/img/ml/fastai/fastai3_nw.png" margin="2rem" title="" width="60%" line-height="0rem">}}
 {{</img>}}
+{{%/fragment%}}
 
 ---
 
@@ -39,6 +34,10 @@ custom_theme_compile = true
 
 {{<img src="/img/ml/fastai/fastai2_nw.png" margin="2rem" title="" width="60%" line-height="0rem">}}
 {{</img>}}
+
+---
+
+
 
 ---
 
