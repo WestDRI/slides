@@ -80,26 +80,6 @@ This dataset can be accessed direction from within R thanks to the packages `rna
 ---
 
 # <center>Packages</center>
-
-```r
-library(sf)                 # spatial vector data manipulation
-library(tmap)               # map production & tiled web map
-library(dplyr)              # non GIS specific (tabular data manipulation)
-library(magrittr)           # non GIS specific (pipes)
-library(purrr)              # non GIS specific (functional programming)
-library(rnaturalearth)      # basemap data access functions
-library(rnaturalearthdata)  # basemap data
-library(mapview)            # tiled web map
-library(grid)               # (part of base R) used to create inset map
-library(ggmap)              # download basemap data
-library(ggplot2)            # alternative to tmap for map production
-library(basemaps)           # download basemap data
-library(raster)             # gridded spatial data manipulation
-```
-
----
-
-### <center>Note on installing packages</center>
 <br>
 Packages need to be installed before they can be loaded in a session.
 <br>
@@ -115,6 +95,26 @@ install.packages("<package-name>")
 ```r
 install.packages("devtools")
 devtools::install_github("16EAGLE/basemaps")
+```
+
+---
+
+# <center>Packages</center>
+
+```r
+library(sf)                 # spatial vector data manipulation
+library(tmap)               # map production & tiled web map
+library(dplyr)              # non GIS specific (tabular data manipulation)
+library(magrittr)           # non GIS specific (pipes)
+library(purrr)              # non GIS specific (functional programming)
+library(rnaturalearth)      # basemap data access functions
+library(rnaturalearthdata)  # basemap data
+library(mapview)            # tiled web map
+library(grid)               # (part of base R) used to create inset map
+library(ggmap)              # download basemap data
+library(ggplot2)            # alternative to tmap for map production
+library(basemaps)           # download basemap data
+library(raster)             # gridded spatial data manipulation
 ```
 
 ---
