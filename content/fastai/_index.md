@@ -132,6 +132,47 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 {{%/fragment%}}
 
 ---
+
+#### <center>Neurons</center>
+
+<figure style="display: table; margin: 2rem auto">
+  <div class="row">
+	<div class="column">
+	  <b>Biological</b> <br><br><br><br>
+	  {{<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Neuron.svg" title="" width="100%" line-height="0.5rem">}}
+	  Schematic from <a href="https://commons.wikimedia.org/w/index.php?curid=1474927">Dhp1080, Wikipedia</a>
+	  {{</img>}}
+	</div>
+	<div class="column">
+	   <b>Artificial</b> <br><br><br>
+	   {{<img src="/img/ml/artificial_neuron_nw.png" title="" width="100%" line-height="0.5rem">}}
+	   Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0163">O.C. Akgun & J. Mei 2019</a>
+	   {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+#### <center>Neural networks</center>
+
+<figure style="display: table; margin: 1rem auto">
+  <div class="row">
+	<div class="column">
+	  <b>Biological</b> <br><br><br><br>
+	 {{<img src="/img/ml/brain_neurons.jpg" title="" width="90%" line-height="0.5rem">}}
+	 Image by <a href="https://news.berkeley.edu/2020/03/19/high-speed-microscope-captures-fleeting-brain-signals/">Na Ji, UC Berkeley</a>
+	 {{</img>}}
+	</div>
+	<div class="column">
+	   <b>Artificial</b> <br><br>
+	   {{<img src="/img/ml/nn_single_layer_nw.png" title="" width="100%" line-height="0.5rem">}}
+	   Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0163">O.C. Akgun & J. Mei 2019</a>
+	   {{</img>}}
+	</div>
+  </div>
+</figure>
+
 <br>
 fastai's advantages:
 
