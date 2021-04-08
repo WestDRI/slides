@@ -1,4 +1,4 @@
-<figure style="display: table; text-align: right; margin: 0 5.5rem 0 0">
+<figure style="display: table; text-align: right; margin: {{ .Get "margin" }}">
     <img src="{{ .Get "src" }}" title="{{ .Get "title" }}" width="{{ .Get "width" }}">
   <div align="right" style="font-size: 1.3rem; color: #6f5d5d; line-height: {{ .Get "line-height" }}">
     <figcaption>
