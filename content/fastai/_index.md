@@ -41,6 +41,23 @@ custom_theme_compile = true
 
 ---
 
+## fastai
+
+fastai is a library that builds on top of PyTorch, adding a higher-level of functionality.
+
+High level API for PyTorch.
+
+Layered API: allows for very low level research, production model, super easy world class model for beginners
+
+<br>
+fastai's advantages:
+
+- a fast and efficient approach
+- the low-level functionality of PyTorch remains accessible for those who need it
+<br><br>
+
+---
+
 ## Resources
 
 ##### Documentation
@@ -74,13 +91,9 @@ PyTorch's advantages:
 
 ---
 
-# fastai
 
-fastai is a library that builds on top of PyTorch, adding a higher-level of functionality.
 
-High level API for PyTorch.
 
-Layered API: allows for very low level research, production model, super easy world class model for beginners
 
 <br>
 fastai's advantages:
