@@ -114,10 +114,24 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 
 ---
 
+# <center>History</center>
+<br>
 
+{{%fragment%}}
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">1943:</span>&nbsp; Warren McCulloch & Walter Pitts—mathematical model of artificial neuron.
+{{%/fragment%}}
 
+{{%fragment%}}
+<br>
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">1961:</span>&nbsp; Frank Rosenblatt—perceptron.
+{{%/fragment%}}
 
+{{%fragment%}}
+<br>
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">1986:</span>&nbsp; James McClelland, David Rumelhart & PDP Research Group—book: "Parallel Distributed &emsp;&emsp;&ensp;Processing".
+{{%/fragment%}}
 
+---
 <br>
 fastai's advantages:
 
