@@ -12,16 +12,16 @@ custom_theme_compile = true
 +++
 
 # <center><span style="line-height: 11rem; font-size: 4.5rem;">GIS mapping in R</span></center>
-#### <center><div style="line-height: 2.5rem">Marie-Hélène Burle</div></center>
-##### <center><div style="line-height: 2.8rem">[training@westgrid.ca](mailto:training@westgrid.ca)</div></center>
-##### <center><div style="line-height: 2.5rem">February 3, 2021</div></center>
-{{<img src="/img/wg_white_removed_medium.png" title="" width="70%" line-height="0rem">}}
+#### <center><div style="line-height: 2rem">Marie-Hélène Burle</div></center>
+##### <center><div style="line-height: 2rem">[training@westgrid.ca](mailto:training@westgrid.ca)</div></center>
+##### <center><div style="line-height: 2rem">February 3, 2021</div></center>
+{{<img src="/img/wg_white_removed_medium.png" title="" margin="2rem" width="70%" line-height="0rem">}}
 {{</img>}}
 
 ---
 
 #### <center><div style="line-height: 2.5rem">Great resources</div></center>
-
+<br>
 **Open GIS data** \\
 [Free GIS Data](https://freegisdata.rtwilson.com/): list of free GIS datasets \\
 **Books** \\
@@ -41,7 +41,7 @@ custom_theme_compile = true
 ---
 
 ### <center>Data</center>
-
+<br>
 For this webinar, we will use:
 
 - the Alaska as well as the Western Canada & USA subsets of the [Randolph Glacier Inventory](http://www.glims.org/RGI/) version 6.0<sup>1</sup>
@@ -60,8 +60,10 @@ The datasets can be downloaded as zip files from these websites.
 
 ### <center>Basemap</center>
 <br>
+<br>
 We will use data from [Natural Earth](https://www.naturalearthdata.com/), a public domain map dataset.
-
+<br>
+<br>
 This dataset can be accessed direction from within R thanks to the packages `rnaturalearth` (provides the functions) & `rnaturalearthdata` (provides the data).
 
 ---
@@ -91,7 +93,7 @@ Packages need to be installed before they can be loaded in a session.
 ---
 
 ### <center>Note on installing packages</center>
-
+<br>
 Packages on CRAN can be installed with:
 
 ```r
@@ -113,7 +115,7 @@ devtools::install_github("16EAGLE/basemaps")
 ---
 
 ### <center>Reading in data</center>
-
+<br>
 Download and unzip `02_rgi60_WesternCanadaUS` & `01_rgi60_Alaska` from the [Randolph Glacier Inventory](http://www.glims.org/RGI/) version 6.0.
 
 Data get imported and turned into `sf` objects with the function `sf::st_read()`:
@@ -356,7 +358,7 @@ states <- states_all %>%
 ---
 
 #### <center>Adding a basemap to our map: a few notes</center>
-
+<br>
 Always make sure the CRS match!
 
 ```r
@@ -421,8 +423,10 @@ tm_shape(states, bbox = nwa_bbox) +
 #### <center>Retreat of glaciers over time</center>
 #### <center>in Glacier National Park</center>
 <br>
+<br>
 We will use the [USGS time series of the named glaciers of Glacier National Park](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542).
-
+<br>
+<br>
 These 4 datasets have the contour lines of 39 glaciers for the years `1966`, `1998`, `2005`, and `2015`.
 
 ---
@@ -462,7 +466,7 @@ We use {{%c%}}dplyr::select(){{%/c%}} because <b>raster</b> also has a {{%c%}}se
 ---
 
 ### <center>Combining datasets into one sf object</center>
-
+<br>
 Checking that the CRS are the same:
 
 ```r
@@ -616,7 +620,7 @@ As always, first we check that the CRS are the same:
 ---
 
 ### <center>CRS transformation</center>
-
+<br>
 We need to reproject `gnp`:
 ```r
 gnp <- st_transform(gnp, st_crs(ak))
@@ -632,7 +636,7 @@ We can verify that the CRS of both our maps are now the same:
 ---
 
 ### <center>Inset map</center>
-
+<br>
 **First step: add a rectangle showing the bounding box of `gnp` in the `nwa` map.**
 
 This will show the location of the GNP map in the main North America map.
@@ -654,7 +658,7 @@ tm_shape(gnp_zone) +
 ---
 
 ### <center>Inset map</center>
-
+<br>
 **Second step: create a `tmap` object for our main map:**
 
 ```r
@@ -693,7 +697,7 @@ main_map <- tm_shape(states, bbox = nwa_bbox) +
 ---
 
 ### <center>Inset map</center>
-
+<br>
 **Third step: create a `tmap` object for the inset map.**
 
 Matching colors and edited layouts will help with readability:
@@ -756,6 +760,7 @@ inset_map <- tm_shape(gnp) +
 ---
 
 ## <center>Mapping a subset of the data</center>
+<br>
 
 {{%fragment%}}
 To see the retreat of the glaciers, we need to zoom in on this map. So let's focus on a single glacier: the Agassiz Glacier.
@@ -917,7 +922,7 @@ tm_shape(ag) +
 ---
 
 #### <center>Animated map of the Retreat of Agassiz Glacier</center>
-
+<br>
 First, we need to create a `tmap` object with facets:
 
 ```r
@@ -980,6 +985,7 @@ tmap_animation(
 
 ##### <center>Tiled web maps with Leaflet</center>
 ### <center>mapview</center>
+<br>
 
 ```r
 mapview(gnp)
@@ -989,7 +995,7 @@ mapview(gnp)
 
 ##### <center>Tiled web maps with Leaflet</center>
 ### <center>mapview</center>
-
+<br>
 <figure style="display: table;">
   <div class="row">
 	<div class="column">
@@ -1041,7 +1047,7 @@ mapview(gnp)
 
 ##### <center>Tiled web maps with Leaflet</center>
 ### <center>tmap</center>
-
+<br>
 So far, we have used the `plot` mode of **tmap**. There is also a `view` mode which allows interactive viewing in a browser through [Leaflet](https://leafletjs.com/).
 <br><br>
 Change to `view` mode:
@@ -1064,7 +1070,7 @@ tmap_last()
 
 ##### <center>Tiled web maps with Leaflet</center>
 ### <center>leaflet</center>
-
+<br>
 `leaflet()` creates a map widget to which you add layers.
 
 ```r
@@ -1080,9 +1086,10 @@ addTiles(map)
 ---
 
 ### <center>Ice thickness</center>
-
+<br>
 The nomenclature for glaciers and regions in the ice thickness dataset follows the Randolph Glacier Inventory (RGI) version 6.0.
-
+<br>
+<br>
 Let's look for the Agassiz Glacier data.
 
 ---
@@ -1107,7 +1114,7 @@ Now we now which file we need to look for in the ice thickness dataset: `RGI60-0
 ---
 
 ### <center>Load raster data for Agassiz Glacier</center>
-
+<br>
 First, we want to see how many bands are available:
 
 ```r
@@ -1124,7 +1131,7 @@ agras <- raster("RGI60-02/RGI60-02.16664_thickness.tif")
 ---
 
 ### <center>Inspect raster data</center>
-
+<br>
 ```r
 > agras
 class      : RasterLayer
@@ -1198,7 +1205,7 @@ Formal class 'RasterLayer' [package "raster"] with 12 slots
 ---
 
 ### <center>Map of ice thickness Agassiz Glacier</center>
-
+<br>
 This time, we use `tm_raster()`:
 
 ```r
@@ -1235,7 +1242,7 @@ tm_shape(agras) +
 ---
 
 ### <center>Combining with Randolph data</center>
-
+<br>
 As always, we check whether the CRS are the same:
 
 ```r
