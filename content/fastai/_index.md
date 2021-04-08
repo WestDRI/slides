@@ -173,20 +173,43 @@ From <a href="https://xkcd.com/">xkcd.com</a>
   </div>
 </figure>
 
+---
+
+#### <center>Neural networks</center>
+{{<br size="4.2">}}
+
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Single layer of artificial neurons</span> &nbsp;&nbsp;→ &nbsp; Unable to learn even some of the simple mathematical functions (Marvin Minsky & Seymour Papert).
+
+{{%fragment%}}
 <br>
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Two layers</span> &nbsp;&nbsp;→ &nbsp; Theoretically can approximate any math model, but in practice very slow.
+{{%/fragment%}}
 
+{{%fragment%}}
+<br>
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">More layers</span> &nbsp;&nbsp;→ &nbsp; Deeper networks
+{{%/fragment%}}
+
+{{<br size="9.7">}}
+
+---
+
+#### <center>Neural networks</center>
+{{<br size="4.2">}}
+
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Single layer of artificial neurons</span> &nbsp;&nbsp;→ &nbsp; Unable to learn even some of the simple mathematical functions (Marvin Minsky & Seymour Papert).
+
+<br>
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Two layers</span> &nbsp;&nbsp;→ &nbsp; Theoretically can approximate any math model, but in practice very slow.
+
+<br>
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">More layers</span> &nbsp;&nbsp;→ &nbsp; Deeper networks &nbsp;→&nbsp; <b>deep learning</b>.
+
+{{<br size="9.7">}}
 
 ---
 
 
-
----
-
-### Neural networks
-
-Single layer of artificial neurons: unable to learn even some of the simple math functions (Marvin Minsky & Seymour Papert)
-Two layers: theoretically can approximate any math model, but in practice very big and slow
-More layers: deeper networks → deep learning
 
 ---
 
