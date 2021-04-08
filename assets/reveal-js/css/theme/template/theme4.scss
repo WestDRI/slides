@@ -463,40 +463,56 @@ figcaption {
   margin: 0;
 }
 
-.challenge-block {
-  color: #262626;
-  margin: 45px 50px 45px 15px;
-  border-left: 5px solid #ff3399;
-  padding-left: 2.0rem;
-  text-align: left;
-  line-height: 3.5rem;
-}
-
-.exercise-block {
-  color: #262626;
-  margin: 45px 50px 45px 0px;
-  border-left: 5px solid #fbcc9d;
-  padding-left: 2.0rem;
-  line-height: 2.5rem;
-}
-
-.simplebox-block {
-  line-height: 3.0rem;
-  border-radius: 3px;
-  border: 0.5pt solid #000000;
-  box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
-  padding: 0.5px 2.0rem 0.5px 2.0rem;
-}
+// * blocks
 
 .example-block {
   // this will be rendered as pre
   padding: 0em 1.5em;
 }
 
+.syntax-block {
+  // box-shadow: 0px 0px 1.5px rgba(0,0,0,0.3);
+  // box-shadow: 0px 0px 1.5px rgba(0,0,0,0.3);
+  // background-color: #ffffff;
+  border-left: 3px solid #e7e7e7;
+  font-size: 1.6rem;
+  font-weight: 400;
+  // line-height: 2.5rem;
+  margin: 0rem 0rem;
+  padding: 0rem 1.6rem;
+  overflow-x: auto;
+}
+
+.exsimple-block {
+  color: #262626;
+  margin: 45px 50px 45px 20px;
+  border-left: 4px solid #ff3399;
+  padding-left: 1.3rem;
+  line-height: 3.0rem;
+}
+
+.exsimplec-block {
+  color: #262626;
+  margin: 45px 50px 45px 20px;
+  padding-left: 1.3rem;
+  line-height: 3.0rem;
+}
+
 .challenge-block {
   color: #262626;
   margin: 45px 50px 45px 20px;
+  // margin: 45px 50px 45px 15px;
   border-left: 5px solid #ff3399;
+  padding-left: 1.3rem;
+  // padding-left: 2.0rem;
+  // text-align: left;
+  line-height: 2.5rem;
+  // line-height: 3.5rem;
+}
+
+.challengec-block {
+  color: #262626;
+  margin: 45px 50px 45px 20px;
   padding-left: 1.3rem;
   line-height: 2.5rem;
 }
@@ -507,19 +523,6 @@ figcaption {
   border-left: 5px solid #fbcc9d;
   padding-left: 2.0rem;
   line-height: 2.5rem;
-}
-
-.note-block {
-  margin: 45px 10px 45px 50px;
-  border-left: 5px solid #636f83;
-  padding-left: 1.5rem;
-  line-height: 1.8rem;
-  // color: #404040;
-  color: #282d35;
-  // color: #424a57;
-  font-family: 'Maven Pro', sans-serif;
-  font-size: 1.3rem;
-  text-align: left;
 }
 
 .simplebox-block {
@@ -548,6 +551,18 @@ figcaption {
   // box-shadow: 0px 0px 6px #6699cc;
   box-shadow: 0px 0px 6px #c6b7c8;
   // box-shadow: 0px 0px 6px #644f67;
+}
+
+.bigquo-block {
+  // border-left: 3px solid #cccccc;
+  border-left: 3px solid #c6d9ec;
+  color: #264d73;
+  margin-left: 3.5rem;
+  padding-left: 1.9rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  font-size: 2.3rem;
+  line-height: 4rem;
 }
 
 .zoombox-block {
@@ -590,6 +605,28 @@ figcaption {
   font-style: italic;
   margin-left: 30px;
   // keep this line to have the verses indented
+  line-height: 25px;
+}
+
+.note-block {
+  margin: 45px 10px 45px 50px;
+  border-left: 5px solid #636f83;
+  padding-left: 1.5rem;
+  line-height: 1.8rem;
+  // color: #404040;
+  color: #282d35;
+  // color: #424a57;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.ex-block {
+  color: #424a57;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  margin: 3rem 1rem 0rem 0rem;
   line-height: 25px;
 }
 
@@ -681,6 +718,16 @@ figcaption {
   font-family: 'Montserrat';
   margin: 30px 100px;
   color: #911808;
+}
+
+.emph-block {
+  line-height: 2.6rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: 'Montserrat';
+  margin: 30px 100px;
+  // color: #f58020;
+  color: #e8761e;
 }
 
 .footnote-definition {
