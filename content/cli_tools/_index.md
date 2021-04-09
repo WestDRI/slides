@@ -536,15 +536,15 @@ And in bash: {{%c%}}[fff](https://github.com/dylanaraps/fff){{%/c%}} (you will h
 
 #### If you would like to explore other fun utilities, here is a little selection:
 
-- [tig](https://github.com/jonas/tig). If you read it backward, you will get some hint as to what it is about
+- {{<a "https://github.com/jonas/tig" "tig">}}. If you read it backward, you will get some hint as to what it is about
 
-- [rg](https://github.com/BurntSushi/ripgrep). Stands for "RIP grep"...
+- {{<a "https://github.com/BurntSushi/ripgrep" "rg">}}. Stands for "RIP grep"...
 
-- [ag](https://github.com/ggreer/the_silver_searcher). Similar to {{%c%}}rg{{%/c%}}. You need to have some background in Latin or in chemistry to know right away that it is the *silver* searcher
+- {{<a "https://github.com/ggreer/the_silver_searcher" "ag">}}. Similar to {{%c%}}rg{{%/c%}}. You need to have some background in Latin or in chemistry to know right away that it is the *silver* searcher
 
-- [fd](https://github.com/sharkdp/fd). If you have always found {{%c%}}find{{%/c%}}'s syntax awkward, this might be for you. And it is fast. *Very fast*
+- {{<a "https://github.com/sharkdp/fd" "fd">}}. If you have always found {{%c%}}find{{%/c%}}'s syntax awkward, this might be for you. And it is fast. *Very fast*
 
-- [fasd](https://github.com/clvv/fasd). Similar to autojump, but also works on files. However the project is currently not being developed anymore
+- {{<a "https://github.com/clvv/fasd" "fasd">}}. Similar to autojump, but also works on files. However the project is currently not being developed anymore
 
 ---
 
