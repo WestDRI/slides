@@ -206,7 +206,7 @@ ls -a
 
 Add several paragraphs in each of your 3 files.<br>
 <br>
-You can type random words, copy and paste a few paragraphs from a page web, or use [Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum)... it doesn't matter what the content is.<br>
+You can type random words, copy and paste a few paragraphs from a page web, or use {{<a "https://en.wikipedia.org/wiki/Lorem_ipsum" "Lorem ipsum">}}... it doesn't matter what the content is.<br>
 <br>
 From the command line, you can use, for instance:
 ```sh
@@ -459,7 +459,7 @@ e	edit
 ?	print help
 ```
 
-There are [more options](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging), but these are the main ones to remember.
+There are {{<a "https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging" "more options">}}, but these are the main ones to remember.
 
 ---
 
@@ -493,7 +493,7 @@ git status
 <br>
 If you aren't sure about something, try it out. Experiment to understand how Git works.
 
-You can also look up the [Git book](https://git-scm.com/book/en/v2) and countless great answers on [Stack Overflow](https://stackoverflow.com).
+You can also look up the {{<a "https://stackoverflow.com" "Git book](https://git-scm.com/book/en/v2) and countless great answers on [Stack Overflow">}}.
 
 ---
 
@@ -501,4 +501,4 @@ You can also look up the [Git book](https://git-scm.com/book/en/v2) and countles
 
 # <center><span style="font-variant: small-caps;">Questions?</span></center>
 <br><br>
-Bring all your questions to [tomorrow morning's live session](https://westgrid-cli.netlify.app/school/git-08-recording.html). See you there!
+Bring all your questions to {{<a "https://westgrid-cli.netlify.app/school/git-08-recording.html" "tomorrow morning's live session">}}. See you there!

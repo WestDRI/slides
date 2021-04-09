@@ -64,7 +64,7 @@ Computer languages mostly fall into two categories:
 ### <center>JIT compilation</center>
 <br>
 
-[Just-in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation) (JIT) based on [LLVM](https://en.wikipedia.org/wiki/LLVM)
+{{<a "https://en.wikipedia.org/wiki/LLVM" "Just-in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation) (JIT) based on [LLVM">}}
 
 Source code compiled at run time
 
@@ -73,7 +73,7 @@ Source code compiled at run time
 ### <center>Multiple dispatch</center>
 <br>
 
-Built-in [multiple dispatch](https://en.wikipedia.org/wiki/Multiple_dispatch): functions apply different methods at run time based on the type of the operands
+Built-in {{<a "https://en.wikipedia.org/wiki/Multiple_dispatch" "multiple dispatch">}}: functions apply different methods at run time based on the type of the operands
 
 <br>
 Optional type declaration
@@ -83,35 +83,35 @@ Optional type declaration
 ### <center>Documentation</center>
 <br>
 
-Julia [website](https://julialang.org/)
+Julia {{<a "https://julialang.org/" "website">}}
 
-The official Julia [manual](https://docs.julialang.org/en/v1/)
+The official Julia {{<a "https://docs.julialang.org/en/v1/" "manual">}}
 
-Online [training](https://julialang.org/learning/) material
+Online {{<a "https://julialang.org/learning/" "training">}} material
 
-The Julia [YouTube](https://www.youtube.com/user/JuliaLanguage) channel
+The Julia {{<a "https://www.youtube.com/user/JuliaLanguage" "YouTube">}} channel
 
-The Julia [Wikibook](https://en.wikibooks.org/wiki/Introducing_Julia)
+The Julia {{<a "https://en.wikibooks.org/wiki/Introducing_Julia" "Wikibook">}}
 
-A [blog](https://www.juliabloggers.com/) aggregator for Julia
+A {{<a "https://www.juliabloggers.com/" "blog">}} aggregator for Julia
 
 ---
 
 ### <center>Getting help</center>
 
-Discourse [forum](https://discourse.julialang.org/)
+Discourse {{<a "https://discourse.julialang.org/" "forum">}}
 
-[[julia] ](https://stackoverflow.com/tags/julia)tag on Stack Overflow
+{{<a "https://stackoverflow.com/tags/julia" "[julia] ">}}tag on Stack Overflow
 
-[Slack](https://app.slack.com/client/T68168MUP/C67910KEH) team (you need to agree to the community code of conduct at slackinvite.julialang.org to receive an invitation)
+{{<a "https://app.slack.com/client/T68168MUP/C67910KEH) team (you need to agree to the community code of conduct at slackinvite.julialang.org to receive an invitation" "Slack">}}
 
-[#julialang](https://twitter.com/search?q=%23julialang) hashtag on Twitter
+{{<a "https://twitter.com/search?q=%23julialang" "#julialang">}} hashtag on Twitter
 
-[Subreddit](https://www.reddit.com/r/Julia/)
+{{<a "https://www.reddit.com/r/Julia/" "Subreddit">}}
 
-[Gitter](https://gitter.im/JuliaLang/julia) channel
+{{<a "https://gitter.im/JuliaLang/julia" "Gitter">}} channel
 
-[#julia](https://webchat.freenode.net/#julia) IRC channel on Freenode
+{{<a "https://webchat.freenode.net/#julia" "#julia">}} IRC channel on Freenode
 
 ---
 
@@ -119,19 +119,19 @@ Discourse [forum](https://discourse.julialang.org/)
 
 #### Emacs
 
-[julia-emacs](https://github.com/JuliaEditorSupport/julia-emacs) with [julia-repl](https://github.com/tpapp/julia-repl)<br>
-[ESS](https://github.com/emacs-ess/ESS)<br>
-[EIN](http://millejoh.github.io/emacs-ipython-notebook/) for Jupyter notebooks
+{{<a "https://github.com/tpapp/julia-repl" "julia-emacs](https://github.com/JuliaEditorSupport/julia-emacs) with [julia-repl">}}<br>
+{{<a "https://github.com/emacs-ess/ESS" "ESS">}}<br>
+{{<a "http://millejoh.github.io/emacs-ipython-notebook/" "EIN">}} for Jupyter notebooks
 <br>
 
 #### Juno
 
-[A Julia IDE](https://junolab.org/) built on [Atom](https://atom.io/)
+{{<a "https://atom.io/" "A Julia IDE](https://junolab.org/) built on [Atom">}}
 <br>
 
 #### Jupyter
 
-[Project Jupyter](https://jupyter.org/) has a Julia kernel
+{{<a "https://jupyter.org/" "Project Jupyter">}} has a Julia kernel
 
 ---
 
@@ -330,7 +330,7 @@ Nicer looking plots
 > plot(p1, p2, p3, p4)
 ```
 <br>
-The {{<b>}}Plots{{</b>}} site has [demos](http://docs.juliaplots.org/latest/)
+The {{<b>}}Plots{{</b>}} site has {{<a "http://docs.juliaplots.org/latest/" "demos">}}
 
 ---
 

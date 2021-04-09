@@ -13,7 +13,7 @@ custom_theme_compile = true
 
 # <center><span style="line-height: 11rem; font-size: 4.5rem;">GIS mapping in R</span></center>
 #### <center><div style="line-height: 2rem">Marie-Hélène Burle</div></center>
-##### <center><div style="line-height: 2rem">[training@westgrid.ca](mailto:training@westgrid.ca)</div></center>
+##### <center><div style="line-height: 2rem">{{<a "mailto:training@westgrid.ca" "training@westgrid.ca">}}</div></center>
 ##### <center><div style="line-height: 2rem">February 3, 2021</div></center>
 {{<img src="/img/wg_white_removed_medium.png" title="" margin="2rem" width="70%" line-height="0rem">}}
 {{</img>}}
@@ -23,20 +23,20 @@ custom_theme_compile = true
 #### <center><div style="line-height: 2.5rem">Great resources</div></center>
 <br>
 **Open GIS data** \\
-[Free GIS Data](https://freegisdata.rtwilson.com/): list of free GIS datasets \\
+{{<a "https://freegisdata.rtwilson.com/" "Free GIS Data">}}: list of free GIS datasets \\
 **Books** \\
-[Geocomputation with R](https://geocompr.robinlovelace.net/) by Robin Lovelace, Jakub Nowosad & Jannes Muenchow\\
-[Spatial Data Science](https://keen-swartz-3146c4.netlify.app/) by Edzer Pebesma & Roger Bivand\\
-[Spatial Data Science with R](https://rspatial.org/) by Robert J. Hijmans\\
-[Using Spatial Data with R](https://cengel.github.io/R-spatial/) by Claudia A. Engel \\
+{{<a "https://geocompr.robinlovelace.net/" "Geocomputation with R">}} by Robin Lovelace, Jakub Nowosad & Jannes Muenchow\\
+{{<a "https://keen-swartz-3146c4.netlify.app/" "Spatial Data Science">}} by Edzer Pebesma & Roger Bivand\\
+{{<a "https://rspatial.org/" "Spatial Data Science with R">}} by Robert J. Hijmans\\
+{{<a "https://cengel.github.io/R-spatial/" "Using Spatial Data with R">}} by Claudia A. Engel \\
 **Tutorial** \\
-[An Introduction to Spatial Data Analysis and Visualisation in R](https://data.cdrc.ac.uk/dataset/introduction-spatial-data-analysis-and-visualisation-r) by the CDRC \\
+{{<a "https://data.cdrc.ac.uk/dataset/introduction-spatial-data-analysis-and-visualisation-r" "An Introduction to Spatial Data Analysis and Visualisation in R">}} by the CDRC \\
 **Website** \\
-[r-spatial](https://www.r-spatial.org/) by Edzer Pebesma, Marius Appel & Daniel Nüst \\
+{{<a "https://www.r-spatial.org/" "r-spatial">}} by Edzer Pebesma, Marius Appel & Daniel Nüst \\
 **CRAN package list** \\
-[Analysis of Spatial Data](https://cran.r-project.org/web/views/Spatial.html) \\
+{{<a "https://cran.r-project.org/web/views/Spatial.html" "Analysis of Spatial Data">}} \\
 **Mailing list** \\
-[R Special Interest Group on using Geographical data and Mapping](https://stat.ethz.ch/mailman/listinfo/r-sig-geo)
+{{<a "https://stat.ethz.ch/mailman/listinfo/r-sig-geo" "R Special Interest Group on using Geographical data and Mapping">}}
 
 ---
 
@@ -44,9 +44,9 @@ custom_theme_compile = true
 <br>
 For this webinar, we will use:
 
-- the Alaska as well as the Western Canada & USA subsets of the [Randolph Glacier Inventory](http://www.glims.org/RGI/) version 6.0<sup>1</sup>
-- the [USGS time series of the named glaciers of Glacier National Park](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542)<sup>2</sup>
-- the Alaska as well as the Western Canada & USA subsets of the [consensus estimate for the ice thickness distribution of all glaciers on Earth dataset](https://www.research-collection.ethz.ch/handle/20.500.11850/315707)<sup>3</sup>
+- the Alaska as well as the Western Canada & USA subsets of the {{<a "http://www.glims.org/RGI/" "Randolph Glacier Inventory">}} version 6.0<sup>1</sup>
+- the {{<a "https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542" "USGS time series of the named glaciers of Glacier National Park">}}<sup>2</sup>
+- the Alaska as well as the Western Canada & USA subsets of the {{<a "https://www.research-collection.ethz.ch/handle/20.500.11850/315707" "consensus estimate for the ice thickness distribution of all glaciers on Earth dataset">}}<sup>3</sup>
 
 The datasets can be downloaded as zip files from these websites.
 
@@ -61,7 +61,7 @@ The datasets can be downloaded as zip files from these websites.
 ### <center>Basemap</center>
 <br>
 <br>
-We will use data from [Natural Earth](https://www.naturalearthdata.com/), a public domain map dataset.
+We will use data from {{<a "https://www.naturalearthdata.com/" "Natural Earth">}}, a public domain map dataset.
 <br>
 <br>
 This dataset can be accessed direction from within R thanks to the packages `rnaturalearth` (provides the functions) & `rnaturalearthdata` (provides the data).
@@ -116,7 +116,7 @@ devtools::install_github("16EAGLE/basemaps")
 
 ### <center>Reading in data</center>
 <br>
-Download and unzip `02_rgi60_WesternCanadaUS` & `01_rgi60_Alaska` from the [Randolph Glacier Inventory](http://www.glims.org/RGI/) version 6.0.
+Download and unzip `02_rgi60_WesternCanadaUS` & `01_rgi60_Alaska` from the {{<a "http://www.glims.org/RGI/" "Randolph Glacier Inventory">}} version 6.0.
 
 Data get imported and turned into `sf` objects with the function `sf::st_read()`:
 
@@ -424,7 +424,7 @@ tm_shape(states, bbox = nwa_bbox) +
 #### <center>in Glacier National Park</center>
 <br>
 <br>
-We will use the [USGS time series of the named glaciers of Glacier National Park](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542).
+We will use the {{<a "https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542" "USGS time series of the named glaciers of Glacier National Park">}}.
 <br>
 <br>
 These 4 datasets have the contour lines of 39 glaciers for the years `1966`, `1998`, `2005`, and `2015`.
@@ -1048,7 +1048,7 @@ mapview(gnp)
 ##### <center>Tiled web maps with Leaflet</center>
 ### <center>tmap</center>
 <br>
-So far, we have used the `plot` mode of **tmap**. There is also a `view` mode which allows interactive viewing in a browser through [Leaflet](https://leafletjs.com/).
+So far, we have used the `plot` mode of **tmap**. There is also a `view` mode which allows interactive viewing in a browser through {{<a "https://leafletjs.com/" "Leaflet">}}.
 <br><br>
 Change to `view` mode:
 

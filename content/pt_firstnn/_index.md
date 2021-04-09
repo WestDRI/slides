@@ -75,7 +75,7 @@ Within `torch.nn.functional`, you can select from a large range of loss function
 - `poisson_nll_loss` for Poisson negative log likelihood loss <br>
 ...
 
-Go to [the documentation](https://pytorch.org/docs/stable/nn.functional.html#loss-functions) for a full list.
+Go to {{<a "https://pytorch.org/docs/stable/nn.functional.html#loss-functions" "the documentation">}} for a full list.
 
 ---
 
@@ -224,7 +224,7 @@ nano mlp.py   # use the text editor of your choice
 
 ## Let's start with an MLP
 
-Let's start with the simplest possible neural net: a [multilayer perceptron (MLP)](https://en.wikipedia.org/wiki/Multilayer_perceptron).<br><br>
+Let's start with the simplest possible neural net: a {{<a "https://en.wikipedia.org/wiki/Multilayer_perceptron" "multilayer perceptron (MLP)">}}.<br><br>
 It is a feed-forward (i.e. no loop), fully-connected (i.e. each neuron of one layer is connected to all the neurons of the adjacent layers) neural network with a single hidden layer.
 
 {{<img src="/img/ml/mlp_nw.png" title="" width="50%" line-height="0.5rem">}}
@@ -351,7 +351,7 @@ We will only run our model over 3 epochs to save time. Obviously, you normally w
 
 We are using CPUs.
 
-We will use the [Adadelta algorithm](https://arxiv.org/abs/1212.5701) as optimizer.
+We will use the {{<a "https://arxiv.org/abs/1212.5701" "Adadelta algorithm">}} as optimizer.
 
 ---
 

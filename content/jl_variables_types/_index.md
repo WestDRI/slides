@@ -52,7 +52,7 @@ using JLD
 ```
 <br>
 {{%b%}}Dates{{%/b%}} is a package from the standard Julia library (it was installed when you installed Julia).<br>
-The other packages are packages that [you should have installed](https://westgrid-julia.netlify.app/school/jl-05-pkg.html).
+The other packages are packages that {{<a "https://westgrid-julia.netlify.app/school/jl-05-pkg.html" "you should have installed">}}.
 
 ---
 
@@ -73,7 +73,7 @@ The only rules are:
 ## <center>Variables</center>
 <br>
 
-The [Julia Style Guide](https://docs.julialang.org/en/v1/manual/style-guide/#Style-Guide-1) recommends the following conventions:
+The {{<a "https://docs.julialang.org/en/v1/manual/style-guide/#Style-Guide-1" "Julia Style Guide">}} recommends the following conventions:
 
 - use lower case
 - word separation can be indicated by underscores, but better not use them if the names can be read easily enough without them
@@ -371,7 +371,7 @@ Let's do that third option.
 #### <center>Save object</center>
 <br>
 
-For this, we are using the package [JLD](https://github.com/JuliaIO/JLD.jl) which allows to save and load Julia data in {{%b%}}.jld{{%/b%}} files.
+For this, we are using the package {{<a "https://github.com/JuliaIO/JLD.jl" "JLD">}} which allows to save and load Julia data in {{%b%}}.jld{{%/b%}} files.
 
 Note that a single {{%b%}}.jld{{%/b%}} file can contain several objects.<br>
 

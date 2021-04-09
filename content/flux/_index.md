@@ -168,7 +168,7 @@ Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.
 ##### <center>Bias</center>
 <br>
 
-<center>Allows to [shift the output of the activation function to the right or to the left](https://stackoverflow.com/q/2480650/9210961)</center>
+<center>Allows to {{<a "https://stackoverflow.com/q/2480650/9210961" "shift the output of the activation function to the right or to the left">}}</center>
 → Offset
 
 ---
@@ -295,7 +295,7 @@ Allows a vectorized approach that stochastic gradient descent did not allow\\
 → parallelization
 
 <br>
-Variation: [Adam optimization algorithm](https://arxiv.org/abs/1412.6980)
+Variation: {{<a "https://arxiv.org/abs/1412.6980" "Adam optimization algorithm">}}
 
 <!-- --- -->
 
@@ -415,8 +415,8 @@ Long Short-Term Memory (LSTM)
 
 *Most popular:*
 
-- [PyTorch](https://pytorch.org/), developed by Facebook's AI Research lab\\
-- [TensorFlow](https://www.tensorflow.org/), developed by the Google Brain Team
+- {{<a "https://pytorch.org/" "PyTorch">}}, developed by Facebook's AI Research lab\\
+- {{<a "https://www.tensorflow.org/" "TensorFlow">}}, developed by the Google Brain Team
 
 Both most often used through their Python interfaces<br><br>
 
@@ -431,12 +431,12 @@ Julia's speed is attractive in computation hungry fields
 #### <center>Some of the ML packages in Julia</center>
 <br>
 
-[Flux.jl](https://github.com/FluxML/Flux.jl): a machine learning stack\\
-[Knet.jl](https://github.com/denizyuret/Knet.jl): a deep learning framework\\
-[TensorFlow.jl](https://github.com/malmaud/TensorFlow.jl): wrapper for TensorFlow\\
-[Turing.jl](https://github.com/TuringLang/Turing.jl): for probabilistic machine learning\\
-[MLJ.jl](https://github.com/alan-turing-institute/MLJ.jl): framework to compose machine learning models\\
-[ScikitLearn.jl](https://github.com/cstjean/ScikitLearn.jl): implementation of the scikit-learn API
+{{<a "https://github.com/FluxML/Flux.jl" "Flux.jl">}}: a machine learning stack\\
+{{<a "https://github.com/denizyuret/Knet.jl" "Knet.jl">}}: a deep learning framework\\
+{{<a "https://github.com/malmaud/TensorFlow.jl" "TensorFlow.jl">}}: wrapper for TensorFlow\\
+{{<a "https://github.com/TuringLang/Turing.jl" "Turing.jl">}}: for probabilistic machine learning\\
+{{<a "https://github.com/alan-turing-institute/MLJ.jl" "MLJ.jl">}}: framework to compose machine learning models\\
+{{<a "https://github.com/cstjean/ScikitLearn.jl" "ScikitLearn.jl">}}: implementation of the scikit-learn API
 
 <br>
 Today, we will have a glance at Flux
@@ -444,11 +444,11 @@ Today, we will have a glance at Flux
 ---
 
 ## <center>*Example:*</center>
-## <center>Classifying the [MNIST](http://yann.lecun.com/exdb/mnist/)</center>
+## <center>Classifying the {{<a "http://yann.lecun.com/exdb/mnist/" "MNIST">}}</center>
 
 ---
 
-#### <center>The [MNIST](http://yann.lecun.com/exdb/mnist/) database</center>
+#### <center>The {{<a "http://yann.lecun.com/exdb/mnist/" "MNIST">}} database</center>
 <br>
 {{<img src="/img/ml/mnist_nw.png" title="" width="70%" line-height="0.5rem">}}
 Modified from <a href="https://commons.wikimedia.org/w/index.php?curid=64810040">Josef Steppan, Wikimedia</a>
@@ -460,7 +460,7 @@ used for testing ML systems
 
 ---
 
-#### <center>The [MNIST](http://yann.lecun.com/exdb/mnist/) database</center>
+#### <center>The {{<a "http://yann.lecun.com/exdb/mnist/" "MNIST">}} database</center>
 <br>
 {{<img src="/img/ml/mnist_example.png" title="" width="76.5%" line-height="0.5rem">}}
 {{</img>}}
@@ -471,7 +471,7 @@ Labels from 0 to 9 of the actual digits
 
 ---
 
-#### <center>The [MNIST](http://yann.lecun.com/exdb/mnist/) database</center>
+#### <center>The {{<a "http://yann.lecun.com/exdb/mnist/" "MNIST">}} database</center>
 <br>
 {{<img src="/img/ml/mnist_nw.png" title="" width="70%" line-height="0.5rem">}}
 Modified from <a href="https://commons.wikimedia.org/w/index.php?curid=64810040">Josef Steppan, Wikimedia</a>
@@ -483,7 +483,7 @@ Modified from <a href="https://commons.wikimedia.org/w/index.php?curid=64810040"
 
 ---
 
-#### <center>The [MNIST](http://yann.lecun.com/exdb/mnist/) database</center>
+#### <center>The {{<a "http://yann.lecun.com/exdb/mnist/" "MNIST">}} database</center>
 <br>
 {{<img src="/img/ml/mnist_nw.png" title="" width="70%" line-height="0.5rem">}}
 Modified from <a href="https://commons.wikimedia.org/w/index.php?curid=64810040">Josef Steppan, Wikimedia</a>
@@ -498,7 +498,7 @@ Modified from <a href="https://commons.wikimedia.org/w/index.php?curid=64810040"
 #### <center>How to get started?</center>
 <br>
 
-<center>The [Flux Model Zoo](https://github.com/FluxML/model-zoo) provides examples which are great starting points</center>
+<center>The {{<a "https://github.com/FluxML/model-zoo" "Flux Model Zoo">}} provides examples which are great starting points</center>
 
 ---
 
@@ -1135,7 +1135,7 @@ test()
 #### <center>Saving models</center>
 <br>
 
-<center>[BSON.jl](https://github.com/JuliaIO/BSON.jl) allows to save models in [Binary JSON](http://bsonspec.org/) format</center>
+<center>{{<a "http://bsonspec.org/" "BSON.jl](https://github.com/JuliaIO/BSON.jl) allows to save models in [Binary JSON">}} format</center>
 
 ---
 
@@ -1147,14 +1147,14 @@ start from model trained on related problem for weight initialization
 <center>→ Allows to get good results on small datasets</center>
 
 <br>
-[ONNX.jl](https://github.com/FluxML/ONNX.jl) allows to read pre-trained models from [ONNX format](https://onnx.ai/) to Flux.
+{{<a "https://onnx.ai/" "ONNX.jl](https://github.com/FluxML/ONNX.jl) allows to read pre-trained models from [ONNX format">}} to Flux.
 
 ---
 
 #### <center>GPU support</center>
 <br>
 
-[CuArrays.jl](https://github.com/JuliaGPU/CuArrays.jl) provides GPU functionality to Flux
+{{<a "https://github.com/JuliaGPU/CuArrays.jl" "CuArrays.jl">}} provides GPU functionality to Flux
 
 {{<i>}}
 ```julia
