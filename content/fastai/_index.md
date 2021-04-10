@@ -291,6 +291,12 @@ From <a href="https://commons.wikimedia.org/w/index.php?curid=1474927" target="_
 
 ---
 
+A NN  is a parameterized function which can, in theory, solve any problem to any level of accuracy.
+
+The learning process is the mapping of input data to output data (in a training set) through the adjustment of parameters. The parameters are weights and biases.
+
+At the practical level, this is achieve through minimization of the loss function by backpropagation (the loss function is the distance between predicted and real values).
+
 ---
 
 # <center>General principles</center>
@@ -424,6 +430,11 @@ Which means that we can use it to obtain outputs from inputs.
 ---
 
 # <center>Let's dive in</center>
+
+---
+
+## <center></center>
+
 
 ---
 
