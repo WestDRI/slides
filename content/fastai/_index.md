@@ -14,7 +14,7 @@ custom_theme_compile = true
 #### <div style="line-height: 3.2rem; font-size: 5.5rem"><br><font color="black">&emsp;&nbsp;fastai</font></div>
 #### <center><div style="line-height: 3.2rem; font-size: 2.3rem">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;A deep learning library<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&emsp;for fast implementation <br> &ensp;&emsp;& research</div></center>
 ##### <div style="line-height: 1.1rem"><br>&nbsp;&emsp;&emsp;&emsp;&emsp;Marie-Hélène Burle</div>
-###### <div style="line-height: 1.1rem">&emsp;&emsp;&emsp;&emsp;&emsp;[training@westgrid.ca](mailto:training@westgrid.ca)</div>
+###### <div style="line-height: 1.1rem">&emsp;&emsp;&emsp;&emsp;&emsp;{{<a "mailto:training@westgrid.ca" "training@westgrid.ca">}}</div>
 ###### <div style="line-height: 1.1rem">&emsp;&emsp;&emsp;&emsp;&emsp;April 14, 2021</div>
 {{<imgright src="/img/wg_white_removed_medium.png" title="" width="60%" line-height="rem">}}
 {{</imgright>}}
@@ -71,19 +71,20 @@ fastai's advantages:
 
 ##### Documentation
 
-[fastai](https://docs.fast.ai/)
-
 ##### Course
-
-[fast.ai](https://course.fast.ai/)
+{{<a "https://docs.fast.ai/" "Manual">}}<br>
+{{<a "https://docs.fast.ai/tutorial.html" "Tutorials">}}<br>
+{{<a "https://www.mdpi.com/2078-2489/11/2/108/htm" "Peer-reviewed paper">}}
 
 ##### Book
 
-[fastbook](https://github.com/fastai/fastbook/)
+{{<a "https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527" "Paperback version">}}<br>
+{{<a "https://course.fast.ai/" "Free MOOC version">}}<br>
+{{<a "https://github.com/fastai/fastbook/" "Jupyter notebooks version">}}
 
 ##### Getting help
 
-[Discourse forum](https://forums.fast.ai/)
+{{<a "https://forums.fast.ai/" "Discourse forum">}} <br>
 
 ---
 
@@ -108,7 +109,7 @@ fastai's advantages:
 {{</emph>}}
 
 {{<img src="https://imgs.xkcd.com/comics/machine_learning.png" title="" width="%" line-height="1rem">}}
-From <a href="https://xkcd.com/">xkcd.com</a>
+From <a href="https://xkcd.com/" target="_blank">xkcd.com</a>
 {{</img>}}
 {{%/fragment%}}
 
@@ -142,13 +143,13 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 	<div class="column">
 	  <b>Biological</b> <br><br><br><br>
 	  {{<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Neuron.svg" title="" width="100%" line-height="0.5rem">}}
-	  Schematic from <a href="https://commons.wikimedia.org/w/index.php?curid=1474927">Dhp1080, Wikipedia</a>
+	  Schematic from <a href="https://commons.wikimedia.org/w/index.php?curid=1474927" target="_blank">Dhp1080, Wikipedia</a>
 	  {{</img>}}
 	</div>
 	<div class="column">
 	   <b>Artificial</b> <br><br><br>
 	   {{<img src="/img/ml/artificial_neuron_nw.png" title="" width="100%" line-height="0.5rem">}}
-	   Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0163">O.C. Akgun & J. Mei 2019</a>
+	   Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0163" target="_blank">O.C. Akgun & J. Mei 2019</a>
 	   {{</img>}}
 	</div>
   </div>
@@ -165,13 +166,13 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 	<div class="column">
 	  <b>Biological</b> <br><br><br><br>
 	 {{<img src="/img/ml/brain_neurons.jpg" title="" width="90%" line-height="0.5rem">}}
-	 Image by <a href="https://news.berkeley.edu/2020/03/19/high-speed-microscope-captures-fleeting-brain-signals/">Na Ji, UC Berkeley</a>
+	 Image by <a href="https://news.berkeley.edu/2020/03/19/high-speed-microscope-captures-fleeting-brain-signals/" target="_blank">Na Ji, UC Berkeley</a>
 	 {{</img>}}
 	</div>
 	<div class="column">
 	   <b>Artificial</b> <br><br>
 	   {{<img src="/img/ml/nn_single_layer_nw.png" title="" width="100%" line-height="0.5rem">}}
-	   Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0163">O.C. Akgun & J. Mei 2019</a>
+	   Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0163" target="_blank">O.C. Akgun & J. Mei 2019</a>
 	   {{</img>}}
 	</div>
   </div>
@@ -224,7 +225,7 @@ From <a href="https://xkcd.com/">xkcd.com</a>
 #### <center>Fully-connected, feedforward, single-layer NN</center><br>
 
 {{<img src="/img/ml/nn_1layer.png" title="" width="%" line-height="1.5rem">}}
-From <a href="http://neuralnetworksanddeeplearning.com/chap5.html">"Neural Networks and Deep Learning" free online book, Chapter 5</a>
+From <a href="http://neuralnetworksanddeeplearning.com/chap5.html" target="_blank">"Neural Networks and Deep Learning" free online book, Chapter 5</a>
 {{</img>}}
 <br>
 <br>
@@ -238,7 +239,7 @@ From <a href="http://neuralnetworksanddeeplearning.com/chap5.html">"Neural Netwo
 #### <center>Fully-connected, feedforward, deep NN</center><br>
 
 {{<img src="/img/ml/nn_3layers.png" title="" width="%" line-height="1.5rem">}}
-From <a href="http://neuralnetworksanddeeplearning.com/chap5.html">"Neural Networks and Deep Learning" free online book, Chapter 5</a>
+From <a href="http://neuralnetworksanddeeplearning.com/chap5.html" target="_blank">"Neural Networks and Deep Learning" free online book, Chapter 5</a>
 {{</img>}}
 <br>
 <br>
@@ -253,7 +254,7 @@ From <a href="http://neuralnetworksanddeeplearning.com/chap5.html">"Neural Netwo
 {{<br size="2.5">}}
 
 {{<img src="/img/ml/cnn_nw.png" title="" width="80%" line-height="2rem">}}
-From <a href="https://codetolight.wordpress.com/2017/11/29/getting-started-with-pytorch-for-deep-learning-part-3-neural-network-basics/">Programming Journeys by Rensu Theart</a>
+From <a href="https://codetolight.wordpress.com/2017/11/29/getting-started-with-pytorch-for-deep-learning-part-3-neural-network-basics/" target="_blank">Programming Journeys by Rensu Theart</a>
 {{</img>}}
 
 {{<br size="1.5">}}
@@ -281,7 +282,7 @@ From <a href="https://codetolight.wordpress.com/2017/11/29/getting-started-with-
 {{<br size="1.8">}}
 
 {{<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Recurrent_neural_network_unfold.svg" title="" width="%" line-height="0rem">}}
-From <a href="https://commons.wikimedia.org/w/index.php?curid=1474927">fdeloche, Wikipedia</a>
+From <a href="https://commons.wikimedia.org/w/index.php?curid=1474927" target="_blank">fdeloche, Wikipedia</a>
 {{</img>}}
 
 {{<br size="1.3">}}
