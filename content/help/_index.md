@@ -14,7 +14,7 @@ custom_theme_compile = true
 # <span style="font-size: 5rem;">So, you are stuck ... now what?</span>
 <br>
 #### <div style="line-height: 2.8rem">Marie-Hélène Burle</div>
-##### <div style="line-height: 2.8rem">[training@westgrid.ca](mailto:training@westgrid.ca)</div>
+##### <div style="line-height: 2.8rem">{{<a "mailto:training@westgrid.ca" "training@westgrid.ca">}}</div>
 ##### <div style="line-height: 2.8rem">November 13, 2020</div>
 
 ---
@@ -96,12 +96,12 @@ Take the time to look for the official documentation & other high quality source
 {{%fragment%}}
 &emsp;*Examples:*
 
-&emsp;&emsp;Python: [Reference manual](https://docs.python.org/3/reference/index.html), [Standard library manual](https://docs.python.org/3/library/index.html), [Tutorial](https://docs.python.org/3/tutorial/index.html) \\
-&emsp;&emsp;NumPy: [Tutorial](https://numpy.org/devdocs/user/tutorials_index.html) \\
-&emsp;&emsp;R: [Open source book "R for Data Science"](https://r4ds.had.co.nz/index.html), [Open source book "Advanced R"](https://adv-r.hadley.nz/) \\
-&emsp;&emsp;Julia: [Documentation](https://docs.julialang.org/en/v1/) \\
-&emsp;&emsp;Bash: [Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) \\
-&emsp;&emsp;Git: [Manual](https://git-scm.com/docs), [Open source book](https://git-scm.com/book/en/v2)
+&emsp;&emsp;Python: {{<a "https://docs.python.org/3/reference/index.html" "Reference manual">}}, {{<a "https://docs.python.org/3/library/index.html" "Standard library manual">}}, {{<a "https://docs.python.org/3/tutorial/index.html" "Tutorial">}} \\
+&emsp;&emsp;NumPy: {{<a "https://numpy.org/devdocs/user/tutorials_index.html" "Tutorial">}} \\
+&emsp;&emsp;R: {{<a "https://adv-r.hadley.nz/" "Open source book "R for Data Science"](https://r4ds.had.co.nz/index.html), [Open source book "Advanced R"">}} \\
+&emsp;&emsp;Julia: {{<a "https://docs.julialang.org/en/v1/" "Documentation">}} \\
+&emsp;&emsp;Bash: {{<a "https://www.gnu.org/software/bash/manual/html_node/index.html" "Manual">}} \\
+&emsp;&emsp;Git: {{<a "https://git-scm.com/book/en/v2" "Manual](https://git-scm.com/docs), [Open source book">}}
 {{%/fragment%}}
 
 ---
@@ -188,17 +188,17 @@ When everything has failed & you have to ask for help, you need to know: <br><br
 {{%fragment%}}
 #### <div align="left" style="line-height: 3.0rem">Q&A sites</div>
 
-Mostly, **[Stack Overflow](https://en.wikipedia.org/wiki/Stack_Overflow)** & **[the Stack Exchange network](https://en.wikipedia.org/wiki/Stack_Exchange)**.
+Mostly, **{{<a "https://en.wikipedia.org/wiki/Stack_Overflow" "Stack Overflow">}}** & **{{<a "https://en.wikipedia.org/wiki/Stack_Exchange" "the Stack Exchange network">}}**.
 
-Co-founded in 2008 & 2009 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood) & [Joel Spolsky](https://en.wikipedia.org/wiki/Joel_Spolsky).<br><br>
+Co-founded in 2008 & 2009 by {{<a "https://en.wikipedia.org/wiki/Jeff_Atwood" "Jeff Atwood">}} & {{<a "https://en.wikipedia.org/wiki/Joel_Spolsky" "Joel Spolsky">}}.<br><br>
 {{%/fragment%}}
 
 {{%fragment%}}
 #### <div align="left" style="line-height: 3.0rem">Forums</div>
 
-Mostly, **[Discourse](https://en.wikipedia.org/wiki/Discourse_(software))**.
+Mostly, **{{<a "https://en.wikipedia.org/wiki/Discourse_(software)" "Discourse">}}**.
 
-Co-founded in 2013 by [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood), Robin Ward & Sam Saffron.
+Co-founded in 2013 by {{<a "https://en.wikipedia.org/wiki/Jeff_Atwood" "Jeff Atwood">}}, Robin Ward & Sam Saffron.
 
 A few other older forums.
 {{%/fragment%}}
@@ -224,14 +224,14 @@ Possible considerations:
 Pick the best site to ask your question. \\
 A few of the Stack Exchange network sites:
 
-[Stack Overflow](https://stackoverflow.com/): programming \\
-[Super User](https://superuser.com): computer hardware & software \\
-[Unix & Linux](https://unix.stackexchange.com/): *nix OS
-[TEX](https://tex.stackexchange.com/): TeX/LaTeX \\
-[Cross Validated](https://stats.stackexchange.com/): stats; data mining, collecting, analysis & visualization; ML \\
-[Data Science](https://datascience.stackexchange.com/): focus on implementation & processes \\
-[Open Data](https://opendata.stackexchange.com/) \\
-[GIS](https://gis.stackexchange.com/)
+{{<a "https://stackoverflow.com/" "Stack Overflow">}}: programming \\
+{{<a "https://superuser.com" "Super User">}}: computer hardware & software \\
+{{<a "https://unix.stackexchange.com/" "Unix & Linux">}}: *nix OS
+{{<a "https://tex.stackexchange.com/" "TEX">}}: TeX/LaTeX \\
+{{<a "https://stats.stackexchange.com/" "Cross Validated">}}: stats; data mining, collecting, analysis & visualization; ML \\
+{{<a "https://datascience.stackexchange.com/" "Data Science">}}: focus on implementation & processes \\
+{{<a "https://opendata.stackexchange.com/" "Open Data">}} \\
+{{<a "https://gis.stackexchange.com/" "GIS">}}
 
 ---
 
@@ -301,9 +301,9 @@ Avoid apologies about being a beginner, this being your first post, the question
 
 #### Formatting your question
 
-Nowadays, most sites (including Stack Overflow & Discourse) allow [markdown](https://en.wikipedia.org/wiki/Markdown) rendering.
+Nowadays, most sites (including Stack Overflow & Discourse) allow {{<a "https://en.wikipedia.org/wiki/Markdown" "markdown">}} rendering.
 
-Some older forums implement other markup languages (e.g. [BBCode](https://en.wikipedia.org/wiki/BBCode)).
+Some older forums implement other markup languages (e.g. {{<a "https://en.wikipedia.org/wiki/BBCode" "BBCode">}}).
 
 The information is always easy to find. **Spend the time to format your question properly.** People will be much less inclined to help you if you don't show any effort & if your question is a nightmare to read.
 
@@ -345,7 +345,7 @@ What am I doing wrong?
 
 #### Still not good enough
 
-This question is actually a duplicate of [a question asked](https://stackoverflow.com/q/30983013/9210961) which is itself a duplicate of [another question](https://stackoverflow.com/q/31038636/9210961).
+This question is actually a duplicate of {{<a "https://stackoverflow.com/q/30983013/9210961" "a question asked">}} which is itself a duplicate of {{<a "https://stackoverflow.com/q/31038636/9210961" "another question">}}.
 
 ---
 
@@ -353,13 +353,13 @@ This question is actually a duplicate of [a question asked](https://stackoverflo
 
 There are great posts on how to create a good minimal reproducible example. In particular:
 
-&emsp;[How to create a Minimal, Reproducible Example](https://stackoverflow.com/help/minimal-reproducible-example)
+&emsp;{{<a "https://stackoverflow.com/help/minimal-reproducible-example" "How to create a Minimal, Reproducible Example">}}
 <br><br>
 For R (but concepts apply to any language):
 
-&emsp;[How to make a great R reproducible example](https://stackoverflow.com/q/5963269/9210961) \\
-&emsp;[What's a reproducible example (`reprex`) and how do I do one?](https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219?u=prosoitos)
-<!-- [](https://github.com/tidyverse/reprex) -->
+&emsp;{{<a "https://stackoverflow.com/q/5963269/9210961" "How to make a great R reproducible example">}} \\
+&emsp;{{<a "https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219?u=prosoitos" "What's a reproducible example (`reprex`) and how do I do one?">}}
+<!-- {{<a "https://github.com/tidyverse/reprex" "">}} -->
 <!-- `reprex::reprex()` -->
 
 ---
@@ -428,7 +428,7 @@ You will learn in the process of developing your question (you may actually find
 
 It is forth the effort.
 
-[Here](https://stackoverflow.com/help/how-to-ask) is the Stack Overflow documentation on how to ask a good question.
+{{<a "https://stackoverflow.com/help/how-to-ask" "Here">}} is the Stack Overflow documentation on how to ask a good question.
 
 ---
 

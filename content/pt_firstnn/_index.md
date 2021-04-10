@@ -101,8 +101,8 @@ As mentioned earlier, `torch.nn.functional` also has activation functions.
 <br><br>
 *Examples:*
 <br><br>
-[ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) can be called with `torch.nn.functional.relu()`<br>
-[Softmax](https://en.wikipedia.org/wiki/Softmax_function) with `torch.nn.functional.softmax()`
+{{<a "https://en.wikipedia.org/wiki/Rectifier_(neural_networks)" "ReLU">}} can be called with `torch.nn.functional.relu()`<br>
+{{<a "https://en.wikipedia.org/wiki/Softmax_function" "Softmax">}} with `torch.nn.functional.softmax()`
 
 ---
 
@@ -133,7 +133,7 @@ class Net(nn.Module):
 		self.fc2 = nn.Linear(128, 10)
 ```
 <br>
-If this Python syntax is obscure to you, you should have a look at [the answers to this question](https://stackoverflow.com/q/625083/9210961), as well as [this answer to a similar question](https://stackoverflow.com/a/8609238/9210961).
+If this Python syntax is obscure to you, you should have a look at {{<a "https://stackoverflow.com/q/625083/9210961" "the answers to this question">}}, as well as {{<a "https://stackoverflow.com/a/8609238/9210961" "this answer to a similar question">}}.
 
 ---
 
