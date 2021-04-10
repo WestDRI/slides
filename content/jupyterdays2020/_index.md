@@ -77,7 +77,7 @@ syzygy does not have the Julia kernel installed at this point, so I will show a 
 <br>
 <br>
 {{<img src="https://imgs.xkcd.com/comics/coronavirus_charts.png" title="" width="80%" line-height="0rem">}}
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;From <a href="https://xkcd.com/">xkcd</a>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;From <a href="https://xkcd.com/" target="_blank">xkcd</a>
 {{</img>}}
 {{</fragment>}}
 
