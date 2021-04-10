@@ -38,7 +38,7 @@ custom_theme_compile = true
 ---
 
 ## PyTorch
-
+<br>
 PyTorch is currently the fastest growing machine learning library and is now used for most research papers on the subject.
 
 <br>
@@ -51,19 +51,12 @@ PyTorch's advantages:
 ---
 
 ## fastai
-
-fastai is a library that builds on top of PyTorch, adding a higher-level of functionality.
-
-High level API for PyTorch.
-
-Layered API: allows for very low level research, production model, super easy world class model for beginners
-
 <br>
-fastai's advantages:
+{{<a "https://github.com/fastai/fastai" "fastai" >}} is a deep learning library that builds on top of PyTorch, adding a higher level of functionality.
+<br>
+<br>
 
-- a fast and efficient approach
-- the low-level functionality of PyTorch remains accessible for those who need it
-<br><br>
+> [It] is organized around two main design goals: to be approachable and rapidly productive, while also being deeply hackable and configurable. {{<el l="https://docs.fast.ai/#About-fastai">}}
 
 ---
 
@@ -71,7 +64,6 @@ fastai's advantages:
 
 ##### Documentation
 
-##### Course
 {{<a "https://docs.fast.ai/" "Manual">}}<br>
 {{<a "https://docs.fast.ai/tutorial.html" "Tutorials">}}<br>
 {{<a "https://www.mdpi.com/2078-2489/11/2/108/htm" "Peer-reviewed paper">}}
@@ -435,4 +427,4 @@ Which means that we can use it to obtain outputs from inputs.
 
 ---
 
-### <center><span style="font-size: 5.0rem">Questions?</span></center>
+# <center><span style="font-size: 5.0rem">Questions?</span></center>
