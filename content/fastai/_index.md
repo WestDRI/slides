@@ -21,6 +21,17 @@ custom_theme_compile = true
 
 ---
 
+### <center>WestGrid Training Modules 2021</center>
+{{<br size="2">}}
+
+{{<img src="/img/ml/fastai/wgtm21.png" margin="rem" title="" width="55%" line-height="0.5rem">}}
+{{</img>}}
+
+{{<br size="2">}}
+#### <center>https://wgtm21.netlify.app/</center>
+
+---
+
 # <center>Machine learning</center>
 <br>
 
