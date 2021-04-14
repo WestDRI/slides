@@ -38,15 +38,13 @@ custom_theme_compile = true
 ---
 
 ## PyTorch
-<br>
-PyTorch is currently the fastest growing machine learning library and is now used for most research papers on the subject.
 
-<br>
-PyTorch's advantages:
+{{<imgshadow src="/img/ml/pt_vs_tf.png" margin="0.5rem" title="" width="50%" line-height="0.5rem">}}
+{{<br size="1.5">}}
+{{</imgshadow>}}
 
-- written in Python
-- excellent low-level highly customizable functionalities
-<br><br>
+- Very Pythonic.
+- Widely used in research.
 
 ---
 
@@ -71,12 +69,33 @@ PyTorch's advantages:
 ##### Book
 
 {{<a "https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527" "Paperback version">}}<br>
-{{<a "https://course.fast.ai/" "Free MOOC version">}}<br>
-{{<a "https://github.com/fastai/fastbook/" "Jupyter notebooks version">}}
+{{<a "https://course.fast.ai/" "Free MOOC version of part 1 of the book">}}<br>
+{{<a "https://github.com/fastai/fastbook/" "Jupyter notebooks version of the book">}}
 
 ##### Getting help
 
 {{<a "https://forums.fast.ai/" "Discourse forum">}} <br>
+
+<!-- --- -->
+
+<!-- ## Installation -->
+
+<!-- Currently, fastai needs PyTorch 1.7.1 -->
+
+<!-- python -m pip install fastai -->
+
+
+<!-- https://pytorch.org/get-started/previous-versions/ -->
+
+<!-- python -m pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html -->
+
+<!-- --- -->
+
+<!-- ## Notes for Python users -->
+
+<!-- import * -->
+
+<!-- {{<a "https://github.com/fastai/fastcore" "fastcore">}} -->
 
 ---
 
@@ -121,6 +140,11 @@ From <a href="https://xkcd.com/" target="_blank">xkcd.com</a>
 
 {{%fragment%}}
 <br>
+<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">1961:</span>&nbsp; Arthur Samuel's checkers program.
+{{%/fragment%}}
+
+{{%fragment%}}
+<br>
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">1986:</span>&nbsp; James McClelland, David Rumelhart & PDP Research Group—book: "Parallel Distributed &emsp;&emsp;&ensp;Processing".
 {{%/fragment%}}
 
@@ -128,7 +152,7 @@ From <a href="https://xkcd.com/" target="_blank">xkcd.com</a>
 
 ---
 
-#### <center>Neurons</center>
+# <center>Neurons</center>
 
 <figure style="display: table; margin: 2rem auto">
   <div class="row">
@@ -149,9 +173,27 @@ From <a href="https://xkcd.com/" target="_blank">xkcd.com</a>
 
 ---
 
+# <center>Neural networks</center>
+{{<br size="4">}}
+
+{{%fragment%}}
+A NN is a parameterized function which can, in theory, solve any problem to any level of accuracy.
+{{%/fragment%}}
+
+{{<br size="4">}}
+
+{{%fragment%}}
+The learning process is the mapping of input data to output data (in a training set) through the adjustment of the parameters.
+{{%/fragment%}}
+
+{{<br size="4">}}
+
+---
+
 {{<br size="3">}}
 
-#### <center>Neural networks</center>
+## <center>Neural networks</center>
+{{<br size="3">}}
 
 <figure style="display: table; margin: 1rem auto">
   <div class="row">
@@ -170,11 +212,13 @@ From <a href="https://xkcd.com/" target="_blank">xkcd.com</a>
   </div>
 </figure>
 
+{{<br size="2">}}
+
 ---
 
 {{<br size="3">}}
 
-#### <center>Neural networks</center>
+## <center>Neural networks</center>
 {{<br size="4.2">}}
 
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Single layer of artificial neurons</span> &nbsp;&nbsp;→ &nbsp; Unable to learn even some of the simple mathematical functions (Marvin Minsky & Seymour Papert).
@@ -195,7 +239,7 @@ From <a href="https://xkcd.com/" target="_blank">xkcd.com</a>
 
 {{<br size="3">}}
 
-#### <center>Neural networks</center>
+## <center>Neural networks</center>
 {{<br size="4.2">}}
 
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Single layer of artificial neurons</span> &nbsp;&nbsp;→ &nbsp; Unable to learn even some of the simple mathematical functions (Marvin Minsky & Seymour Papert).
@@ -291,38 +335,39 @@ From <a href="https://commons.wikimedia.org/w/index.php?curid=1474927" target="_
 
 ---
 
-A NN  is a parameterized function which can, in theory, solve any problem to any level of accuracy.
-
-The learning process is the mapping of input data to output data (in a training set) through the adjustment of parameters. The parameters are weights and biases.
-
-At the practical level, this is achieve through minimization of the loss function by backpropagation (the loss function is the distance between predicted and real values).
-
----
-
 # <center>General principles</center>
 
+{{<br size="5">}}
+
+{{%fragment%}}
+<center>Derived from **Arthur Samuel**'s approach.</center>
+{{%/fragment%}}
+
+{{<br size="6">}}
+
 ---
 
-#### <center>*Building* our model</center>
+#### <center>*Building* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_01_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
 
-Our model will be made of an architecture (size, depth, types of layers, etc.). \\
-We set this before training and it will not change.
+First, we need an architecture (size, depth, types of layers, etc.). \\
+This is set before training and does not change.
 
 ---
 
-#### <center>*Building* our model</center>
+#### <center>*Building* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_02_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
 
-Our model will also comprise parameters. Those are set to some initial values, but will change during training. Only at the end of training will they have reached their final values.
+A model also comprises parameters. \\
+Those are set to some initial values, but will change during training.
 
 ---
 
-#### <center>*Training* our model</center>
+#### <center>*Training* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_03_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
@@ -333,7 +378,7 @@ To train the model, we need labelled data in the form of input/output pairs.
 
 ---
 
-#### <center>*Training* our model</center>
+#### <center>*Training* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_04_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
@@ -344,7 +389,7 @@ Inputs and parameters are fed to the architecture.
 
 ---
 
-#### <center>*Training* our model</center>
+#### <center>*Training* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_05_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
@@ -355,85 +400,91 @@ We get predictions as outputs.
 
 ---
 
-#### <center>*Training* our model</center>
+#### <center>*Training* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_06_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
 
-These can then be compared with the labels (or true outputs).
+A metric (e.g. error rate) compares predictions and labels and is a measure of model performance.
 <br>
 <br>
 
 ---
 
-#### <center>*Training* our model</center>
+#### <center>*Training* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_07_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
 
-The distance between them is the loss.
-<br>
+Because it is not always sensitive enough to changes in parameter values, we compute a loss function ...
 <br>
 
 ---
 
-#### <center>*Training* our model</center>
+#### <center>*Training* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_08_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
 
-Of course, we want to minimize the loss. Parameters get adjusted slightly through backpropagation to that effect. This cycle gets repeated at each xxx.
+... which allows to adjust the parameters slightly through backpropagation. \\
+This cycle gets repeated for a number of steps.
 
 ---
 
-#### <center>*Using* our model</center>
+#### <center>*Using* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_09_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
 
-At the end of the training process, what we are interested in are the architecture and the parameters.
+At the end of the training process, what matters is the combination of architecture and trained parameters.
 <br>
 
 ---
 
-#### <center>*Using* our model</center>
+#### <center>*Using* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_10_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
 
-The rest was only necessary to train and evaluate our model.
+That's what constitute a model.
 <br>
 <br>
 
 ---
 
-#### <center>*Using* our model</center>
+#### <center>*Using* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_11_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
 
-Now our model can be considered as a regular program.
+A model can be considered as a regular program ...
 <br>
 <br>
 
 ---
 
-#### <center>*Using* our model</center>
+#### <center>*Using* a model</center>
 
 {{<img src="/img/ml/fastai/dl_schematics_12_nw.png" margin="1.5rem" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
 
-Which means that we can use it to obtain outputs from inputs.
+... and be used to obtain outputs from inputs.
 <br>
 <br>
 
 ---
 
-# <center>Let's dive in</center>
+### <center>Two main types of models</center>
+{{<br size="5">}}
+
+##### - Classification
+{{<br size="3">}}
+
+##### - Regression
+{{<br size="3">}}
 
 ---
 
-## <center></center>
 
 
 ---
