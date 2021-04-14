@@ -21,84 +21,6 @@ custom_theme_compile = true
 
 ---
 
-# <center>What is fastai?</center>
-
-{{%fragment%}}
-{{<img src="/img/ml/fastai/fastai3_nw.png" margin="2rem" title="" width="60%" line-height="0rem">}}
-{{</img>}}
-{{%/fragment%}}
-
----
-
-# <center>What is fastai?</center>
-
-{{<img src="/img/ml/fastai/fastai2_nw.png" margin="2rem" title="" width="60%" line-height="0rem">}}
-{{</img>}}
-
----
-
-## PyTorch
-
-{{<imgshadow src="/img/ml/pt_vs_tf.png" margin="0.5rem" title="" width="50%" line-height="0.5rem">}}
-{{<br size="1.5">}}
-{{</imgshadow>}}
-
-- Very Pythonic.
-- Widely used in research.
-
----
-
-## fastai
-<br>
-{{<a "https://github.com/fastai/fastai" "fastai" >}} is a deep learning library that builds on top of PyTorch, adding a higher level of functionality.
-<br>
-<br>
-
-> [It] is organized around two main design goals: to be approachable and rapidly productive, while also being deeply hackable and configurable. {{<el l="https://docs.fast.ai/#About-fastai">}}
-
----
-
-## Resources
-
-##### Documentation
-
-{{<a "https://docs.fast.ai/" "Manual">}}<br>
-{{<a "https://docs.fast.ai/tutorial.html" "Tutorials">}}<br>
-{{<a "https://www.mdpi.com/2078-2489/11/2/108/htm" "Peer-reviewed paper">}}
-
-##### Book
-
-{{<a "https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527" "Paperback version">}}<br>
-{{<a "https://course.fast.ai/" "Free MOOC version of part 1 of the book">}}<br>
-{{<a "https://github.com/fastai/fastbook/" "Jupyter notebooks version of the book">}}
-
-##### Getting help
-
-{{<a "https://forums.fast.ai/" "Discourse forum">}} <br>
-
-<!-- --- -->
-
-<!-- ## Installation -->
-
-<!-- Currently, fastai needs PyTorch 1.7.1 -->
-
-<!-- python -m pip install fastai -->
-
-
-<!-- https://pytorch.org/get-started/previous-versions/ -->
-
-<!-- python -m pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html -->
-
-<!-- --- -->
-
-<!-- ## Notes for Python users -->
-
-<!-- import * -->
-
-<!-- {{<a "https://github.com/fastai/fastcore" "fastcore">}} -->
-
----
-
 # <center>Machine learning</center>
 <br>
 
@@ -219,17 +141,19 @@ The learning process is the mapping of input data to output data (in a training 
 {{<br size="3">}}
 
 ## <center>Neural networks</center>
-{{<br size="4.2">}}
+{{<br size="4.05">}}
 
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Single layer of artificial neurons</span> &nbsp;&nbsp;→ &nbsp; Unable to learn even some of the simple mathematical functions (Marvin Minsky & Seymour Papert).
 
+{{<br size="4">}}
+
 {{%fragment%}}
-<br>
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Two layers</span> &nbsp;&nbsp;→ &nbsp; Theoretically can approximate any math model, but in practice very slow.
 {{%/fragment%}}
 
+{{<br size="4">}}
+
 {{%fragment%}}
-<br>
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">More layers</span> &nbsp;&nbsp;→ &nbsp; Deeper networks
 {{%/fragment%}}
 
@@ -240,14 +164,16 @@ The learning process is the mapping of input data to output data (in a training 
 {{<br size="3">}}
 
 ## <center>Neural networks</center>
-{{<br size="4.2">}}
+{{<br size="4.05">}}
 
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Single layer of artificial neurons</span> &nbsp;&nbsp;→ &nbsp; Unable to learn even some of the simple mathematical functions (Marvin Minsky & Seymour Papert).
 
-<br>
+{{<br size="4">}}
+
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Two layers</span> &nbsp;&nbsp;→ &nbsp; Theoretically can approximate any math model, but in practice very slow.
 
-<br>
+{{<br size="4">}}
+
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">More layers</span> &nbsp;&nbsp;→ &nbsp; Deeper networks &nbsp;→&nbsp; <b>deep learning</b>.
 
 {{<br size="9.7">}}
@@ -255,6 +181,8 @@ The learning process is the mapping of input data to output data (in a training 
 ---
 
 # <center>Types of NN</center>
+
+{{<br size="4">}}
 
 ---
 
@@ -471,6 +399,84 @@ A model can be considered as a regular program ...
 ... and be used to obtain outputs from inputs.
 <br>
 <br>
+
+---
+
+# <center>What is fastai?</center>
+
+{{%fragment%}}
+{{<img src="/img/ml/fastai/fastai3_nw.png" margin="2rem" title="" width="60%" line-height="0rem">}}
+{{</img>}}
+{{%/fragment%}}
+
+---
+
+# <center>What is fastai?</center>
+
+{{<img src="/img/ml/fastai/fastai2_nw.png" margin="2rem" title="" width="60%" line-height="0rem">}}
+{{</img>}}
+
+---
+
+## PyTorch
+
+{{<imgshadow src="/img/ml/pt_vs_tf.png" margin="0.5rem" title="" width="50%" line-height="0.5rem">}}
+{{<br size="1.5">}}
+{{</imgshadow>}}
+
+- Very Pythonic.
+- Widely used in research.
+
+---
+
+## fastai
+<br>
+{{<a "https://github.com/fastai/fastai" "fastai" >}} is a deep learning library that builds on top of PyTorch, adding a higher level of functionality.
+<br>
+<br>
+
+> [It] is organized around two main design goals: to be approachable and rapidly productive, while also being deeply hackable and configurable. {{<el l="https://docs.fast.ai/#About-fastai">}}
+
+---
+
+## Resources
+
+##### Documentation
+
+{{<a "https://docs.fast.ai/" "Manual">}}<br>
+{{<a "https://docs.fast.ai/tutorial.html" "Tutorials">}}<br>
+{{<a "https://www.mdpi.com/2078-2489/11/2/108/htm" "Peer-reviewed paper">}}
+
+##### Book
+
+{{<a "https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527" "Paperback version">}}<br>
+{{<a "https://course.fast.ai/" "Free MOOC version of part 1 of the book">}}<br>
+{{<a "https://github.com/fastai/fastbook/" "Jupyter notebooks version of the book">}}
+
+##### Getting help
+
+{{<a "https://forums.fast.ai/" "Discourse forum">}} <br>
+
+<!-- --- -->
+
+<!-- ## Installation -->
+
+<!-- Currently, fastai needs PyTorch 1.7.1 -->
+
+<!-- python -m pip install fastai -->
+
+
+<!-- https://pytorch.org/get-started/previous-versions/ -->
+
+<!-- python -m pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html -->
+
+<!-- --- -->
+
+<!-- ## Notes for Python users -->
+
+<!-- import * -->
+
+<!-- {{<a "https://github.com/fastai/fastcore" "fastcore">}} -->
 
 ---
 
