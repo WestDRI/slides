@@ -48,11 +48,11 @@ custom_theme_compile = true
 
 ###### CRAN package list
 
-{{<a "https://cran.r-project.org/web/views/Spatial.html" "Analysis of Spatial Data">}}
+{{<a "https://cran.r-project.org/web/views/Spatial.html" "Analysis of Spatial Data">}} &nbsp;
 
 ###### Mailing list
 
-{{<a "https://stat.ethz.ch/mailman/listinfo/r-sig-geo" "R Special Interest Group on using Geographical data and Mapping">}}
+{{<a "https://stat.ethz.ch/mailman/listinfo/r-sig-geo" "R Special Interest Group on using Geographical data and Mapping">}} &nbsp;
 
 ---
 

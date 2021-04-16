@@ -2,7 +2,7 @@
 title = "r_gis_brc"
 outputs = ["Reveal"]
 [logowgnofront]
-src = "/img/wg_white_removed_medium.png"
+src = "/img/wg_for_dark_bg.png"
 [backlink]
 href = "https://westgrid-cli.netlify.app/workshops/gis_r_rc/"
 txt = "Back to webinar page"
@@ -11,11 +11,11 @@ custom_theme = "mh5.scss"
 custom_theme_compile = true
 +++
 
-#### <center><div style="line-height: 4.5rem; font-size: 3.5rem"><font color="black">&emsp;&emsp;&ensp;Spatial data analysis &emsp;&emsp;&emsp;&ensp;& visualisation &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;in R &emsp;&emsp;&emsp;&emsp;</font></div></center>
+## <center><div style="line-height: 4.5rem; font-size: 3.5rem">&emsp;&emsp;&ensp;Spatial data analysis &emsp;&emsp;&emsp;&ensp;& visualisation &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;in R &emsp;&emsp;&emsp;&emsp;</div></center>
 ##### <div style="line-height: 1.1rem"><br>&emsp;&emsp;&emsp;&emsp;Marie-Hélène Burle</div>
 ###### <div style="line-height: 1.1rem">&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;{{<a "mailto:training@westgrid.ca" "training@westgrid.ca">}}</div>
 ###### <div style="line-height: 1.1rem">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;April 8, 2021</div>
-{{<imgright src="/img/wg_white_removed_medium.png" title="" margin="0.7rem 7rem 0 0" width="65%" line-height="rem">}}
+{{<imgright src="/img/wg_for_dark_bg.png" title="" margin="0.7rem 7rem 0 0" width="65%" line-height="rem">}}
 {{</imgright>}}
 
 ---
@@ -48,11 +48,11 @@ custom_theme_compile = true
 
 ###### CRAN package list
 
-{{<a "https://cran.r-project.org/web/views/Spatial.html" "Analysis of Spatial Data">}}
+{{<a "https://cran.r-project.org/web/views/Spatial.html" "Analysis of Spatial Data">}} &nbsp;
 
 ###### Mailing list
 
-{{<a "https://stat.ethz.ch/mailman/listinfo/r-sig-geo" "R Special Interest Group on using Geographical data and Mapping">}}
+{{<a "https://stat.ethz.ch/mailman/listinfo/r-sig-geo" "R Special Interest Group on using Geographical data and Mapping">}} &nbsp;
 
 ---
 
@@ -141,7 +141,7 @@ ak <- st_read("01_rgi60_Alaska")
 wes <- st_read("02_rgi60_WesternCanadaUS")
 ```
 {{<note>}}
-Make sure to use the absolute paths or the paths relative to your working directory (which can be obtained with {{%c%}}getwd(){{%/c%}})
+Make sure to use the absolute paths or the paths relative to your working directory (which can be obtained with {{%cdark%}}getwd(){{%/cdark%}})
 {{</note>}}
 
 ---
@@ -475,7 +475,7 @@ gnp <- map(dirs, prep)
 ```
 
 {{<note>}}
-We use {{%c%}}dplyr::select(){{%/c%}} because <b>raster</b> also has a {{%c%}}select(){{%/c%}} function.
+We use {{%cdark%}}dplyr::select(){{%/cdark%}} because <b>raster</b> also has a {{%cdark%}}select(){{%/cdark%}} function.
 {{</note>}}
 
 
@@ -1075,7 +1075,7 @@ tmap_mode("view")
 ```
 
 {{<note>}}
-you can also toggle between modes with {{%c%}}ttm(){{%/c%}}
+you can also toggle between modes with {{%cdark%}}ttm(){{%/cdark%}}
 {{</note>}}
 
 Re-plot the last map we plotted with **tmap**:
