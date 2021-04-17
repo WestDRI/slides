@@ -1343,4 +1343,6 @@ tm_shape(agras) +
 
 ---
 
-# <center><span style="font-size: 5.0rem">Questions?</span></center>
+{{< slide background="#fff" background-image="/img/r_gis/bg3_alpha.png" >}}
+
+# <font color="black"><center><span style="font-size: 8.0rem; font-family: Righteous">Questions?</span></center></font>
