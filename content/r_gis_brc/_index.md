@@ -11,17 +11,30 @@ custom_theme = "mh5.scss"
 custom_theme_compile = true
 +++
 
-## <center><div style="line-height: 4.5rem; font-size: 3.5rem">&emsp;&emsp;&ensp;Spatial data analysis &emsp;&emsp;&emsp;&ensp;& visualisation &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;in R &emsp;&emsp;&emsp;&emsp;</div></center>
-##### <div style="line-height: 1.1rem"><br>&emsp;&emsp;&emsp;&emsp;Marie-Hélène Burle</div>
-###### <div style="line-height: 1.1rem">&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;{{<a "mailto:training@westgrid.ca" "training@westgrid.ca">}}</div>
-###### <div style="line-height: 1.1rem">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;April 8, 2021</div>
-{{<imgright src="/img/wg_for_dark_bg.png" title="" margin="0.7rem 7rem 0 0" width="65%" line-height="rem">}}
-{{</imgright>}}
+{{< slide background-image="/img/r_gis/bg1.png" >}}
+
+## <div style="line-height: 5rem; font-size: 4rem; color: black; font-family: Righteous">&emsp;Introduction to GIS & <br>&emsp;Spatial Analysis in R</div>
+{{<br size="3">}}
+#### <div style="line-height: 1.5rem; text-align: right; color: black; font-family: Righteous"><br>Marie-Hélène Burle &emsp;&emsp;&emsp;&nbsp;</div>
+##### <div style="line-height: 1.5rem; text-align: right; color: black; font-family: Righteous">training@westgrid.ca&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+##### <div style="line-height: 1.5rem; text-align: right; color: black; font-family: Righteous">April 26, 2021&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</div>
+{{<br size="3">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column">
+	 {{<img src="/img/wg_no_bg.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column">
+	   {{<img src="/img/jupyterdays/ubc.png" title="" width="40%" line-height="rem">}}
+	   {{</img>}}
+	</div>
+  </div>
+</figure>
 
 ---
 
-{{<img src="/img/r_gis/gis-r-workshop_ubc-brc_2021.png" margin="0rem" title="" width="55%" line-height="rem">}}
-{{</img>}}
 
 ---
 
