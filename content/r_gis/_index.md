@@ -310,7 +310,7 @@ tm_shape(ak, bbox = nwa_bbox) +
 
 ---
 
-{{<imgshadow src="/img/r_gis/nwa.png" title="" width="70%" line-height="0.5rem">}}
+{{<imgshadow src="/img/r_gis/nwa.jpg" title="" width="70%" line-height="0.5rem">}}
 {{</imgshadow>}}
 
 ---
@@ -413,7 +413,7 @@ tm_shape(states, bbox = nwa_bbox) +
 
 ---
 
-{{<imgshadow src="/img/r_gis/nwa_bg.png" title="" width="70%" line-height="0.5rem">}}
+{{<imgshadow src="/img/r_gis/nwa_bg.jpg" title="" width="70%" line-height="0.5rem">}}
 {{</imgshadow>}}
 
 ---
@@ -999,7 +999,7 @@ mapview(gnp)
 <figure style="display: table;">
   <div class="row">
 	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview4.png">
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview4.jpg">
 	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
 	<figcaption>
 	  <em>
@@ -1009,7 +1009,7 @@ mapview(gnp)
 	  </div>
 	</div>
 	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview1.png"  >
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview1.jpg"  >
 	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
 	<figcaption>
 	  <em>
@@ -1021,7 +1021,7 @@ mapview(gnp)
   </div>
   <div class="row">
 	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview3.png" margin="5rem" >
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview3.jpg" margin="5rem" >
 	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
 	<figcaption>
 	  <em>
@@ -1031,7 +1031,7 @@ mapview(gnp)
 	  </div>
 	</div>
 	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview2.png" margin="5rem" >
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview2.jpg" margin="5rem" >
 	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
 	<figcaption>
 	  <em>

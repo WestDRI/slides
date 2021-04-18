@@ -11,7 +11,7 @@ custom_theme = "mh5.scss"
 custom_theme_compile = true
 +++
 
-{{< slide background-image="/img/r_gis/bg1.png" >}}
+{{< slide background-image="/img/r_gis/bg1.jpg" >}}
 
 ## <div style="line-height: 5rem; font-size: 4rem; color: black; font-family: Righteous">&emsp;Introduction to GIS & <br>&emsp;Spatial Analysis in R</div>
 {{<br size="3">}}
@@ -339,7 +339,7 @@ tm_shape(ak, bbox = nwa_bbox) +
 
 ---
 
-{{<imgshadow src="/img/r_gis/nwa.png" title="" width="70%" line-height="0.5rem">}}
+{{<imgshadow src="/img/r_gis/nwa.jpg" title="" width="70%" line-height="0.5rem">}}
 {{</imgshadow>}}
 
 ---
@@ -442,7 +442,7 @@ tm_shape(states, bbox = nwa_bbox) +
 
 ---
 
-{{<imgshadow src="/img/r_gis/nwa_bg.png" title="" width="70%" line-height="0.5rem">}}
+{{<imgshadow src="/img/r_gis/nwa_bg.jpg" title="" width="70%" line-height="0.5rem">}}
 {{</imgshadow>}}
 
 ---
@@ -1031,7 +1031,7 @@ mapview(gnp)
 <figure style="display: table;">
   <div class="row">
 	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview4.png">
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview4.jpg">
 	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
 	<figcaption>
 	  <em>
@@ -1041,7 +1041,7 @@ mapview(gnp)
 	  </div>
 	</div>
 	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview1.png"  >
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview1.jpg"  >
 	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
 	<figcaption>
 	  <em>
@@ -1053,7 +1053,7 @@ mapview(gnp)
   </div>
   <div class="row">
 	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview3.png" margin="5rem" >
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview3.jpg" margin="5rem" >
 	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
 	<figcaption>
 	  <em>
@@ -1063,7 +1063,7 @@ mapview(gnp)
 	  </div>
 	</div>
 	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview2.png" margin="5rem" >
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview2.jpg" margin="5rem" >
 	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
 	<figcaption>
 	  <em>
@@ -1343,6 +1343,6 @@ tm_shape(agras) +
 
 ---
 
-{{< slide background="#fff" background-image="/img/r_gis/bg3_alpha.png" >}}
+{{< slide background="#fff" background-image="/img/r_gis/bg3.jpg" >}}
 
 # <font color="black"><center><span style="font-size: 8.0rem; font-family: Righteous">Questions?</span></center></font>
