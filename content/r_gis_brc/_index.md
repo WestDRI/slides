@@ -13,11 +13,11 @@ custom_theme_compile = true
 
 {{< slide background-image="/img/r_gis/bg1.jpg" >}}
 
-## <div style="line-height: 5rem; font-size: 4rem; color: black; font-family: Righteous">&emsp;Introduction to GIS & <br>&emsp;Spatial Analysis in R</div>
+## <div style="line-height: 5rem; font-size: 4rem; color: black">&emsp;Introduction to GIS & <br>&emsp;Spatial Analysis in R</div>
 {{<br size="3">}}
-#### <div style="line-height: 1.5rem; text-align: right; color: black; font-family: Righteous"><br>Marie-Hélène Burle &emsp;&emsp;&emsp;&nbsp;</div>
-##### <div style="line-height: 1.5rem; text-align: right; color: black; font-family: Righteous">training@westgrid.ca&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
-##### <div style="line-height: 1.5rem; text-align: right; color: black; font-family: Righteous">April 26, 2021&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</div>
+#### <div style="line-height: 1.5rem; font-size: 2.3rem; text-align: right; color: black"><br>Marie-Hélène Burle &emsp;&emsp;&emsp;&nbsp;</div>
+##### <div style="line-height: 1.5rem; font-size: 1.8rem; text-align: right; color: black">training@westgrid.ca&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+##### <div style="line-height: 1.5rem; font-size: 1.8rem; text-align: right; color: black">April 26, 2021&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</div>
 {{<br size="3">}}
 
 <figure style="display: table; margin: 0rem auto">
