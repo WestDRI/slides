@@ -42,6 +42,35 @@ custom_theme_compile = true
 ---
 
 #### <center><div style="line-height: 1.8rem">Great resources</div></center>
+# <center>Types of spatial data</center>
+
+{{%fragment%}}
+## <div style="line-height: 4rem">Vector data</div>
+{{%/fragment%}}
+
+{{%fragment%}}
+<span style="color: #e8761e; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">**Discrete objects**</span>
+
+*Examples:*&ensp; countries, roads, rivers, towns
+
+Contain: &ensp;- geometry:&ensp; shape and location of the objects
+
+&emsp;&emsp;&emsp;&emsp;- attributes:&ensp; additional variables (e.g. name, year, type)
+
+Common file format:&ensp; [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON), [shapefile](https://en.wikipedia.org/wiki/Shapefile)
+{{%/fragment%}}
+
+{{%fragment%}}
+## <div style="line-height: 4rem">Raster data</div>
+{{%/fragment%}}
+
+{{%fragment%}}
+<span style="color: #e8761e; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">**Continuous phenomena or spatial fields**</span>
+
+*Examples:*&ensp; temperature, air quality, elevation, water depth
+
+Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF](https://en.wikipedia.org/wiki/GeoTIFF), [NetCDF](https://en.wikipedia.org/wiki/NetCDF), [Esri grid](https://en.wikipedia.org/wiki/Esri_grid)
+{{%/fragment%}}
 
 ###### Open GIS data
 
