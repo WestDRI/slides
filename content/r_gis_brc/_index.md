@@ -1424,22 +1424,8 @@ tm_shape(agras) +
 
 ---
 
-<!-- --- -->
 
-<!-- {{< slide background="#fff" background-image="/img/r_gis/bg3.jpg" >}} -->
 
-<!-- # <font color="black"><center><span style="font-size: 8.0rem">Questions?</span></center></font> -->
-
-<!-- --- -->
-
-<!-- {{< slide background-color="black" background-image="/img/r_gis/australia_watersheds.png" background-size="85%" >}} -->
-
-<!-- # <font color="white"><center><span style="font-size: 5.5rem">Lunch break</span></center></font> -->
-
-<!-- --- -->
-<!-- {{< slide background="#fff" background-image="/img/r_gis/bg2.jpg" >}} -->
-
-<!-- # <font color="black"><center><span style="font-size: 5.5rem">Lunch break</span></center></font> -->
 ---
 
 {{< slide background-color="black" background-image="/img/r_gis/bg_world_watersheds_dark.png" background-size="112%" >}}
