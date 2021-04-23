@@ -41,7 +41,6 @@ custom_theme_compile = true
 
 ---
 
-#### <center><div style="line-height: 1.8rem">Great resources</div></center>
 # <center>Types of spatial data</center>
 
 {{%fragment%}}
@@ -71,6 +70,9 @@ Common file format:&ensp; [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON), [sha
 
 Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF](https://en.wikipedia.org/wiki/GeoTIFF), [NetCDF](https://en.wikipedia.org/wiki/NetCDF), [Esri grid](https://en.wikipedia.org/wiki/Esri_grid)
 {{%/fragment%}}
+
+
+### <center><div style="line-height: 1.8rem">Resources</div></center>
 
 ###### Open GIS data
 
