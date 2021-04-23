@@ -277,6 +277,18 @@ So it is best to try to avoid reprojecting rasters: if you want to combine vario
 - ggmap
 - tmap
 
+---
+
+{{< slide background-color="black" background-image="/img/r_gis/bg_na_watersheds.png" background-size="58%" >}}
+
+# <font color="white"><center><span style="font-size: 5rem">Let's work on a project</span></center></font>
+
+{{%fragment%}}
+# <font color="white"><center><span style="font-size: 3rem">Retreat of glaciers in North America</span></center></font>
+{{%/fragment%}}
+
+---
+
 # <center>Data</center>
 
 For this webinar, we will use:
