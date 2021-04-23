@@ -109,6 +109,47 @@ Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF]
 
 ---
 
+# <center>Packages</center>
+
+[There is now a rich ecosystem of GIS packages in R](https://rdcu.be/cjceF){{<fl n="1">}}.
+
+{{<fn>}}
+{{<fr n="1" text="Bivand, R.S. Progress in the R ecosystem for representing and handling spatial data. J Geogr Syst (2020). https://doi.org/10.1007/s10109-020-00336-0">}}
+{{</fn>}}
+
+---
+
+## <center>Data manipulation</center>
+
+### Older packages
+
+- sp
+- raster
+- rgdal
+- rgeos
+
+### Newer generation
+
+- [sf](https://github.com/r-spatial/sf): vector data
+- [terra](https://github.com/rspatial/terra): raster data (also has vector data capabilities)
+
+---
+
+## <center>Mapping</center>
+
+### Static maps
+
+- ggplot2
+- tmap
+
+### Dynamic maps
+
+- leaflet
+- ggplot2 + gganimate
+- mapview
+- ggmap
+- tmap
+
 # <center>Data</center>
 
 For this webinar, we will use:
