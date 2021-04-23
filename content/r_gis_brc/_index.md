@@ -71,6 +71,19 @@ Common file format:&ensp; [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON), [sha
 Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF](https://en.wikipedia.org/wiki/GeoTIFF), [NetCDF](https://en.wikipedia.org/wiki/NetCDF), [Esri grid](https://en.wikipedia.org/wiki/Esri_grid)
 {{%/fragment%}}
 
+---
+
+## <center>Vector data</center>
+
+### Types
+<br>
+
+- **point**:&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp; single set of coordinates
+- **multi-point**:&emsp;&emsp; multiple sets of coordinates
+- **polyline**:&emsp;&emsp;&emsp;&ensp;&nbsp; multiple sets for which the order matters
+- **multi-polyline**:&emsp; multiple of the above
+- **polygon**:&emsp;&emsp;&emsp;&ensp;&nbsp; same as polyline but first and last sets are the same
+- **multi-polygon**:&emsp; multiple of the above
 
 {{< slide background-color="black" background-image="/img/r_gis/bg_australia_watersheds.png" background-size="85%" >}}
 
