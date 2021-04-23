@@ -37,7 +37,7 @@ custom_theme_compile = true
 
 {{< slide background-color="black" background-image="/img/r_gis/africa_watersheds.jpg" background-size="58%" >}}
 
-# <font color="white"><center><span style="font-size: 5rem">Definitions</span></center></font>
+# <font color="white"><center><span style="font-size: 5rem">GIS concepts</span></center></font>
 
 ---
 
