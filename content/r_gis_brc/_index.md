@@ -72,6 +72,12 @@ Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF]
 {{%/fragment%}}
 
 
+{{< slide background-color="black" background-image="/img/r_gis/europe_watersheds.png" background-size="58%" >}}
+
+# <font color="white"><center><span style="font-size: 5rem">GIS in R</span></center></font>
+
+---
+
 ### <center><div style="line-height: 1.8rem">Resources</div></center>
 
 ###### Open GIS data
