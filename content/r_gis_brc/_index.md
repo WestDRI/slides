@@ -35,7 +35,7 @@ custom_theme_compile = true
 
 ---
 
-{{< slide background-color="black" background-image="/img/r_gis/africa_watersheds.jpg" background-size="58%" >}}
+{{< slide background-color="black" background-image="/img/r_gis/bg_africa_watersheds.jpg" background-size="58%" >}}
 
 # <font color="white"><center><span style="font-size: 5rem">GIS concepts</span></center></font>
 
@@ -72,7 +72,7 @@ Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF]
 {{%/fragment%}}
 
 
-{{< slide background-color="black" background-image="/img/r_gis/europe_watersheds.png" background-size="58%" >}}
+{{< slide background-color="black" background-image="/img/r_gis/bg_australia_watersheds.png" background-size="85%" >}}
 
 # <font color="white"><center><span style="font-size: 5rem">GIS in R</span></center></font>
 
@@ -1440,8 +1440,9 @@ tm_shape(agras) +
 <!-- {{< slide background="#fff" background-image="/img/r_gis/bg2.jpg" >}} -->
 
 <!-- # <font color="black"><center><span style="font-size: 5.5rem">Lunch break</span></center></font> -->
+---
 
-{{< slide background-color="black" background-image="/img/r_gis/world_watersheds_dark.png" background-size="112%" >}}
+{{< slide background-color="black" background-image="/img/r_gis/bg_world_watersheds_dark.png" background-size="112%" >}}
 
 # <font color="white"><center>References</center></font>
 
@@ -1453,6 +1454,6 @@ The rspatial website by Robert Hijmans helped put some of the content together.
 
 ---
 
-{{< slide background-color="black" background-image="/img/r_gis/canada_watersheds.png" background-size="70%" >}}
+{{< slide background-color="black" background-image="/img/r_gis/bg_canada_watersheds.png" background-size="70%" >}}
 
 # <font color="white"><center><span style="font-size: 6.5rem">Questions?</span></center></font>
