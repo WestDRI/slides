@@ -1425,6 +1425,20 @@ tm_shape(agras) +
 ---
 
 
+
+
+{{< slide background-color="black" background-image="/img/r_gis/world_watersheds_dark.png" background-size="112%" >}}
+
+# <font color="white"><center>References</center></font>
+
+<font color="white">
+Background images from Szűcs Róbert, Grasshopper Geography.
+
+The rspatial website by Robert Hijmans helped put some of the content together.
+</font>
+
+---
+
 {{< slide background-color="black" background-image="/img/r_gis/canada_watersheds.png" background-size="70%" >}}
 
 # <font color="white"><center><span style="font-size: 6.5rem">Questions?</span></center></font>
