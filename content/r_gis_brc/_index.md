@@ -52,8 +52,7 @@ custom_theme_compile = true
 
 *Examples:*&ensp; countries, roads, rivers, towns
 
-Contain: &ensp;- geometry:&ensp; shape and location of the objects
-
+Contain: &ensp;- geometry:&ensp; shape and location of the objects \\
 &emsp;&emsp;&emsp;&emsp;- attributes:&ensp; additional variables (e.g. name, year, type)
 
 Common file format:&ensp; [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON), [shapefile](https://en.wikipedia.org/wiki/Shapefile)
@@ -84,6 +83,121 @@ Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF]
 - **multi-polyline**:&emsp; multiple of the above
 - **polygon**:&emsp;&emsp;&emsp;&ensp;&nbsp; same as polyline but first and last sets are the same
 - **multi-polygon**:&emsp; multiple of the above
+
+---
+
+## <center>Raster data</center>
+{{<br size="3">}}
+
+**Grid** of equally sized rectangular cells containing values for some variables.
+<br>
+<br>
+Size of cells = resolution.
+<br>
+<br>
+For computing efficiency, rasters do not have coordinates of each cell, but the bounding box and the number of rows and columns.
+
+---
+
+# <center>Coordinate Reference Systems (CRS)</center>
+{{<br size="2">}}
+
+A location on earth's surface can be identified by its **coordinates** and some **reference system** called CRS.
+<br>
+<br>
+The coordinates (x, y) are called <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">longitude</span> and <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">latitude</span>.
+<br>
+<br>
+In 3D, longitude and latitude are expressed in angular units (e.g. degrees) and the reference system needed is an <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">angular CRS</span> or <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">geographic coordinate system (GCS)</span>.
+<br>
+<br>
+In 2D, they are expressed in linear units (e.g. meters) and the reference system needed is a <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">planar CRS</span> or <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">projected coordinate system (PCS)</span>.
+
+---
+
+## <center>Datums</center>
+{{<br size="2">}}
+
+Since the earth is not a perfect sphere, we use spheroidal models to represent its surface. Those are called **geodetic datums**.
+{{<br size="1.5">}}
+Some datums are global, others local (more accurate in a particular area of the globe, but only useful there).
+{{<br size="3">}}
+
+*Examples of commonly used global datums:*
+{{<br size="1.5">}}
+
+- WGS84 (World Geodesic System 1984)
+- NAD83 (North American Datum of 1983)
+
+---
+
+## <center>Angular CRS</center>
+{{<br size="1.5">}}
+
+An angular CRS contains a datum, an angular unit, and references such as a prime meridian (e.g. the Royal Observatory, Greenwich, England).
+{{<br size="2">}}
+
+In an angular CRS or GCS:
+{{<br size="1">}}
+
+- Longitude (\\(\lambda\\)) represents the angle between the prime meridian and the meridian that passes through that location.
+{{<br size="1">}}
+
+- Latitude (\\(\phi\\)) represents the angle between the line that passes through the center of the earth and that location and its projection on the equatorial plane.
+{{<br size="1">}}
+
+Longitude and latitude are thus angular coordinates.
+
+---
+
+## <center>Projections</center>
+{{<br size="1.5">}}
+
+To create a two-dimensional map, you need to project this 3D angular CRS into a 2D one.
+{{<br size="1.5">}}
+
+Various projections offer different characteristics. For instance:
+
+- some respect areas (equal-area)
+- some respect the shape of geographic features (conformal)
+- some *almost* respect both for small areas
+{{<br size="1.5">}}
+
+It is important to choose one which sensible properties for your goals.
+{{<br size="1.5">}}
+
+*Examples of projections:*
+
+- Mercator
+- UTM
+- Robinson
+
+---
+
+## <center>Planar CRS</center>
+{{<br size="2">}}
+
+A planar CRS is defined by a datum, a projection, and a set of parameters such as a linear unit and the origins.
+{{<br size="2">}}
+
+Common planar CRS have been assigned a unique ID called [EPSG](https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset) code which is much more convenient to use.
+{{<br size="2">}}
+
+In a planar CRS, coordinates will not be in degrees anymore but in meters (or other length unit).
+
+---
+
+## <center>Projecting into a new CRS</center>
+{{<br size="2">}}
+
+You can change the projection of your data.
+{{<br size="2">}}
+
+Vector data won't suffer any loss of precision, but raster data will.
+
+So it is best to try to avoid reprojecting rasters: if you want to combine various datasets which have different projections, reproject vector data instead.
+
+---
 
 {{< slide background-color="black" background-image="/img/r_gis/bg_australia_watersheds.png" background-size="85%" >}}
 
