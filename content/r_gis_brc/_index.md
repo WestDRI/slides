@@ -5,7 +5,7 @@ outputs = ["Reveal"]
 src = "/img/wg_for_dark_bg.png"
 [backlink]
 href = "https://westgrid-cli.netlify.app/workshops/gis_r_rc/"
-txt = "Back to webinar page"
+txt = "Back to workshop page"
 [reveal_hugo]
 custom_theme = "mh5.scss"
 custom_theme_compile = true
@@ -291,7 +291,7 @@ So it is best to try to avoid reprojecting rasters: if you want to combine vario
 
 # <center>Data</center>
 
-For this webinar, we will use:
+For this workshop, we will use:
 
 - the Alaska as well as the Western Canada & USA subsets of the {{<a "http://www.glims.org/RGI/" "Randolph Glacier Inventory">}} version 6.0<sup>1</sup>
 - the {{<a "https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542" "USGS time series of the named glaciers of Glacier National Park">}}<sup>2</sup>
