@@ -401,12 +401,14 @@ Vector data won't suffer any loss of precision, but raster data will \\
 # <center>Data</center>
 
 For this workshop, we will use:
+{{<br size="1">}}
 
 - the Alaska as well as the Western Canada & USA subsets of the {{<a "http://www.glims.org/RGI/" "Randolph Glacier Inventory">}} version 6.0<sup>1</sup>
 - the {{<a "https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542" "USGS time series of the named glaciers of Glacier National Park">}}<sup>2</sup>
 - the Alaska as well as the Western Canada & USA subsets of the {{<a "https://www.research-collection.ethz.ch/handle/20.500.11850/315707" "consensus estimate for the ice thickness distribution of all glaciers on Earth dataset">}}<sup>3</sup>
+{{<br size="1">}}
 
-The datasets can be downloaded as zip files from these websites.
+The datasets can be downloaded as zip files from these websites
 
 {{<fn>}}
 {{<fr n="1" text="RGI Consortium (2017). Randolph Glacier Inventory – A Dataset of Global Glacier Outlines: Version 6.0: Technical Report, Global Land Ice Measurements from Space, Colorado, USA. Digital Media. DOI: https://doi.org/10.7265/N5-RGI-60.">}}
@@ -418,17 +420,17 @@ The datasets can be downloaded as zip files from these websites.
 
 # <center>Basemap</center>
 <br>
-We will use data from {{<a "https://www.naturalearthdata.com/" "Natural Earth">}}, a public domain map dataset.
+We will use data from {{<a "https://www.naturalearthdata.com/" "Natural Earth">}}, a public domain map dataset
 <br>
 <br>
 
-This dataset can be accessed direction from within R thanks to the packages `rnaturalearth` (provides the functions) & `rnaturalearthdata` (provides the data).
+This dataset can be accessed direction from within R thanks to the packages `rnaturalearth` (provides the functions) & `rnaturalearthdata` (provides the data)
 
 ---
 
 # <center>Packages</center>
 <br>
-Packages need to be installed before they can be loaded in a session.
+Packages need to be installed before they can be loaded in a session
 <br>
 <br>
 Packages on CRAN can be installed with:
@@ -437,7 +439,7 @@ Packages on CRAN can be installed with:
 install.packages("<package-name>")
 ```
 <br>
-`basemaps` is not on CRAN and needs to be installed from GitHub thanks to `devtools`:
+`basemaps` is not on CRAN & needs to be installed from GitHub thanks to `devtools`:
 
 ```r
 install.packages("devtools")
@@ -466,17 +468,13 @@ library(raster)             # gridded spatial data manipulation
 
 ---
 
-# <center>sf</center>
-## <center>Package for spatial vector data</center>
-
----
-
 ## <center>Reading in data</center>
-<br>
+{{<br size="3">}}
 
-Download and unzip `02_rgi60_WesternCanadaUS` & `01_rgi60_Alaska` from the {{<a "http://www.glims.org/RGI/" "Randolph Glacier Inventory">}} version 6.0.
+Download & unzip `02_rgi60_WesternCanadaUS` & `01_rgi60_Alaska` from the {{<a "http://www.glims.org/RGI/" "Randolph Glacier Inventory">}} version 6.0
+{{<br size="2">}}
 
-Data get imported and turned into `sf` objects with the function `sf::st_read()`:
+Data get imported & turned into `sf` objects with the function `sf::st_read()`:
 
 ```r
 ak <- st_read("01_rgi60_Alaska")
