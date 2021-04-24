@@ -206,8 +206,6 @@ Vector data won't suffer any loss of precision, but raster data will \\
 
 ---
 
-### <center><div style="line-height: 1.8rem">Resources</div></center>
-
 ###### Open GIS data
 
 {{<a "https://freegisdata.rtwilson.com/" "Free GIS Data">}}: list of free GIS datasets
