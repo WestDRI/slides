@@ -48,7 +48,7 @@ custom_theme_compile = true
 {{%/fragment%}}
 
 {{%fragment%}}
-<span style="color: #e8761e; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">**Discrete objects**</span>
+{{<e>}}**Discrete objects**{{</e>}}
 
 *Examples:*&ensp; countries, roads, rivers, towns
 
@@ -63,7 +63,7 @@ Common file format:&ensp; [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON), [sha
 {{%/fragment%}}
 
 {{%fragment%}}
-<span style="color: #e8761e; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">**Continuous phenomena or spatial fields**</span>
+{{<e>}}**Continuous phenomena or spatial fields**{{</e>}}
 
 *Examples:*&ensp; temperature, air quality, elevation, water depth
 
@@ -105,7 +105,9 @@ For computing efficiency, rasters do not have coordinates of each cell, but the 
 A location on earth's surface can be identified by its **coordinates** and some **reference system** called CRS.
 <br>
 <br>
-The coordinates (x, y) are called <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">longitude</span> and <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">latitude</span>.
+The coordinates (x, y) are called {{<e>}}longitude{{</e>}} & {{<e>}}latitude{{</e>}}
+
+The coordinates (x, y) are called {{<e>}}longitude{{</e>}} & {{<e>}}latitude{{</e>}}
 <br>
 <br>
 In 3D, longitude and latitude are expressed in angular units (e.g. degrees) and the reference system needed is an <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">angular CRS</span> or <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">geographic coordinate system (GCS)</span>.
