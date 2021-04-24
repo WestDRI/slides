@@ -52,7 +52,7 @@ custom_theme_compile = true
 
 *Examples:*&ensp; countries, roads, rivers, towns
 
-Contain: &ensp;- geometry:&ensp; shape and location of the objects \\
+Contain: &ensp;- geometry:&ensp; shape & location of the objects \\
 &emsp;&emsp;&emsp;&emsp;- attributes:&ensp; additional variables (e.g. name, year, type)
 
 Common file format:&ensp; [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON), [shapefile](https://en.wikipedia.org/wiki/Shapefile)
@@ -81,7 +81,7 @@ Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF]
 - **multi-point**:&emsp;&emsp; multiple sets of coordinates
 - **polyline**:&emsp;&emsp;&emsp;&ensp;&nbsp; multiple sets for which the order matters
 - **multi-polyline**:&emsp; multiple of the above
-- **polygon**:&emsp;&emsp;&emsp;&ensp;&nbsp; same as polyline but first and last sets are the same
+- **polygon**:&emsp;&emsp;&emsp;&ensp;&nbsp; same as polyline but first & last sets are the same
 - **multi-polygon**:&emsp; multiple of the above
 
 ---
@@ -95,14 +95,14 @@ Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF]
 Size of cells = resolution.
 <br>
 <br>
-For computing efficiency, rasters do not have coordinates of each cell, but the bounding box and the number of rows and columns.
+For computing efficiency, rasters do not have coordinates of each cell, but the bounding box & the number of rows & columns
 
 ---
 
 # <center>Coordinate Reference Systems (CRS)</center>
 {{<br size="2">}}
 
-A location on earth's surface can be identified by its **coordinates** and some **reference system** called CRS.
+A location on earth's surface can be identified by its **coordinates** & some **reference system** called CRS
 <br>
 <br>
 The coordinates (x, y) are called {{<e>}}longitude{{</e>}} & {{<e>}}latitude{{</e>}}
@@ -110,10 +110,10 @@ The coordinates (x, y) are called {{<e>}}longitude{{</e>}} & {{<e>}}latitude{{</
 The coordinates (x, y) are called {{<e>}}longitude{{</e>}} & {{<e>}}latitude{{</e>}}
 <br>
 <br>
-In 3D, longitude and latitude are expressed in angular units (e.g. degrees) and the reference system needed is an <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">angular CRS</span> or <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">geographic coordinate system (GCS)</span>.
+In 3D, longitude & latitude are expressed in angular units (e.g. degrees) & the reference system needed is an {{<e>}}angular CRS{{</e>}} or {{<e>}}geographic coordinate system (GCS){{</e>}}
 <br>
 <br>
-In 2D, they are expressed in linear units (e.g. meters) and the reference system needed is a <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">planar CRS</span> or <span style="color: #e8761e; font-weight: 500; font-size: 1.3rem; font-family: 'Montserrat'">projected coordinate system (PCS)</span>.
+In 2D, they are expressed in linear units (e.g. meters) & the reference system needed is a {{<e>}}planar CRS{{</e>}} or {{<e>}}projected coordinate system (PCS){{</e>}}
 
 ---
 
@@ -142,13 +142,13 @@ An angular CRS contains a datum, an angular unit, and references such as a prime
 In an angular CRS or GCS:
 {{<br size="1">}}
 
-- Longitude (\\(\lambda\\)) represents the angle between the prime meridian and the meridian that passes through that location.
+- Longitude (\\(\lambda\\)) represents the angle between the prime meridian & the meridian that passes through that location
 {{<br size="1">}}
 
 - Latitude (\\(\phi\\)) represents the angle between the line that passes through the center of the earth and that location and its projection on the equatorial plane.
 {{<br size="1">}}
 
-Longitude and latitude are thus angular coordinates.
+Longitude & latitude are thus angular coordinates
 
 ---
 
@@ -179,7 +179,7 @@ It is important to choose one which sensible properties for your goals.
 ## <center>Planar CRS</center>
 {{<br size="2">}}
 
-A planar CRS is defined by a datum, a projection, and a set of parameters such as a linear unit and the origins.
+A planar CRS is defined by a datum, a projection & a set of parameters such as a linear unit & the origins
 {{<br size="2">}}
 
 Common planar CRS have been assigned a unique ID called [EPSG](https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset) code which is much more convenient to use.
