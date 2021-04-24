@@ -319,16 +319,27 @@ Vector data won't suffer any loss of precision, but raster data will \\
 ---
 
 ## <center>sf</center>
-### <center>Simple features in R</center>
+### <center>Simple Features in R</center>
 {{<br size="3">}}
 
 <center>Geospatial vectors: points, lines, polygons</center>
 
 ---
 
-## <center>Simple features</center>
+## <center>Simple Features</center>
+{{<br size="3">}}
 
-[Well-known text (WKT) and well-known binary (WKB)](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry) 
+[Simple Features](https://en.wikipedia.org/wiki/Simple_Features)—defined by the [Open Geospatial Consortium (OGC)](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium)—is a set of standards now used by most GIS libraries.
+{{<br size="1">}}
+
+[Well-known text (WKT)](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry) is a markup language for representing vector geometry objects according to those standards.
+{{<br size="1">}}
+
+A compact computer version also exists: well-known binary (WKB).
+{{<br size="4">}}
+
+The package sp predates Simple Features. \\
+sf—launched in 2016—implements these standards in R.
 
 ---
 
