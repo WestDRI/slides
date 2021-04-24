@@ -236,7 +236,9 @@ Vector data won't suffer any loss of precision, but raster data will \\
 ---
 
 # <center>Packages</center>
+{{<br size="3">}}
 
+[There is now a rich ecosystem of GIS packages in R<sup>1</sup>](https://rdcu.be/cjceF)
 
 {{<fn>}}
 {{<fr n="1" text="Bivand, R.S. Progress in the R ecosystem for representing and handling spatial data. J Geogr Syst (2020). https://doi.org/10.1007/s10109-020-00336-0">}}
@@ -244,36 +246,145 @@ Vector data won't suffer any loss of precision, but raster data will \\
 
 ---
 
-## <center>Data manipulation</center>
-
-### Older packages
-
-- sp
-- raster
-- rgdal
-- rgeos
-
-### Newer generation
-
-- [sf](https://github.com/r-spatial/sf): vector data
-- [terra](https://github.com/rspatial/terra): raster data (also has vector data capabilities)
-
----
-
 ## <center>Mapping</center>
 
 ### Static maps
+{{<br size="1">}}
 
 - ggplot2
 - tmap
+{{<br size="2">}}
 
 ### Dynamic maps
+{{<br size="1">}}
 
 - leaflet
 - ggplot2 + gganimate
 - mapview
 - ggmap
 - tmap
+
+---
+
+## <center>Data manipulation</center>
+
+### Older packages
+{{<br size="1">}}
+
+- sp
+- raster
+- rgdal
+- rgeos
+{{<br size="2">}}
+
+### Newer generation
+{{<br size="1">}}
+
+- [sf](https://github.com/r-spatial/sf): vector data
+- [terra](https://github.com/rspatial/terra): raster data (also has vector data capabilities)
+
+---
+
+## <center>tmap</center>
+{{<br size="2">}}
+
+### Useful links
+{{<br size="1">}}
+
+- [GitHub repo](https://github.com/mtennekes/tmap)
+- [Resources](https://mtennekes.github.io/tmap/)
+
+---
+
+## <center>ggplot2</center>
+{{<br size="2">}}
+
+### Useful links
+{{<br size="1">}}
+
+- [GitHub repo](https://github.com/tidyverse/ggplot2)
+- [Resources](https://ggplot2.tidyverse.org/)
+- [Cheatsheet](https://www.rstudio.com/resources/cheatsheets/)
+
+---
+
+{{<img src="/img/r_gis/ggplot_cs_1.jpg" margin="rem" title="" width="90%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+{{<img src="/img/r_gis/ggplot_cs_2.jpg" margin="rem" title="" width="90%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+## <center>sf</center>
+### <center>Simple features in R</center>
+{{<br size="3">}}
+
+<center>Geospatial vectors: points, lines, polygons</center>
+
+---
+
+## <center>Simple features</center>
+
+[Well-known text (WKT) and well-known binary (WKB)](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry) 
+
+---
+
+## <center>sf</center>
+
+### Useful links
+
+- [GitHub repo](https://github.com/r-spatial/sf)
+- [Paper](https://journal.r-project.org/archive/2018/RJ-2018-009/index.html)
+- [Resources](https://r-spatial.github.io/sf/)
+- [Cheatsheet](https://www.rstudio.com/resources/cheatsheets/)
+
+---
+
+{{<img src="/img/r_gis/sf_cs_1.jpg" margin="rem" title="" width="90%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+{{<img src="/img/r_gis/sf_cs_2.jpg" margin="rem" title="" width="90%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+## <center>terra</center>
+{{<br size="2">}}
+
+<center>Geospatial rasters</center>
+{{<br size="6">}}
+
+<center>Faster and simpler replacement of raster package by the same team</center>
+{{<br size="2">}}
+
+<center>Mostly implemented in C++</center>
+{{<br size="2">}}
+
+<center>Can work with datasets too large to be loaded into memory</center>
+
+---
+
+## <center>terra</center>
+
+### Useful links
+
+- [GitHub repo](https://github.com/rspatial/terra)
+- [Resources](https://rspatial.github.io/terra/reference/terra-package.html)
+- [Full manual](https://rspatial.org/terra/index.html)
+
+<!-- Classes: -->
+
+<!-- - SpatVector: vector data -->
+<!-- - SpatRaster: raster data -->
+<!-- - SpatExtent: bounding boxes -->
+<!-- - SpatRasterDataset -->
+<!-- - SpatRasterCollection -->
+<!-- - SpatVectorCollection -->
 
 ---
 
