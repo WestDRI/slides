@@ -1676,13 +1676,10 @@ tm_shape(agras) +
 
 {{< slide background-color="black" background-image="/img/r_gis/bg_world_watersheds_dark.png" background-size="112%" >}}
 
-# <font color="white"><center>References</center></font>
+# <font color="white"><center>Image credits</center></font>
+{{<br size="2">}}
 
-<font color="white">
-Background images from Szűcs Róbert, Grasshopper Geography.
-
-The rspatial website by Robert Hijmans helped put some of the content together.
-</font>
+<center><font color="white">Szűcs Róbert, Grasshopper Geography</font></center>
 
 ---
 
