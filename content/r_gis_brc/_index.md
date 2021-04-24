@@ -89,10 +89,10 @@ Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF]
 ## <center>Raster data</center>
 {{<br size="3">}}
 
-**Grid** of equally sized rectangular cells containing values for some variables.
+**Grid** of equally sized rectangular cells containing values for some variables
 <br>
 <br>
-Size of cells = resolution.
+Size of cells = resolution
 <br>
 <br>
 For computing efficiency, rasters do not have coordinates of each cell, but the bounding box & the number of rows & columns
@@ -120,9 +120,9 @@ In 2D, they are expressed in linear units (e.g. meters) & the reference system n
 ## <center>Datums</center>
 {{<br size="2">}}
 
-Since the earth is not a perfect sphere, we use spheroidal models to represent its surface. Those are called **geodetic datums**.
+Since the earth is not a perfect sphere, we use spheroidal models to represent its surface. Those are called **geodetic datums**
 {{<br size="1.5">}}
-Some datums are global, others local (more accurate in a particular area of the globe, but only useful there).
+Some datums are global, others local (more accurate in a particular area of the globe, but only useful there)
 {{<br size="3">}}
 
 *Examples of commonly used global datums:*
@@ -136,7 +136,7 @@ Some datums are global, others local (more accurate in a particular area of the 
 ## <center>Angular CRS</center>
 {{<br size="1.5">}}
 
-An angular CRS contains a datum, an angular unit, and references such as a prime meridian (e.g. the Royal Observatory, Greenwich, England).
+An angular CRS contains a datum, an angular unit & references such as a prime meridian (e.g. the Royal Observatory, Greenwich, England)
 {{<br size="2">}}
 
 In an angular CRS or GCS:
@@ -145,7 +145,7 @@ In an angular CRS or GCS:
 - Longitude (\\(\lambda\\)) represents the angle between the prime meridian & the meridian that passes through that location
 {{<br size="1">}}
 
-- Latitude (\\(\phi\\)) represents the angle between the line that passes through the center of the earth and that location and its projection on the equatorial plane.
+- Latitude (\\(\phi\\)) represents the angle between the line that passes through the center of the earth & that location & its projection on the equatorial plane
 {{<br size="1">}}
 
 Longitude & latitude are thus angular coordinates
@@ -155,7 +155,7 @@ Longitude & latitude are thus angular coordinates
 ## <center>Projections</center>
 {{<br size="1.5">}}
 
-To create a two-dimensional map, you need to project this 3D angular CRS into a 2D one.
+To create a two-dimensional map, you need to project this 3D angular CRS into a 2D one
 {{<br size="1.5">}}
 
 Various projections offer different characteristics. For instance:
@@ -165,7 +165,7 @@ Various projections offer different characteristics. For instance:
 - some *almost* respect both for small areas
 {{<br size="1.5">}}
 
-It is important to choose one which sensible properties for your goals.
+It is important to choose one which sensible properties for your goals
 {{<br size="1.5">}}
 
 *Examples of projections:*
@@ -182,22 +182,21 @@ It is important to choose one which sensible properties for your goals.
 A planar CRS is defined by a datum, a projection & a set of parameters such as a linear unit & the origins
 {{<br size="2">}}
 
-Common planar CRS have been assigned a unique ID called [EPSG](https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset) code which is much more convenient to use.
+Common planar CRS have been assigned a unique ID called [EPSG](https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset) code which is much more convenient to use
 {{<br size="2">}}
 
-In a planar CRS, coordinates will not be in degrees anymore but in meters (or other length unit).
+In a planar CRS, coordinates will not be in degrees anymore but in meters (or other length unit)
 
 ---
 
 ## <center>Projecting into a new CRS</center>
 {{<br size="2">}}
 
-You can change the projection of your data.
+You can change the projection of your data
 {{<br size="2">}}
 
-Vector data won't suffer any loss of precision, but raster data will.
-
-So it is best to try to avoid reprojecting rasters: if you want to combine various datasets which have different projections, reproject vector data instead.
+Vector data won't suffer any loss of precision, but raster data will \\
+→&nbsp; best to try to avoid reprojecting rasters: if you want to combine various datasets which have different projections, reproject vector data instead
 
 ---
 
@@ -240,7 +239,6 @@ So it is best to try to avoid reprojecting rasters: if you want to combine vario
 
 # <center>Packages</center>
 
-[There is now a rich ecosystem of GIS packages in R](https://rdcu.be/cjceF){{<fl n="1">}}.
 
 {{<fn>}}
 {{<fr n="1" text="Bivand, R.S. Progress in the R ecosystem for representing and handling spatial data. J Geogr Syst (2020). https://doi.org/10.1007/s10109-020-00336-0">}}
