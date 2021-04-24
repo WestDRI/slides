@@ -722,7 +722,7 @@ Always make sure the CRS match!
 [1] TRUE
 ```
 
-The bounding boxes are different and we are only interested in the basemap within the bounding box of our data, so this is the only part of the basemap that we will plot.
+The bounding boxes are different & we are only interested in the basemap within the bounding box of our data, so this is the only part of the basemap that we will plot
 
 ```r
 > st_bbox(states) == nwa_bbox
@@ -730,7 +730,7 @@ xmin  ymin  xmax  ymax
 FALSE FALSE FALSE FALSE
 ```
 
-Play with colors of borders and fill, as well as the width of the borders.
+Play with colors of borders & fill, as well as the width of the borders
 
 ---
 
@@ -781,9 +781,9 @@ tm_shape(states, bbox = nwa_bbox) +
 <br>
 <br>
 
-We will use the {{<a "https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542" "USGS time series of the named glaciers of Glacier National Park">}}.
+We will use the {{<a "https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542" "USGS time series of the named glaciers of Glacier National Park">}}
 
-These 4 datasets have the contour lines of 39 glaciers for the years `1966`, `1998`, `2005`, and `2015`.
+These 4 datasets have the contour lines of 39 glaciers for the years `1966`, `1998`, `2005` & `2015`
 
 ---
 
@@ -815,7 +815,7 @@ gnp <- map(dirs, prep)
 ```
 
 {{<note>}}
-We use {{%cdark%}}dplyr::select(){{%/cdark%}} because <b>raster</b> also has a {{%cdark%}}select(){{%/cdark%}} function.
+We use {{%cdark%}}dplyr::select(){{%/cdark%}} because <b>raster</b> also has a {{%cdark%}}select(){{%/cdark%}} function
 {{</note>}}
 
 
@@ -962,7 +962,7 @@ tm_shape(gnp) +
 <br>
 
 {{%fragment%}}
-Let's plot our GNP map as an inset of our Western North America map.
+Let's plot our GNP map as an inset of our Western North America map
 <br><br>
 As always, first we check that the CRS are the same:
 
@@ -998,9 +998,9 @@ We can verify that the CRS of both our maps are now the same:
 
 ## <center>Inset maps</center>
 <br>
-**First step: add a rectangle showing the bounding box of `gnp` in the `nwa` map.**
+**First step: add a rectangle showing the bounding box of `gnp` in the `nwa` map**
 
-This will show the location of the GNP map in the main North America map.
+This will show the location of the GNP map in the main North America map
 
 We add a new `sfc_POLYGON` from the `gnp` bounding box as a new layer:
 
@@ -1059,9 +1059,9 @@ main_map <- tm_shape(states, bbox = nwa_bbox) +
 
 ## <center>Inset maps</center>
 
-**Third step: create a `tmap` object for the inset map.**
+**Third step: create a `tmap` object for the inset map**
 
-Matching colors and edited layouts will help with readability:
+Matching colors & edited layouts will help with readability:
 
 ```r
 inset_map <- tm_shape(gnp) +
@@ -1097,7 +1097,7 @@ print(inset_map, vp = viewport(0.41, 0.26, width = 0.5, height = 0.5))
 
 ### <center>Adjustments</center>
 <br>
-The scale is too small to show the retreat of the glaciers on this map. So it might be better to remove the legend and the palette per year and to make the borders and fill of the same colors as in the main map instead:
+The scale is too small to show the retreat of the glaciers on this map. So it might be better to remove the legend & the palette per year & to make the borders & fill of the same colors as in the main map instead:
 
 ```r
 inset_map <- tm_shape(gnp) +
@@ -1124,7 +1124,7 @@ inset_map <- tm_shape(gnp) +
 <br>
 
 {{%fragment%}}
-To see the retreat of the glaciers, we need to zoom in. Let's focus on a single glacier: Agassiz.
+To see the retreat of the glaciers, we need to zoom in. Let's focus on a single glacier: Agassiz
 {{%/fragment%}}
 
 ---
@@ -1175,9 +1175,9 @@ tm_shape(ag) +
 
 ## <center>Using ggplot2 instead of tmap</center>
 <br>
-As an alternative to the **tmap** package, **ggplot2** can plot maps with the `geom_sf()` function.
+As an alternative to the **tmap** package, **ggplot2** can plot maps with the `geom_sf()` function
 
-The previous map can be reproduced (with some tweaking of style and layout) with:
+The previous map can be reproduced (with some tweaking of style & layout) with:
 
 ```r
 ggplot(ag)+
@@ -1206,14 +1206,14 @@ basemap <- get_map(
 ```
 
 {{<note>}}
-<b>ggmap</b> is a powerful package, but Google now requires an API key obtained through registration.
+<b>ggmap</b> is a powerful package, but Google now requires an API key obtained through registration
 {{</note>}}
 
 ---
 
 ## <center>Basemap with basemaps</center>
 <br>
-The package **basemaps** allows to download open source basemap data from several sources, but those cannot easily be combined with `sf` objects.
+The package **basemaps** allows to download open source basemap data from several sources, but those cannot easily be combined with `sf` objects
 <br><br>
 This plots a satellite image of the Agassiz Glacier:
 
@@ -1406,7 +1406,7 @@ mapview(gnp)
 
 ## <center>tmap</center>
 <br>
-So far, we have used the `plot` mode of **tmap**. There is also a `view` mode which allows interactive viewing in a browser through {{<a "https://leafletjs.com/" "Leaflet">}}.
+So far, we have used the `plot` mode of **tmap**. There is also a `view` mode which allows interactive viewing in a browser through {{<a "https://leafletjs.com/" "Leaflet">}}
 <br><br>
 Change to `view` mode:
 
@@ -1428,7 +1428,7 @@ tmap_last()
 
 ## <center>leaflet</center>
 <br>
-`leaflet()` creates a map widget to which you add layers.
+`leaflet()` creates a map widget to which you add layers
 
 ```r
 map <- leaflet()
@@ -1453,11 +1453,11 @@ addTiles(map)
 
 ## <center>Ice thickness</center>
 <br>
-The nomenclature for glaciers and regions in the ice thickness dataset follows the Randolph Glacier Inventory (RGI) version 6.0.
+The nomenclature for glaciers & regions in the ice thickness dataset follows the Randolph Glacier Inventory (RGI) version 6.0
 <br>
 <br>
 
-Let's look for the Agassiz Glacier data.
+Let's look for the Agassiz Glacier data
 
 ---
 
@@ -1476,7 +1476,7 @@ RGIId                       geometry
 1 RGI60-02.16664 MULTIPOLYGON (((-114.1487 4...
 ```
 
-Now we now which file we need to look for in the ice thickness dataset: `RGI60-02.16664_thickness.tif`.
+Now we now which file we need to look for in the ice thickness dataset: `RGI60-02.16664_thickness.tif`
 
 ---
 
@@ -1632,7 +1632,7 @@ We can verify that the CRS of both our maps are now the same:
 ---
 
 <br>
-The retreat and ice thickness layers will hide each other (the order matters!).\\
+The retreat & ice thickness layers will hide each other (the order matters!)\\
 One option is to use `tm_borders()` only for one of them, or we can use transparency (alpha):
 
 ```r
