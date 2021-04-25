@@ -55,7 +55,7 @@ custom_theme_compile = true
 Contain: &ensp;- geometry:&ensp; shape & location of the objects \\
 &emsp;&emsp;&emsp;&emsp;- attributes:&ensp; additional variables (e.g. name, year, type)
 
-Common file format:&ensp; [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON), [shapefile](https://en.wikipedia.org/wiki/Shapefile)
+Common file format:&ensp; {{<a "https://en.wikipedia.org/wiki/GeoJSON" "GeoJSON">}}, {{<a "https://en.wikipedia.org/wiki/Shapefile" "shapefile">}}
 {{%/fragment%}}
 
 {{%fragment%}}
@@ -67,7 +67,7 @@ Common file format:&ensp; [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON), [sha
 
 *Examples:*&ensp; temperature, air quality, elevation, water depth
 
-Common file formats:&ensp; [TIFF](https://en.wikipedia.org/wiki/TIFF), [GeoTIFF](https://en.wikipedia.org/wiki/GeoTIFF), [NetCDF](https://en.wikipedia.org/wiki/NetCDF), [Esri grid](https://en.wikipedia.org/wiki/Esri_grid)
+Common file formats:&ensp; {{<a "https://en.wikipedia.org/wiki/TIFF" "TIFF">}}, {{<a "https://en.wikipedia.org/wiki/GeoTIFF" "GeoTIFF">}}, {{<a "https://en.wikipedia.org/wiki/NetCDF" "NetCDF">}}, {{<a "https://en.wikipedia.org/wiki/Esri_grid" "Esri grid">}}
 {{%/fragment%}}
 
 ---
@@ -182,7 +182,7 @@ It is important to choose one which sensible properties for your goals
 A planar CRS is defined by a datum, a projection & a set of parameters such as a linear unit & the origins
 {{<br size="2">}}
 
-Common planar CRS have been assigned a unique ID called [EPSG](https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset) code which is much more convenient to use
+Common planar CRS have been assigned a unique ID called {{<a "https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset" "EPSG">}} code which is much more convenient to use
 {{<br size="2">}}
 
 In a planar CRS, coordinates will not be in degrees anymore but in meters (or other length unit)
@@ -238,7 +238,7 @@ Vector data won't suffer any loss of precision, but raster data will \\
 # <center>Packages</center>
 {{<br size="3">}}
 
-[There is now a rich ecosystem of GIS packages in R<sup>1</sup>](https://rdcu.be/cjceF)
+<a href="https://rdcu.be/cjceF" target="_blank">There is now a rich ecosystem of GIS packages in R<sup>1</sup></a>
 
 {{<fn>}}
 {{<fr n="1" text="Bivand, R.S. Progress in the R ecosystem for representing and handling spatial data. J Geogr Syst (2020). https://doi.org/10.1007/s10109-020-00336-0">}}
@@ -280,8 +280,8 @@ Vector data won't suffer any loss of precision, but raster data will \\
 ### Newer generation
 {{<br size="1">}}
 
-- [sf](https://github.com/r-spatial/sf): vector data
-- [terra](https://github.com/rspatial/terra): raster data (also has vector data capabilities)
+- {{<a "https://github.com/r-spatial/sf" "sf">}}: vector data
+- {{<a "https://github.com/rspatial/terra" "terra">}}: raster data (also has vector data capabilities)
 
 ---
 
@@ -291,8 +291,8 @@ Vector data won't suffer any loss of precision, but raster data will \\
 ### Useful links
 {{<br size="1">}}
 
-- [GitHub repo](https://github.com/mtennekes/tmap)
-- [Resources](https://mtennekes.github.io/tmap/)
+- {{<a "https://github.com/mtennekes/tmap" "GitHub repo">}}
+- {{<a "https://mtennekes.github.io/tmap/" "Resources">}}
 
 ---
 
@@ -309,9 +309,9 @@ Vector data won't suffer any loss of precision, but raster data will \\
 ### Useful links
 {{<br size="1">}}
 
-- [GitHub repo](https://github.com/tidyverse/ggplot2)
-- [Resources](https://ggplot2.tidyverse.org/)
-- [Cheatsheet](https://www.rstudio.com/resources/cheatsheets/)
+- {{<a "https://github.com/tidyverse/ggplot2" "GitHub repo">}}
+- {{<a "https://ggplot2.tidyverse.org/" "Resources">}}
+- {{<a "https://www.rstudio.com/resources/cheatsheets/" "Cheatsheet">}}
 
 ---
 
@@ -336,10 +336,10 @@ Vector data won't suffer any loss of precision, but raster data will \\
 ## <center>Simple Features</center>
 {{<br size="3">}}
 
-[Simple Features](https://en.wikipedia.org/wiki/Simple_Features)—defined by the [Open Geospatial Consortium (OGC)](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) & formalized by [ISO](https://en.wikipedia.org/wiki/International_Organization_for_Standardization)—is a set of standards now used by most GIS libraries.
+{{<a "https://en.wikipedia.org/wiki/Simple_Features" "Simple Features">}}—defined by the {{<a "https://en.wikipedia.org/wiki/Open_Geospatial_Consortium" "Open Geospatial Consortium (OGC)">}} & formalized by {{<a "https://en.wikipedia.org/wiki/International_Organization_for_Standardization" "ISO">}}—is a set of standards now used by most GIS libraries.
 {{<br size="1">}}
 
-[Well-known text (WKT)](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry) is a markup language for representing vector geometry objects according to those standards.
+{{<a "https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry" "Well-known text (WKT)">}} is a markup language for representing vector geometry objects according to those standards.
 {{<br size="1">}}
 
 A compact computer version also exists—well-known binary (WKB)—used by spatial databases.
@@ -357,10 +357,11 @@ sf—launched in 2016—implements these standards in R in the form of sf object
 ### Useful links
 {{<br size="1">}}
 
-- [GitHub repo](https://github.com/r-spatial/sf)
-- [Paper](https://journal.r-project.org/archive/2018/RJ-2018-009/index.html)
-- [Resources](https://r-spatial.github.io/sf/)
-- [Cheatsheet](https://www.rstudio.com/resources/cheatsheets/)
+- {{<a "https://github.com/r-spatial/sf" "GitHub repo">}}
+- {{<a "https://journal.r-project.org/archive/2018/RJ-2018-009/index.html" "Paper">}}
+- {{<a "https://r-spatial.github.io/sf/" "Resources">}}
+- {{<a "https://www.rstudio.com/resources/cheatsheets/" "Cheatsheet">}}
+- 6 vignettes: {{<a "https://r-spatial.github.io/sf/articles/sf1.html" "1">}}, {{<a "https://r-spatial.github.io/sf/articles/sf2.html" "2">}}, {{<a "https://r-spatial.github.io/sf/articles/sf3.html" "3">}}, {{<a "https://r-spatial.github.io/sf/articles/sf4.html" "4">}}, {{<a "https://r-spatial.github.io/sf/articles/sf5.html" "5">}}, {{<a "https://r-spatial.github.io/sf/articles/sf6.html" "6">}}
 
 ---
 
@@ -440,10 +441,11 @@ sf—launched in 2016—implements these standards in R in the form of sf object
 ## <center>terra</center>
 
 ### Useful links
+{{<br size="1">}}
 
-- [GitHub repo](https://github.com/rspatial/terra)
-- [Resources](https://rspatial.github.io/terra/reference/terra-package.html)
-- [Full manual](https://rspatial.org/terra/index.html)
+- {{<a "https://github.com/rspatial/terra" "GitHub repo">}}
+- {{<a "https://rspatial.github.io/terra/reference/terra-package.html" "Resources">}}
+- {{<a "https://rspatial.org/terra/index.html" "Full manual">}}
 
 <!-- Classes: -->
 
