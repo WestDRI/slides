@@ -117,7 +117,7 @@ In 2D, they are expressed in linear units (e.g. meters) & the reference system n
 
 ---
 
-## <center>Datums</center>
+### <center>Datums</center>
 {{<br size="2">}}
 
 Since the earth is not a perfect sphere, we use spheroidal models to represent its surface. Those are called **geodetic datums**
@@ -152,7 +152,7 @@ Longitude & latitude are thus angular coordinates
 
 ---
 
-## <center>Projections</center>
+### <center>Projections</center>
 {{<br size="1.5">}}
 
 To create a two-dimensional map, you need to project this 3D angular CRS into a 2D one
@@ -189,7 +189,7 @@ In a planar CRS, coordinates will not be in degrees anymore but in meters (or ot
 
 ---
 
-## <center>Projecting into a new CRS</center>
+### <center>Projecting into a new CRS</center>
 {{<br size="2">}}
 
 You can change the projection of your data
@@ -246,6 +246,25 @@ Vector data won't suffer any loss of precision, but raster data will \\
 
 ---
 
+## <center>Data manipulation</center>
+
+### Older packages
+{{<br size="1">}}
+
+- sp
+- raster
+- rgdal
+- rgeos
+{{<br size="2">}}
+
+### Newer generation
+{{<br size="1">}}
+
+- {{<a "https://github.com/r-spatial/sf" "sf">}}: vector data
+- {{<a "https://github.com/rspatial/terra" "terra">}}: raster data (also has vector data capabilities)
+
+---
+
 ## <center>Mapping</center>
 
 ### Static maps
@@ -266,67 +285,8 @@ Vector data won't suffer any loss of precision, but raster data will \\
 
 ---
 
-## <center>Data manipulation</center>
-
-### Older packages
-{{<br size="1">}}
-
-- sp
-- raster
-- rgdal
-- rgeos
-{{<br size="2">}}
-
-### Newer generation
-{{<br size="1">}}
-
-- {{<a "https://github.com/r-spatial/sf" "sf">}}: vector data
-- {{<a "https://github.com/rspatial/terra" "terra">}}: raster data (also has vector data capabilities)
-
----
-
-## <center>tmap</center>
-{{<br size="2">}}
-
-### Useful links
-{{<br size="1">}}
-
-- {{<a "https://github.com/mtennekes/tmap" "GitHub repo">}}
-- {{<a "https://mtennekes.github.io/tmap/" "Resources">}}
-
----
-
-## <center>tmap functions</center>
-{{<br size="6">}}
-
-<center>All start with `tmap_` or `tm_`</center>
-
----
-
-## <center>ggplot2</center>
-{{<br size="2">}}
-
-### Useful links
-{{<br size="1">}}
-
-- {{<a "https://github.com/tidyverse/ggplot2" "GitHub repo">}}
-- {{<a "https://ggplot2.tidyverse.org/" "Resources">}}
-- {{<a "https://www.rstudio.com/resources/cheatsheets/" "Cheatsheet">}}
-
----
-
-{{<imgm src="/img/r_gis/ggplot_cs_1.jpg" margin="0 0 0 5rem" title="" width="90%" line-height="0.5rem">}}
-{{</imgm>}}
-
----
-
-{{<imgm src="/img/r_gis/ggplot_cs_2.jpg" margin="0 0 0 5rem" title="" width="90%" line-height="0.5rem">}}
-{{</imgm>}}
-
----
-
-## <center>sf</center>
-### <center>Simple Features in R</center>
+# <center>sf</center>
+## <center>Simple Features in R</center>
 {{<br size="3">}}
 
 <center>Geospatial vectors: points, lines, polygons</center>
@@ -422,11 +382,11 @@ sf—launched in 2016—implements these standards in R in the form of sf object
 
 ---
 
-## <center>terra</center>
+# <center>terra</center>
 {{<br size="2">}}
 
-<center>Geospatial rasters</center>
-{{<br size="6">}}
+## <center>Geospatial rasters</center>
+{{<br size="4">}}
 
 <center>Faster and simpler replacement of raster package by the same team</center>
 {{<br size="2">}}
@@ -455,6 +415,54 @@ sf—launched in 2016—implements these standards in R in the form of sf object
 <!-- - SpatRasterDataset -->
 <!-- - SpatRasterCollection -->
 <!-- - SpatVectorCollection -->
+
+---
+
+# <center>tmap</center>
+{{<br size="2">}}
+
+## <center><a href="http://vita.had.co.nz/papers/layered-grammar.pdf">Layered grammar of graphics</a> GIS maps</center>
+{{<br size="4">}}
+
+---
+
+## <center>tmap</center>
+{{<br size="2">}}
+
+### Useful links
+{{<br size="1">}}
+
+- {{<a "https://github.com/mtennekes/tmap" "GitHub repo">}}
+- {{<a "https://mtennekes.github.io/tmap/" "Resources">}}
+
+---
+
+## <center>tmap functions</center>
+{{<br size="6">}}
+
+<center>All start with `tmap_` or `tm_`</center>
+
+---
+
+## <center>ggplot2</center>
+{{<br size="2">}}
+
+### Useful links
+{{<br size="1">}}
+
+- {{<a "https://github.com/tidyverse/ggplot2" "GitHub repo">}}
+- {{<a "https://ggplot2.tidyverse.org/" "Resources">}}
+- {{<a "https://www.rstudio.com/resources/cheatsheets/" "Cheatsheet">}}
+
+---
+
+{{<imgm src="/img/r_gis/ggplot_cs_1.jpg" margin="0 0 0 5rem" title="" width="90%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+{{<imgm src="/img/r_gis/ggplot_cs_2.jpg" margin="0 0 0 5rem" title="" width="90%" line-height="0.5rem">}}
+{{</imgm>}}
 
 ---
 
