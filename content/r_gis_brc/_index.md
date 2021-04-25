@@ -308,13 +308,13 @@ Vector data won't suffer any loss of precision, but raster data will \\
 
 ---
 
-{{<img src="/img/r_gis/ggplot_cs_1.jpg" margin="rem" title="" width="90%" line-height="0.5rem">}}
-{{</img>}}
+{{<imgm src="/img/r_gis/ggplot_cs_1.jpg" margin="0 0 0 5rem" title="" width="90%" line-height="0.5rem">}}
+{{</imgm>}}
 
 ---
 
-{{<img src="/img/r_gis/ggplot_cs_2.jpg" margin="rem" title="" width="90%" line-height="0.5rem">}}
-{{</img>}}
+{{<imgm src="/img/r_gis/ggplot_cs_2.jpg" margin="0 0 0 5rem" title="" width="90%" line-height="0.5rem">}}
+{{</imgm>}}
 
 ---
 
@@ -329,23 +329,26 @@ Vector data won't suffer any loss of precision, but raster data will \\
 ## <center>Simple Features</center>
 {{<br size="3">}}
 
-[Simple Features](https://en.wikipedia.org/wiki/Simple_Features)—defined by the [Open Geospatial Consortium (OGC)](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium)—is a set of standards now used by most GIS libraries.
+[Simple Features](https://en.wikipedia.org/wiki/Simple_Features)—defined by the [Open Geospatial Consortium (OGC)](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) & formalized by [ISO](https://en.wikipedia.org/wiki/International_Organization_for_Standardization)—is a set of standards now used by most GIS libraries.
 {{<br size="1">}}
 
 [Well-known text (WKT)](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry) is a markup language for representing vector geometry objects according to those standards.
 {{<br size="1">}}
 
-A compact computer version also exists: well-known binary (WKB).
+A compact computer version also exists—well-known binary (WKB)—used by spatial databases.
 {{<br size="4">}}
 
-The package sp predates Simple Features. \\
-sf—launched in 2016—implements these standards in R.
+The package sp predates Simple Features.
+{{<br size="1">}}
+
+sf—launched in 2016—implements these standards in R in the form of sf objects: data.frames (or tibbles) containing the attributes, extended by sfc objects or simple feature geometries list-columns.
 
 ---
 
 ## <center>sf</center>
 
 ### Useful links
+{{<br size="1">}}
 
 - [GitHub repo](https://github.com/r-spatial/sf)
 - [Paper](https://journal.r-project.org/archive/2018/RJ-2018-009/index.html)
@@ -354,13 +357,13 @@ sf—launched in 2016—implements these standards in R.
 
 ---
 
-{{<img src="/img/r_gis/sf_cs_1.jpg" margin="rem" title="" width="90%" line-height="0.5rem">}}
-{{</img>}}
+{{<imgm src="/img/r_gis/sf_cs_1.jpg" margin="0 0 0 5rem" title="" width="90%" line-height="0.5rem">}}
+{{</imgm>}}
 
 ---
 
-{{<img src="/img/r_gis/sf_cs_2.jpg" margin="rem" title="" width="90%" line-height="0.5rem">}}
-{{</img>}}
+{{<imgm src="/img/r_gis/sf_cs_2.jpg" margin="0 0 0 5rem" title="" width="90%" line-height="0.5rem">}}
+{{</imgm>}}
 
 ---
 
