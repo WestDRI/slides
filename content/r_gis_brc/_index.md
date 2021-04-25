@@ -523,6 +523,15 @@ Each layer contains:
 {{<imgm src="/img/r_gis/tmap8_nw.png" margin="0 0 0 5rem" title="" width="85%" line-height="0.5rem">}}
 {{</imgm>}}
 
+---
+
+# <center>ggplot2</center>
+{{<br size="2">}}
+
+## <center>The standard in R plots</center>
+
+---
+
 ## <center>ggplot2</center>
 {{<br size="2">}}
 
@@ -542,6 +551,13 @@ Each layer contains:
 
 {{<imgm src="/img/r_gis/ggplot_cs_2.jpg" margin="0 0 0 5rem" title="" width="90%" line-height="0.5rem">}}
 {{</imgm>}}
+
+---
+
+## <center>ggplot2</center>
+{{<br size="6">}}
+
+<center>{{<a "https://ggplot2.tidyverse.org/reference/ggsf.html" "geom_sf">}} allows to plot `sf` objects (i.e. make maps)</center>
 
 ---
 
