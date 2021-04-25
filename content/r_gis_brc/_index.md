@@ -378,7 +378,7 @@ sf—launched in 2016—implements these standards in R in the form of sf object
 ## <center>sf functions</center>
 {{<br size="6">}}
 
-<center>All start with `st_`</center>
+<center>Most functions start with `st_` (which refers to "spatial type")</center>
 
 ---
 
@@ -433,6 +433,15 @@ sf—launched in 2016—implements these standards in R in the form of sf object
 
 - {{<a "https://github.com/mtennekes/tmap" "GitHub repo">}}
 - {{<a "https://mtennekes.github.io/tmap/" "Resources">}}
+
+### Help pages and vignettes
+
+```{r}
+?tmap-element
+vignette("tmap-getstarted")
+# All the usual help pages, e.g.:
+?tm_layout
+```
 
 ---
 
@@ -813,50 +822,194 @@ Inspect the {{%cdark%}}wes{{%/cdark%}} object you created
 
 ---
 
-## <center>Combining datasets</center>
+# <center>Let's map our sf object ak</center>
+{{<br size="4">}}
 
-{{<note>}}
-The Coordinate Reference Systems (CRS) must be the same
-{{</note>}}
+At a bare minimum, we need `tm_shape` with the data & some info as to how to represent that data:
+{{<br size="3">}}
 
 ```r
-> st_crs(ak) == st_crs(wes)
+tm_shape(ak) +
+  tm_polygons()
+```
+[//]:codesnippet3
+
+---
+
+{{<img src="/img/r_gis/ak0.png" margin="rem" title="" width="80%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+## <center>We need to label & customize it</center>
+
+```r
+tm_shape(ak) +
+  tm_polygons() +
+  tm_layout(
+    title = "Glaciers of Alaska",
+    title.position = c("center", "top"),
+    title.size = 1.1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.06, 0.01, 0.09, 0.01),
+    outer.margins = 0,
+    frame.lwd = 0.2
+  ) +
+  tm_compass(
+    type = "arrow",
+    position = c("right", "top"),
+    size = 1.2,
+    text.size = 0.6
+  ) +
+  tm_scale_bar(
+    breaks = c(0, 500, 1000),
+    position = c("right", "BOTTOM")
+  )
+```
+[//]:codesnippet4
+
+---
+
+{{<img src="/img/r_gis/ak.png" margin="rem" title="" width="80%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+## <center>Make a map of the wes object</center>
+{{<br size="5">}}
+
+{{<challenge_dark>}}
+Make a map with the {{%cdark%}}wes{{%/cdark%}} object you created with the data for Western North America excluding AK
+{{</challenge_dark>}}
+
+---
+
+{{<img src="/img/r_gis/wes.png" margin="rem" title="" width="35%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
+# <center>Now, let's combine our maps</center>
+{{<br size="1.5">}}
+
+{{%fragment%}}
+{{<e>}}The Coordinate Reference Systems (CRS) must be the same{{</e>}}<br>
+{{<br size="1.5">}}
+{{%/fragment%}}
+
+{{%fragment%}}
+sf has a function to retrieve the CRS of an sf object: `st_crs`
+{{<br size="1.5">}}
+{{%/fragment%}}
+
+{{%fragment%}}
+```r
+st_crs(ak) == st_crs(wes)
+```
+[//]:codesnippet5
+{{<o>}}
+```{r}
 [1] TRUE
 ```
+{{%/fragment%}}
 
-The spatial bounding boxes (`bbox`) however are different\\
-(of course, since the 2 datasets cover different geographic areas)
+{{%fragment%}}
+So we're good (we will see later what to do if this is not the case)
+{{%/fragment%}}
+
+---
+
+## <center>Our combined map</center>
+{{<br size="4">}}
+
+Let's start again with a minimum map without any layout to test things out:
+{{<br size="3">}}
 
 ```r
-> st_bbox(ak) == st_bbox(wes)
- xmin  ymin  xmax  ymax
-FALSE FALSE FALSE FALSE
+tm_shape(ak) +
+  tm_polygons() +
+  tm_shape(wes) +
+  tm_polygons()
+```
+[//]:codesnippet6
+
+---
+
+{{<img src="/img/r_gis/nwa0.png" margin="rem" title="" width="70%" line-height="0.5rem">}}
+{{</img>}}
+{{<br size="3">}}
+
+{{%fragment%}}
+<center>Uh ... oh ...</center>
+{{%/fragment%}}
+
+{{<br size="2">}}
+
+---
+
+## <center>What went wrong?</center>
+{{<br size="3">}}
+
+Maps are bound by "bounding boxes". In tmap, they are called `bbox`
+{{<br size="3">}}
+
+tmap sets the bbox the first time `tm_shape` is called. In our case, the bbox was thus set to the bbox of the ak object
+{{<br size="3">}}
+
+We need to create a new bbox for our new map
+{{<br size="2">}}
+
+---
+
+## <center>Retrieving bounding boxes</center>
+{{<br size="2">}}
+
+sf has a function to retrieve the bbox of an sf object: `st_bbox`
+{{<br size="2">}}
+
+The bbox of ak is:
+
+```r
+st_bbox(ak)
+```
+[//]:codesnippet7
+
+{{<o>}}
+```{r}
+xmin         ymin       xmax         ymax 
+-176.14247   52.05727   -126.85450   69.35167 
 ```
 
 ---
 
-## <center>Union of bounding boxes</center>
+## <center>Combining bounding boxes</center>
+
+bbox objects can't be combined directly
+{{<br size="2">}}
+
+Here is how we can create a new bbox encompassing both of our bboxes:
+{{<br size="1">}}
+
+- First, we transform our bboxes to sfc objects with `st_as_sfc`
+- Then we combine those objects into a new sfc object with `st_union`
+- Finally, we retrieve the bbox of that object with `st_bbox`:
 
 ```r
 nwa_bbox <- st_bbox(
   st_union(
-	st_as_sfc(st_bbox(wes)),
-	st_as_sfc(st_bbox(ak))
+    st_as_sfc(st_bbox(wes)),
+    st_as_sfc(st_bbox(ak))
   )
 )
 ```
-
-Our new bounding box for the map of Western North America:
-
-```r
-> nwa_bbox
-	  xmin       ymin       xmax       ymax
--176.14247   36.38625 -105.60821   69.35167
-```
+[//]:codesnippet8
 
 ---
 
-## <center>Glaciers of Western North America</center>
+## <center>Back to our map</center>
+{{<br size="1">}}
+
+We can now use our new bounding box for the map of Western North America:
 
 ```r
 tm_shape(ak, bbox = nwa_bbox) +
@@ -864,25 +1017,26 @@ tm_shape(ak, bbox = nwa_bbox) +
   tm_shape(wes) +
   tm_polygons() +
   tm_layout(
-	title = "Glaciers of Western North America",
-	title.position = c("center", "top"),
-	title.size = 1.1,
-	bg.color = "#fcfcfc",
-	inner.margins = c(0.06, 0.01, 0.09, 0.01),
-	outer.margins = 0,
-	frame.lwd = 0.2
+    title = "Glaciers of Western North America",
+    title.position = c("center", "top"),
+    title.size = 1.1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.06, 0.01, 0.09, 0.01),
+    outer.margins = 0,
+    frame.lwd = 0.2
   ) +
   tm_compass(
-	type = "arrow",
-	position = c("right", "top"),
-	size = 1.2,
-	text.size = 0.6
+    type = "arrow",
+    position = c("right", "top"),
+    size = 1.2,
+    text.size = 0.6
   ) +
   tm_scale_bar(
-	breaks = c(0, 1000, 2000),
-	position = c("right", "BOTTOM")
+    breaks = c(0, 1000, 2000),
+    position = c("right", "BOTTOM")
   )
 ```
+[//]:codesnippet9
 
 ---
 
