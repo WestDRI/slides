@@ -600,19 +600,6 @@ The datasets can be downloaded as zip files from these websites
 
 ---
 
-# <center>Basemap</center>
-<br>
-We will use data from {{<a "https://www.naturalearthdata.com/" "Natural Earth">}}, a public domain map dataset
-{{<br size="4">}}
-
-This dataset can be accessed direction from within R thanks to the packages:
-{{<br size="2">}}
-
-- `rnaturalearth`: provides the functions
-- `rnaturalearthdata`: provides the data
-
----
-
 # <center>Packages</center>
 <br>
 Packages need to be installed before they can be loaded in a session
@@ -1045,75 +1032,114 @@ tm_shape(ak, bbox = nwa_bbox) +
 
 ---
 
-# <center>Basemaps</center>
+# <center>Let's add a basemap</center>
+{{<br size="2">}}
 
-{{%fragment%}}
-#### <center>Let's add one to our map of the glaciers of WNA</center>
-{{%/fragment%}}
+We will use data from {{<a "https://www.naturalearthdata.com/" "Natural Earth">}}, a public domain map dataset
+{{<br size="2">}}
+
+There are much more fancy options, but they usually involve creating accounts (e.g. with Google) to access some API
+{{<br size="2">}}
+
+In addition, this dataset can be accessed direction from within R thanks to the {{<a "https://ropensci.org/" "rOpenSci">}} packages:
+{{<br size="2">}}
+
+- `rnaturalearth`: provides the functions
+- `rnaturalearthdata`: provides the data
 
 ---
 
-### <center>Getting a basemap from rnaturalearth</center>
-<br>
+## <center>Create an sf object with states/provinces</center>
+{{<br size="4">}}
+
 ```r
 states_all <- ne_states(
   country = c("canada", "united states of america"),
   returnclass = "sf"
 )
 ```
+[//]:codesnippet10
+{{<br size="5">}}
+
+{{<note>}}
+{{%cdark%}}ne_{{%/cdark%}} stands for "Natural Earth"
+{{</note>}}
 
 ---
 
-### <center>Selection of relevant data</center>
-<br>
+## <center>Select relevant states/provinces</center>
+{{<br size="2">}}
+
 ```r
 states <- states_all %>%
   filter(name_en == "Alaska" |
-		   name_en == "British Columbia" |
-		   name_en == "Yukon" |
-		   name_en == "Northwest Territories" |
-		   name_en ==  "Alberta" |
-		   name_en == "California" |
-		   name_en == "Washington" |
-		   name_en == "Oregon" |
-		   name_en == "Idaho" |
-		   name_en == "Montana" |
-		   name_en == "Wyoming" |
-		   name_en == "Colorado" |
-		   name_en == "Nevada" |
-		   name_en == "Utah"
-		 )
+           name_en == "British Columbia" |
+           name_en == "Yukon" |
+           name_en == "Northwest Territories" |
+           name_en ==  "Alberta" |
+           name_en == "California" |
+           name_en == "Washington" |
+           name_en == "Oregon" |
+           name_en == "Idaho" |
+           name_en == "Montana" |
+           name_en == "Wyoming" |
+           name_en == "Colorado" |
+           name_en == "Nevada" |
+           name_en == "Utah"
+         )
 ```
+[//]:codesnippet11
 
 ---
 
-### <center>A few notes</center>
-<br>
-Always make sure the CRS match!
+## <center>Add the basemap to our map</center>
+{{<br size="3">}}
 
+{{%fragment%}}
+{{<chall_dark>}}
+What do we need to make sure of first?
+{{</chall_dark>}}
+{{<br size="4">}}
+{{%/fragment%}}
+
+{{%fragment%}}
 ```r
-> st_crs(states) == st_crs(ak)
+st_crs(states) == st_crs(ak)
+```
+[//]:codesnippet12
+
+{{<o>}}
+```{r}
 [1] TRUE
 ```
-
-The bounding boxes are different & we are only interested in the basemap within the bounding box of our data, so this is the only part of the basemap that we will plot
-
-```r
-> st_bbox(states) == nwa_bbox
-xmin  ymin  xmax  ymax
-FALSE FALSE FALSE FALSE
-```
-
-Play with colors of borders & fill, as well as the width of the borders
+{{%/fragment%}}
 
 ---
 
-### <center>Add the basemap to our map</center>
+## <center>Add the basemap to our map</center>
+{{<br size="3">}}
+
+We add the basemap as a 3<sup>rd</sup> layer
+{{<br size="3">}}
+
+Mind the order! If you put the basemap last, it will cover your data
+{{<br size="3">}}
+
+Of course, we will use our `nwa_bbox` bounding box again
+{{<br size="3">}}
+
+We will also break `tm_polygons` into `tm_borders` and `tm_fill` for ak and wes in order to colourise them with slightly different colours
+{{<br size="2">}}
+
+---
+
+## <center>Add the basemap to our map</center>
+{{<br size="3">}}
 
 ```r
 tm_shape(states, bbox = nwa_bbox) +
   tm_polygons(col = "#f2f2f2",
-			  lwd = 0.2) +
+              lwd = 0.2) +
   tm_shape(ak) +
   tm_borders(col = "#3399ff") +
   tm_fill(col = "#86baff") +
@@ -1121,25 +1147,26 @@ tm_shape(states, bbox = nwa_bbox) +
   tm_borders(col = "#3399ff") +
   tm_fill(col = "#86baff") +
   tm_layout(
-	title = "Glaciers of Western North America",
-	title.position = c("center", "top"),
-	title.size = 1.1,
-	bg.color = "#fcfcfc",
-	inner.margins = c(0.06, 0.01, 0.09, 0.01),
-	outer.margins = 0,
-	frame.lwd = 0.2
+    title = "Glaciers of Western North America",
+    title.position = c("center", "top"),
+    title.size = 1.1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.06, 0.01, 0.09, 0.01),
+    outer.margins = 0,
+    frame.lwd = 0.2
   ) +
   tm_compass(
-	type = "arrow",
-	position = c("right", "top"),
-	size = 1.2,
-	text.size = 0.6
+    type = "arrow",
+    position = c("right", "top"),
+    size = 1.2,
+    text.size = 0.6
   ) +
   tm_scale_bar(
-	breaks = c(0, 1000, 2000),
-	position = c("right", "BOTTOM")
+    breaks = c(0, 1000, 2000),
+    position = c("right", "BOTTOM")
   )
 ```
+[//]:codesnippet13
 
 ---
 
