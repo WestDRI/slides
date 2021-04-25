@@ -296,6 +296,13 @@ Vector data won't suffer any loss of precision, but raster data will \\
 
 ---
 
+## <center>tmap functions</center>
+{{<br size="6">}}
+
+<center>All start with `tmap_` or `tm_`</center>
+
+---
+
 ## <center>ggplot2</center>
 {{<br size="2">}}
 
