@@ -422,7 +422,6 @@ sf—launched in 2016—implements these standards in R in the form of sf object
 {{<br size="2">}}
 
 ## <center><a href="http://vita.had.co.nz/papers/layered-grammar.pdf">Layered grammar of graphics</a> GIS maps</center>
-{{<br size="4">}}
 
 ---
 
@@ -438,11 +437,91 @@ sf—launched in 2016—implements these standards in R in the form of sf object
 ---
 
 ## <center>tmap functions</center>
-{{<br size="6">}}
+{{<br size="5">}}
 
-<center>All start with `tmap_` or `tm_`</center>
+<center>Main functions start with `tmap_`</center>
+{{<br size="4">}}
+
+<center>Functions creating map elements start with `tm_`</center>
 
 ---
+
+## <center>tmap functioning</center>
+{{<br size="1">}}
+
+Very similar to ggplot2
+{{<br size="2.5">}}
+
+Typically, a map contains:
+{{<br size="1">}}
+
+- One or multiple layer(s) (the order matters as they stack on top of each other)
+- Some layout (e.g. customization of title, background, margins): `tm_layout()`
+- A compass: `tm_compass()`
+- A scale bar: `tm_scale_bar()`
+{{<br size="2.5">}}
+
+Each layer contains:
+{{<br size="1">}}
+
+- Some data: `tm_shape()`
+- How that data will be represented: e.g. `tm_polygons()`, `tm_lines()`, `tm_raster()`
+
+---
+
+## <center>tmap example</center>
+
+{{<imgm src="/img/r_gis/tmap1_nw.png" margin="0 0 0 5rem" title="" width="85%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>tmap example</center>
+
+{{<imgm src="/img/r_gis/tmap2_nw.png" margin="0 0 0 5rem" title="" width="85%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>tmap example</center>
+
+{{<imgm src="/img/r_gis/tmap3_nw.png" margin="0 0 0 5rem" title="" width="85%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>tmap example</center>
+
+{{<imgm src="/img/r_gis/tmap4_nw.png" margin="0 0 0 5rem" title="" width="85%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>tmap example</center>
+
+{{<imgm src="/img/r_gis/tmap5_nw.png" margin="0 0 0 5rem" title="" width="85%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>tmap example</center>
+
+{{<imgm src="/img/r_gis/tmap6_nw.png" margin="0 0 0 5rem" title="" width="85%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>tmap example</center>
+
+{{<imgm src="/img/r_gis/tmap7_nw.png" margin="0 0 0 5rem" title="" width="85%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>tmap example</center>
+
+{{<imgm src="/img/r_gis/tmap8_nw.png" margin="0 0 0 5rem" title="" width="85%" line-height="0.5rem">}}
+{{</imgm>}}
 
 ## <center>ggplot2</center>
 {{<br size="2">}}
