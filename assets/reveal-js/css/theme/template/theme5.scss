@@ -292,20 +292,26 @@ body {
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease;
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+    font-style: italic;
+  }
 }
-.reveal a:hover {
-  color: $linkColorHover;
-  text-shadow: none;
-  border: none;
-}
+
+// .reveal a:hover {
+//   text-shadow: none;
+//   border: none;
+// }
+
 .reveal a:visited {
   color: $linkColorVisited;
 }
-.reveal a:visited:hover {
-  color: $linkColorVisitedHover;
-  text-shadow: none;
-  border: none;
-}
+
+// .reveal a:visited:hover {
+//   text-shadow: none;
+//   border: none;
+// }
 
 .reveal .roll span:after {
   color: #fff;
