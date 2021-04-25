@@ -508,13 +508,13 @@ Packages need to be installed before they can be loaded in a session
 
 Packages on CRAN can be installed with:
 
-```r
+```{r}
 install.packages("<package-name>")
 ```
 <br>
 `basemaps` is not on CRAN & needs to be installed from GitHub thanks to `devtools`:
 
-```r
+```{r}
 install.packages("devtools")
 devtools::install_github("16EAGLE/basemaps")
 ```
@@ -538,8 +538,11 @@ library(grid)               # (part of base R) used to create inset map
 library(ggmap)              # download basemap data
 library(ggplot2)            # alternative to tmap for map production
 library(basemaps)           # download basemap data
-library(raster)             # gridded spatial data manipulation
+library(terra)              # gridded spatial data manipulation
+library(leaflet)
+library(magick)
 ```
+[//]:codesnippet1
 
 ---
 
@@ -552,9 +555,9 @@ Download & unzip `02_rgi60_WesternCanadaUS` & `01_rgi60_Alaska` from the {{<a "h
 Data get imported & turned into `sf` objects with the function `sf::st_read()`:
 
 ```r
-ak <- st_read("01_rgi60_Alaska")
-wes <- st_read("02_rgi60_WesternCanadaUS")
+ak <- st_read("data/01_rgi60_Alaska")
 ```
+[//]:codesnippet2
 
 {{<br size="4">}}
 
@@ -568,33 +571,47 @@ Make sure to use the absolute paths or the paths relative to your working direct
 {{<br size="3">}}
 
 ```r
-> Reading layer '01_rgi60_Alaska' using driver 'ESRI Shapefile'
-Simple feature collection with 27108 features and 22 fields
-geometry type:  POLYGON
-dimension:      XY
-bbox:           xmin: -176.1425 ymin: 52.05727 xmax: -126.8545 ymax: 69.35167
-geographic CRS: WGS 84
-> Reading layer '02_rgi60_WesternCanadaUS' using driver 'ESRI Shapefile'
-Simple feature collection with 18855 features and 22 fields
-geometry type:  MULTIPOLYGON
-dimension:      XY
-bbox:           xmin: -133.7324 ymin: 36.38625 xmax: -105.6082 ymax: 65.15664
-geographic CRS: WGS 84
+ak <- st_read("data/01_rgi60_Alaska")
 ```
+[//]:codesnippet2
+
+{{<o>}}
+```{r}
+Reading layer `01_rgi60_Alaska' from data source `./data/01_rgi60_Alaska'
+			   using driver `ESRI Shapefile'
+Simple feature collection with 27108 features and 22 fields
+Geometry type: POLYGON
+Dimension:     XY
+Bounding box:  xmin: -176.1425 ymin: 52.05727 xmax: -126.8545 ymax: 69.35167
+Geodetic CRS:  WGS 84
+```
+
+---
+
+## <center>Reading in data</center>
+{{<br size="5">}}
+
+{{<challenge_dark>}}
+Read in the data for the rest of north western America (from {{%cdark%}}02_rgi60_WesternCanadaUS{{%/cdark%}}) and create an sf object called {{%cdark%}}wes{{%/cdark%}}
+{{</challenge_dark>}}
 
 ---
 
 ## <center>First look at the data</center>
 
-```r
-> ak
+```{r}
+ak
+```
+
+{{<o>}}
+```{r}
 Simple feature collection with 27108 features and 22 fields
-geometry type:  POLYGON
-dimension:      XY
-bbox:           xmin: -176.1425 ymin: 52.05727 xmax: -126.8545 ymax: 69.35167
-geographic CRS: WGS 84
+Geometry type: POLYGON
+Dimension:     XY
+Bounding box:  xmin: -176.1425 ymin: 52.05727 xmax: -126.8545 ymax: 69.35167
+Geodetic CRS:  WGS 84
 First 10 features:
-		   RGIId        GLIMSId  BgnDate  EndDate    CenLon   CenLat O1Region
+           RGIId        GLIMSId  BgnDate  EndDate    CenLon   CenLat O1Region
 1  RGI60-01.00001 G213177E63689N 20090703 -9999999 -146.8230 63.68900        1
 2  RGI60-01.00002 G213332E63404N 20090703 -9999999 -146.6680 63.40400        1
 3  RGI60-01.00003 G213920E63376N 20090703 -9999999 -146.0800 63.37600        1
@@ -633,10 +650,14 @@ TermType Surging Linkages Name                       geometry
 
 ## <center>Structure of the data</center>
 
-```r
-> str(ak)
+```{r}
+str(ak)
+```
+
+{{<o>}}
+```{r}
 Classes ‘sf’ and 'data.frame':	27108 obs. of  23 variables:
-$ RGIId   : chr  "RGI60-01.00001" "RGI60-01.00002" "RGI60-01.00003"  ...
+$ RGIId   : chr  "RGI60-01.00001" "RGI60-01.00002" "RGI60-01.00003" ...
 $ GLIMSId : chr  "G213177E63689N" "G213332E63404N" "G213920E63376N" ...
 $ BgnDate : chr  "20090703" "20090703" "20090703" "20090703" ...
 $ EndDate : chr  "-9999999" "-9999999" "-9999999" "-9999999" ...
@@ -662,9 +683,18 @@ $ geometry:sfc_POLYGON of length 27108; first list element: List of 1
 ..$ : num [1:65, 1:2] -147 -147 -147 -147 -147 ...
 ..- attr(*, "class")= chr [1:3] "XY" "POLYGON" "sfg"
 - attr(*, "sf_column")= chr "geometry"
-- attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: NA NA NA NA ...
+- attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: NA NA NA ...
 ..- attr(*, "names")= chr [1:22] "RGIId" "GLIMSId" "BgnDate" "EndDate" ...
 ```
+
+---
+
+## <center>Inspect your data</center>
+{{<br size="5">}}
+
+{{<challenge_dark>}}
+Inspect the {{%cdark%}}wes{{%/cdark%}} object you created
+{{</challenge_dark>}}
 
 ---
 
