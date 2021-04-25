@@ -491,18 +491,21 @@ The datasets can be downloaded as zip files from these websites
 # <center>Basemap</center>
 <br>
 We will use data from {{<a "https://www.naturalearthdata.com/" "Natural Earth">}}, a public domain map dataset
-<br>
-<br>
+{{<br size="4">}}
 
-This dataset can be accessed direction from within R thanks to the packages `rnaturalearth` (provides the functions) & `rnaturalearthdata` (provides the data)
+This dataset can be accessed direction from within R thanks to the packages:
+{{<br size="2">}}
+
+- `rnaturalearth`: provides the functions
+- `rnaturalearthdata`: provides the data
 
 ---
 
 # <center>Packages</center>
 <br>
 Packages need to be installed before they can be loaded in a session
-<br>
-<br>
+{{<br size="2">}}
+
 Packages on CRAN can be installed with:
 
 ```r
@@ -519,6 +522,8 @@ devtools::install_github("16EAGLE/basemaps")
 ---
 
 # <center>Packages</center>
+{{<br size="1.5">}}
+We load all the packages that we will need at the top of the script:
 
 ```r
 library(sf)                 # spatial vector data manipulation
@@ -538,11 +543,11 @@ library(raster)             # gridded spatial data manipulation
 
 ---
 
-## <center>Reading in data</center>
-{{<br size="3">}}
+# <center>Reading in data</center>
+{{<br size="2">}}
 
 Download & unzip `02_rgi60_WesternCanadaUS` & `01_rgi60_Alaska` from the {{<a "http://www.glims.org/RGI/" "Randolph Glacier Inventory">}} version 6.0
-{{<br size="2">}}
+{{<br size="3">}}
 
 Data get imported & turned into `sf` objects with the function `sf::st_read()`:
 
@@ -550,6 +555,9 @@ Data get imported & turned into `sf` objects with the function `sf::st_read()`:
 ak <- st_read("01_rgi60_Alaska")
 wes <- st_read("02_rgi60_WesternCanadaUS")
 ```
+
+{{<br size="4">}}
+
 {{<note>}}
 Make sure to use the absolute paths or the paths relative to your working directory (which can be obtained with {{%cdark%}}getwd(){{%/cdark%}})
 {{</note>}}
@@ -557,6 +565,7 @@ Make sure to use the absolute paths or the paths relative to your working direct
 ---
 
 ## <center>Reading in data</center>
+{{<br size="3">}}
 
 ```r
 > Reading layer '01_rgi60_Alaska' using driver 'ESRI Shapefile'
