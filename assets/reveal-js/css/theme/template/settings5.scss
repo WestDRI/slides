@@ -67,7 +67,9 @@ $heading6Size: 1.4rem;
 // $linkColor: #996080;
 // $linkColor: #af5c83;
 // $linkColor: #bf6490;
-$linkColor: #c46e98;
+// $linkColor: #c46e98;
+$linkColor: #538cc6;
+// $linkColor: #6699cc;
 // $linkColorVisited: #4a40bf;
 // $linkColorVisited: #879aab;
 // $linkColorVisited: #993366;
@@ -77,6 +79,8 @@ $linkColor: #c46e98;
 $linkColorVisited: #c46e98;
 $linkColorHover: lighten( $linkColor, 15% );
 $linkColorVisitedHover: lighten( $linkColorVisited, 15% );
+// $linkColorVisited: #538cc6;
+// $linkColorVisited: #6699cc;
 
 // Text selection
 $selectionBackgroundColor: #bfbfc0;
