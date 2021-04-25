@@ -546,6 +546,12 @@ library(magick)
 
 ---
 
+{{< slide background-color="black" background-image="/img/r_gis/bg_us_watersheds.png" background-size="85%" >}}
+
+# <font color="white"><center><span style="font-size: 4.5rem">Reading & preparing data</span></center></font>
+
+---
+
 # <center>Reading in data</center>
 {{<br size="2">}}
 
@@ -698,7 +704,9 @@ Inspect the {{%cdark%}}wes{{%/cdark%}} object you created
 
 ---
 
-# <center>Mapping with tmap</center>
+{{< slide background-color="black" background-image="/img/r_gis/bg_washington_watersheds.png" background-size="85%" >}}
+
+# <font color="white"><center><span style="font-size: 5rem">Making maps</span></center></font>
 
 ---
 
@@ -1779,7 +1787,15 @@ tm_shape(agras) +
 
 ---
 
+{{< slide background-color="black" background-image="/img/r_gis/bg_europe_watersheds.png" background-size="58%" >}}
 
+# <font color="white"><center><span style="font-size: 6.5rem">Lunch break</span></center></font>
+
+---
+
+{{< slide background-color="black" background-image="/img/r_gis/bg_mexico_watersheds.png" background-size="85%" >}}
+
+# <font color="white"><center><span style="font-size: 4.5rem">Spatial data analysis</span></center></font>
 
 ---
 
