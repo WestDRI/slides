@@ -367,6 +367,53 @@ sf—launched in 2016—implements these standards in R in the form of sf object
 
 ---
 
+## <center>sf objects</center>
+{{<br size="2">}}
+
+{{<imgm src="/img/r_gis/sf_object_1_nw.png" margin="0 0 0 5rem" title="" width="%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>sf objects</center>
+{{<br size="2">}}
+
+{{<imgm src="/img/r_gis/sf_object_2_nw.png" margin="0 0 0 5rem" title="" width="%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>sf objects</center>
+{{<br size="2">}}
+
+{{<imgm src="/img/r_gis/sf_object_3_nw.png" margin="0 0 0 5rem" title="" width="%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>sf objects</center>
+{{<br size="2">}}
+
+{{<imgm src="/img/r_gis/sf_object_4_nw.png" margin="0 0 0 5rem" title="" width="%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>sf objects</center>
+{{<br size="2">}}
+
+{{<imgm src="/img/r_gis/sf_object_5_nw.png" margin="0 0 0 5rem" title="" width="%" line-height="0.5rem">}}
+{{</imgm>}}
+
+---
+
+## <center>sf functions</center>
+{{<br size="6">}}
+
+<center>All start with `st_`</center>
+
+---
+
 ## <center>terra</center>
 {{<br size="2">}}
 
