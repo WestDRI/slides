@@ -1729,49 +1729,9 @@ ggplot(ag) +
 
 ---
 
-# <center>Other ways to add a basemap</center>
+{{< slide background-color="black" background-image="/img/r_gis/bg_europe_watersheds.png" background-size="58%" >}}
 
----
-
-## <center>Basemap with ggmap</center>
-
-```r
-basemap <- get_map(
-  bbox = c(
-    left = st_bbox(ag)[1],
-    bottom = st_bbox(ag)[2],
-    right = st_bbox(ag)[3],
-    top = st_bbox(ag)[4]
-  ),
-  source = "osm"
-)
-```
-[//]:codesnippet35
-
-{{<note>}}
-<b>ggmap</b> is a powerful package, but Google now requires an API key obtained through registration
-{{</note>}}
-
----
-
-## <center>Basemap with basemaps</center>
-<br>
-The package **basemaps** allows to download open source basemap data from several sources, but those cannot easily be combined with `sf` objects
-<br><br>
-This plots a satellite image of the Agassiz Glacier:
-
-```r
-basemap_plot(ag, map_service = "esri", map_type = "world_imagery")
-```
-[//]:codesnippet36
-
----
-
-### <center>Satellite image of the Agassiz Glacier</center>
-{{<br size="1.5">}}
-
-{{<imgshadow src="/img/r_gis/ag_magick.png" title="" width="75%" line-height="1.0rem">}}
-{{</imgshadow>}}
+# <font color="white"><center><span style="font-size: 6.5rem">Lunch break</span></center></font>
 
 ---
 
@@ -1779,8 +1739,8 @@ basemap_plot(ag, map_service = "esri", map_type = "world_imagery")
 
 ---
 
-### <center>Faceted map of the retreat of Agassiz Glacier</center>
-{{<br size="3">}}
+## <center>Faceted map of the retreat of Agassiz</center>
+{{<br size="2.5">}}
 
 ```r
 tm_shape(ag) +
@@ -1829,7 +1789,7 @@ tm_shape(ag) +
 
 ---
 
-### <center>Animated map of the Retreat of Agassiz Glacier</center>
+## <center>Animated map of the Retreat of Agassiz</center>
 {{<br size="2">}}
 
 First, we need to create a tmap object with facets:
@@ -1867,8 +1827,8 @@ agassiz_anim <- tm_shape(ag) +
 
 ---
 
-### <center>Animated map of the Retreat of Agassiz Glacier</center>
-{{<br size="3">}}
+## <center>Animated map of the Retreat of Agassiz</center>
+{{<br size="2.5">}}
 
 Then we can pass that object to `tmap_animation`:
 
@@ -1887,108 +1847,6 @@ tmap_animation(
 
 {{<imgshadow src="/img/r_gis/ag.gif" title="" width="70%" line-height="1.0rem">}}
 {{</imgshadow>}}
-
----
-
-# <center>Tiled web maps with Leaflet</center>
-
----
-
-## <center>mapview</center>
-{{<br size="4">}}
-
-```r
-mapview(gnp)
-```
-[//]:codesnippet40
-{{<br size="4">}}
-
----
-
-## <center>mapview</center>
-<br>
-<figure style="display: table;">
-  <div class="row">
-	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview4.jpg">
-	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
-	<figcaption>
-	  <em>
-		CartoDB.Positron
-	  </em>
-	</figcaption>
-	  </div>
-	</div>
-	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview1.jpg"  >
-	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
-	<figcaption>
-	  <em>
-		OpenTopoMap
-	  </em>
-	</figcaption>
-	  </div>
-	</div>
-  </div>
-  <div class="row">
-	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview3.jpg" margin="5rem" >
-	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
-	<figcaption>
-	  <em>
-		OpenStreetMap
-	  </em>
-	</figcaption>
-	  </div>
-	</div>
-	<div class="column">
-	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview2.jpg" margin="5rem" >
-	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
-	<figcaption>
-	  <em>
-		Esri.WorldImagery
-	  </em>
-	</figcaption>
-	  </div>
-	</div>
-  </div>
-</figure>
-
----
-
-## <center>tmap</center>
-<br>
-So far, we have used the `plot` mode of **tmap**. There is also a `view` mode which allows interactive viewing in a browser through {{<a "https://leafletjs.com/" "Leaflet">}}
-<br><br>
-Change to `view` mode:
-
-```{r}
-tmap_mode("view")
-```
-
-{{<note>}}
-you can also toggle between modes with {{%cdark%}}ttm(){{%/cdark%}}
-{{</note>}}
-
-Re-plot the last map we plotted with **tmap**:
-
-```{r}
-tmap_last()
-```
-
----
-
-## <center>leaflet</center>
-{{<br size="3">}}
-
-`leaflet()` creates a map widget to which you add layers
-
-```r
-map <- leaflet()
-addTiles(map)
-```
-[//]:codesnippet41
-{{<br size="4">}}
 
 ---
 
@@ -2098,12 +1956,6 @@ tm_shape(ras) +
 
 ---
 
-{{< slide background-color="black" background-image="/img/r_gis/bg_europe_watersheds.png" background-size="58%" >}}
-
-# <font color="white"><center><span style="font-size: 6.5rem">Lunch break</span></center></font>
-
----
-
 # <center>Refining raster maps</center>
 
 ---
@@ -2186,6 +2038,154 @@ tm_shape(ras) +
 
 {{<imgshadow src="/img/r_gis/ag_thickness_blue_res.png" title="" width="40%" line-height="1.0rem">}}
 {{</imgshadow>}}
+
+---
+
+# <center>Other ways to add a basemap</center>
+
+---
+
+## <center>Basemap with ggmap</center>
+
+```r
+basemap <- get_map(
+  bbox = c(
+    left = st_bbox(ag)[1],
+    bottom = st_bbox(ag)[2],
+    right = st_bbox(ag)[3],
+    top = st_bbox(ag)[4]
+  ),
+  source = "osm"
+)
+```
+[//]:codesnippet35
+
+{{<note>}}
+<b>ggmap</b> is a powerful package, but Google now requires an API key obtained through registration
+{{</note>}}
+
+---
+
+## <center>Basemap with basemaps</center>
+<br>
+The package **basemaps** allows to download open source basemap data from several sources, but those cannot easily be combined with `sf` objects
+<br><br>
+This plots a satellite image of the Agassiz Glacier:
+
+```r
+basemap_plot(ag, map_service = "esri", map_type = "world_imagery")
+```
+[//]:codesnippet36
+
+---
+
+### <center>Satellite image of the Agassiz Glacier</center>
+{{<br size="1.5">}}
+
+{{<imgshadow src="/img/r_gis/ag_magick.png" title="" width="75%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
+---
+
+# <center>Tiled web maps with Leaflet JS</center>
+
+---
+
+## <center>mapview</center>
+{{<br size="4">}}
+
+```r
+mapview(gnp)
+```
+[//]:codesnippet40
+{{<br size="4">}}
+
+---
+
+## <center>mapview</center>
+<br>
+<figure style="display: table;">
+  <div class="row">
+	<div class="column">
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview4.jpg">
+	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
+	<figcaption>
+	  <em>
+		CartoDB.Positron
+	  </em>
+	</figcaption>
+	  </div>
+	</div>
+	<div class="column">
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview1.jpg"  >
+	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
+	<figcaption>
+	  <em>
+		OpenTopoMap
+	  </em>
+	</figcaption>
+	  </div>
+	</div>
+  </div>
+  <div class="row">
+	<div class="column">
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview3.jpg" margin="5rem" >
+	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
+	<figcaption>
+	  <em>
+		OpenStreetMap
+	  </em>
+	</figcaption>
+	  </div>
+	</div>
+	<div class="column">
+	  <img style="box-shadow: 0px 0px 6px rgba(0,0,0,0.3)" src="/img/r_gis/mapview2.jpg" margin="5rem" >
+	  <div align="right" style="font-size: 1.3rem; color: #978282; line-height: 1rem">
+	<figcaption>
+	  <em>
+		Esri.WorldImagery
+	  </em>
+	</figcaption>
+	  </div>
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center>tmap</center>
+<br>
+So far, we have used the `plot` mode of **tmap**. There is also a `view` mode which allows interactive viewing in a browser through {{<a "https://leafletjs.com/" "Leaflet">}}
+<br><br>
+Change to `view` mode:
+
+```{r}
+tmap_mode("view")
+```
+
+{{<note>}}
+you can also toggle between modes with {{%cdark%}}ttm(){{%/cdark%}}
+{{</note>}}
+
+Re-plot the last map we plotted with **tmap**:
+
+```{r}
+tmap_last()
+```
+
+---
+
+## <center>leaflet</center>
+{{<br size="3">}}
+
+`leaflet()` creates a map widget to which you add layers
+
+```r
+map <- leaflet()
+addTiles(map)
+```
+[//]:codesnippet41
+{{<br size="4">}}
 
 ---
 
