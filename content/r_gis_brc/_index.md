@@ -905,15 +905,68 @@ You can inspect your new sf object by calling it or with `str()`
 
 ---
 
+# <center>Estimate for ice thickness</center>
+{{<br size="3">}}
+
+<center>This dataset contains an estimate for the ice thickness of all glaciers on Earth</center>
+{{<br size="3">}}
+
+<center>The nomenclature follows the Randolph Glacier Inventory</center>
+{{<br size="3">}}
+
+<center>Ice thickness being a spatial field, this is raster data</center>
+{{<br size="3">}}
+
+<center>We will use data in `RGI60-02.16664_thickness.tif` from the {{<a "https://www.research-collection.ethz.ch/handle/20.500.11850/315707" "ETH Zürich Research Collection">}}</center>
+{{<br size="1">}}
+<center>which corresponds to the area of Glacier National Park, MT</center>
+{{<br size="2">}}
+
+---
+
+## <center>Load raster data</center>
+{{<br size="4">}}
+
+Read in data and create a SpatRaster object:
+
+```r
+ras <- rast("data/RGI60-02/RGI60-02.16664_thickness.tif")
+```
+[//]:codesnippet28
+{{<br size="4">}}
+
+---
+
+## <center>Inspect our SpatRaster object</center>
+
+```{r}
+ras
+```
+{{<o>}}
+```{r}
+class       : SpatRaster 
+dimensions  : 93, 74, 1  (nrow, ncol, nlyr)
+resolution  : 25, 25  (x, y)
+extent      : 707362.5, 709212.5, 5422962, 5425288  (xmin, xmax, ymin, ymax)
+coord. ref. : +proj=utm +zone=11 +datum=WGS84 +units=m +no_defs 
+source      : RGI60-02.16664_thickness.tif 
+name        : RGI60-02.16664_thickness 
+```
+
+`nlyr` gives us the number of bands (a single one here). You can also run `str(ras)`
+
+---
+
 # <center>Our data</center>
 {{<br size="3">}}
 
-We now have 3 sf objects:
+We now have 3 sf objects & 1 SpatRaster object:
 {{<br size="1">}}
 
 - `ak`: &emsp;contour of glaciers in AK
 - `wes`: &ensp;contour of glaciers in the rest of Western North America
 - `gnp`: &ensp;time series of 39 glaciers in Glacier National Park, MT, USA
+- `ras`: &ensp;ice thickness of the glaciers in the area of Glacier National Park
 {{<br size="2">}}
 
 ---
@@ -1879,125 +1932,6 @@ addTiles(map)
 ```
 
 ---
-
-## <center>Ice thickness</center>
-<br>
-The nomenclature for glaciers & regions in the ice thickness dataset follows the Randolph Glacier Inventory (RGI) version 6.0
-<br>
-<br>
-
-Let's look for the Agassiz Glacier data
-
----
-
-### <center>RGIId for Agassiz Glacier</center>
-
-```r
-> wes %>%
-	filter(Name == "Agassiz Glacier MT") %>%
-	select(RGIId)
-Simple feature collection with 1 feature and 1 field
-geometry type:  MULTIPOLYGON
-dimension:      XY
-bbox:           xmin: -114.1673 ymin: 48.92498 xmax: -114.1442 ymax: 48.94501
-geographic CRS: WGS 84
-RGIId                       geometry
-1 RGI60-02.16664 MULTIPOLYGON (((-114.1487 4...
-```
-
-Now we now which file we need to look for in the ice thickness dataset: `RGI60-02.16664_thickness.tif`
-
----
-
-### <center>Load raster data for Agassiz Glacier</center>
-<br>
-First, we want to see how many bands are available:
-
-```r
-> nlayers(stack("RGI60-02/RGI60-02.16664_thickness.tif"))
-[1] 1
-```
-
-This is not a multi-layer band (such as an RGB file), so we don't have to worry about band selection:
-
-```r
-agras <- raster("RGI60-02/RGI60-02.16664_thickness.tif")
-```
-
----
-
-### <center>Inspect raster data</center>
-<br>
-```r
-> agras
-class      : RasterLayer
-dimensions : 93, 74, 6882  (nrow, ncol, ncell)
-resolution : 25, 25  (x, y)
-extent     : 707362.5, 709212.5, 5422962, 5425288  (xmin, xmax, ymin, ymax)
-crs        : +proj=utm +zone=11 +datum=WGS84 +units=m +no_defs
-source     : /RGI60-02/RGI60-02.16664_thickness.tif
-names      : RGI60.02.16664_thickness
-```
-
----
-
-### <center>Inspect raster data</center>
-<br>
-```r
-> str(agras)
-Formal class 'RasterLayer' [package "raster"] with 12 slots
-  ..@ file    :Formal class '.RasterFile' [package "raster"] with 13 slots
-  .. .. ..@ name        : chr "RGI60-02/RGI60-02.16664_thickness.tif"
-  .. .. ..@ datanotation: chr "FLT4S"
-  .. .. ..@ byteorder   : chr "little"
-.. .. ..@ nodatavalue : num -Inf
-.. .. ..@ NAchanged   : logi FALSE
-.. .. ..@ nbands      : int 1
-.. .. ..@ bandorder   : chr "BIL"
-.. .. ..@ offset      : int 0
-.. .. ..@ toptobottom : logi TRUE
-.. .. ..@ blockrows   : int 27
-.. .. ..@ blockcols   : int 74
-.. .. ..@ driver      : chr "gdal"
-.. .. ..@ open        : logi FALSE
-..@ data    :Formal class '.SingleLayerData' [package "raster"] with 13 slots
-.. .. ..@ values    : logi(0)
-.. .. ..@ offset    : num 0
-.. .. ..@ gain      : num 1
-.. .. ..@ inmemory  : logi FALSE
-.. .. ..@ fromdisk  : logi TRUE
-.. .. ..@ isfactor  : logi FALSE
-.. .. ..@ attributes: list()
-.. .. ..@ haveminmax: logi FALSE
-.. .. ..@ min       : num Inf
-.. .. ..@ max       : num -Inf
-.. .. ..@ band      : int 1
-.. .. ..@ unit      : chr ""
-.. .. ..@ names     : chr "RGI60.02.16664_thickness"
-..@ legend  :Formal class '.RasterLegend' [package "raster"] with 5 slots
-.. .. ..@ type      : chr(0)
-.. .. ..@ values    : logi(0)
-.. .. ..@ color     : logi(0)
-.. .. ..@ names     : logi(0)
-.. .. ..@ colortable: logi(0)
-..@ title   : chr(0)
-..@ extent  :Formal class 'Extent' [package "raster"] with 4 slots
-.. .. ..@ xmin: num 707362
-.. .. ..@ xmax: num 709212
-.. .. ..@ ymin: num 5422962
-.. .. ..@ ymax: num 5425288
-..@ rotated : logi FALSE
-..@ rotation:Formal class '.Rotation' [package "raster"] with 2 slots
-.. .. ..@ geotrans: num(0)
-.. .. ..@ transfun:function ()
-  ..@ ncols   : int 74
-  ..@ nrows   : int 93
-  ..@ crs     :Formal class 'CRS' [package "sp"] with 1 slot
-  .. .. ..@ projargs: chr "+proj=utm +zone=11 +datum=WGS84 +units=m +no_defs"
-  ..@ history : list()
-  ..@ z       : list()
-```
-
 ---
 
 ### <center>Map of ice thickness Agassiz Glacier</center>
