@@ -1932,37 +1932,40 @@ addTiles(map)
 ```
 
 ---
----
 
-### <center>Map of ice thickness Agassiz Glacier</center>
-<br>
+# <center>Map of ice thickness of Agassiz</center>
+
+Now, let's map the estimated ice thickness on Agassiz Glacier
+{{<br size="2">}}
+
 This time, we use `tm_raster()`:
 
 ```r
-tm_shape(agras) +
+tm_shape(ras) +
   tm_raster() +
   tm_layout(
-	title = "Ice thickness (m) of Agassiz Glacier",
-	title.position = c("center", "top"),
-	legend.position = c("left", "bottom"),
-	legend.bg.color = "#d9d9d9",
-	legend.title.color = "#d9d9d9",
-	legend.text.size = 1,
-	bg.color = "#fcfcfc",
-	inner.margins = c(0.07, 0.03, 0.07, 0.03),
-	outer.margins = 0
+    title = "Ice thickness (m) of Agassiz Glacier",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom"),
+    legend.bg.color = "#d9d9d9",
+    legend.title.color = "#d9d9d9",
+    legend.text.size = 1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.07, 0.03, 0.07, 0.03),
+    outer.margins = 0
   ) +
   tm_compass(
-	type = "arrow",
-	position = c("right", "top"),
-	text.size = 0.7
+    type = "arrow",
+    position = c("right", "top"),
+    text.size = 0.7
   ) +
   tm_scale_bar(
-	breaks = c(0, 0.5, 1),
-	position = c("right", "BOTTOM"),
-	text.size = 1
+    breaks = c(0, 0.5, 1),
+    position = c("right", "BOTTOM"),
+    text.size = 1
   )
 ```
+[//]:codesnippet29
 
 ---
 
@@ -1971,60 +1974,64 @@ tm_shape(agras) +
 
 ---
 
-### <center>Combining with Randolph data</center>
-<br>
+## <center>Combining with Randolph data</center>
+{{<br size="2">}}
+
 As always, we check whether the CRS are the same:
 
 ```r
-> st_crs(ag) == st_crs(agras)
+st_crs(ag) == st_crs(ras)
+```
+[//]:codesnippet30
+
+{{<o>}}
+```{r}
 [1] FALSE
 ```
+{{<br size="3">}}
 
-We need to reproject `ag` (easier than reprojecting the `raster` object):
-```r
-ag %<>% st_transform(st_crs(agras))
-```
-
-We can verify that the CRS of both our maps are now the same:
+We need to reproject `ag` (remember that it is best to avoid reprojecting raster data):
 
 ```r
-> st_crs(ag) == st_crs(agras)
-[1] TRUE
+ag %<>% st_transform(st_crs(ras))
 ```
+[//]:codesnippet31
 
 ---
 
-<br>
+## <center>Combining with Randolph data</center>
+
 The retreat & ice thickness layers will hide each other (the order matters!)\\
-One option is to use `tm_borders()` only for one of them, or we can use transparency (alpha):
+One option is to use `tm_borders` for one of them, but we can also use transparency (alpha):
 
 ```r
-tm_shape(agras) +
+tm_shape(ras) +
   tm_raster() +
   tm_shape(ag) +
   tm_polygons("year", palette = "Blues", alpha = 0.2) +
   tm_layout(
-	title = "Ice thickness (m) and retreat of Agassiz Glacier",
-	title.position = c("center", "top"),
-	legend.position = c("left", "bottom"),
-	legend.bg.color = "#e6e6e6",
-	legend.title.color = "#e6e6e6",
-	legend.text.size = 0.7,
-	bg.color = "#fcfcfc",
-	inner.margins = c(0.07, 0.03, 0.07, 0.03),
-	outer.margins = 0
+    title = "Ice thickness (m) and retreat of Agassiz Glacier",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom"),
+    legend.bg.color = "#e6e6e6",
+    legend.title.color = "#e6e6e6",
+    legend.text.size = 0.7,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.07, 0.03, 0.07, 0.03),
+    outer.margins = 0
   ) +
   tm_compass(
-	type = "arrow",
-	position = c("right", "top"),
-	text.size = 0.7
+    type = "arrow",
+    position = c("right", "top"),
+    text.size = 0.7
   ) +
   tm_scale_bar(
-	breaks = c(0, 0.5, 1),
-	position = c("right", "BOTTOM"),
-	text.size = 1
+    breaks = c(0, 0.5, 1),
+    position = c("right", "BOTTOM"),
+    text.size = 1
   )
 ```
+[//]:codesnippet32
 
 ---
 
