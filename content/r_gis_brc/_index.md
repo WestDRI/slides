@@ -1342,6 +1342,51 @@ tm_shape(states, bbox = nwa_bbox) +
 
 ---
 
+# <center>tmap styles</center>
+{{<br size="2">}}
+
+**tmap** has a number of styles that you can try
+{{<br size="2">}}
+
+For instance, to set the style to "classic", run the following before making your map:
+{{<br size="1">}}
+
+```{r}
+tmap_style("classic")
+```
+{{<br size="4">}}
+
+{{<note>}}
+Other options are: <br>
+
+"white" (default), "gray", "natural", "cobalt", "col_blind", "albatross", "beaver", "bw", "watercolor"
+{{</note>}}
+
+---
+
+{{<imgshadow src="/img/r_gis/nwa_bg_classic.jpg" title="" width="70%" line-height="0.5rem">}}
+{{</imgshadow>}}
+
+---
+
+# <center>tmap styles</center>
+{{<br size="2">}}
+
+To return to the default, you need to run
+{{<br size="2">}}
+```{r}
+tmap_style("white")
+```
+{{<br size="1">}}
+or
+{{<br size="2">}}
+```{r}
+tmap_options_reset()
+```
+which will reset every **tmap** option
+
+---
+
 # <center>Inset maps</center>
 {{<br size="5">}}
 
