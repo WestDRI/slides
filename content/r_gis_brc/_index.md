@@ -2090,6 +2090,91 @@ tm_shape(ras) +
 
 ---
 
+# <center>Refining raster maps</center>
+
+---
+
+<center>Let's go back to our ice thickness map:</center>
+{{<br size="2">}}
+
+{{<imgshadow src="/img/r_gis/ag_thickness.png" title="" width="40%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
+---
+
+<center>We can change the palette to blue with `tm_raster(palette = "Blues")`:</center>
+{{<br size="2">}}
+
+{{<imgshadow src="/img/r_gis/ag_thickness_blue.png" title="" width="40%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
+---
+
+<center>We can create a more suitable interval scale:</center>
+{{<br size="4">}}
+
+First, let's see what the maximum value is:
+{{<br size="1">}}
+
+```r
+global(ras, "max")
+```
+[//]:codesnippet34
+
+{{<o>}}
+```{r}
+max
+RGI60-02.16664_thickness 70.10873
+```
+{{<br size="4">}}
+
+Then we can set the breaks with `tm_raster(breaks = seq(0, 80, 5))`
+{{<br size="2">}}
+
+---
+
+<center>We can create a more suitable interval scale:</center>
+{{<br size="3">}}
+
+We also need to tweak the layout, legend, etc.:
+{{<br size="1">}}
+
+```r
+tm_shape(ras) +
+  tm_raster(title = "", palette = "Blues", breaks = seq(0, 80, 5)) +
+  tm_layout(
+    title = "Ice thickness (m) of Agassiz Glacier",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom"),
+    legend.bg.color = "#ffffff",
+    legend.text.size = 0.7,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.07, 0.03, 0.07, 0.03),
+    outer.margins = 0
+  ) +
+  tm_compass(
+    type = "arrow",
+    position = c("right", "top"),
+    text.size = 0.7
+  ) +
+  tm_scale_bar(
+    breaks = c(0, 0.5, 1),
+    position = c("right", "BOTTOM"),
+    text.size = 1
+  )
+```
+[//]:codesnippet33
+
+---
+
+<center>We can create a more suitable interval scale:</center>
+{{<br size="2">}}
+
+{{<imgshadow src="/img/r_gis/ag_thickness_blue_res.png" title="" width="40%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
+---
+
 {{< slide background-color="black" background-image="/img/r_gis/bg_mexico_watersheds.png" background-size="85%" >}}
 
 # <font color="white"><center><span style="font-size: 4.5rem">Spatial data analysis</span></center></font>
