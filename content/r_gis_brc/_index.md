@@ -1981,19 +1981,18 @@ addTiles(map)
 # <center>Map of ice thickness of Agassiz</center>
 
 Now, let's map the estimated ice thickness on Agassiz Glacier
-{{<br size="2">}}
+{{<br size="1">}}
 
 This time, we use `tm_raster()`:
 
 ```r
 tm_shape(ras) +
-  tm_raster() +
+  tm_raster(title = "") +
   tm_layout(
     title = "Ice thickness (m) of Agassiz Glacier",
     title.position = c("center", "top"),
     legend.position = c("left", "bottom"),
-    legend.bg.color = "#d9d9d9",
-    legend.title.color = "#d9d9d9",
+    legend.bg.color = "#ffffff",
     legend.text.size = 1,
     bg.color = "#fcfcfc",
     inner.margins = c(0.07, 0.03, 0.07, 0.03),
@@ -2047,19 +2046,19 @@ ag %<>% st_transform(st_crs(ras))
 ## <center>Combining with Randolph data</center>
 
 The retreat & ice thickness layers will hide each other (the order matters!)\\
-One option is to use `tm_borders` for one of them, but we can also use transparency (alpha):
+One option is to use `tm_borders` for one of them, but we can also use transparency (alpha) \\
+We also adjust the legend:
 
 ```r
 tm_shape(ras) +
-  tm_raster() +
+  tm_raster(title = "Ice (m)") +
   tm_shape(ag) +
-  tm_polygons("year", palette = "Blues", alpha = 0.2) +
+  tm_polygons("year", palette = "Blues", alpha = 0.2, title = "Contour") +
   tm_layout(
     title = "Ice thickness (m) and retreat of Agassiz Glacier",
     title.position = c("center", "top"),
     legend.position = c("left", "bottom"),
-    legend.bg.color = "#e6e6e6",
-    legend.title.color = "#e6e6e6",
+    legend.bg.color = "#ffffff",
     legend.text.size = 0.7,
     bg.color = "#fcfcfc",
     inner.margins = c(0.07, 0.03, 0.07, 0.03),
