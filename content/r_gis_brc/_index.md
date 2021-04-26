@@ -1503,7 +1503,10 @@ print(inset_map, vp = viewport(0.41, 0.26, width = 0.5, height = 0.5))
 {{<br size="4">}}
 
 {{%fragment%}}
-<center>To see the retreat of the ice, we need to zoom in. Let's focus on a single glacier: Agassiz Glacier</center>
+<center>To see the retreat of the ice, we need to zoom in</center>
+{{<br size="2">}}
+
+<center>Let's focus on a single glacier: Agassiz Glacier</center>
 {{%/fragment%}}
 
 {{<br size="2">}}
@@ -1511,41 +1514,87 @@ print(inset_map, vp = viewport(0.41, 0.26, width = 0.5, height = 0.5))
 ---
 
 ## <center>Map of the Agassiz Glacier</center>
-<br>
+{{<br size="4">}}
+
 Select the data points corresponding to the Agassiz Glacier:
 
 ```r
-ag <- g %>% filter(glacname == "Agassiz Glacier")
+ag <- gnp %>% filter(glacname == "Agassiz Glacier")
 ```
+[//]:codesnippet24
+{{<br size="3">}}
 
 ---
 
 ## <center>Map of the Agassiz Glacier</center>
+{{<br size="2">}}
+
+```r
+tm_shape(ag) +
+  tm_polygons() +
+  tm_layout(
+    title = "Agassiz Glacier",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom"),
+    legend.title.color = "#fcfcfc",
+    legend.text.size = 1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.07, 0.03, 0.07, 0.03),
+    outer.margins = 0
+  ) +
+  tm_compass(
+    type = "arrow",
+    position = c("right", "top"),
+    text.size = 0.7
+  ) +
+  tm_scale_bar(
+    breaks = c(0, 0.5, 1),
+    position = c("right", "BOTTOM"),
+    text.size = 1
+  )
+```
+[//]:codesnippet25
+
+---
+
+{{<imgshadow src="/img/r_gis/ag0.png" title="" width="40%" line-height="1.0rem">}}
+{{</imgshadow>}}
+{{<br size="2">}}
+
+{{%fragment%}}
+<center>Not great ...</center>
+{{%/fragment%}}
+
+---
+
+# <center>Map based on attribute variables</center>
+{{<br size="2">}}
 
 ```r
 tm_shape(ag) +
   tm_polygons("year", palette = "Blues") +
   tm_layout(
-	title = "Agassiz Glacier",
-	title.position = c("center", "top"),
-	legend.position = c("left", "bottom"),
-	legend.title.color = "#fcfcfc",
-	legend.text.size = 1,
-	bg.color = "#fcfcfc",
-	inner.margins = c(0.07, 0.03, 0.07, 0.03),
-	outer.margins = 0
+    title = "Agassiz Glacier",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom"),
+    legend.title.color = "#fcfcfc",
+    legend.text.size = 1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.07, 0.03, 0.07, 0.03),
+    outer.margins = 0
   ) +
   tm_compass(
-	type = "arrow",
-	position = c("right", "top"),
-	text.size = 0.7
+    type = "arrow",
+    position = c("right", "top"),
+    text.size = 0.7
   ) +
   tm_scale_bar(
-	breaks = c(0, 0.5, 1),
-	position = c("right", "BOTTOM"),
-	text.size = 1
+    breaks = c(0, 0.5, 1),
+    position = c("right", "BOTTOM"),
+    text.size = 1
   )
 ```
+[//]:codesnippet26
 
 ---
 
