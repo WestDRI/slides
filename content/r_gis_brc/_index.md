@@ -251,10 +251,10 @@ Vector data won't suffer any loss of precision, but raster data will \\
 ### Older packages
 {{<br size="1">}}
 
-- sp
-- raster
-- rgdal
-- rgeos
+- **sp**
+- **raster**
+- **rgdal**
+- **rgeos**
 {{<br size="2">}}
 
 ### Newer generation
@@ -270,18 +270,18 @@ Vector data won't suffer any loss of precision, but raster data will \\
 ### Static maps
 {{<br size="1">}}
 
-- ggplot2
-- tmap
+- **ggplot2** + **ggspatial**
+- **tmap**
 {{<br size="2">}}
 
 ### Dynamic maps
 {{<br size="1">}}
 
-- leaflet
-- ggplot2 + gganimate
-- mapview
-- ggmap
-- tmap
+- **leaflet**
+- **ggplot2** + **gganimate**
+- **mapview**
+- **ggmap**
+- **tmap**
 
 ---
 
@@ -305,10 +305,10 @@ Vector data won't suffer any loss of precision, but raster data will \\
 A compact computer version also exists—well-known binary (WKB)—used by spatial databases.
 {{<br size="4">}}
 
-The package sp predates Simple Features.
+The package **sp** predates Simple Features.
 {{<br size="1">}}
 
-sf—launched in 2016—implements these standards in R in the form of sf objects: data.frames (or tibbles) containing the attributes, extended by sfc objects or simple feature geometries list-columns.
+**sf**—launched in 2016—implements these standards in R in the form of sf objects: data.frames (or tibbles) containing the attributes, extended by sfc objects or simple feature geometries list-columns.
 
 ---
 
@@ -388,7 +388,7 @@ sf—launched in 2016—implements these standards in R in the form of sf object
 ## <center>Geospatial rasters</center>
 {{<br size="4">}}
 
-<center>Faster and simpler replacement of raster package by the same team</center>
+<center>Faster and simpler replacement for the **raster** package by the same team</center>
 {{<br size="2">}}
 
 <center>Mostly implemented in C++</center>
@@ -458,7 +458,7 @@ vignette("tmap-getstarted")
 ## <center>tmap functioning</center>
 {{<br size="1">}}
 
-Very similar to ggplot2
+Very similar to **ggplot2**
 {{<br size="2.5">}}
 
 Typically, a map contains:
@@ -862,7 +862,7 @@ gnp <- map(dirs, prep)
 [//]:codesnippet14
 
 {{<note>}}
-We use {{%cdark%}}dplyr::select(){{%/cdark%}} because terra also has a {{%cdark%}}select(){{%/cdark%}} function
+We use {{%cdark%}}dplyr::select(){{%/cdark%}} because <b>terra</b> also has a {{%cdark%}}select(){{%/cdark%}} function
 {{</note>}}
 
 ---
@@ -1706,7 +1706,7 @@ tm_shape(ag) +
 # <center>Using ggplot2 instead of tmap</center>
 {{<br size="1.5">}}
 
-As an alternative to the **tmap** package, **ggplot2** can plot maps with the `geom_sf` function:
+As an alternative to **tmap**, **ggplot2** can plot maps with the `geom_sf` function:
 
 ```r
 ggplot(ag) +
@@ -1721,6 +1721,8 @@ ggplot(ag) +
   theme(plot.title = element_text(hjust = 0.5))
 ```
 [//]:codesnippet27
+
+The package **ggspatial** adds a lot of functionality to **ggplot2** for spatial data
 
 ---
 
