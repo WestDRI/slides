@@ -1880,20 +1880,6 @@ addTiles(map)
 
 ---
 
-# <center>raster</center>
-## <center>Package for spatial raster data</center>
-<br>
-<br>
-
-{{<fragment>}}
-<span style="font-size: 2rem;"><center>Note that there is a faster package in beta from the same team:</center></span>
-<br>
-<br>
-<span style="font-size: 3rem;"><b><center><a href="https://github.com/rspatial/terra" target="_blank">terra</a></center></b></span>
-{{</fragment>}}
-
----
-
 ## <center>Ice thickness</center>
 <br>
 The nomenclature for glaciers & regions in the ice thickness dataset follows the Randolph Glacier Inventory (RGI) version 6.0
