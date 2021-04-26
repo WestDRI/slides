@@ -919,7 +919,7 @@ You can inspect your new sf object by calling it or with `str()`
 
 <center>We will use data in `RGI60-02.16664_thickness.tif` from the {{<a "https://www.research-collection.ethz.ch/handle/20.500.11850/315707" "ETH Zürich Research Collection">}}</center>
 {{<br size="1">}}
-<center>which corresponds to the area of Glacier National Park, MT</center>
+<center>which corresponds to one of the glaciers (Agassiz Glacier) of Glacier National Park</center>
 {{<br size="2">}}
 
 ---
@@ -966,7 +966,7 @@ We now have 3 sf objects & 1 SpatRaster object:
 - `ak`: &emsp;contour of glaciers in AK
 - `wes`: &ensp;contour of glaciers in the rest of Western North America
 - `gnp`: &ensp;time series of 39 glaciers in Glacier National Park, MT, USA
-- `ras`: &ensp;ice thickness of the glaciers in the area of Glacier National Park
+- `ras`: &ensp;ice thickness of the Agassiz Glacier from Glacier National Park
 {{<br size="2">}}
 
 ---
