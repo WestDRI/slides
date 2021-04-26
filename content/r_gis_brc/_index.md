@@ -102,7 +102,7 @@ For computing efficiency, rasters do not have coordinates of each cell, but the 
 # <center>Coordinate Reference Systems (CRS)</center>
 {{<br size="2">}}
 
-A location on earth's surface can be identified by its **coordinates** & some **reference system** called CRS
+A location on Earth's surface can be identified by its **coordinates** & some **reference system** called CRS
 <br>
 <br>
 The coordinates (x, y) are called {{<e>}}longitude{{</e>}} & {{<e>}}latitude{{</e>}}
@@ -120,7 +120,7 @@ In 2D, they are expressed in linear units (e.g. meters) & the reference system n
 ### <center>Datums</center>
 {{<br size="2">}}
 
-Since the earth is not a perfect sphere, we use spheroidal models to represent its surface. Those are called **geodetic datums**
+Since the Earth is not a perfect sphere, we use spheroidal models to represent its surface. Those are called **geodetic datums**
 {{<br size="1.5">}}
 Some datums are global, others local (more accurate in a particular area of the globe, but only useful there)
 {{<br size="3">}}
@@ -145,7 +145,7 @@ In an angular CRS or GCS:
 - Longitude (\\(\lambda\\)) represents the angle between the prime meridian & the meridian that passes through that location
 {{<br size="1">}}
 
-- Latitude (\\(\phi\\)) represents the angle between the line that passes through the center of the earth & that location & its projection on the equatorial plane
+- Latitude (\\(\phi\\)) represents the angle between the line that passes through the center of the Earth & that location & its projection on the equatorial plane
 {{<br size="1">}}
 
 Longitude & latitude are thus angular coordinates
@@ -651,10 +651,25 @@ library(magick)
 
 ---
 
+# <center>Randolph Glacier Inventory</center>
+{{<br size="3">}}
+
+<center>This dataset contains the contour of all glaciers on Earth</center>
+{{<br size="3">}}
+
+<center>We will focus on glaciers in Western North America</center>
+{{<br size="5">}}
+
+<center>You can download & unzip `02_rgi60_WesternCanadaUS` & `01_rgi60_Alaska`</center>
+{{<br size="1">}}
+<center>from the {{<a "http://www.glims.org/RGI/" "Randolph Glacier Inventory">}} version 6.0</center>
+
+---
+
 # <center>Reading in data</center>
 {{<br size="2">}}
 
-Download & unzip `02_rgi60_WesternCanadaUS` & `01_rgi60_Alaska` from the {{<a "http://www.glims.org/RGI/" "Randolph Glacier Inventory">}} version 6.0
+
 {{<br size="3">}}
 
 Data get imported & turned into `sf` objects with the function `sf::st_read()`:
@@ -716,7 +731,7 @@ Dimension:     XY
 Bounding box:  xmin: -176.1425 ymin: 52.05727 xmax: -126.8545 ymax: 69.35167
 Geodetic CRS:  WGS 84
 First 10 features:
-           RGIId        GLIMSId  BgnDate  EndDate    CenLon   CenLat O1Region
+		   RGIId        GLIMSId  BgnDate  EndDate    CenLon   CenLat O1Region
 1  RGI60-01.00001 G213177E63689N 20090703 -9999999 -146.8230 63.68900        1
 2  RGI60-01.00002 G213332E63404N 20090703 -9999999 -146.6680 63.40400        1
 3  RGI60-01.00003 G213920E63376N 20090703 -9999999 -146.0800 63.37600        1
@@ -803,6 +818,105 @@ Inspect the {{%cdark%}}wes{{%/cdark%}} object you created
 
 ---
 
+# <center>Glacier National Park</center>
+{{<br size="3">}}
+
+<center>This dataset contains a time series of the retreat of 39 glaciers of Glacier National Park, MT, USA</center>
+{{<br size="1">}}
+
+<center>for the years `1966`, `1998`, `2005` & `2015`</center>
+{{<br size="3">}}
+
+<center>You can download and unzip the 4 sets of files from {{<a "https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542" "the USGS website">}}</center>
+{{<br size="2">}}
+
+---
+
+## <center>Read in and clean datasets</center>
+
+```r
+## create a function that reads and cleans the data
+prep <- function(dir) {
+  g <- st_read(dir)
+  g %<>% rename_with(~ tolower(gsub("Area....", "area", .x)))
+  g %<>% dplyr::select(
+    year,
+    objectid,
+    glacname,
+    area,
+    shape_leng,
+    x_coord,
+    y_coord,
+    source_sca,
+    source
+  )
+}
+
+## create a vector of dataset names
+dirs <- grep("data/GNPglaciers_.*", list.dirs(), value = T)
+
+## pass each element of that vector through prep() thanks to map()
+gnp <- map(dirs, prep)
+```
+[//]:codesnippet14
+
+{{<note>}}
+We use {{%cdark%}}dplyr::select(){{%/cdark%}} because terra also has a {{%cdark%}}select(){{%/cdark%}} function
+{{</note>}}
+
+---
+
+## <center>Combine datasets into one sf object</center>
+{{<br size="1">}}
+
+Check that the CRS are all the same:
+
+```r
+all(sapply(
+  list(st_crs(gnp[[1]]),
+       st_crs(gnp[[2]]),
+       st_crs(gnp[[3]]),
+       st_crs(gnp[[4]])),
+  function(x) x == st_crs(gnp[[1]])
+))
+```
+[//]:codesnippet15
+
+{{<o>}}
+```{r}
+[1] TRUE
+```
+
+---
+
+## <center>Combine datasets into one sf object</center>
+{{<br size="4">}}
+
+We can `rbind` the elements of our list:
+```r
+gnp <- do.call("rbind", gnp)
+```
+[//]:codesnippet16
+{{<br size="4">}}
+
+You can inspect your new sf object by calling it or with `str()`
+{{<br size="2">}}
+
+---
+
+# <center>Our data</center>
+{{<br size="3">}}
+
+We now have 3 sf objects:
+{{<br size="1">}}
+
+- `ak`: &emsp;contour of glaciers in AK
+- `wes`: &ensp;contour of glaciers in the rest of Western North America
+- `gnp`: &ensp;time series of 39 glaciers in Glacier National Park, MT, USA
+{{<br size="2">}}
+
+---
+
 {{< slide background-color="black" background-image="/img/r_gis/bg_washington_watersheds.png" background-size="85%" >}}
 
 # <font color="white"><center><span style="font-size: 5rem">Making maps</span></center></font>
@@ -876,7 +990,7 @@ Make a map with the {{%cdark%}}wes{{%/cdark%}} object you created with the data 
 
 ---
 
-# <center>Now, let's combine our maps</center>
+# <center>Now, let's make a map with ak & wes</center>
 {{<br size="1.5">}}
 
 {{%fragment%}}
@@ -963,8 +1077,8 @@ st_bbox(ak)
 
 {{<o>}}
 ```{r}
-xmin         ymin       xmax         ymax 
--176.14247   52.05727   -126.85450   69.35167 
+xmin         ymin       xmax         ymax
+-176.14247   52.05727   -126.85450   69.35167
 ```
 
 ---
@@ -1174,95 +1288,25 @@ tm_shape(states, bbox = nwa_bbox) +
 
 ---
 
-# <center>Maps based on attribute variables</center>
+# <center>Inset maps</center>
+{{<br size="5">}}
 
-### <center>Retreat of glaciers in Glacier National Park</center>
-{{<br size="4">}}
+<center>Now, how can we combine this with our `gnp` object?</center>
+{{<br size="3">}}
 
-We will use the {{<a "https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542" "USGS time series of the named glaciers of Glacier National Park (GNP)">}}
-
-These 4 datasets have the contour lines of 39 glaciers for the years `1966`, `1998`, `2005` & `2015`
-
----
-
-## <center>Clean datasets</center>
-
-```r
-## create a function that reads and cleans the data
-prep <- function(dir) {
-  g <- st_read(dir)
-  g %<>% rename_with(~ tolower(gsub("Area....", "area", .x)))
-  g %<>% dplyr::select(
-    year,
-    objectid,
-    glacname,
-    area,
-    shape_leng,
-    x_coord,
-    y_coord,
-    source_sca,
-    source
-  )
-}
-
-## create a vector of dataset names
-dirs <- grep("data/GNPglaciers_.*", list.dirs(), value = T)
-
-## pass each element of that vector through prep() thanks to map()
-gnp <- map(dirs, prep)
-```
-[//]:codesnippet14
-
-{{<note>}}
-We use {{%cdark%}}dplyr::select(){{%/cdark%}} because terra also has a {{%cdark%}}select(){{%/cdark%}} function
-{{</note>}}
+<center> We could add it as an inset of our Western North America map</center>
 
 ---
 
-## <center>Combine datasets into one sf object</center>
-{{<br size="1">}}
-
-Check that the CRS are all the same:
-
-```r
-all(sapply(
-  list(st_crs(gnp[[1]]),
-       st_crs(gnp[[2]]),
-       st_crs(gnp[[3]]),
-       st_crs(gnp[[4]])),
-  function(x) x == st_crs(gnp[[1]])
-))
-```
-[//]:codesnippet15
-
-{{<o>}}
-```{r}
-[1] TRUE
-```
-
----
-
-## <center>Combine datasets into one sf object</center>
-{{<br size="4">}}
-
-We can `rbind` the elements of our list:
-```r
-gnp <- do.call("rbind", gnp)
-```
-[//]:codesnippet16
-{{<br size="4">}}
-
-You can inspect your new sf object by calling it or with `str()`
+## <center>First, let's map it</center>
 {{<br size="2">}}
 
----
-
-## <center>Map of Glacier National Park</center>
-{{<br size="2">}}
+Let's use the same `tm_borders` and `tm_fill` we just used:
 
 ```r
 tm_shape(gnp) +
-  tm_polygons("year", palette = "Blues") +
+  tm_borders(col = "#3399ff") +
+  tm_fill(col = "#86baff") +
   tm_layout(
     title = "Glaciers of Glacier National Park",
     title.position = c("center", "top"),
@@ -1292,74 +1336,86 @@ tm_shape(gnp) +
 
 ---
 
-# <center>Inset maps</center>
-<br>
+# <center>Create an inset map</center>
+{{<br size="3">}}
 
-{{%fragment%}}
-Let's plot our GNP map as an inset of our Western North America map
-<br><br>
 As always, first we check that the CRS are the same:
 
 ```r
-> st_crs(ak) == st_crs(gnp)
+st_crs(gnp) == st_crs(ak)
+```
+[//]:codesnippet18
+
+{{<o>}}
+```{r}
 [1] FALSE
 ```
-{{%/fragment%}}
-
-<br>
+{{<br size="3">}}
 
 {{%fragment%}}
-<b><center>:(</center></b>
+<center>AH!</center>
 {{%/fragment%}}
 
 ---
 
 ## <center>CRS transformation</center>
-<br>
-We need to reproject `gnp`:
+{{<br size="2">}}
+
+We need to reproject `gnp` into the CRS of our other sf objects (e.g. `ak`):
+
 ```r
 gnp <- st_transform(gnp, st_crs(ak))
 ```
+[//]:codesnippet19
 
-We can verify that the CRS of both our maps are now the same:
+{{<br size="3">}}
+
+{{%fragment%}}
+We can verify that the CRS are now the same:
 
 ```r
-> st_crs(ak) == st_crs(gnp)
+st_crs(gnp) == st_crs(ak)
+```
+[//]:codesnippet18
+
+{{<o>}}
+```{r}
 [1] TRUE
 ```
+{{%/fragment%}}
 
 ---
 
 ## <center>Inset maps</center>
-<br>
-**First step: add a rectangle showing the bounding box of `gnp` in the `nwa` map**
+{{<br size="1">}}
 
-This will show the location of the GNP map in the main North America map
+<u>First step:</u>
 
-We add a new `sfc_POLYGON` from the `gnp` bounding box as a new layer:
+**Add a rectangle showing the location of the GNP map in the main North America map**
+{{<br size="3">}}
+
+We need to create a new sfc object from the `gnp` bbox so that we can add it to our previous map as a new layer:
 
 ```r
 gnp_zone <- st_bbox(gnp) %>%
   st_as_sfc()
 ```
-
-We will use it as the following layer within the new map:
-
-```r
-tm_shape(gnp_zone) +
-  tm_borders(lwd = 1.5, col = "#ff9900")
-```
+[//]:codesnippet20
 
 ---
 
 ## <center>Inset maps</center>
+{{<br size="1">}}
 
-**Second step: create a `tmap` object for our main map:**
+<u>Second step:</u>
+
+**Create a tmap object of the main map**
+
+Of course, we need to edit the title. Also, note the presence of our new layer:
 
 ```r
 main_map <- tm_shape(states, bbox = nwa_bbox) +
-  tm_polygons(col = "#f2f2f2",
-			  lwd = 0.2) +
+  tm_polygons(col = "#f2f2f2", lwd = 0.2) +
   tm_shape(ak) +
   tm_borders(col = "#3399ff") +
   tm_fill(col = "#86baff") +
@@ -1369,83 +1425,72 @@ main_map <- tm_shape(states, bbox = nwa_bbox) +
   tm_shape(gnp_zone) +
   tm_borders(lwd = 1.5, col = "#ff9900") +
   tm_layout(
-	title = "Glaciers of Glacier National Park",
-	title.position = c("center", "top"),
-	title.size = 1.1,
-	bg.color = "#fcfcfc",
-	inner.margins = c(0.06, 0.01, 0.09, 0.01),
-	outer.margins = 0,
-	frame.lwd = 0.2
+    title = "Glaciers of Glacier National Park",
+    title.position = c("center", "top"),
+    title.size = 1.1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.06, 0.01, 0.09, 0.01),
+    outer.margins = 0,
+    frame.lwd = 0.2
   ) +
   tm_compass(
-	type = "arrow",
-	position = c("right", "top"),
-	size = 1.2,
-	text.size = 0.6
+    type = "arrow",
+    position = c("right", "top"),
+    size = 1.2,
+    text.size = 0.6
   ) +
   tm_scale_bar(
-	breaks = c(0, 500, 1000),
-	position = c("right", "BOTTOM")
+    breaks = c(0, 500, 1000),
+    position = c("right", "BOTTOM")
   )
 ```
+[//]:codesnippet21
 
 ---
 
 ## <center>Inset maps</center>
+{{<br size="1">}}
 
-**Third step: create a `tmap` object for the inset map**
+<u>Third step:</u>
 
-Matching colors & edited layouts will help with readability:
+**Create a tmap object of the inset map**
 
-```r
-inset_map <- tm_shape(gnp) +
-  tm_polygons("year", palette = "Blues") +
-  tm_layout(
-	legend.title.color = "#fcfcfc",
-	legend.text.size = 0.7,
-	bg.color = "#fcfcfc",
-	inner.margins = c(0.03, 0.03, 0.03, 0.03),
-	outer.margins = 0,
-	frame = "#ff9900",
-	frame.lwd = 3
-  )
-```
-
----
-
-## <center>Inset maps</center>
-<br>
-**Final step: we combine the two `tmap` objects with `grid::viewport()`:**
-
-```r
-main_map
-print(inset_map, vp = viewport(0.41, 0.26, width = 0.5, height = 0.5))
-```
-
----
-
-{{<imgshadow src="/img/r_gis/inset_bg.png" title="" width="70%" line-height="1.0rem">}}
-{{</imgshadow>}}
-
----
-
-### <center>Adjustments</center>
-<br>
-The scale is too small to show the retreat of the glaciers on this map. So it might be better to remove the legend & the palette per year & to make the borders & fill of the same colors as in the main map instead:
+We make sure to matching colours & edit the layouts for better readability:
 
 ```r
 inset_map <- tm_shape(gnp) +
   tm_borders(col = "#3399ff") +
   tm_fill(col = "#86baff") +
   tm_layout(
-	legend.show = F,
-	bg.color = "#fcfcfc",
-	inner.margins = c(0.03, 0.03, 0.03, 0.03),
-	outer.margins = 0,
-	frame = "#ff9900",
-	frame.lwd = 3
+    legend.show = F,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.03, 0.03, 0.03, 0.03),
+    outer.margins = 0,
+    frame = "#ff9900",
+    frame.lwd = 3
   )
 ```
+[//]:codesnippet22
+
+---
+
+## <center>Inset maps</center>
+{{<br size="3">}}
+
+<u>Final step:</u>
+
+**Combine the two tmap objects**
+
+We print the main map & add the inset map with `grid::viewport`:
+{{<br size="2">}}
+
+```r
+main_map
+print(inset_map, vp = viewport(0.41, 0.26, width = 0.5, height = 0.5))
+```
+[//]:codesnippet23
+
+{{<br size="4">}}
 
 ---
 
@@ -1455,11 +1500,13 @@ inset_map <- tm_shape(gnp) +
 ---
 
 # <center>Mapping a subset of the data</center>
-<br>
+{{<br size="4">}}
 
 {{%fragment%}}
-To see the retreat of the glaciers, we need to zoom in. Let's focus on a single glacier: Agassiz
+<center>To see the retreat of the ice, we need to zoom in. Let's focus on a single glacier: Agassiz Glacier</center>
 {{%/fragment%}}
+
+{{<br size="2">}}
 
 ---
 
