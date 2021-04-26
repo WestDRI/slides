@@ -4,7 +4,7 @@ outputs = ["Reveal"]
 [logowgnofront]
 src = "/img/wg_for_dark_bg.png"
 [backlink]
-href = "https://westgrid-cli.netlify.app/workshops/gis_r_rc/"
+href = "https://westgrid-cli.netlify.app/workshops/gis_r_brc/"
 txt = "Back to workshop page"
 [reveal_hugo]
 custom_theme = "mh5.scss"
