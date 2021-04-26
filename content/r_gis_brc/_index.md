@@ -167,7 +167,7 @@ Various projections offer different characteristics. For instance:
 - some *almost* respect both for small areas
 {{<br size="1.5">}}
 
-It is important to choose one which sensible properties for your goals
+It is important to choose one with sensible properties for your goals
 {{<br size="1.5">}}
 
 *Examples of projections:*
@@ -298,19 +298,19 @@ Vector data won't suffer any loss of precision, but raster data will \\
 ## <center>Simple Features</center>
 {{<br size="3">}}
 
-{{<a "https://en.wikipedia.org/wiki/Simple_Features" "Simple Features">}}—defined by the {{<a "https://en.wikipedia.org/wiki/Open_Geospatial_Consortium" "Open Geospatial Consortium (OGC)">}} & formalized by {{<a "https://en.wikipedia.org/wiki/International_Organization_for_Standardization" "ISO">}}—is a set of standards now used by most GIS libraries.
+{{<a "https://en.wikipedia.org/wiki/Simple_Features" "Simple Features">}}—defined by the {{<a "https://en.wikipedia.org/wiki/Open_Geospatial_Consortium" "Open Geospatial Consortium (OGC)">}} & formalized by {{<a "https://en.wikipedia.org/wiki/International_Organization_for_Standardization" "ISO">}}—is a set of standards now used by most GIS libraries
 {{<br size="1">}}
 
-{{<a "https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry" "Well-known text (WKT)">}} is a markup language for representing vector geometry objects according to those standards.
+{{<a "https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry" "Well-known text (WKT)">}} is a markup language for representing vector geometry objects according to those standards
 {{<br size="1">}}
 
-A compact computer version also exists—well-known binary (WKB)—used by spatial databases.
+A compact computer version also exists—well-known binary (WKB)—used by spatial databases
 {{<br size="4">}}
 
-The package **sp** predates Simple Features.
+The package **sp** predates Simple Features
 {{<br size="1">}}
 
-**sf**—launched in 2016—implements these standards in R in the form of sf objects: data.frames (or tibbles) containing the attributes, extended by sfc objects or simple feature geometries list-columns.
+**sf**—launched in 2016—implements these standards in R in the form of sf objects: data.frames (or tibbles) containing the attributes, extended by sfc objects or simple feature geometries list-columns
 
 ---
 
@@ -467,16 +467,16 @@ Typically, a map contains:
 {{<br size="1">}}
 
 - One or multiple layer(s) (the order matters as they stack on top of each other)
-- Some layout (e.g. customization of title, background, margins): `tm_layout()`
-- A compass: `tm_compass()`
-- A scale bar: `tm_scale_bar()`
+- Some layout (e.g. customization of title, background, margins): `tm_layout`
+- A compass: `tm_compass`
+- A scale bar: `tm_scale_bar`
 {{<br size="2.5">}}
 
 Each layer contains:
 {{<br size="1">}}
 
-- Some data: `tm_shape()`
-- How that data will be represented: e.g. `tm_polygons()`, `tm_lines()`, `tm_raster()`
+- Some data: `tm_shape`
+- How that data will be represented: e.g. `tm_polygons`, `tm_lines`, `tm_raster`
 
 ---
 
@@ -641,8 +641,8 @@ library(ggspatial)          # spatial framework for ggplot2
 library(terra)              # gridded spatial data manipulation
 library(ggmap)              # download basemap data
 library(basemaps)           # download basemap data
-library(magick)
-library(leaflet)
+library(magick)             # wrapper around ImageMagick STL
+library(leaflet)	        # integrate Leaflet JS in R
 ```
 [//]:codesnippet1
 
@@ -675,7 +675,7 @@ library(leaflet)
 
 {{<br size="3">}}
 
-Data get imported & turned into `sf` objects with the function `sf::st_read()`:
+Data get imported & turned into `sf` objects with the function `sf::st_read`:
 
 ```r
 ak <- st_read("data/01_rgi60_Alaska")
@@ -685,7 +685,7 @@ ak <- st_read("data/01_rgi60_Alaska")
 {{<br size="4">}}
 
 {{<note>}}
-Make sure to use the absolute paths or the paths relative to your working directory (which can be obtained with {{%cdark%}}getwd(){{%/cdark%}})
+Make sure to use the absolute paths or the paths relative to your working directory (which can be obtained with {{%cdark%}}getwd{{%/cdark%}})
 {{</note>}}
 
 ---
@@ -830,7 +830,7 @@ Inspect the {{%cdark%}}wes{{%/cdark%}} object you created
 <center>for the years `1966`, `1998`, `2005` & `2015`</center>
 {{<br size="3">}}
 
-<center>You can download and unzip the 4 sets of files from {{<a "https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542" "the USGS website">}}</center>
+<center>You can download and unzip the 4 sets of files from the {{<a "https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542" "USGS website">}}</center>
 {{<br size="2">}}
 
 ---
@@ -864,7 +864,7 @@ gnp <- map(dirs, prep)
 [//]:codesnippet14
 
 {{<note>}}
-We use {{%cdark%}}dplyr::select(){{%/cdark%}} because <b>terra</b> also has a {{%cdark%}}select(){{%/cdark%}} function
+We use {{%cdark%}}dplyr::select{{%/cdark%}} because <b>terra</b> also has a {{%cdark%}}select{{%/cdark%}} function
 {{</note>}}
 
 ---
@@ -902,7 +902,7 @@ gnp <- do.call("rbind", gnp)
 [//]:codesnippet16
 {{<br size="4">}}
 
-You can inspect your new sf object by calling it or with `str()`
+You can inspect your new sf object by calling it or with `str`
 {{<br size="2">}}
 
 ---
@@ -921,7 +921,7 @@ You can inspect your new sf object by calling it or with `str()`
 
 <center>We will use data in `RGI60-02.16664_thickness.tif` from the {{<a "https://www.research-collection.ethz.ch/handle/20.500.11850/315707" "ETH Zürich Research Collection">}}</center>
 {{<br size="1">}}
-<center>which corresponds to one of the glaciers (Agassiz Glacier) of Glacier National Park</center>
+<center>which corresponds to one of the glaciers (Agassiz) of Glacier National Park</center>
 {{<br size="2">}}
 
 ---
@@ -1859,7 +1859,7 @@ tmap_animation(
 Now, let's map the estimated ice thickness on Agassiz Glacier
 {{<br size="1">}}
 
-This time, we use `tm_raster()`:
+This time, we use `tm_raster`:
 
 ```r
 tm_shape(ras) +
@@ -2168,7 +2168,7 @@ tmap_mode("view")
 ```
 
 {{<note>}}
-you can also toggle between modes with {{%cdark%}}ttm(){{%/cdark%}}
+you can also toggle between modes with {{%cdark%}}ttm{{%/cdark%}}
 {{</note>}}
 
 Re-plot the last map we plotted with **tmap**:
@@ -2182,7 +2182,7 @@ tmap_last()
 ## <center>leaflet</center>
 {{<br size="3">}}
 
-`leaflet()` creates a map widget to which you add layers
+`leaflet` creates a map widget to which you add layers
 
 ```r
 map <- leaflet()
