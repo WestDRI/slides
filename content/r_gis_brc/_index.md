@@ -2045,6 +2045,14 @@ tm_shape(ras) +
 
 ---
 
+<center>Or we can use a continuous colour scheme with `tm_raster(style = "cont")`:</center>
+{{<br size="2">}}
+
+{{<imgshadow src="/img/r_gis/ag_thickness_blue_cont.png" title="" width="40%" line-height="1.0rem">}}
+{{</imgshadow>}}
+
+---
+
 # <center>Other ways to add a basemap</center>
 
 ---
