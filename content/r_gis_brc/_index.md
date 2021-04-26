@@ -100,17 +100,21 @@ For computing efficiency, rasters do not have coordinates of each cell, but the 
 ---
 
 # <center>Coordinate Reference Systems (CRS)</center>
-{{<br size="2">}}
+{{<br size="1.5">}}
 
 A location on Earth's surface can be identified by its **coordinates** & some **reference system** called CRS
-<br>
-<br>
-The coordinates (x, y) are called {{<e>}}longitude{{</e>}} & {{<e>}}latitude{{</e>}}
-<br>
-<br>
+{{<br size="1.5">}}
+
+The coordinates (`x`, `y`) are called {{<e>}}longitude{{</e>}} & {{<e>}}latitude{{</e>}}
+{{<br size="1.5">}}
+
+There can be a 3<sup>rd</sup> coordinate (`z`) for elevation or other measurement—usually a vertical one \\
+& a 4<sup>th</sup> (`m`) for some other data attribute—usually a horizontal measurement
+{{<br size="1.5">}}
+
 In 3D, longitude & latitude are expressed in angular units (e.g. degrees) & the reference system needed is an {{<e>}}angular CRS{{</e>}} or {{<e>}}geographic coordinate system (GCS){{</e>}}
-<br>
-<br>
+{{<br size="1.5">}}
+
 In 2D, they are expressed in linear units (e.g. meters) & the reference system needed is a {{<e>}}planar CRS{{</e>}} or {{<e>}}projected coordinate system (PCS){{</e>}}
 
 ---
