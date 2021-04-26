@@ -190,7 +190,7 @@ In a planar CRS, coordinates will not be in degrees anymore but in meters (or ot
 ---
 
 ### <center>Projecting into a new CRS</center>
-{{<br size="2">}}
+{{<br size="3">}}
 
 You can change the projection of your data
 {{<br size="2">}}
@@ -634,13 +634,13 @@ library(rnaturalearth)      # basemap data access functions
 library(rnaturalearthdata)  # basemap data
 library(mapview)            # tiled web map
 library(grid)               # (part of base R) used to create inset map
-library(ggmap)              # download basemap data
 library(ggplot2)            # alternative to tmap for map production
-library(basemaps)           # download basemap data
 library(ggspatial)          # spatial framework for ggplot2
 library(terra)              # gridded spatial data manipulation
-library(leaflet)
+library(ggmap)              # download basemap data
+library(basemaps)           # download basemap data
 library(magick)
+library(leaflet)
 ```
 [//]:codesnippet1
 
@@ -997,6 +997,7 @@ tm_shape(ak) +
 ---
 
 ## <center>We need to label & customize it</center>
+{{<br size="2">}}
 
 ```r
 tm_shape(ak) +
@@ -1737,14 +1738,15 @@ ggplot(ag) +
 ```r
 basemap <- get_map(
   bbox = c(
-	left = st_bbox(ag)[1],
-	bottom = st_bbox(ag)[2],
-	right = st_bbox(ag)[3],
-	top = st_bbox(ag)[4]
+    left = st_bbox(ag)[1],
+    bottom = st_bbox(ag)[2],
+    right = st_bbox(ag)[3],
+    top = st_bbox(ag)[4]
   ),
   source = "osm"
 )
 ```
+[//]:codesnippet35
 
 {{<note>}}
 <b>ggmap</b> is a powerful package, but Google now requires an API key obtained through registration
@@ -1761,11 +1763,13 @@ This plots a satellite image of the Agassiz Glacier:
 ```r
 basemap_plot(ag, map_service = "esri", map_type = "world_imagery")
 ```
+[//]:codesnippet36
 
 ---
 
-#### <center>Satellite image of the Agassiz Glacier</center>
-<br>
+### <center>Satellite image of the Agassiz Glacier</center>
+{{<br size="1.5">}}
+
 {{<imgshadow src="/img/r_gis/ag_magick.png" title="" width="75%" line-height="1.0rem">}}
 {{</imgshadow>}}
 
@@ -1775,42 +1779,44 @@ basemap_plot(ag, map_service = "esri", map_type = "world_imagery")
 
 ---
 
-#### <center>Faceted map of the retreat of Agassiz Glacier</center>
+### <center>Faceted map of the retreat of Agassiz Glacier</center>
+{{<br size="3">}}
 
 ```r
 tm_shape(ag) +
   tm_polygons(col = "#86baff") +
   tm_layout(
-	main.title = "Agassiz Glacier",
-	main.title.position = c("center", "top"),
-	main.title.size = 1.2,
-	legend.position = c("left", "bottom"),
-	legend.title.color = "#fcfcfc",
-	legend.text.size = 1,
-	bg.color = "#fcfcfc",
-	## inner.margins = c(0, 0.03, 0, 0.03),
-	outer.margins = 0,
-	panel.label.bg.color = "#fcfcfc",
-	frame = F,
-	asp = 0.6
+    main.title = "Agassiz Glacier",
+    main.title.position = c("center", "top"),
+    main.title.size = 1.2,
+    legend.position = c("left", "bottom"),
+    legend.title.color = "#fcfcfc",
+    legend.text.size = 1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0, 0.03, 0, 0.03),
+    outer.margins = 0,
+    panel.label.bg.color = "#fcfcfc",
+    frame = F,
+    asp = 0.6
   ) +
   tm_compass(
-	type = "arrow",
-	position = c("right", "top"),
-	size = 1,
-	text.size = 0.6
+    type = "arrow",
+    position = c("right", "top"),
+    size = 1,
+    text.size = 0.6
   ) +
   tm_scale_bar(
-	breaks = c(0, 0.5, 1),
-	position = c("right", "BOTTOM"),
-	text.size = 0.6
+    breaks = c(0, 0.5, 1),
+    position = c("right", "BOTTOM"),
+    text.size = 0.6
   ) +
   tm_facets(
-	by = "year",
-	free.coords = F,
-	ncol = 4
+    by = "year",
+    free.coords = F,
+    ncol = 4
   )
 ```
+[//]:codesnippet37
 
 ---
 
@@ -1823,46 +1829,48 @@ tm_shape(ag) +
 
 ---
 
-#### <center>Animated map of the Retreat of Agassiz Glacier</center>
-<br>
-First, we need to create a `tmap` object with facets:
+### <center>Animated map of the Retreat of Agassiz Glacier</center>
+{{<br size="2">}}
+
+First, we need to create a tmap object with facets:
 
 ```r
 agassiz_anim <- tm_shape(ag) +
-  tm_borders() +
-  tm_fill(col = "#86baff") +
+  tm_polygons(col = "#86baff") +
   tm_layout(
-	title = "Agassiz Glacier",
-	title.position = c("center", "top"),
-	legend.position = c("left", "bottom"),
-	legend.title.color = "#fcfcfc",
-	legend.text.size = 1,
-	bg.color = "#fcfcfc",
-	inner.margins = c(0.08, 0, 0.08, 0),
-	outer.margins = 0
+    title = "Agassiz Glacier",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom"),
+    legend.title.color = "#fcfcfc",
+    legend.text.size = 1,
+    bg.color = "#fcfcfc",
+    inner.margins = c(0.08, 0, 0.08, 0),
+    outer.margins = 0,
+    panel.label.bg.color = "#fcfcfc"
   ) +
   tm_compass(
-	type = "arrow",
-	position = c("right", "top"),
-	text.size = 0.7
+    type = "arrow",
+    position = c("right", "top"),
+    text.size = 0.7
   ) +
   tm_scale_bar(
-	breaks = c(0, 0.5, 1),
-	position = c("right", "BOTTOM"),
-	text.size = 1
+    breaks = c(0, 0.5, 1),
+    position = c("right", "BOTTOM"),
+    text.size = 1
   ) +
   tm_facets(
-	along = "year",
-	free.coords = F
+    along = "year",
+    free.coords = F
   )
-
 ```
+[//]:codesnippet38
 
 ---
 
-#### <center>Animated map of the Retreat of Agassiz Glacier</center>
-<br>
-Then we can pass that object to `tmap_animation()`:
+### <center>Animated map of the Retreat of Agassiz Glacier</center>
+{{<br size="3">}}
+
+Then we can pass that object to `tmap_animation`:
 
 ```r
 tmap_animation(
@@ -1873,6 +1881,7 @@ tmap_animation(
   delay = 100
 )
 ```
+[//]:codesnippet39
 
 ---
 
@@ -1886,11 +1895,13 @@ tmap_animation(
 ---
 
 ## <center>mapview</center>
-<br>
+{{<br size="4">}}
 
 ```r
 mapview(gnp)
 ```
+[//]:codesnippet40
+{{<br size="4">}}
 
 ---
 
@@ -1951,7 +1962,7 @@ So far, we have used the `plot` mode of **tmap**. There is also a `view` mode wh
 <br><br>
 Change to `view` mode:
 
-```r
+```{r}
 tmap_mode("view")
 ```
 
@@ -1961,20 +1972,23 @@ you can also toggle between modes with {{%cdark%}}ttm(){{%/cdark%}}
 
 Re-plot the last map we plotted with **tmap**:
 
-```r
+```{r}
 tmap_last()
 ```
 
 ---
 
 ## <center>leaflet</center>
-<br>
+{{<br size="3">}}
+
 `leaflet()` creates a map widget to which you add layers
 
 ```r
 map <- leaflet()
 addTiles(map)
 ```
+[//]:codesnippet41
+{{<br size="4">}}
 
 ---
 
