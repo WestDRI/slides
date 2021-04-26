@@ -2195,6 +2195,22 @@ addTiles(map)
 
 ---
 
+# <center>Resources</center>
+{{<br size="3">}}
+
+Maybe very disappointingly, I am leaving you to fend on your own here
+{{<br size="3">}}
+
+But here are some great resources on the topic that should get you started \\
+(& maybe I'll give another workshop on the subject some time?)
+{{<br size="3">}}
+
+- {{<a "https://rspatial.org/terra/rosu/index.html" "R companion to Geographic Information Analysis">}}
+- {{<a "https://rspatial.org/terra/analysis/index.html" "Spatial data analysis">}}
+{{<br size="4">}}
+
+---
+
 {{< slide background-color="black" background-image="/img/r_gis/bg_world_watersheds_dark.png" background-size="112%" >}}
 
 # <font color="white"><center>Image credits</center></font>
