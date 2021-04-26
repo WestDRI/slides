@@ -106,8 +106,6 @@ A location on Earth's surface can be identified by its **coordinates** & some **
 <br>
 <br>
 The coordinates (x, y) are called {{<e>}}longitude{{</e>}} & {{<e>}}latitude{{</e>}}
-
-The coordinates (x, y) are called {{<e>}}longitude{{</e>}} & {{<e>}}latitude{{</e>}}
 <br>
 <br>
 In 3D, longitude & latitude are expressed in angular units (e.g. degrees) & the reference system needed is an {{<e>}}angular CRS{{</e>}} or {{<e>}}geographic coordinate system (GCS){{</e>}}
