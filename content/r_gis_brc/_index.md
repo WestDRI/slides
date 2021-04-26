@@ -637,6 +637,7 @@ library(grid)               # (part of base R) used to create inset map
 library(ggmap)              # download basemap data
 library(ggplot2)            # alternative to tmap for map production
 library(basemaps)           # download basemap data
+library(ggspatial)          # spatial framework for ggplot2
 library(terra)              # gridded spatial data manipulation
 library(leaflet)
 library(magick)
@@ -1603,17 +1604,29 @@ tm_shape(ag) +
 
 ---
 
-## <center>Using ggplot2 instead of tmap</center>
-<br>
-As an alternative to the **tmap** package, **ggplot2** can plot maps with the `geom_sf()` function
+# <center>Using ggplot2 instead of tmap</center>
+{{<br size="1.5">}}
 
-The previous map can be reproduced (with some tweaking of style & layout) with:
+As an alternative to the **tmap** package, **ggplot2** can plot maps with the `geom_sf` function:
 
 ```r
-ggplot(ag)+
+ggplot(ag) +
   geom_sf(aes(fill = year)) +
-  scale_fill_brewer(palette = "Blues")
+  scale_fill_brewer(palette = "Blues") +
+  labs(title = "Agassiz Glacier") +
+  annotation_scale(location = "bl", width_hint = 0.4) +
+  annotation_north_arrow(location = "tr", which_north = "true",
+                         pad_x = unit(0.75, "in"), pad_y = unit(0.5, "in"),
+                         style = north_arrow_fancy_orienteering) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5))
 ```
+[//]:codesnippet27
+
+---
+
+{{<imgshadow src="/img/r_gis/ag_ggplot2.png" title="" width="60%" line-height="1.0rem">}}
+{{</imgshadow>}}
 
 ---
 
