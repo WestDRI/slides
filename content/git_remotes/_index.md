@@ -26,10 +26,10 @@ custom_theme_compile = true
 # <center>What are Git remotes?</center>
 {{<br size="4">}}
 
-Remotes are versions of a project that reside outside it
+Remotes are repositories which serve as copies of a project and all of its history
 {{<br size="2">}}
 
-"Outside" can be anywhere, including on an external drive or even on the same machine
+They can be anywhere, including on an external drive or even on the same machine as the project
 {{<br size="2">}}
 
 Often however, remotes are on a different machine to serve as backup or on a network (possibly the internet) to be accessible by several persons and serve as a syncing hub for collaborations
