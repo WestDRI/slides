@@ -298,9 +298,15 @@ This is bad for three reasons:
 {{<br size="3">}}
 
 Here is a proper workflow if you have created commits from a detached `HEAD` state
+{{<br size="3">}}
 
-{{<img src="/img/git/git_timetravel/45.png" title="" width="%" line-height="0rem">}}
+{{<img src="/img/git/git_timetravel/21.png" title="" width="%" line-height="0rem">}}
 {{</img>}}
+
+---
+
+### <center>Good workflow</center>
+{{<br size="3">}}
 
 First, create a new branch:
 {{<br size="3">}}
