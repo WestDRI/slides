@@ -27,7 +27,7 @@ custom_theme_compile = true
 # <font color="#8b8b8d"><span style="font-size: 7rem"><center>Time travel</center></span></font>
 {{<br size="1.3">}}
 
-{{<img src="/img/git/git_img/shutterstock_25016035.jpgweb.jpg" title="" width="100%" line-height="rem">}}
+{{<img src="/img/git/git_img/timetravel.jpg" title="" width="100%" line-height="rem">}}
 {{</img>}}
 
 ---
