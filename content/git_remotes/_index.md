@@ -82,7 +82,7 @@ You can make your repository public or private. Choose the private option if you
 # <center>Adding a GitHub remote</center>
 {{<br size="2">}}
 
-Click on the {{<bdark>}}Code{{</bdark>}} green drop-down button, select SSH (if you have set SSH for your GitHub account) or HTTPS (if you haven't) and copy the address
+Click on the {{<bdark>}}Code{{</bdark>}} green drop-down button, select SSH ({{<a "https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh" "if you have set SSH for your GitHub account">}}) or HTTPS (if you haven't) and copy the address
 {{<br size="2">}}
 
 Then, go back to your command line, `cd` inside your project if you aren't already there and add your remote
@@ -127,10 +127,10 @@ git remote add origin https://github.com/<user>/<repo>.git
 {{<br size="4">}}
 
 If you are working alone on this project and only wanted to have a remote for backup, you are set
-{{<br size="2">}}
+{{<br size="3">}}
 
 If you don't want to grant others write access to the project and only accept contributions through pull requests, you are also set
-{{<br size="2">}}
+{{<br size="3">}}
 
 If you want to grant your collaborators write access to the project however, you need to add them to it
 
@@ -161,11 +161,12 @@ git remote
 ```
 {{<br size="4">}}
 
-To list the remotes with their addresses:
+To list the remotes with their addresses, run:
 
 ```sh
 git remote -v
 ```
+{{<br size="4">}}
 
 You can see that your local project now has a remote called `origin` and that it has the address of your GitHub repo
 
@@ -200,14 +201,14 @@ You rename a remote with:
 ```sh
 git remote rename <old-remote-name> <new-remote-name>
 ```
-{{<br size="3">}}
+{{<br size="3.5">}}
 
-And you delete a remote with:
+You delete a remote with:
 
 ```sh
 git remote remove <remote-name>
 ```
-{{<br size="3">}}
+{{<br size="3.5">}}
 
 You can change the url of the remote with:
 
@@ -217,10 +218,10 @@ git remote set-url <remote-name> <new-url> [<old-url>]
 
 ---
 
-# <center>Downloading data from the remote</center>
-{{<br size="4">}}
+# <center>Getting data from the remote</center>
+{{<br size="3">}}
 
-If you collaborate on your project through the GitHub remote, you will have to download data added by your teammates to keep your local project up to date
+If you collaborate on your project through the GitHub remote, you will have to get the data added by your teammates to keep your local project up to date
 {{<br size="2">}}
 
 To download new data from the remote, you have 2 options:
@@ -263,7 +264,7 @@ git pull <remote-name> <branch>
 ```
 
 {{<note>}}
-Example
+Example:
 {{</note>}}
 
 ```sh
