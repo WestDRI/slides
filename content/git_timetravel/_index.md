@@ -265,7 +265,7 @@ Is this a problem?
 ### <center>Bad workflow</center>
 {{<br size="3">}}
 
-It becomes a problem if you checkout main from there:
+It becomes a problem if you checkout `main` from there:
 
 {{<img src="/img/git/git_timetravel/22.png" title="" width="%" line-height="0rem">}}
 {{</img>}}
@@ -287,8 +287,8 @@ This is bad for three reasons:
 - Those commits will not show when you run `git log`, so it is easy to forget about them
 {{<br size="2">}}
 
-- It is not easy to go back to them because there aren't any tag or branch that you can checkout to
-{{<br size="2w">}}
+- It is not easy to go back to them because there aren't any tag or branch that you can switch to
+{{<br size="2">}}
 
 - The garbage collection (which runs every 30 days by default) will delete commits which are not on any branch or tag. So you will ultimately loose them
 
