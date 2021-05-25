@@ -22,7 +22,7 @@ custom_theme_compile = true
 ---
 
 # <center>Comments</center>
-{{<br size="5">}}
+{{<br size="2">}}
 
 Comments do not get evaluated
 {{<br size="3">}}
@@ -47,7 +47,7 @@ x = 2;          # comments can be added at the end of lines
 ---
 
 # <center>Unicode support</center>
-{{<br size="4">}}
+{{<br size="3">}}
 
 You can enter Unicode characters {{<a "https://docs.julialang.org/en/v1/manual/unicode-input/" "via tab completion of LaTeX">}}:
 {{<br size="2.5">}}
@@ -63,7 +63,7 @@ You can enter Unicode characters {{<a "https://docs.julialang.org/en/v1/manual/u
 ---
 
 # <center>Quotes</center>
-{{<br size="5">}}
+{{<br size="3">}}
 
 Notice the difference between single and double quotes:
 {{<br size="2">}}
@@ -79,7 +79,7 @@ println('Ouch')
 ---
 
 # <center>Sourcing a file</center>
-{{<br size="5">}}
+{{<br size="3">}}
 
 `include()` sources a Julia script:
 {{<br size="2">}}
