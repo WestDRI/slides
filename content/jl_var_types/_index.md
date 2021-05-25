@@ -173,7 +173,7 @@ At the bottom: *concrete types*\\
 Above: *abstract types* (concepts for collections of concrete types)\\
 At the top: the `Any` type, encompassing all types
 
-{{<img src="/img/type_nw.png" margin="2.5rem" title="" width="60%" line-height="2rem">}}
+{{<img src="/img/jl/type_nw.png" margin="2.5rem" title="" width="60%" line-height="2rem">}}
 <center>{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}From <a href="https://www.oreilly.com/library/view/learning-julia-abstract/9781491999585/ch01.html">O'Reilly</a></center>
 {{</img>}}
 
