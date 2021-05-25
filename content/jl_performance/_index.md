@@ -96,6 +96,28 @@ local_loop(0, 1e6)
 
 ---
 
+# <center>Measuring performance tips</center>
+{{<br size="5">}}
+
+We just saw the `@time` macro
+{{<br size="3">}}
+
+Look for garbage collection output: this is a sign that something is really not optimized
+{{<br size="3">}}
+
+Look also at the memory allocation
+
+---
+
+# <center>Measuring performance tips</center>
+{{<br size="5">}}
+
+You can also use the `@btime` macro from the `BenchmarkTools` package
+{{<br size="3">}}
+It averages times over multiple runs, excludes compilation time, and is customizable
+
+---
+
 # <center>More advanced performance tips</center>
 {{<br size="5">}}
 
