@@ -26,18 +26,18 @@ custom_theme_compile = true
 ---
 
 A variable is a name bound to a value:
-{{<br size="3">}}
+{{<br size="2">}}
 
 ```jl
 a = 3
 ```
-{{<br size="5">}}
+{{<br size="3">}}
 
 These names are extremely flexible & can use any Unicode character.
-{{<br size="5">}}
+{{<br size="3">}}
 
 The only rules are:
-{{<br size="3">}}
+{{<br size="2">}}
 
 - They must begin with a letter or an underscore (a few of the Unicode characters are also accepted)
 {{<br size="1">}}
@@ -62,7 +62,7 @@ In an interactive session, Julia returns the value of an expression (even the as
 ```jl
 b = "Hello, World!";
 ```
-{{<br size="5">}}
+{{<br size="3">}}
 
 To print a value in the REPL or in Jupyter, you only need to call it:
 {{<br size="2">}}
@@ -70,7 +70,7 @@ To print a value in the REPL or in Jupyter, you only need to call it:
 ```jl
 a
 ```
-{{<br size="5">}}
+{{<br size="3">}}
 
 If you want to print it while running a script however, you need to use the `println()` function:
 {{<br size="2">}}
@@ -88,7 +88,7 @@ a = 3;
 a = -8,2;
 a
 ```
-{{<br size="5">}}
+{{<br size="3">}}
 
 You can define multiple variables at once:
 
@@ -96,7 +96,7 @@ You can define multiple variables at once:
 a, b, c = 1, 2, 3
 b
 ```
-{{<br size="5">}}
+{{<br size="3">}}
 
 Variables in Julia are case-sensitive & can include Unicode characters:
 
@@ -113,7 +113,7 @@ false = 3;
 
 > ERROR: syntax: invalid assignment location "false"
 ```
-{{<br size="5">}}
+{{<br size="3">}}
 
 The keyword `ans` is a variable which, in the REPL, automatically takes the value of the last computation:
 
@@ -133,10 +133,8 @@ typeof(ans)
 ---
 
 # <center>2 main type systems</center>
-{{<br size="5">}}
 
 ## Static type-checking
-{{<br size="1">}}
 
 Type safety (catching errors of inadequate type) performed at compile time
 
@@ -145,7 +143,6 @@ Examples: C, C++, Java, Fortran, Haskell
 {{</note>}}
 
 ## Dynamic type-checking
-{{<br size="1">}}
 
 Type safety done at runtime
 
@@ -156,7 +153,7 @@ Examples: Python, JavaScript, PHP, Ruby, Lisp
 ---
 
 # <center>Julia type system</center>
-{{<br size="5">}}
+{{<br size="4">}}
 
 Julia's type system is *dynamic* (types are unknown until runtime), but types *can* be declared, optionally bringing the advantages of static type systems
 {{<br size="4">}}
@@ -166,14 +163,14 @@ This gives users the freedom to choose between an easy and convenient language, 
 
 ---
 
-# <center>Julia types: a hierarchical tree</center>
-{{<br size="1.5">}}
+# <span style="font-size: 3rem;"><center>Julia types: a hierarchical tree</center></span>
+{{<br size="0.5">}}
 
 At the bottom: *concrete types*\\
 Above: *abstract types* (concepts for collections of concrete types)\\
 At the top: the `Any` type, encompassing all types
 
-{{<img src="/img/jl/type_nw.png" margin="2.5rem" title="" width="60%" line-height="2rem">}}
+{{<img src="/img/jl/type_nw.png" margin="1rem" title="" width="50%" line-height="2rem">}}
 <center>{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}{{<m>}}From <a href="https://www.oreilly.com/library/view/learning-julia-abstract/9781491999585/ch01.html">O'Reilly</a></center>
 {{</img>}}
 
@@ -188,7 +185,8 @@ Done with `::`
 ```jl
 <value>::<type>
 ```
-<br>
+{{<br size="3">}}
+
 *Example:*
 
 ```jl
@@ -205,7 +203,7 @@ This works:
 ```{jl}
 2::Int
 ```
-{{<br size="5">}}
+{{<br size="4">}}
 
 We get an error message here:
 
@@ -233,6 +231,20 @@ This works:
 ```{jl}
 floatsum(2.3, 1.0)
 ```
+
+---
+
+## <center>Illustration of type safety</center>
+
+{{<note>}}
+Type declaration is not supported on global variables; this is used in local contexts. Example:
+{{</note>}}
+
+```{jl}
+function floatsum(a, b)
+    (a + b)::Float64
+end
+```
 {{<br size="3">}}
 
 We get an error message here:
@@ -244,7 +256,7 @@ floatsum(2, 4)
 ---
 
 ## <center>Information and conversion</center>
-{{<br size="3">}}
+{{<br size="1">}}
 
 To know the type of an object, use `typeof`:
 
@@ -255,9 +267,9 @@ typeof("Hello, World!")
 typeof(true)
 typeof((2, 4, 1.0, "test"))
 ```
-{{<br size="5">}}
+{{<br size="2">}}
 
-You can convert with:
+When it makes sense, you can also convert types:
 
 ```{jl}
 Int(2.0)
