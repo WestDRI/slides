@@ -4,7 +4,7 @@ outputs = ["Reveal"]
 [logowgnofront]
 src = "/img/wg_for_dark_bg.png"
 [backlink]
-href = "https://westgrid-julia.netlify.app/2021_modules/07_jl_var_type_cons/"
+href = "https://westgrid-julia.netlify.app/2021_modules/07_jl_basics/"
 txt = "Back to workshop page"
 [reveal_hugo]
 custom_theme = "mh6.scss"
