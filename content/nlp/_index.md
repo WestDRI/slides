@@ -397,6 +397,22 @@ A model can be considered as a regular program ...
 
 ---
 
+# <center>Natural Language Processing</center>
+
+{{<br size="5">}}
+
+---
+
+## <center>Language models</center>
+{{<br size="3">}}
+
+A language model is {{<a "https://en.wikipedia.org/wiki/Language_model" "a probability distribution over sequences of words.">}} It attempts to predict the next word after any sequence of words.
+{{<br size="2">}}
+
+Pre-trained models can be used to quickly get good results in all sorts of problems such as, for instance, sentiment analysis.
+
+---
+
 # <center>fastai</center>
 
 {{<br size="5">}}
