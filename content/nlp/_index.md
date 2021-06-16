@@ -413,6 +413,86 @@ Pre-trained models can be used to quickly get good results in all sorts of probl
 
 ---
 
+# <center>Data bias</center>
+
+{{%fragment%}}
+**Bias is always present in data.**
+{{%/fragment%}}
+
+{{%fragment%}}
+*Document the limitations and scope of your data as best as possible.*
+{{%/fragment%}}
+
+{{%fragment%}}
+<br>
+Problems to watch for:
+
+- *Out of domain data*: data used for training are not relevant to the model application.
+- *Domain shift*: model becoming inadapted as conditions evolve.
+- *Feedback loop*: initial bias exacerbated over the time.
+<br>
+<br>
+{{%/fragment%}}
+
+{{%fragment%}}
+The last one is particularly problematic whenever the model outputs the next round of data based on interactions of the current round of data with the real world.
+{{%/fragment%}}
+
+{{%fragment%}}
+<br>
+<b><font color="#e3731d">Solution: ensure there are human circuit breakers and oversight.</font></b>
+{{%/fragment%}}
+
+---
+
+## <center>Two main types of models</center>
+{{<br size="5">}}
+
+#### - Classification
+{{<br size="3">}}
+
+#### - Regression
+{{<br size="3">}}
+
+---
+
+## <center>Major pitfall: over-fitting</center>
+<br>
+{{<img src="/img/ml/overfitting.png" margin="rem" title="" width="40%" line-height="0.5rem">}}
+From <a href="https://commons.wikimedia.org/w/index.php?curid=3610704">Chabacano, Wikipedia</a>
+{{</img>}}
+
+---
+
+## <center>Major pitfall: over-fitting</center>
+{{<br size="5">}}
+
+##### - Training too long
+{{<br size="3">}}
+
+##### - Training without enough data
+{{<br size="3">}}
+
+##### - Too many parameters
+
+---
+
+# <center>Transfer learning</center>
+{{<br size="3">}}
+
+#### Repurposing pretrained models.
+{{<br size="2">}}
+
+##### - Less data needed
+{{<br size="2">}}
+
+##### - Less computing time needed
+{{<br size="2">}}
+
+##### - Leads to better accuracy
+
+---
+
 # <center>fastai</center>
 
 {{<br size="5">}}
@@ -476,6 +556,25 @@ Pre-trained models can be used to quickly get good results in all sorts of probl
 ##### Getting help
 
 {{<a "https://forums.fast.ai/" "Discourse forum">}} <br>
+
+---
+
+## <center>Basic workflow</center>
+{{<br size="2">}}
+
+##### - DataLoaders
+
+Create iterators with the training and validation data.
+{{<br size="2">}}
+
+##### - Learner
+
+Train the model.
+{{<br size="2">}}
+
+##### - Predict or visualize
+
+Get predictions from our model.
 
 ---
 
