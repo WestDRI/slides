@@ -1,5 +1,5 @@
 +++
-title = "fastai"
+title = "ai_ml_dl"
 outputs = ["Reveal"]
 [logowgnofront]
 src = "/img/wg_for_dark_bg.png"
