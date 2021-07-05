@@ -4,7 +4,7 @@ outputs = ["Reveal"]
 [logowgnofront]
 src = "/img/wg_for_dark_bg.png"
 [backlink]
-href = "https://westgrid-ml.netlify.app/2021_modules/02_ml"
+href = "https://westgrid-ml.netlify.app/2021_modules/02_ml/"
 txt = "Back to Webinar Page"
 [reveal_hugo]
 custom_theme = "mh6.scss"
@@ -30,20 +30,6 @@ custom_theme_compile = true
 {{%/fragment%}}
 
 <br>
-
----
-
-### <center>Dominant approach:</center>
-
-{{%fragment%}}
-{{<emph>}}
-<center>Feeding vast amounts of data to algorithms</center>
-{{</emph>}}
-
-{{<img src="https://imgs.xkcd.com/comics/machine_learning.png" title="" width="%" line-height="1rem">}}
-From <a href="https://xkcd.com/" target="_blank">xkcd.com</a>
-{{</img>}}
-{{%/fragment%}}
 
 ---
 
@@ -74,6 +60,38 @@ From <a href="https://xkcd.com/" target="_blank">xkcd.com</a>
 
 ---
 
+## <center>Dominant approach:</center>
+
+{{%fragment%}}
+{{<emph>}}
+<center>Feeding vast amounts of data to algorithms</center>
+{{</emph>}}
+
+{{<img src="https://imgs.xkcd.com/comics/machine_learning.png" title="" width="%" line-height="1rem">}}
+From <a href="https://xkcd.com/" target="_blank">xkcd.com</a>
+{{</img>}}
+{{%/fragment%}}
+
+---
+
+## <center>Dominant approach:</center>
+
+{{<emph>}}
+Learning = strengthening pathways
+{{</emph>}}
+{{<br size="6">}}
+
+*Example in image recognition:*
+{{<br size="2">}}
+
+Rather than coding explicitly all the possible ways—pixel by pixel—that a picture can represent an object, image/label pairs are fed to a neural network
+{{<br size="3">}}
+
+Parameters get adjusted in an iterative and automated manner
+{{<br size="4">}}
+
+---
+
 ## <center>Neurons</center>
 
 <figure style="display: table; margin: 2rem auto">
@@ -93,29 +111,162 @@ From <a href="https://xkcd.com/" target="_blank">xkcd.com</a>
   </div>
 </figure>
 
----
-
-# <center>Neural networks</center>
-{{<br size="4">}}
-
-{{%fragment%}}
-A NN is a parameterized function which can, in theory, solve any problem to any level of accuracy
-{{%/fragment%}}
-
-{{<br size="4">}}
-
-{{%fragment%}}
-The learning process is the mapping of input data to output data (in a training set) through the adjustment of the parameters
-{{%/fragment%}}
-
-{{<br size="4">}}
+<br>
+<br>
 
 ---
 
+## <center>Neurons</center>
+
+<figure style="display: table; margin: 2rem auto">
+  <div class="row">
+	<div class="column">
+	  <b>Biological</b> <br><br><br><br>
+	  {{<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Neuron.svg" title="" width="100%" line-height="3.3rem">}}
+	  Schematic from <a href="https://commons.wikimedia.org/w/index.php?curid=1474927" target="_blank">Dhp1080, Wikipedia</a>
+	  {{</img>}}
+	</div>
+	<div class="column">
+	   <b>Artificial</b> <br><br><br>
+	   {{<img src="/img/ml/artificial_neuron_nw.png" title="" width="100%" line-height="0.5rem">}}
+	   Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0163" target="_blank">O.C. Akgun & J. Mei 2019</a>
+	   {{</img>}}
+	</div>
+  </div>
+</figure>
+
+**Biological neuron:** an electrically excitable cell receives information through the dendrites & transmits a compiled output through the axons
+
+---
+
+## <center>Neurons</center>
+
+<figure style="display: table; margin: 2rem auto">
+  <div class="row">
+	<div class="column">
+	  <b>Biological</b> <br><br><br><br>
+	  {{<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Neuron.svg" title="" width="100%" line-height="3.3rem">}}
+	  Schematic from <a href="https://commons.wikimedia.org/w/index.php?curid=1474927" target="_blank">Dhp1080, Wikipedia</a>
+	  {{</img>}}
+	</div>
+	<div class="column">
+	   <b>Artificial</b> <br><br><br>
+	   {{<img src="/img/ml/artificial_neuron_nw.png" title="" width="100%" line-height="0.5rem">}}
+	   Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0163" target="_blank">O.C. Akgun & J. Mei 2019</a>
+	   {{</img>}}
+	</div>
+  </div>
+</figure>
+
+**Artificial neuron:** the weighted sum of a set of numeric inputs is passed through an activation function before yielding a numeric output
+
+---
+
+## <center>Activation</center>
+
+<figure style="display: table; margin: 1rem auto">
+  <div class="row">
+	<div class="column">
+	  <b>Threshold potential</b>
+	  {{<br size="2">}}
+	  {{<imgb src="/img/ml/all_none_law_nw.png" bg="#f2f2f2" title="" width="80%" line-height="2.5rem">}}
+      Modified from <a href="https://commons.wikimedia.org/w/index.php?curid=78013076">Blacktc, Wikimedia</a>
+      {{</imgb>}}
+	</div>
+	<div class="column">
+	  <b>Activation functions</b>
+	  {{<br size="2">}}
+      {{<imgb src="/img/ml/act_func_nw.png" bg="#f2f2f2" title="" width="80%" line-height="2.5rem">}}
+      From <a href="https://arxiv.org/abs/1908.08681">Diganta Misra 2019</a>
+      {{</imgb>}}
+	</div>
+  </div>
+</figure>
+
+<br>
+<br>
+
+---
+
+## <center>Activation</center>
+
+<figure style="display: table; margin: 1rem auto">
+  <div class="row">
+	<div class="column">
+	  <b>Threshold potential</b>
+	  {{<br size="2">}}
+	  {{<imgb src="/img/ml/all_none_law_nw.png" bg="#f2f2f2" title="" width="80%" line-height="2.5rem">}}
+      Modified from <a href="https://commons.wikimedia.org/w/index.php?curid=78013076">Blacktc, Wikimedia</a>
+      {{</imgb>}}
+	</div>
+	<div class="column">
+	  <b>Activation functions</b>
+	  {{<br size="2">}}
+      {{<imgb src="/img/ml/act_func_nw.png" bg="#f2f2f2" title="" width="80%" line-height="2.5rem">}}
+      From <a href="https://arxiv.org/abs/1908.08681">Diganta Misra 2019</a>
+      {{</imgb>}}
+	</div>
+  </div>
+</figure>
+
+**Biological neuron:** all-or-nothing action potential; greater stimuli don't produce stronger signals but increase firing frequency
+
+---
+
+## <center>Activation</center>
+
+<figure style="display: table; margin: 1rem auto">
+  <div class="row">
+	<div class="column">
+	  <b>Threshold potential</b>
+	  {{<br size="2">}}
+	  {{<imgb src="/img/ml/all_none_law_nw.png" bg="#f2f2f2" title="" width="80%" line-height="2.5rem">}}
+      Modified from <a href="https://commons.wikimedia.org/w/index.php?curid=78013076">Blacktc, Wikimedia</a>
+      {{</imgb>}}
+	</div>
+	<div class="column">
+	  <b>Activation functions</b>
+	  {{<br size="2">}}
+      {{<imgb src="/img/ml/act_func_nw.png" bg="#f2f2f2" title="" width="80%" line-height="2.5rem">}}
+      From <a href="https://arxiv.org/abs/1908.08681">Diganta Misra 2019</a>
+      {{</imgb>}}
+	</div>
+  </div>
+</figure>
+
+**Artificial neuron:** many activation functions have been tried; choices based on problem & available computing budget
+
+---
+
+### <center>Softmax activation function</center>
+
+\\[\sigma(\mathbf{z})\_i=\frac{e^{z\_i}}{\sum\_{j=1}^{K}e^{z\_j}}\\]
+\\[\text{ for }i=1,...,K\text{ and }\mathbf{z}=(z\_1,...,z\_K)\in\mathbb{R}^K\\]
+
+{{<si "1.3" "(\(\mathbb{R}\) represents the set of real numbers)">}}
+
+{{<br size="2">}}
+
+{{<imgshadow src="/img/ml/softmax.png" title="" width="40%" line-height="0.5rem">}}
+{{</imgshadow>}}
+{{<br size="1">}}
+
+Vector of real numbers &nbsp;→&nbsp; vector of numbers between 0 and 1 which add to 1
+
+---
+
+### <center>Relu: rectifier activation function</center>
 {{<br size="3">}}
+
+\\[f(x) = max(0, x)\\]
+{{<br size="3">}}
+
+{{<imgshadow src="/img/ml/relu.png" title="" width="50%" line-height="0.5rem">}}
+{{</imgshadow>}}
+
+---
 
 ## <center>Neural networks</center>
-{{<br size="3">}}
 
 <figure style="display: table; margin: 1rem auto">
   <div class="row">
@@ -134,14 +285,58 @@ The learning process is the mapping of input data to output data (in a training 
   </div>
 </figure>
 
-{{<br size="2">}}
+<br>
 
 ---
 
-{{<br size="3">}}
+## <center>Neural networks</center>
+
+<figure style="display: table; margin: 1rem auto">
+  <div class="row">
+	<div class="column">
+	  <b>Biological</b> <br><br><br><br>
+	 {{<img src="/img/ml/brain_neurons.jpg" title="" width="90%" line-height="7.5rem">}}
+	 Image by <a href="https://news.berkeley.edu/2020/03/19/high-speed-microscope-captures-fleeting-brain-signals/" target="_blank">Na Ji, UC Berkeley</a>
+	 {{</img>}}
+	</div>
+	<div class="column">
+	   <b>Artificial</b> <br><br>
+	   {{<img src="/img/ml/nn_single_layer_nw.png" title="" width="100%" line-height="0.5rem">}}
+	   Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0163" target="_blank">O.C. Akgun & J. Mei 2019</a>
+	   {{</img>}}
+	</div>
+  </div>
+</figure>
+
+**Biological network:** tremendously complex organization
+
+---
 
 ## <center>Neural networks</center>
-{{<br size="4.05">}}
+
+<figure style="display: table; margin: 1rem auto">
+  <div class="row">
+	<div class="column">
+	  <b>Biological</b> <br><br><br><br>
+	 {{<img src="/img/ml/brain_neurons.jpg" title="" width="90%" line-height="7.5rem">}}
+	 Image by <a href="https://news.berkeley.edu/2020/03/19/high-speed-microscope-captures-fleeting-brain-signals/" target="_blank">Na Ji, UC Berkeley</a>
+	 {{</img>}}
+	</div>
+	<div class="column">
+	   <b>Artificial</b> <br><br>
+	   {{<img src="/img/ml/nn_single_layer_nw.png" title="" width="100%" line-height="0.5rem">}}
+	   Modified from <a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0163" target="_blank">O.C. Akgun & J. Mei 2019</a>
+	   {{</img>}}
+	</div>
+  </div>
+</figure>
+
+**Natural network:** organized in layers
+
+---
+
+## <center>Neural networks</center>
+{{<br size="3.5">}}
 
 <span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Single layer of artificial neurons</span> &nbsp;&nbsp;→ &nbsp; Unable to learn even some of the simple mathematical functions (Marvin Minsky & Seymour Papert)
 
@@ -163,96 +358,16 @@ The learning process is the mapping of input data to output data (in a training 
 <b>deep learning</b> = two or more layers
 {{%/fragment%}}
 
-{{<br size="9.7">}}
+{{<br size="4.2">}}
 
 ---
 
-# <center>Types of NN</center>
-
-{{<br size="4">}}
-
----
-
-## <center>Fully-connected feedforward single-layer</center>
-{{<br size="2">}}
-
-{{<imgb src="/img/ml/nn_1layer.png" bg="#bfbfbf" title="" width="%" line-height="3rem">}}
-From <a href="http://neuralnetworksanddeeplearning.com/chap5.html" target="_blank">"Neural Networks and Deep Learning" free online book, Chapter 5</a>
-{{</imgb>}}
-<br>
-<br>
+# <center>How do neural networks learn?</center>
 
 {{%fragment%}}
-<center>Each neuron receives input from every element of the previous layer</center>
+<br><br>
+<center>They adjust parameters automatically in an iterative manner</center>
 {{%/fragment%}}
-
----
-
-## <center>Fully-connected feedforward deep NN</center>
-{{<br size="2">}}
-
-{{<imgb src="/img/ml/nn_3layers.png" bg="#bfbfbf" title="" width="%" line-height="3rem">}}
-From <a href="http://neuralnetworksanddeeplearning.com/chap5.html" target="_blank">"Neural Networks and Deep Learning" free online book, Chapter 5</a>
-{{</imgb>}}
-<br>
-<br>
-
-{{%fragment%}}
-<center>Data with large input sizes (e.g. images) require a huge number of neurons</center>
-{{%/fragment%}}
-
----
-
-## <center>Convolutional neural network (CNN)</center>
-{{<br size="0.5">}}
-
-{{<imgb src="/img/ml/cnn_nw.png" bg="#cccccc" title="" width="80%" line-height="2rem">}}
-From <a href="https://codetolight.wordpress.com/2017/11/29/getting-started-with-pytorch-for-deep-learning-part-3-neural-network-basics/" target="_blank">Programming Journeys by Rensu Theart</a>
-{{</imgb>}}
-
-{{<br size="0.5">}}
-
-{{%fragment%}}
-<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Used for spatially structured data</span>
-{{<br size="0.5">}}
-{{%/fragment%}}
-
-{{%fragment%}}
-**Convolution layers** &nbsp;&nbsp;→ &nbsp; each neuron receives input only from a subarea of the previous layer
-
-**Pooling** &nbsp;&nbsp;→ &nbsp; combines the outputs of neurons in a subarea to reduce the data dimensions
-{{%/fragment%}}
-
-{{<br size="0.5">}}
-
-{{%fragment%}}
-<em>Not fully connected</em>
-{{%/fragment%}}
-
----
-
-## <center>Recurrent neural network (RNN)</center>
-{{<br size="1.8">}}
-
-{{<imgb src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Recurrent_neural_network_unfold.svg" bg="#cccccc" title="" width="%" line-height="2.5rem">}}
-From <a href="https://commons.wikimedia.org/w/index.php?curid=1474927" target="_blank">fdeloche, Wikipedia</a>
-{{</imgb>}}
-
-{{<br size="1.3">}}
-
-{{%fragment%}}
-<span style="color: #e3731d; font-weight: 500; font-size: 1.4rem; font-family: 'Montserrat';">Used for chain structured data (e.g. text)</span>
-{{%/fragment%}}
-
-{{<br size="0.5">}}
-
-{{%fragment%}}
-<em>Not feedforward</em>
-{{%/fragment%}}
-
----
-
-# <center>General principles</center>
 
 {{<br size="5">}}
 
@@ -279,7 +394,7 @@ This is set before training and does not change.
 {{<imgb src="/img/ml/fastai/dl_schematics_02_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
-A model also comprises parameters. \\
+Then we need parameters. \\
 Those are set to some initial values, but will change during training.
 
 ---
@@ -322,8 +437,7 @@ We get predictions as outputs.
 {{<imgb src="/img/ml/fastai/dl_schematics_06_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
-A metric (e.g. error rate) compares predictions & labels: \\
-this is a measure of model performance.
+A metric (e.g. error rate) compares predictions & labels: this is a measure of model performance.
 <br>
 
 ---
@@ -349,7 +463,7 @@ This cycle gets repeated at each step.
 
 ---
 
-## <center>*Using* a model</center>
+## <center>*Training* a model</center>
 
 {{<imgb src="/img/ml/fastai/dl_schematics_09_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
@@ -359,12 +473,12 @@ At the end of the training process, what matters is the combination of architect
 
 ---
 
-## <center>*Using* a model</center>
+## <center>Our model</center>
 
 {{<imgb src="/img/ml/fastai/dl_schematics_10_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
-That's what constitute a model
+That's what constitute a model.
 <br>
 <br>
 
