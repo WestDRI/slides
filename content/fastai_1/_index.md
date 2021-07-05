@@ -11,9 +11,9 @@ custom_theme = "mh6.scss"
 custom_theme_compile = true
 +++
 
-#### <div style="line-height: 3.2rem; font-size: 5.5rem; color: #b3765b"><br>AI, ML, DL:</div>{{<br size="7">}}
+#### <div style="line-height: 3.2rem; font-size: 4.3rem; color: #b3765b">AI, ML, DL:</div>{{<br size="6">}}
 
-#### <center><div style="line-height: 3.2rem; font-size: 4.3rem; color: #c98749">Concepts</div></center>{{<br size="3.5">}}
+#### <center><div style="line-height: 3.2rem; font-size: 5.5rem; color: #c98749">Concepts</div></center>{{<br size="5">}}
 
 {{<imgright src="/img/wg_for_dark_bg.png" title="" width="35%" line-height="rem">}}
 {{</imgright>}}
