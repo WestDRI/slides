@@ -77,6 +77,18 @@ PCA\\
 Cocktail party algorithm (signal separation)
 {{%/fragment%}}
 
+---
+
+## <center>Self-supervised learning</center>
+{{<br size="3">}}
+
+Mostly used in Natural Language Processing (NLP):
+{{<br size="4">}}
+
+Unlabelled data (e.g. raw text from the internet) is used by a model for training, for instance by predicting which words will come next in a sentence and calculating a loss function with the word that actually comes next.
+{{<br size="4">}}
+
+Not needing labelled data is a huge advantage and SSL {{<a "https://www.fast.ai/2020/01/13/self_supervised/#self-supervised-learning-in-computer-vision" "is starting to be used in computer vision">}} as well.
 
 ---
 
@@ -84,26 +96,30 @@ Cocktail party algorithm (signal separation)
 
 ---
 
-## <center>Bias</center>
+# <center>Bias</center>
 <br>
 
-<center>Allows to {{<a "https://stackoverflow.com/q/2480650/9210961" "shift the output of the activation function to the right or to the left">}}</center>
-→ Offset
+Allows to {{<a "https://stackoverflow.com/q/2480650/9210961" "shift the output of the activation function to the right or to the left">}}
+{{<br size="2">}}
+
+<center>→ Offset</center>
 
 ---
 
-## <center>Gradient descent</center>
+# <center>Gradient descent</center>
+{{<br size="1">}}
 
-{{<img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Gradient_descent.svg" title="" width="100%" line-height="0.5rem">}}
+{{<imgb src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Gradient_descent.svg" bg="#e6e6e6" title="" width="100%" line-height="2.5rem">}}
 From <a href="https://commons.wikimedia.org/w/index.php?curid=20569355">Olegalexandrov & Zerodamage, Wikipedia</a>
-{{</img>}}
-<br>
-<center>Iterative optimization method</center>
+{{</imgb>}}
+{{<br size="1.5">}}
+
+Iterative optimization method \\
 Adjust the weights and biases
 
 ---
 
-### <center>Batch gradient descent</center>
+## <center>Batch gradient descent</center>
 <br>
 
 Use all examples in each iteration
@@ -114,7 +130,7 @@ Parameters adjusted only after all the samples have been through
 
 ---
 
-### <center>Stochastic gradient descent</center>
+## <center>Stochastic gradient descent</center>
 <br>
 
 Use one example in each iteration
@@ -128,7 +144,7 @@ But no vectorization
 
 ---
 
-### <center>Mini-batch gradient descent</center>
+## <center>Mini-batch gradient descent</center>
 <br>
 
 *Intermediate approach:* \\
@@ -143,17 +159,18 @@ Variation: {{<a "https://arxiv.org/abs/1412.6980" "Adam optimization algorithm">
 
 ---
 
-### <center>Major pitfall: over-fitting</center>
-<br>
-{{<img src="/img/ml/overfitting.png" margin="rem" title="" width="40%" line-height="0.5rem">}}
+## <center>Major pitfall: over-fitting</center>
+{{<br size="1">}}
+
+{{<imgb src="/img/ml/overfitting.png" margin="rem" bg="#e6e6e6" title="" width="40%" line-height="0.5rem">}}
 From <a href="https://commons.wikimedia.org/w/index.php?curid=3610704">Chabacano, Wikipedia</a>
-{{</img>}}
+{{</imgb>}}
 
 Some noise from the data extracted by the model while it does not represent general meaningful structure and has no predictive power
 
 ---
 
-### <center>Major pitfall: over-fitting</center>
+## <center>Major pitfall: over-fitting</center>
 {{<br size="5">}}
 
 ##### - Training too long
@@ -166,20 +183,27 @@ Some noise from the data extracted by the model while it does not represent gene
 
 ---
 
-### <center>Overfitting: solutions</center><br>
+## <center>Overfitting: solutions</center>
+{{<br size="2">}}
 
 {{%fragment%}}
 Regularization by adding a penalty to the loss function
 {{%/fragment%}}
 
+{{<br size="2">}}
+
 {{%fragment%}}
 Early stopping
 {{%/fragment%}}
+
+{{<br size="2">}}
 
 {{%fragment%}}
 Increase depth (more layers), decrease breadth (less neurons per layer)\\
 <span style="font-size: 1.5rem;">→ less parameters overall, but creates vanishing and exploding gradient problems</span>
 {{%/fragment%}}
+
+{{<br size="2">}}
 
 {{%fragment%}}
 Neural architectures adapted to the type of data\\
@@ -300,6 +324,19 @@ From <a href="https://commons.wikimedia.org/w/index.php?curid=1474927" target="_
 {{<imgb src="/img/ml/transformer_nw.png" bg="#e6e6e6" title="" width="35%" line-height="2.5rem">}}
 From <a href="https://arxiv.org/abs/1706.03762">Vaswani et al., 2017, arXiv:1706.03762</a>
 {{</imgb>}}
+
+---
+
+## <center>Transformers</center>
+{{<br size="1">}}
+
+They allow for easier parallelization of tasks because the processing order doesn't matter.
+
+---
+
+# <center>Transfer learning</center>
+
+You will watch a short video on this in next lesson.
 
 ---
 
