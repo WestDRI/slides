@@ -328,15 +328,20 @@ From <a href="https://arxiv.org/abs/1706.03762">Vaswani et al., 2017, arXiv:1706
 ---
 
 ## <center>Transformers</center>
-{{<br size="1">}}
+{{<br size="2">}}
 
-They allow for easier parallelization of tasks because the processing order doesn't matter.
+They allow for easier parallelization of tasks because the data processing order doesn't matter
+{{<br size="2">}}
 
----
+{{%fragment%}}
+Transformers started in 2017 and have since then lead to the most complex models such as BERT and GPT-3
+{{%/fragment%}}
 
-# <center>Transfer learning</center>
+{{<br size="2">}}
 
-You will watch a short video on this in next lesson.
+{{%fragment%}}
+You will watch a video explaining their complex architecture
+{{%/fragment%}}
 
 ---
 
@@ -344,8 +349,68 @@ You will watch a short video on this in next lesson.
 
 ---
 
+## <center>GPUs</center>
+{{<br size="2">}}
 
+{{%fragment%}}
+- Does not help when memory is a problem
+{{%/fragment%}}
 
+{{<br size="1">}}
+
+{{%fragment%}}
+- Expensive. Not always available
+{{%/fragment%}}
+
+---
+
+## <center>Parallelization</center>
+{{<br size="2">}}
+
+{{<emph>}}
+Split batches into smaller batches run in parallel
+{{</emph>}}
+
+{{%fragment%}}
+- Sometimes not possible (e.g. RNN very difficult to parallelize)
+{{%/fragment%}}
+
+{{<br size="1">}}
+
+{{%fragment%}}
+- Sometimes the limiting factor is memory
+{{%/fragment%}}
+
+---
+
+## <center>Gradient accumulation</center>
+{{<br size="2">}}
+
+{{<emph>}}
+Split batches into smaller batches run sequentially
+{{</emph>}}
+
+{{<br size="2">}}
+
+{{%fragment%}}
+- Takes time
+{{%/fragment%}}
+
+{{<br size="1">}}
+
+{{%fragment%}}
+- Does not solve the problem if not enough memory for a single sample
+{{%/fragment%}}
+
+---
+
+# <center>Transfer learning</center>
+{{<br size="3">}}
+
+*The topic of the next lesson*
+{{<br size="3">}}
+
+Transfer learning allows to repurpose models to new (similar) purposes, saving tremendous amounts of computing time and need for data
 
 ---
 
@@ -356,18 +421,22 @@ You will watch a short video on this in next lesson.
 ## <center>ML libraries</center>
 
 *Most popular:*
+{{<br size="2">}}
 
 - {{<a "https://pytorch.org/" "PyTorch">}}, developed by Facebook's AI Research lab\\
 - {{<a "https://www.tensorflow.org/" "TensorFlow">}}, developed by the Google Brain Team
+{{<br size="2">}}
 
 Both most often used through their Python interfaces<br><br>
 
-Julia's syntax is well suited for the implementation of mathematical models\\
-GPU kernels can be written directly in Julia\\
+{{<a "https://julialang.org/" "Julia">}} syntax is well suited for the implementation of mathematical models
+
+GPU kernels can be written directly in Julia
+
 Julia's speed is attractive in computation hungry fields
+{{<br size="2">}}
 
 → Julia has seen the development of many ML packages
-
 
 ---
 
