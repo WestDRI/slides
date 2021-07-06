@@ -21,6 +21,7 @@ custom_theme_compile = true
 ---
 
 # <center>Data bias</center>
+{{<br size="2">}}
 
 {{%fragment%}}
 **Bias is always present in data.**
@@ -34,9 +35,9 @@ custom_theme_compile = true
 <br>
 Problems to watch for:
 
-- *Out of domain data*: data used for training are not relevant to the model application.
-- *Domain shift*: model becoming inadapted as conditions evolve.
-- *Feedback loop*: initial bias exacerbated over the time.
+- *Out of domain data*: data used for training are not relevant to the model application
+- *Domain shift*: model becoming inadapted as conditions evolve
+- *Feedback loop*: initial bias exacerbated over the time
 <br>
 <br>
 {{%/fragment%}}
@@ -49,6 +50,28 @@ The last one is particularly problematic whenever the model outputs the next rou
 <br>
 <b><font color="#e3731d">Solution: ensure there are human circuit breakers and oversight.</font></b>
 {{%/fragment%}}
+
+---
+
+# <center>Transformation of subjects</center>
+{{<br size="2">}}
+
+Algorithms are supposed to help us, not transform us
+{{<br size="2">}}
+
+{{%fragment%}}
+e.g. YouTube recommendation algorithm
+{{%/fragment%}}
+
+---
+
+# <center>Bugs</center>
+{{<br size="2">}}
+
+Liability
+{{<br size="2">}}
+
+{{<a "https://www.theverge.com/2018/3/21/17144260/healthcare-medicaid-algorithm-arkansas-cerebral-palsy" "Example of bug with real life consequences">}} <br>
 
 ---
 
