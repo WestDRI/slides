@@ -381,7 +381,7 @@ Vector of real numbers &nbsp;→&nbsp; vector of numbers between 0 and 1 which a
 
 ## <center>*Building* a model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_01_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_01_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
 First, we need an architecture: size, depth, types of layers, etc. \\
@@ -391,7 +391,7 @@ This is set before training and does not change.
 
 ## <center>*Building* a model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_02_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_02_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
 Then we need parameters. \\
@@ -401,10 +401,10 @@ Those are set to some initial values, but will change during training.
 
 ## <center>*Training* a model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_03_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_03_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
-To train the model, we need labelled data in the form of input/output pairs.
+To train the model, we need labelled examples (input/output pairs).
 <br>
 <br>
 
@@ -412,10 +412,31 @@ To train the model, we need labelled data in the form of input/output pairs.
 
 ## <center>*Training* a model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_04_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_03_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
-Inputs and parameters are fed to the architecture.
+The inputs are **features**: characteristics describing our data. \\
+The outputs are **labels**: the variable we are predicting, also called targets.
+<br>
+
+---
+
+## <center>*Training* a model</center>
+
+{{<imgb src="/img/ml/fastai/diag_04_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{</imgb>}}
+
+We split the labelled data into a training set (often *c.* 80%) & a testing set (the rest).
+<br>
+
+---
+
+## <center>*Training* a model</center>
+
+{{<imgb src="/img/ml/fastai/diag_05_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{</imgb>}}
+
+Training inputs and parameters are fed to the architecture.
 <br>
 <br>
 
@@ -423,7 +444,7 @@ Inputs and parameters are fed to the architecture.
 
 ## <center>*Training* a model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_05_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_06_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
 We get predictions as outputs.
@@ -434,17 +455,17 @@ We get predictions as outputs.
 
 ## <center>*Training* a model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_06_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_07_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
-A metric (e.g. error rate) compares predictions & labels: this is a measure of model performance.
+A metric (e.g. error rate) compares predictions & training labels: this is a measure of model performance.
 <br>
 
 ---
 
 ## <center>*Training* a model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_07_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_08_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
 Because it is not always sensitive enough to changes in parameter values, \\
@@ -455,7 +476,7 @@ we compute a <b>loss function</b> ...
 
 ## <center>*Training* a model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_08_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_09_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
 ... which allows to adjust the parameters slightly through backpropagation. \\
@@ -465,7 +486,7 @@ This cycle gets repeated at each step.
 
 ## <center>*Training* a model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_09_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_10_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
 At the end of the training process, what matters is the combination of architecture and trained parameters.
@@ -473,9 +494,9 @@ At the end of the training process, what matters is the combination of architect
 
 ---
 
-## <center>Our model</center>
+## <center>A model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_10_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_11_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
 That's what constitute a model.
@@ -484,24 +505,44 @@ That's what constitute a model.
 
 ---
 
-## <center>*Using* a model</center>
+## <center>A model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_11_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_12_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
-A model can be considered as a regular program ...
+A model can be considered as a regular program.
 <br>
+<br>
+
+---
+
+## <center>*Testing* a model</center>
+
+{{<imgb src="/img/ml/fastai/diag_13_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{</imgb>}}
+
+We test the model on labelled data **it has never seen**: the testing data. \\
+**No training data is used here!**
+<br>
+
+---
+
+## <center>*Testing* a model</center>
+
+{{<imgb src="/img/ml/fastai/diag_13_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{</imgb>}}
+
+The testing loss informs us on how well our model performs with data it was not trained on.
 <br>
 
 ---
 
 ## <center>*Using* a model</center>
 
-{{<imgb src="/img/ml/fastai/dl_schematics_12_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
+{{<imgb src="/img/ml/fastai/diag_14_nw.png" margin="1.5rem" bg="#cccccc" title="" width="%" line-height="0.5rem">}}
 {{</imgb>}}
 
-... and be used to obtain outputs from inputs.
-<br>
+Finally, the model can be used to obtain outputs we really care about from unlabelled inputs. We are now using it just like a regular program.
 <br>
 
 ---
