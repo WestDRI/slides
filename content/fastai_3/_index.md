@@ -4,7 +4,7 @@ outputs = ["Reveal"]
 [logowgnofront]
 src = "/img/wg_for_dark_bg.png"
 [backlink]
-href = "https://westgrid-ml.netlify.app/2021_modules/07_fastai/"
+href = "https://westgrid-ml.netlify.app/2021_modules/09_fastai/"
 txt = "Back to Webinar Page"
 [reveal_hugo]
 custom_theme = "mh6.scss"
