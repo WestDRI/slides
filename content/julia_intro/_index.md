@@ -18,6 +18,10 @@ custom_theme_compile = true
 <!-- to edit this file, checkout slideforwebinars -->
 <!-- make the edits, then push to the old GitHub repo called slidesForWebinars by running: git push -u old slideforwebinars:master -->
 <!-- otherwise, the changes will not be represented in the slides since the netlify repo is linked with slidesForWebinars and not the new slides GitHub repo -->
+
+<!-- AFTER EDIT ON THE PROPER BRANCH -->
+<!-- needs to be pushed to GitHub with:-->
+<!-- git push old HEAD:m -->
 <!-- ############################################################################################################################################################## -->
 
 <br>
