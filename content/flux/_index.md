@@ -1142,7 +1142,7 @@ test()
 #### <center>Saving models</center>
 <br>
 
-<center>{{<a "http://bsonspec.org/" "BSON.jl](https://github.com/JuliaIO/BSON.jl) allows to save models in [Binary JSON">}} format</center>
+<center>{{<a "https://github.com/JuliaIO/BSON.jl" "BSON.jl">}} allows to save models in {{<a "http://bsonspec.org/" "Binary JSON">}} format</center>
 
 ---
 
@@ -1154,7 +1154,7 @@ start from model trained on related problem for weight initialization
 <center>→ Allows to get good results on small datasets</center>
 
 <br>
-{{<a "https://onnx.ai/" "ONNX.jl](https://github.com/FluxML/ONNX.jl) allows to read pre-trained models from [ONNX format">}} to Flux.
+{{<a "https://github.com/FluxML/ONNX.jl" "ONNX.jl">}} allows to read pre-trained models from {{<a "https://onnx.ai/" "ONNX format">}} to Flux.
 
 ---
 
