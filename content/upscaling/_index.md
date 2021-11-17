@@ -172,3 +172,19 @@ from datasets import load_dataset
 
 set5 = load_dataset('eugenesiow/Set5', 'bicubic_x4', split='validation')
 ```
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Dataset exploration</div></center>
+{{<br size="3">}}
+
+```{py}
+print(set5)
+len(set5)
+set5[0]
+set5.shape
+set5.column_names
+set5.features
+set5.set_format('torch', columns=['hr', 'lr'])
+set5.format
+```
+
