@@ -240,3 +240,85 @@ to complex (e.g. {{<a "https://en.wikipedia.org/wiki/Kriging" "Gaussian process 
 
 {{<a "https://openaccess.thecvf.com/content/ICCV2021W/AIM/html/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.html" "Swin Transformer">}} — 2021
 
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Benchmarks</div></center>
+{{<br size="3">}}
+
+{{<a "https://ieeexplore.ieee.org/abstract/document/6411957" "A 2012 review of interpolation methods for SR">}} gives the metrics for a series of interpolation methods (using other datasets)
+
+---
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column">
+	 {{<img src="/img/upscaling/1_interpolation_psnr1.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column">
+	   {{<img src="/img/upscaling/2_interpolation_ssim1.png" title="" width="%" line-height="rem">}}
+	   {{</img>}}
+	</div>
+  </div>
+    <div class="row">
+	<div class="column">
+	 {{<img src="/img/upscaling/3_interpolation_psnr2.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column">
+	   {{<img src="/img/upscaling/4_interpolation_ssim2.png" title="" width="%" line-height="rem">}}
+	   {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Interpolation methods</div></center>
+{{<br size="3">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column_single">
+	 {{<img src="/img/upscaling/1_interpolation_psnr1_mean.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+  {{<br size="3">}}
+
+  <div class="row">
+	<div class="column_single">
+	 {{<img src="/img/upscaling/3_interpolation_psnr2_mean.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+   </div>
+   {{<br size="3">}}
+
+   <div class="row">
+	<div class="column_single">
+	   {{<img src="/img/upscaling/2_interpolation_ssim1_mean.png" title="" width="%" line-height="rem">}}
+	   {{</img>}}
+	</div>
+   </div>
+   {{<br size="3">}}
+
+   <div class="row">
+	<div class="column_single">
+	   {{<img src="/img/upscaling/4_interpolation_ssim2_mean.png" title="" width="%" line-height="rem">}}
+	   {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">DL methods</div></center>
+{{<br size="4">}}
+
+<center>{{<a "https://paperswithcode.com/" "The Papers with Code website">}} lists {{<a "https://paperswithcode.com/sota/image-super-resolution-on-set5-4x-upscaling" "available benchmarks on Set5">}}</center>
+
+---
+
+{{<img src="/img/upscaling/psnr_ssim_set5.png" margin="rem" title="" width="60%" line-height="0.5rem">}}
+{{</img>}}
+
