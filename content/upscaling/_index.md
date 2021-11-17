@@ -80,3 +80,49 @@ SSIM(x,y) = \frac{(2\mu_x\mu_y + c_1) + (2 \sigma _{xy} + c_2)}
     {(\mu_x^2 + \mu_y^2+c_1) (\sigma_x^2 + \sigma_y^2+c_2)}
 \\]
 
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics implementation</div></center>
+{{<br size="2.5">}}
+
+- Implement them yourself (using {{%c%}}torch.log10{{%/c%}}, etc.)
+{{<br size="2">}}
+
+- Use some library that implements them (e.g. {{<a "https://github.com/kornia/kornia/tree/master/kornia/losses" "kornia">}})
+{{<br size="2">}}
+
+- Use code of open source project with good implementation (e.g. {{<a "https://github.com/JingyunLiang/SwinIR/blob/main/utils/util_calculate_psnr_ssim.py" "SwinIR">}})
+{{<br size="2">}}
+
+- Use some higher level library that provides them (e.g. {{<a "https://pytorch.org/ignite/metrics.html" "ignite">}})
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics implementation</div></center>
+{{<br size="2.5">}}
+
+- Implement them yourself (using {{%c%}}torch.log10{{%/c%}}, etc.)
+{{<br size="2">}}
+
+- <font color="orange">Use some library that implements them (e.g. {{<a "https://github.com/kornia/kornia/tree/master/kornia/losses" "kornia">}})</font>
+{{<br size="2">}}
+
+- Use code of open source project with good implementation (e.g. {{<a "https://github.com/JingyunLiang/SwinIR/blob/main/utils/util_calculate_psnr_ssim.py" "SwinIR">}})
+{{<br size="2">}}
+
+- Use some higher level library that provides them (e.g. with {{<a "https://pytorch.org/ignite/metrics.html" "ignite">}})
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics implementation</div></center>
+{{<br size="4">}}
+
+```{py}
+import kornia
+
+psnr_value = kornia.metrics.psnr(input, target, max_val)
+ssim_value = kornia.metrics.ssim(img1, img2, window_size, max_val=1.0, eps=1e-12)
+```
+
+See the Kornia documentation for more info on {{<a "https://kornia.readthedocs.io/en/latest/metrics.html?highlight=psnr#kornia.metrics.psnr" "kornia.metrics.psnr">}} & {{<a "https://kornia.readthedocs.io/en/latest/metrics.html?highlight=psnr#kornia.metrics.ssim" "kornia.metrics.ssim">}}
+
