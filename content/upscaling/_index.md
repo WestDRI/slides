@@ -27,3 +27,18 @@ custom_theme_compile = true
 </figure>
 
 ---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Definitions</div></center>
+{{<br size="3">}}
+
+<font color="orange">**LR**:</font> &ensp;&ensp;low resolution
+{{<br size="2">}}
+
+<font color="orange">**HR**:</font> &ensp;&ensp;high resolution
+{{<br size="2">}}
+
+<font color="orange">**SR**:</font> &ensp;&ensp;super-resolution = reconstruction of HR images from LR images
+{{<br size="2">}}
+
+<font color="orange">**SISR**:</font> &nbsp;single-image super-resolution = SR using a single input image
+
