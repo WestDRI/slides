@@ -159,3 +159,16 @@ See the Kornia documentation for more info on {{<a "https://kornia.readthedocs.i
 
 A dataset consisting of 5 images which has been used {{<a "http://people.rennes.inria.fr/Aline.Roumy/results/SR_BMVC12.html" "for at least 18 years">}} to assess SR methods
 
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">How to get the dataset?</div></center>
+{{<br size="3">}}
+
+From the {{<a "https://huggingface.co/datasets" "HuggingFace Datasets Hub">}} with the HuggingFace {{<a "https://pypi.org/project/datasets/" "datasets">}} package:
+{{<br size="3">}}
+
+```{py}
+from datasets import load_dataset
+
+set5 = load_dataset('eugenesiow/Set5', 'bicubic_x4', split='validation')
+```
