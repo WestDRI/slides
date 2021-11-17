@@ -42,3 +42,41 @@ custom_theme_compile = true
 
 <font color="orange">**SISR**:</font> &nbsp;single-image super-resolution = SR using a single input image
 
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Models assessment</div></center>
+{{<br size="2">}}
+
+&emsp;2 metrics commonly used:
+{{<br size="3">}}
+
+#### &emsp;{{<a "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio" "Peak sign-to-noise ratio (PSNR) measured in dB">}}
+{{<br size="2">}}
+
+&emsp; \\(\frac{\text{Maximum possible power of signal}}{\text{Power of noise (calculated as the mean squared error)}}\\) &emsp; <span style="font-size: 1.5rem;">Calculated at the pixel level</span>
+{{<br size="4">}}
+
+#### &emsp;{{<a "https://en.wikipedia.org/wiki/Structural_similarity" "Structural similarity index measure (SSIM)">}}
+{{<br size="2">}}
+
+&emsp;<span style="font-size: 1.8rem;">Prediction of perceived image quality based on a "perfect" reference image</span>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Models assessment</div></center>
+{{<br size="2.5">}}
+
+#### &emsp;&emsp;&emsp;&emsp;{{<a "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio" "Peak sign-to-noise ratio (PSNR) measured in dB">}}
+
+\\[
+PSNR = 10\,\cdot\,log_{10}\,\left(\frac{MAX_I^2}{MSE}\right)
+\\]
+{{<br size="3">}}
+
+#### &emsp;&emsp;&emsp;&emsp;{{<a "https://en.wikipedia.org/wiki/Structural_similarity" "Structural similarity index measure (SSIM)">}}
+
+\\[
+SSIM(x,y) = \frac{(2\mu_x\mu_y + c_1) + (2 \sigma _{xy} + c_2)} 
+    {(\mu_x^2 + \mu_y^2+c_1) (\sigma_x^2 + \sigma_y^2+c_2)}
+\\]
+
