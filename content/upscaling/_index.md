@@ -4,8 +4,8 @@ outputs = ["Reveal"]
 [logowgnofront]
 src = "/img/wg_for_dark_bg.png"
 [backlink]
-href = "https://westgrid-ml.netlify.app/webinars/upscaling/"
-txt = "Back to Webinar Page"
+href = "https://westgrid-ml.netlify.app/workshops/upscaling/"
+txt = "Back to Workshop Page"
 [reveal_hugo]
 custom_theme = "mh8.scss"
 custom_theme_compile = true
@@ -16,7 +16,7 @@ custom_theme_compile = true
 {{<br size="6">}}
 #### <div style="line-height: 1.5rem; font-size: 2.3rem; text-align: right; color: #8c8c8c"><br>Marie-Hélène Burle &emsp;&emsp;&emsp;&nbsp;</div>
 ##### <div style="line-height: 1.5rem; font-size: 1.8rem; text-align: right; color: #8c8c8c">training@westgrid.ca &nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
-##### <div style="line-height: 1.5rem; font-size: 1.8rem; text-align: right; color: #8c8c8c">November 24, 2021 &nbsp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+##### <div style="line-height: 1.5rem; font-size: 1.8rem; text-align: right; color: #8c8c8c">November 18, 2021 &nbsp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
 <figure style="display: table; margin: 0rem auto">
   <div class="row">
 	<div class="column">
