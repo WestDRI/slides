@@ -138,6 +138,24 @@ These have all been applied to SR
 
 {{<a "https://openaccess.thecvf.com/content/ICCV2021W/AIM/html/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.html" "Swin Transformer">}} — 2021
 
+
+## <center><div style="font-size: 3.5rem">SwinIR</div></center>
+{{<br size="3">}}
+
+{{<img src="/img/upscaling/SwinIR_archi.png" margin="rem" title="" width="%" line-height="1.3rem">}}
+{{<br size="0.5">}}
+Liang, J., Cao, J., Sun, G., Zhang, K., Van Gool, L., & Timofte, R. (2021). SwinIR: Image restoration using swin transformer. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 1833-1844)
+{{</img>}}
+
+---
+
+## <center><div style="font-size: 3.5rem">Training sets used</div></center>
+{{<br size="3">}}
+
+{{<a "https://data.vision.ee.ethz.ch/cvl/DIV2K/" "DIV2K">}}, Flickr2K, and other datasets
+
+---
+
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Models assessment</div></center>
 {{<br size="2">}}
 
@@ -367,3 +385,41 @@ set5.format
 {{<img src="/img/upscaling/psnr_ssim_set5.png" margin="rem" title="" width="65%" line-height="0.5rem">}}
 {{</img>}}
 
+---
+
+###### <center><div style="font-size: 2rem; line-height: 2rem; color: #e6e6e6">PSNR vs number of parameters for different methods on Set5x4</div></center>
+{{<br size="2">}}
+{{<img src="/img/upscaling/SwinIR_benchmark.png" margin="rem" title="" width="80%" line-height="1.3rem">}}
+{{<br size="1">}}
+Liang, J., Cao, J., Sun, G., Zhang, K., Van Gool, L., & Timofte, R. (2021). SwinIR: Image restoration using swin transformer. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 1833-1844)
+{{</img>}}
+
+---
+
+###### <center><div style="font-size: 2rem; line-height: 2.5rem; color: #e6e6e6">Comparison between SwinIR & a representative CNN-based model (RCAN) on classical SR images x4</div></center>
+{{<br size="3">}}
+
+{{<img src="/img/upscaling/SwinIR_CNN_comparison1.png" margin="rem" title="" width="%" line-height="1.3rem">}}
+{{<br size="1">}}
+Liang, J., Cao, J., Sun, G., Zhang, K., Van Gool, L., & Timofte, R. (2021). SwinIR: Image restoration using swin transformer. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 1833-1844)
+{{</img>}}
+
+---
+
+###### <center><div style="font-size: 2rem; line-height: 2.5rem; color: #e6e6e6">Comparison between SwinIR & a representative CNN-based model (RCAN) on classical SR images x4</div></center>
+{{<br size="3">}}
+
+<center>
+{{<img src="/img/upscaling/SwinIR_CNN_comparison2.png" margin="rem" title="" width="34.5%" line-height="1.3rem">}}
+{{<br size="1">}}
+Liang, J., Cao, J., Sun, G., Zhang, K., Van Gool, L., & Timofte, R. (2021). SwinIR: Image restoration using swin transformer. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 1833-1844)
+{{</img>}}
+</center>
+
+---
+
+{{<img src="/img/upscaling/SwinIR_demo.png" margin="rem" title="" width="%" line-height="1.3rem">}}
+Liang, J., Cao, J., Sun, G., Zhang, K., Van Gool, L., & Timofte, R. (2021). SwinIR: Image restoration using swin transformer. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 1833-1844)
+{{</img>}}
+
+---
