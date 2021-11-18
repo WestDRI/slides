@@ -1,0 +1,93 @@
+// Base settings for all themes that can optionally
+// be overridden by the super-theme
+
+// Background of the presentation
+// $backgroundColor: #f8f8fd;
+$backgroundColor: #1a1a1a;
+
+// Primary/body text
+// $mainFont: 'Amiri', serif;
+// $mainFont: 'Peddana', serif;
+// $mainFont: 'Source Serif Pro', serif;
+// $mainFont: 'Cormorant Garamond', serif;
+// $mainFont: 'Neuton', serif;
+// $mainFont: 'Old Standard TT', serif;
+// $mainFont: 'Alegreya', sans-serif;
+// $mainFont: 'Alegreya', serif;
+// $mainFont: 'Crimson Text', serif;
+// $mainFont: 'Suravaram', serif;
+$mainFont: 'Crimson Pro', serif;
+
+$mainFontSize: 2rem;
+
+// $mainColor: #ffe6c7;
+$mainColor: #ffedcd;
+
+// Headings
+$headingMargin: 0 0 0.1rem 0;
+
+// $headingFont: 'Crimson Text', serif;
+// $headingFont: 'Comfortaa', cursive;
+$headingFont: 'Righteous', cursive;
+// $headingFont: 'Concert One', cursive;
+
+$heading1Color: #f58224;
+// $heading2Color: #383D3D;
+$heading2Color: #c68c53;
+$heading3Color: #999966;
+$heading4Color: #987d9b;
+// $heading5Color: #75788b;
+// $heading5Color: #cc9900;
+$heading5Color: #d2a679;
+// $heading6Color: #9fadad;
+$heading6Color: #d9b38c;
+
+$heading1LineHeight: 5rem;
+$heading2LineHeight: 6rem;
+$heading3LineHeight: 3.3rem;
+$heading4LineHeight: 3rem;
+$heading5LineHeight: 3rem;
+$heading6LineHeight: 1.5rem;
+$headingLetterSpacing: normal;
+
+$headingTextTransform: none;
+$headingTextAlign: left;
+$headingTextShadow: none;
+$headingFontWeight: bold;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 3.5rem;
+$heading2Size: 3.0rem;
+$heading3Size: 2.5rem;
+$heading4Size: 2.0rem;
+$heading5Size: 1.7rem;
+$heading6Size: 1.4rem;
+
+// Links and actions
+// $linkColor: #996080;
+// $linkColor: #af5c83;
+// $linkColor: #bf6490;
+// $linkColor: #c46e98;
+$linkColor: #538cc6;
+// $linkColor: #6699cc;
+// $linkColorVisited: #4a40bf;
+// $linkColorVisited: #879aab;
+// $linkColorVisited: #993366;
+// $linkColorVisited: #a4567a;
+// $linkColorVisited: #af5c83;
+// $linkColorVisited: #bf6490;
+$linkColorVisited: #c46e98;
+// $linkColorVisited: #538cc6;
+// $linkColorVisited: #6699cc;
+// $linkColorHover: lighten( $linkColor, 15% );
+// $linkColorVisitedHover: lighten( $linkColorVisited, 15% );
+
+// Text selection
+$selectionBackgroundColor: #bfbfc0;
+$selectionColor: #ffe6c7;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+  background: $backgroundColor;
+}
