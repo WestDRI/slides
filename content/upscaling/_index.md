@@ -621,3 +621,157 @@ Ran in 9 min on my machine with one GPU and 32GB of RAM
   </div>
 </figure>
 
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics</div></center>
+{{<br size="3">}}
+
+We could use the {{<a "https://github.com/JingyunLiang/SwinIR/blob/main/utils/util_calculate_psnr_ssim.py" "PSNR and SSIM implementations from SwinIR">}}, but let's try the {{<a "https://kornia.readthedocs.io/en/latest/index.html" "Kornia">}} functions we mentioned earlier:
+{{<br size="2">}}
+
+- {{<a "https://kornia.readthedocs.io/en/latest/metrics.html?highlight=psnr#kornia.metrics.psnr" "kornia.metrics.psnr">}}
+{{<br size="1">}}
+
+- {{<a "https://kornia.readthedocs.io/en/latest/metrics.html?highlight=psnr#kornia.metrics.ssim" "kornia.metrics.ssim">}}
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics</div></center>
+{{<br size="3">}}
+
+Let's load the libraries we need:
+
+```{py}
+import kornia
+from PIL import Image
+import torch
+from torchvision import transforms
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics</div></center>
+{{<br size="3">}}
+
+Then, we load one pair images (LR and HR):
+
+```{py}
+berlin1_lr = Image.open("<some/path>/lr/berlin_1945_1.jpg")
+berlin1_hr = Image.open("<some/path>/hr/berlin_1945_1.png")
+```
+{{<br size="3">}}
+
+We can display these images with:
+
+```{py}
+berlin1_lr.show()
+berlin1_hr.show()
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics</div></center>
+{{<br size="3">}}
+
+Now, we need to resize them so that they have identical dimensions and turn them into tensors:
+
+```{py}
+preprocess = transforms.Compose([
+        transforms.Resize(256),
+        transforms.ToTensor()
+        ])
+
+berlin1_lr_t = preprocess(berlin1_lr)
+berlin1_hr_t = preprocess(berlin1_hr)
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics</div></center>
+
+{{<idark>}}
+```{py}
+berlin1_lr_t.shape
+berlin1_hr_t.shape
+```
+
+{{<jodark>}}
+```{py}
+torch.Size([3, 267, 256])
+torch.Size([3, 267, 256])
+```
+
+We now have tensors with 3 dimensions:
+{{<br size="2">}}
+
+- the channels (RGB)
+- the height of the image (in pixels)
+- the width of the image (in pixels)
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics</div></center>
+{{<br size="3">}}
+
+As data processing is done in batch in ML, we need to add a 4th dimension: the **batch size**
+{{<br size="2">}}
+
+(It will be equal to {{%cdark%}}1{{%/cdark%}} since we have a batch size of a single image)
+{{<br size="2">}}
+
+```{py}
+batch_berlin1_lr_t = torch.unsqueeze(berlin1_lr_t, 0)
+batch_berlin1_hr_t = torch.unsqueeze(berlin1_hr_t, 0)
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics</div></center>
+{{<br size="1">}}
+
+Our new tensors are now ready:
+{{<br size="2">}}
+
+{{<idark>}}
+```{py}
+batch_berlin1_lr_t.shape
+batch_berlin1_hr_t.shape
+```
+
+{{<jodark>}}
+```{py}
+torch.Size([1, 3, 267, 256])
+torch.Size([1, 3, 267, 256])
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">PSNR</div></center>
+{{<br size="3">}}
+
+{{<idark>}}
+```{py}
+psnr_value = kornia.metrics.psnr(batch_berlin1_lr_t, batch_berlin1_hr_t, max_val=1.0)
+psnr_value.item()
+```
+{{<jodark>}}
+```{py}
+33.379642486572266
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">SSIM</div></center>
+{{<br size="3">}}
+
+{{<idark>}}
+```{py}
+wssim_map = kornia.metrics.ssim(batch_berlin1_lr_t, batch_berlin1_hr_t, window_size=5, max_val=1.0, eps=1e-12)
+ssim_map.mean().item()
+```
+
+{{<jodark>}}
+```{py}
+0.9868119359016418
+```
+
