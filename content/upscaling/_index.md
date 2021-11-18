@@ -44,6 +44,100 @@ custom_theme_compile = true
 
 ---
 
+## <center><div style="font-size: 4rem; color: #e6e6e6">History of super-resolution</div></center>
+{{<br size="3">}}
+
+#### Can be broken down into 2 main periods:
+{{<br size="2">}}
+
+- A rather slow history with various interpolation algorithms of increasing complexity before deep neural networks
+{{<br size="2">}}
+
+- An incredibly fast evolution since the advent of deep learning (DL)
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">SR history Pre-DL</div></center>
+{{<br size="3">}}
+
+#### Pixel-wise interpolation prior to DL
+{{<br size="3">}}
+
+Various methods ranging from simple (e.g. {{<a "https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation" "nearest-neighbour">}}, {{<a "https://en.wikipedia.org/wiki/Bicubic_interpolation" "bicubic">}})
+to complex (e.g. {{<a "https://en.wikipedia.org/wiki/Kriging" "Gaussian process regression">}}, {{<a "https://en.wikipedia.org/wiki/Wiener_filter" "iterative FIR Wiener filter">}}) algorithms
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">SR history Pre-DL</div></center>
+{{<br size="2">}}
+
+### {{<a "https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation" "Nearest-neighbour interpolation">}}
+{{<br size="1">}}
+
+Simplest method of interpolation
+
+Simply uses the value of the nearest pixel
+{{<br size="4">}}
+
+### {{<a "https://en.wikipedia.org/wiki/Bicubic_interpolation" "Bicubic interpolation">}}
+{{<br size="1">}}
+
+Consists of determining the 16 coefficients \\(a_{ij}\\) in:
+{{<br size="2">}}
+
+\\[
+p(x, y) = \sum\_{i=0}^3\sum\_{i=0}^3 a\_{ij} x^i y^j
+\\]
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">SR history with DL</div></center>
+{{<br size="2">}}
+
+Deep learning has seen a fast evolution marked by the successive emergence of various frameworks and architectures over the past 10 years
+{{<br size="3">}}
+
+Some key network architectures and frameworks:
+{{<br size="1">}}
+
+- CNN
+- GAN
+- Transformers
+{{<br size="3">}}
+
+These have all been applied to SR
+
+---
+
+## <center><div style="font-size: 3.5rem; color: #e6e6e6">SR history with DL</div></center>
+
+*SR using (amongst others):*
+{{<br size="0.5">}}
+
+{{<a "https://arxiv.org/abs/1501.00092" "Convolutional Neural Networks (SRCNN)">}} — 2014
+
+{{<a "https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Schulter_Fast_and_Accurate_2015_CVPR_paper.html" "Random Forests">}} — 2015
+
+{{<a "https://link.springer.com/chapter/10.1007/978-3-319-46475-6_43" "Perceptual loss">}} — 2016
+
+{{<a "https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Shi_Real-Time_Single_Image_CVPR_2016_paper.html" "Sub-pixel CNN">}} — 2016
+
+{{<a "https://openaccess.thecvf.com/content_cvpr_2017/html/Ledig_Photo-Realistic_Single_Image_CVPR_2017_paper.html" "ResNet (SRResNet) & Generative Adversarial Network (SRGAN)">}} — 2017
+
+{{<a "https://openaccess.thecvf.com/content_eccv_2018_workshops/w25/html/Wang_ESRGAN_Enhanced_Super-Resolution_Generative_Adversarial_Networks_ECCVW_2018_paper.html" "Enhanced SRGAN (ESRGAN)">}} — 2018
+
+{{<a "https://arxiv.org/abs/1811.11482" "Predictive Filter Flow (PFF)">}} — 2018
+
+{{<a "https://ieeexplore.ieee.org/abstract/document/9185010" "Densely Residual Laplacian attention Network (DRLN)">}} — 2019
+
+{{<a "https://openaccess.thecvf.com/content_CVPR_2019/html/Dai_Second-Order_Attention_Network_for_Single_Image_Super-Resolution_CVPR_2019_paper.html" "Second-order Attention Network (SAN)">}} — 2019
+
+{{<a "https://ieeexplore.ieee.org/abstract/document/8982168" "Learned downscaling with Content Adaptive Resampler (CAR)">}} — 2019
+
+{{<a "https://link.springer.com/chapter/10.1007/978-3-030-58610-2_12" "Holistic Attention Network (HAN)">}} — 2020
+
+{{<a "https://openaccess.thecvf.com/content/ICCV2021W/AIM/html/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.html" "Swin Transformer">}} — 2021
+
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Models assessment</div></center>
 {{<br size="2">}}
 
@@ -187,58 +281,6 @@ set5.features
 set5.set_format('torch', columns=['hr', 'lr'])
 set5.format
 ```
-
----
-
-## <center><div style="font-size: 4rem; color: #e6e6e6">History of super-resolution</div></center>
-{{<br size="3">}}
-
-#### Can be broken down into 2 main periods:
-{{<br size="2">}}
-
-- A rather slow history with various interpolation algorithms of increasing complexity before deep neural networks
-{{<br size="2">}}
-
-- An incredibly fast evolution since the advent of deep learning (DL)
-
----
-
-## <center><div style="font-size: 4rem; color: #e6e6e6">SR history Pre-DL</div></center>
-{{<br size="3">}}
-
-#### Pixel-wise interpolation
-{{<br size="3">}}
-
-Various methods ranging from simple (e.g. {{<a "https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation" "nearest-neighbour">}}, {{<a "https://en.wikipedia.org/wiki/Bicubic_interpolation" "bicubic">}})
-to complex (e.g. {{<a "https://en.wikipedia.org/wiki/Kriging" "Gaussian process regression">}}, {{<a "https://en.wikipedia.org/wiki/Wiener_filter" "iterative FIR Wiener filter">}}) algorithms
-
----
-
-## <center><div style="font-size: 4rem; color: #e6e6e6">SR history with DL</div></center>
-{{<br size="1">}}
-
-*SR using (amongst others):*
-{{<br size="1">}}
-
-{{<a "https://arxiv.org/abs/1501.00092" "Convolutional Neural Networks (SRCNN)">}} — 2014
-
-{{<a "https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Schulter_Fast_and_Accurate_2015_CVPR_paper.html" "Random Forests">}} — 2015
-
-{{<a "https://openaccess.thecvf.com/content_cvpr_2017/html/Ledig_Photo-Realistic_Single_Image_CVPR_2017_paper.html" "Generative Adversarial Network (SRGAN)">}} — 2017
-
-{{<a "https://openaccess.thecvf.com/content_eccv_2018_workshops/w25/html/Wang_ESRGAN_Enhanced_Super-Resolution_Generative_Adversarial_Networks_ECCVW_2018_paper.html" "Enhanced SRGAN (ESRGAN)">}} — 2018
-
-{{<a "https://arxiv.org/abs/1811.11482" "Predictive Filter Flow (PFF)">}} — 2018
-
-{{<a "https://ieeexplore.ieee.org/abstract/document/9185010" "Densely Residual Laplacian attention Network (DRLN)">}} — 2019
-
-{{<a "https://openaccess.thecvf.com/content_CVPR_2019/html/Dai_Second-Order_Attention_Network_for_Single_Image_Super-Resolution_CVPR_2019_paper.html" "Second-order Attention Network (SAN)">}} — 2019
-
-{{<a "https://ieeexplore.ieee.org/abstract/document/8982168" "Learned downscaling with Content Adaptive Resampler (CAR)">}} — 2019
-
-{{<a "https://link.springer.com/chapter/10.1007/978-3-030-58610-2_12" "Holistic Attention Network (HAN)">}} — 2020
-
-{{<a "https://openaccess.thecvf.com/content/ICCV2021W/AIM/html/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.html" "Swin Transformer">}} — 2021
 
 ---
 
