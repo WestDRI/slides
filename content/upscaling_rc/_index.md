@@ -141,7 +141,29 @@ These have all been applied to SR
 ---
 
 ## <center><div style="font-size: 4rem; color: #e6e6e6">SRCNN</div></center>
-{{<br size="3">}}
+{{<br size="1">}}
+
+{{<img src="/img/upscaling/srcnn1.png" margin="rem" title="" width="80%" line-height="1.3rem">}}
+{{<br size="1">}}
+Dong, C., Loy, C. C., He, K., & Tang, X. (2015). Image super-resolution using deep convolutional networks. IEEE transactions on pattern analysis and machine intelligence, 38(2), 295-307
+{{</img>}}
+
+> <span style="font-size: 1.5rem;">Given a low-resolution image Y, the first convolutional layer of the SRCNN extracts a set of feature maps. The
+second layer maps these feature maps nonlinearly to high-resolution patch representations. The last layer combines
+the predictions within a spatial neighbourhood to produce the final high-resolution image F(Y)</span>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">SRCNN</div></center>
+{{<br size="2">}}
+
+&emsp;&ensp;Can use sparse-coding-based methods
+{{<br size="2">}}
+
+{{<img src="/img/upscaling/srcnn2.png" margin="rem" title="" width="90%" line-height="1.3rem">}}
+{{<br size="1">}}
+Dong, C., Loy, C. C., He, K., & Tang, X. (2015). Image super-resolution using deep convolutional networks. IEEE transactions on pattern analysis and machine intelligence, 38(2), 295-307
+{{</img>}}
 
 ---
 
@@ -152,38 +174,102 @@ Do not provide the best PSNR, but can give more realistic results by providing m
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">SwinIR</div></center>
+## <center><div style="font-size: 4rem; color: #e6e6e6">GAN</div></center>
+{{<br size="3">}}
+
+{{<img src="/img/upscaling/gan.png" margin="rem" title="" width="60%" line-height="0.5rem">}}
+{{<br size="1">}}
+
+{{<a "https://www.manning.com/books/deep-learning-with-pytorch" "Stevens E., Antiga L., & Viehmann T. (2020). Deep Learning with PyTorch">}}
+{{</img>}}
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">SRGAN</div></center>
+{{<br size="1">}}
+
+{{<img src="/img/upscaling/srgan.png" margin="rem" title="" width="80%" line-height="1.3rem">}}
+{{<br size="1">}}
+Ledig, C., Theis, L., Huszár, F., Caballero, J., Cunningham, A., Acosta, A., ... & Shi, W. (2017). Photo-realistic single image super-resolution using a generative adversarial network. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 4681-4690)
+{{</img>}}
+
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">SRGAN</div></center>
+{{<br size="3">}}
+
+Followed by the ESRGAN and many other flavours of SRGANs
+
+---
+
+## <center><div style="font-size: 8rem; color: #e6e6e6">SwinIR</div></center>
 {{<br size="3">}}
 
 ---
 
-## <center><div style="font-size: 3.5rem">Attention</div></center>
+## <center><div style="font-size: 3.5rem; color: #e6e6e6"">Attention</div></center>
 {{<br size="3">}}
 
+{{<note>}}
+Mnih, V., Heess, N., & Graves, A. (2014). Recurrent models of visual attention. In Advances in neural information processing systems (pp. 2204-2212)
+{{</note>}}
 
-Based on {{<a "https://arxiv.org/abs/1706.03762" "attention">}}
-{{<br size="3">}}
+(cited 2769 times)
 
-Transformers were initially used for NLP to replace RNN as they allow parallelization
+{{<note>}}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008)
+{{</note>}}
+
+(cited 30999 times...)
 
 ---
 
-## <center><div style="font-size: 3.5rem">Transformers</div></center>
-{{<br size="3">}}
+## <center><div style="font-size: 3.5rem; color: #e6e6e6"">Transformers</div></center>
+
+{{<img src="/img/upscaling/transformer.png" margin="rem" title="" width="35%" line-height="1.3rem">}}
+{{<br size="0.5">}}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008)
+{{</img>}}
 
 ---
 
-## <center><div style="font-size: 3.5rem"">Swin Transformer</div></center>
+## <center><div style="font-size: 3.5rem; color: #e6e6e6"">Transformers</div></center>
 {{<br size="3">}}
 
-{{<a "https://arxiv.org/abs/2103.14030" "Swin Transformer">}} paper
+Initially used for NLP to replace RNN as they allow parallelization
+{{<br size="2">}}
+Now entering the domain of vision and others
+{{<br size="2">}}
+Very performant with relatively few parameters
+
+---
+
+## <center><div style="font-size: 3.5rem; color: #e6e6e6">Swin Transformer</div></center>
+{{<br size="3">}}
+
+The {{<a "https://arxiv.org/abs/2103.14030" "Swin Transformer">}} improved the use of transformers to the vision domain
 {{<br size="3">}}
 
 Swin = Shifted WINdows
 
 ---
 
-## <center><div style="font-size: 3.5rem">SwinIR</div></center>
+## <center><div style="font-size: 3.5rem; color: #e6e6e6">Swin Transformer</div></center>
+{{<br size="1">}}
+
+Swin transformer (left) vs transformer as initially applied to vision (right):
+{{<br size="2">}}
+
+{{<img src="/img/upscaling/swint.png" margin="rem" title="" width="70%" line-height="1.3rem">}}
+{{<br size="1">}}
+Liu, Z., Lin, Y., Cao, Y., Hu, H., Wei, Y., Zhang, Z., ... & Guo, B. (2021). Swin transformer: Hierarchical vision transformer using shifted windows. arXiv preprint arXiv:2103.14030
+{{</img>}}
+
+
+---
+
+## <center><div style="font-size: 3.5rem; color: #e6e6e6"">SwinIR</div></center>
 {{<br size="3">}}
 
 {{<img src="/img/upscaling/SwinIR_archi.png" margin="rem" title="" width="%" line-height="1.3rem">}}
@@ -193,7 +279,7 @@ Liang, J., Cao, J., Sun, G., Zhang, K., Van Gool, L., & Timofte, R. (2021). Swin
 
 ---
 
-## <center><div style="font-size: 3.5rem">Training sets used</div></center>
+## <center><div style="font-size: 3.5rem; color: #e6e6e6"">Training sets used</div></center>
 {{<br size="3">}}
 
 {{<a "https://data.vision.ee.ethz.ch/cvl/DIV2K/" "DIV2K">}}, Flickr2K, and other datasets
@@ -292,7 +378,7 @@ See the Kornia documentation for more info on {{<a "https://kornia.readthedocs.i
 ### {{<a "https://paperswithcode.com/dataset/set14" "Set14">}}
 {{<imgm src="/img/upscaling/set14.png" margin="0 0 0 1.5rem" title="" width="70%" line-height="0.5rem">}}{{</imgm>}}
 
-### {{<a "https://paperswithcode.com/dataset/bsd100" "BSD100">}}
+### {{<a "https://paperswithcode.com/dataset/bsd100" "BSD100 (Berkeley Segmentation Dataset)">}}
 {{<imgm src="/img/upscaling/bsd100.png" margin="0 0 0 1.5rem" title="" width="70%" line-height="0.5rem">}}{{</imgm>}}
 
 ---
