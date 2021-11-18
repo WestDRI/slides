@@ -140,6 +140,47 @@ These have all been applied to SR
 
 ---
 
+## <center><div style="font-size: 4rem; color: #e6e6e6">SRCNN</div></center>
+{{<br size="3">}}
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">SRGAN</div></center>
+{{<br size="3">}}
+
+Do not provide the best PSNR, but can give more realistic results by providing more texture (less smoothing)
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">SwinIR</div></center>
+{{<br size="3">}}
+
+---
+
+## <center><div style="font-size: 3.5rem">Attention</div></center>
+{{<br size="3">}}
+
+
+Based on {{<a "https://arxiv.org/abs/1706.03762" "attention">}}
+{{<br size="3">}}
+
+Transformers were initially used for NLP to replace RNN as they allow parallelization
+
+---
+
+## <center><div style="font-size: 3.5rem">Transformers</div></center>
+{{<br size="3">}}
+
+---
+
+## <center><div style="font-size: 3.5rem"">Swin Transformer</div></center>
+{{<br size="3">}}
+
+{{<a "https://arxiv.org/abs/2103.14030" "Swin Transformer">}} paper
+{{<br size="3">}}
+
+Swin = Shifted WINdows
+
 ---
 
 ## <center><div style="font-size: 3.5rem">SwinIR</div></center>
