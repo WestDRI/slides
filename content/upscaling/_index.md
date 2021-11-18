@@ -423,3 +423,21 @@ Liang, J., Cao, J., Sun, G., Zhang, K., Van Gool, L., & Timofte, R. (2021). Swin
 {{</img>}}
 
 ---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Let's use SwinIR</div></center>
+{{<br size="4">}}
+
+```sh
+# Get the model
+git clone git@github.com:JingyunLiang/SwinIR.git
+cd SwinIR
+
+# Copy our test images in the repo
+cp -r <some/path>/my_tests /testsets/my_tests
+
+# Run the model on our images
+python main_test_swinir.py --tile 400 --task real_sr --scale 4 --large_model --model_path model_zoo/swinir/003_realSR_BSRGAN_DFOWMFC_s64w8_SwinIR-L_x4_GAN.pth --folder_lq testsets/my_tests
+```
+
+Ran in 9 min on my machine with one GPU and 32GB of RAM
+
