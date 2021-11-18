@@ -441,3 +441,183 @@ python main_test_swinir.py --tile 400 --task real_sr --scale 4 --large_model --m
 
 Ran in 9 min on my machine with one GPU and 32GB of RAM
 
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Results</div></center>
+{{<br size="4">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column">
+	 {{<img src="/img/upscaling/lr/berlin_1945_1.jpg" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column">
+  	 {{<img src="/img/upscaling/hr/berlin_1945_1.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Results</div></center>
+{{<br size="4">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column_large">
+	 {{<img src="/img/upscaling/lr_zoom/berlin_1945_1.jpg" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column_large">
+  	 {{<img src="/img/upscaling/hr_zoom/berlin_1945_1.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Results</div></center>
+{{<br size="4">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column">
+	 {{<img src="/img/upscaling/lr/berlin_1945_2.jpg" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column">
+  	 {{<img src="/img/upscaling/hr/berlin_1945_2.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Results</div></center>
+{{<br size="4">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column_large">
+	 {{<img src="/img/upscaling/lr_zoom/berlin_1945_2.jpg" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column_large">
+  	 {{<img src="/img/upscaling/hr_zoom/berlin_1945_2.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Results</div></center>
+{{<br size="4">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column">
+	 {{<img src="/img/upscaling/lr/bruegel.jpg" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column">
+  	 {{<img src="/img/upscaling/hr/bruegel.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Results</div></center>
+{{<br size="4">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column_large">
+	 {{<img src="/img/upscaling/lr_zoom/bruegel.jpg" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column_large">
+  	 {{<img src="/img/upscaling/hr_zoom/bruegel.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Results</div></center>
+{{<br size="4">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column">
+	 {{<img src="/img/upscaling/lr/vasarely.jpg" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column">
+  	 {{<img src="/img/upscaling/hr/vasarely.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Results</div></center>
+{{<br size="4">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column_large">
+	 {{<img src="/img/upscaling/lr_zoom/vasarely.jpg" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column_large">
+  	 {{<img src="/img/upscaling/hr_zoom/vasarely.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Results</div></center>
+{{<br size="4">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column">
+	 {{<img src="/img/upscaling/lr/bird.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column">
+  	 {{<img src="/img/upscaling/hr/bird.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+</figure>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Results</div></center>
+{{<br size="4">}}
+
+<figure style="display: table; margin: 0rem auto">
+  <div class="row">
+	<div class="column_large">
+	 {{<img src="/img/upscaling/lr_zoom/bird.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+	<div class="column_large">
+  	 {{<img src="/img/upscaling/hr_zoom/bird.png" title="" width="%" line-height="rem">}}
+	 {{</img>}}
+	</div>
+  </div>
+</figure>
+
