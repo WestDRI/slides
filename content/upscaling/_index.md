@@ -138,6 +138,9 @@ These have all been applied to SR
 
 {{<a "https://openaccess.thecvf.com/content/ICCV2021W/AIM/html/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.html" "Swin Transformer">}} — 2021
 
+---
+
+---
 
 ## <center><div style="font-size: 3.5rem">SwinIR</div></center>
 {{<br size="3">}}
@@ -775,3 +778,6 @@ ssim_map.mean().item()
 0.9868119359016418
 ```
 
+---
+
+# <center><span style="font-size: 5.0rem; color: #e6e6e6"">Questions?</span></center>
