@@ -179,7 +179,7 @@ SSIM(x,y) = \frac{(2\mu_x\mu_y + c_1) + (2 \sigma _{xy} + c_2)}
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics implementation</div></center>
 {{<br size="2.5">}}
 
-- Implement them yourself (using {{%c%}}torch.log10{{%/c%}}, etc.)
+- Implement them yourself (using {{%cdark%}}torch.log10{{%/cdark%}}, etc.)
 {{<br size="2">}}
 
 - Use some library that implements them (e.g. {{<a "https://github.com/kornia/kornia/tree/master/kornia/losses" "kornia">}})
@@ -195,7 +195,7 @@ SSIM(x,y) = \frac{(2\mu_x\mu_y + c_1) + (2 \sigma _{xy} + c_2)}
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Metrics implementation</div></center>
 {{<br size="2.5">}}
 
-- Implement them yourself (using {{%c%}}torch.log10{{%/c%}}, etc.)
+- Implement them yourself (using {{%cdark%}}torch.log10{{%/cdark%}}, etc.)
 {{<br size="2">}}
 
 - <font color="orange">Use some library that implements them (e.g. {{<a "https://github.com/kornia/kornia/tree/master/kornia/losses" "kornia">}})</font>
@@ -242,8 +242,11 @@ See the Kornia documentation for more info on {{<a "https://kornia.readthedocs.i
 
 ### {{<a "https://paperswithcode.com/dataset/set14" "Set14">}}
 {{<imgm src="/img/upscaling/set14.png" margin="0 0 0 1.5rem" title="" width="70%" line-height="0.5rem">}}{{</imgm>}}
+{{<br size="2">}}
 
-### {{<a "https://paperswithcode.com/dataset/bsd100" "BSD100">}}
+### {{<a "https://paperswithcode.com/dataset/bsd100" "BSD100 (Berkeley Segmentation Dataset)">}}
+{{<br size="1">}}
+
 {{<imgm src="/img/upscaling/bsd100.png" margin="0 0 0 1.5rem" title="" width="70%" line-height="0.5rem">}}{{</imgm>}}
 
 ---
@@ -361,6 +364,6 @@ set5.format
 
 ---
 
-{{<img src="/img/upscaling/psnr_ssim_set5.png" margin="rem" title="" width="60%" line-height="0.5rem">}}
+{{<img src="/img/upscaling/psnr_ssim_set5.png" margin="rem" title="" width="65%" line-height="0.5rem">}}
 {{</img>}}
 
