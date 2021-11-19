@@ -377,8 +377,10 @@ See the Kornia documentation for more info on {{<a "https://kornia.readthedocs.i
 
 ### {{<a "https://paperswithcode.com/dataset/set14" "Set14">}}
 {{<imgm src="/img/upscaling/set14.png" margin="0 0 0 1.5rem" title="" width="70%" line-height="0.5rem">}}{{</imgm>}}
+{{<br size="2">}}
 
 ### {{<a "https://paperswithcode.com/dataset/bsd100" "BSD100 (Berkeley Segmentation Dataset)">}}
+{{<br size="1">}}
 {{<imgm src="/img/upscaling/bsd100.png" margin="0 0 0 1.5rem" title="" width="70%" line-height="0.5rem">}}{{</imgm>}}
 
 ---
@@ -394,7 +396,6 @@ See the Kornia documentation for more info on {{<a "https://kornia.readthedocs.i
 
 ### {{<a "https://paperswithcode.com/dataset/bsd100" "BSD100 (Berkeley Segmentation Dataset)">}}
 {{<br size="1">}}
-
 {{<imgm src="/img/upscaling/bsd100.png" margin="0 0 0 1.5rem" title="" width="70%" line-height="0.5rem">}}{{</imgm>}}
 
 ---
@@ -896,7 +897,7 @@ psnr_value.item()
 
 {{<idark>}}
 ```{py}
-wssim_map = kornia.metrics.ssim(batch_berlin1_lr_t, batch_berlin1_hr_t, window_size=5, max_val=1.0, eps=1e-12)
+ssim_map = kornia.metrics.ssim(batch_berlin1_lr_t, batch_berlin1_hr_t, window_size=5, max_val=1.0, eps=1e-12)
 ssim_map.mean().item()
 ```
 
