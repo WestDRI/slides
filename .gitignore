@@ -2,3 +2,6 @@ public/
 resources/
 unused/
 .hugo_build.lock
+static/img/upscaling/front_image.pdf
+static/img/upscaling/front_image2.pdf
+static/img/upscaling/front_image2.png
