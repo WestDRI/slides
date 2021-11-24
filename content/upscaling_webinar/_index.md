@@ -910,4 +910,6 @@ ssim_map.mean().item()
 
 ---
 
-# <center><span style="font-size: 5.0rem; color: #e6e6e6"">Questions?</span></center>
+{{< slide background-image="/img/upscaling/front_image.png" >}}
+
+# <center><span style="font-size: 7.0rem; color: black; text-shadow: 0 0 0.7rem white;">Questions?</span></center>
