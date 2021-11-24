@@ -291,37 +291,47 @@ Liang, J., Cao, J., Sun, G., Zhang, K., Van Gool, L., & Timofte, R. (2021). Swin
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Models assessment</div></center>
 {{<br size="2">}}
 
-&emsp;2 metrics commonly used:
-{{<br size="3">}}
+&emsp;3 metrics commonly used:
+{{<br size="2">}}
 
 #### &emsp;{{<a "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio" "Peak sign-to-noise ratio (PSNR) measured in dB">}}
 {{<br size="2">}}
 
 &emsp; \\(\frac{\text{Maximum possible power of signal}}{\text{Power of noise (calculated as the mean squared error)}}\\) &emsp; <span style="font-size: 1.5rem;">Calculated at the pixel level</span>
-{{<br size="4">}}
-
-#### &emsp;{{<a "https://en.wikipedia.org/wiki/Structural_similarity" "Structural similarity index measure (SSIM)">}}
 {{<br size="2">}}
 
+#### &emsp;{{<a "https://en.wikipedia.org/wiki/Structural_similarity" "Structural similarity index measure (SSIM)">}}
+{{<br size="1">}}
+
 &emsp;<span style="font-size: 1.8rem;">Prediction of perceived image quality based on a "perfect" reference image</span>
+{{<br size="2">}}
+
+#### &emsp;{{<a "https://en.wikipedia.org/wiki/Mean_opinion_score" "Mean opinion score (MOS)">}}
+{{<br size="1">}}
+
+&emsp;Mean of subjective quality ratings
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Models assessment</div></center>
-{{<br size="2.5">}}
+## <center><div style="font-size: 4rem; color: #e6e6e6; line-height: 4rem">Models assessment</div></center>
 
 #### &emsp;&emsp;&emsp;&emsp;{{<a "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio" "Peak sign-to-noise ratio (PSNR) measured in dB">}}
 
 \\[
 PSNR = 10\,\cdot\,log_{10}\,\left(\frac{MAX_I^2}{MSE}\right)
 \\]
-{{<br size="3">}}
 
 #### &emsp;&emsp;&emsp;&emsp;{{<a "https://en.wikipedia.org/wiki/Structural_similarity" "Structural similarity index measure (SSIM)">}}
 
 \\[
 SSIM(x,y) = \frac{(2\mu_x\mu_y + c_1) + (2 \sigma _{xy} + c_2)} 
     {(\mu_x^2 + \mu_y^2+c_1) (\sigma_x^2 + \sigma_y^2+c_2)}
+\\]
+
+#### &emsp;&emsp;&emsp;&emsp;{{<a "https://en.wikipedia.org/wiki/Mean_opinion_score" "Mean opinion score (MOS)">}}
+
+\\[
+MOS = \frac{\sum\_{n=1}^N R\_n}{N}
 \\]
 
 ---
