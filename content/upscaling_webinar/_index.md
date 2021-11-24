@@ -11,16 +11,18 @@ custom_theme = "mh8.scss"
 custom_theme_compile = true
 +++
 
-{{<br size="3">}}
-## <div style="line-height: 5rem; font-size: 4.2rem; color: #e6e6e6">Super-resolution with PyTorch</div>
+{{< slide background-image="/img/upscaling/front_image.png" >}}
+
+{{<br size="10">}}
+## <div style="line-height: 5rem; font-size: 4.2rem; color: black; text-shadow: 0 0 0.7rem white;">Super-resolution with PyTorch</div>
 {{<br size="6">}}
-#### <div style="line-height: 1.5rem; font-size: 2.3rem; text-align: right; color: #8c8c8c"><br>Marie-Hélène Burle &emsp;&emsp;&emsp;&nbsp;</div>
-##### <div style="line-height: 1.5rem; font-size: 1.8rem; text-align: right; color: #8c8c8c">training@westgrid.ca &nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
-##### <div style="line-height: 1.5rem; font-size: 1.8rem; text-align: right; color: #8c8c8c">November 24, 2021 &nbsp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+#### <div style="line-height: 1.5rem; font-size: 2.3rem; text-align: right; color: black; text-shadow: 0 0 0.7rem white;"><br>Marie-Hélène Burle &emsp;&emsp;&emsp;&nbsp;</div>
+##### <div style="line-height: 1.5rem; font-size: 1.8rem; text-align: right; color: black; text-shadow: 0 0 0.5rem white;">training@westgrid.ca &nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+##### <div style="line-height: 1.5rem; font-size: 1.8rem; text-align: right; color: black; text-shadow: 0 0 0.5rem white;">November 24, 2021 &nbsp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
 <figure style="display: table; margin: 0rem auto">
   <div class="row">
 	<div class="column">
-	 {{<img src="/img/wg_no_bg.png" title="" width="%" line-height="rem">}}
+	 {{<img src="/img/wg_white_removed_medium.png" title="" width="%" line-height="rem">}}
 	 {{</img>}}
 	</div>
   </div>
