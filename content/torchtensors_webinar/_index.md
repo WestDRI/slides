@@ -11,7 +11,7 @@ custom_theme = "mh8.scss"
 custom_theme_compile = true
 +++
 
-## <div style="line-height: 5rem; font-size: 4.1rem; color: #727274;">Everything you wanted to know (and more) about</div>
+## <div style="line-height: 5rem; font-size: 3.6rem; color: #727274;">Everything you wanted to know (and more) about</div>
 {{<br size="4">}}
 
 ## <div style="line-height: 5rem; font-size: 4.2rem; color: #f6903c;">&emsp;&emsp;&emsp;&ensp;PyTorch tensors</div>
