@@ -83,8 +83,8 @@ t_gpu = torch.rand(2, 3, device='cuda')
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Moving a tensor to a specific device</div></center>
-{{<br size="3">}}
+## <center><div style="font-size: 3rem; color: #e6e6e6">Copying a tensor to a specific device</div></center>
+{{<br size="2">}}
 
 ```{py}
 t_cpu = t_gpu.to(device='cpu')     # move to CPU
@@ -92,4 +92,17 @@ t_gpu = t_cpu.to(device='cuda')    # move to GPU
 t_gpu = t_cpu.to(device='cuda:0')  # move to a specific GPU
 t_gpu = t_cpu.to(device='cuda:1')  # move to a specific GPU
 ```
+{{<br size="2">}}
+
+{{%fragment%}}
+Or the equivalent short forms:
+{{<br size="2">}}
+
+```{py}
+t_cpu = t_gpu.cpu()    # move to CPU
+t_gpu = t_cpu.cuda()   # move to GPU
+t_gpu = t_cpu.cuda(0)  # move to a specific GPU
+t_gpu = t_cpu.cuda(1)  # move to a specific GPU
+```
+{{%/fragment%}}
 
