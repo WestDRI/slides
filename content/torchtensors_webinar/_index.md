@@ -31,6 +31,25 @@ custom_theme_compile = true
 
 ---
 
+
+---
+## <center><div style="font-size: 4rem; color: #e6e6e6">dtype</div></center>
+{{<br size="3.2">}}
+
+<table>
+<tr><td>torch.float16 / torch.half</td><td>&emsp;&emsp;</td><td>16-bit / half-precision floating-point</td></tr>
+<tr><td>torch.float32 / torch.float</td><td></td><td>32-bit / single-precision floating-point</td></tr>
+<tr style="border-bottom: 1px solid white;"><td>torch.float64 / torch.double</td><td></td><td>64-bit / double-precision floating-point</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>torch.uint8</td><td></td><td>unsigned 8-bit integers</td></tr>
+<tr><td>torch.int8</td><td></td><td>signed 8-bit integers</td></tr>
+<tr><td>torch.int16 / torch.short</td><td></td><td>signed 16-bit integers</td></tr>
+<tr><td>torch.int32 / torch.int</td><td></td><td>signed 32-bit integers</td></tr>
+<tr style="border-bottom: 1px solid white;"><td>torch.int64 / torch.long</td><td></td><td>signed 64-bit integers</td></tr>
+<tr><td></td><td></td><td></td></tr>
+<tr><td>torch.bool</td><td></td><td>boolean</td></tr>
+</table>
+
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Device attribute</div></center>
 {{<br size="2.5">}}
 
