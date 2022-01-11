@@ -31,6 +31,13 @@ custom_theme_compile = true
 
 ---
 
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- What is a PyTorch tensor?</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Memory storage</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Basic operations</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Working with NumPy ndarrays</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Distributed operations</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Linear algebra</div>
 
 ---
 ## <center><div style="font-size: 4rem; color: #e6e6e6">dtype</div></center>
