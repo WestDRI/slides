@@ -40,8 +40,92 @@ custom_theme_compile = true
 ## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Linear algebra</div>
 
 ---
-## <center><div style="font-size: 4rem; color: #e6e6e6">dtype</div></center>
-{{<br size="3.2">}}
+
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #e6e6e6">- What is a PyTorch tensor?</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Memory storage</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Basic operations</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Working with NumPy ndarrays</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Distributed operations</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Linear algebra</div>
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">ANN do not process information directly</div></center>
+{{<br size="2">}}
+
+{{<img src="/img/torchtensors/ml1.png" margin="rem" title="" width="85%" line-height="2.2rem">}}
+Modified from Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
+{{</img>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">It needs to be converted to numbers</div></center>
+{{<br size="2">}}
+
+{{<img src="/img/torchtensors/ml2.png" margin="rem" title="" width="85%" line-height="2.2rem">}}
+Modified from Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
+{{</img>}}
+
+---
+
+## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">All these numbers need to be stored and organized in a data structure</div></center>
+{{<br size="5">}}
+
+{{%fragment%}}
+<center>{{<e>}}PyTorch tensors are Python objects holding multidimensional arrays{{</e>}}</center>
+{{%/fragment%}}
+
+---
+
+## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">Why a new object when NumPy ndarray already exists?</div></center>
+{{<br size="5">}}
+
+{{%fragment%}}
+- Can run on GPUs
+{{<br size="1.5">}}
+
+- Operations can be distributed
+{{<br size="1.5">}}
+
+- Keep track of computation graphs for automatic differentiation
+{{%/fragment%}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6;">What is a PyTorch tensor?</div></center>
+{{<br size="1">}}
+
+PyTorch is foremost a {{<e>}}deep learning library{{</e>}}
+{{<br size="2">}}
+
+In deep learning, the information contained in objects of interest (e.g. images, texts, sounds) is converted to {{<e>}}floating-point numbers{{</e>}} (e.g. pixel values, token values, frequencies) {{<br size="2">}}
+
+As this information is complex, {{<e>}}multiple dimensions are required{{</e>}} (e.g. 2 dimensions for the width & height of an image, plus 1 dimension for the 3 RGB colour channels) {{<br size="2">}}
+
+Additionally, as various objects are grouped into batches to be processed together, batch size adds yet another dimension
+{{<br size="2">}}
+
+{{<e>}}Multidimensional arrays are thus particularly well suited for deep learning{{</e>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">What is a PyTorch tensor?</div></center>
+{{<br size="2">}}
+
+Artificial neurons perform basic computations on these tensors
+{{<br size="2">}}
+
+Their number however is huge & computing efficiency is paramount
+{{<br size="2">}}
+
+GPUs are particularly well suited to perform many simple operations in parallel <br>
+{{<br size="2">}}
+
+The very popular {{<a "https://numpy.org/" "NumPy library">}} has at its core a mature multidimensional array object well integrated into the scientific Python ecosystem
+{{<br size="2">}}
+
+But the PyTorch tensor has additional efficiency characteristics ideal for machine learning & it can be converted to/from NumPy's ndarray if needed
 
 <table>
 <tr><td>torch.float16 / torch.half</td><td>&emsp;&emsp;</td><td>16-bit / half-precision floating-point</td></tr>
