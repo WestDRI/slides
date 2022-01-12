@@ -23,8 +23,8 @@ custom_theme_compile = true
 <figure style="display: table; margin: 0rem auto">
   <div class="row">
 	<div class="column">
-	 {{<img src="/img/wg_no_bg.png" title="" width="%" line-height="rem">}}
-	 {{</img>}}
+	 {{<img8 src="/img/wg_no_bg.png" title="" width="%" line-height="rem">}}
+	 {{</img8>}}
 	</div>
   </div>
 </figure>
@@ -54,18 +54,18 @@ custom_theme_compile = true
 ## <center><div style="font-size: 3rem; color: #e6e6e6">ANN do not process information directly</div></center>
 {{<br size="2">}}
 
-{{<img src="/img/torchtensors/ml1.png" margin="rem" title="" width="85%" line-height="2.2rem">}}
+{{<img8 src="/img/torchtensors/ml1.png" margin="rem" title="" width="85%" line-height="2.2rem">}}
 Modified from Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
-{{</img>}}
+{{</img8>}}
 
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">It needs to be converted to numbers</div></center>
 {{<br size="2">}}
 
-{{<img src="/img/torchtensors/ml2.png" margin="rem" title="" width="85%" line-height="2.2rem">}}
+{{<img8 src="/img/torchtensors/ml2.png" margin="rem" title="" width="85%" line-height="2.2rem">}}
 Modified from Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
-{{</img>}}
+{{</img8>}}
 
 ---
 
