@@ -31,6 +31,14 @@ custom_theme_compile = true
 
 ---
 
+<center>All drawings in this webinar come from the book:</center>
+{{<br size="3">}}
+
+{{<img8 src="/img/torchtensors/book_cover.png" margin="rem" title="" width="45%" line-height="0.5rem">}}
+{{</img8>}}
+
+---
+
 ## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- What is a PyTorch tensor?</div>
 ## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Memory storage</div>
 ## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Basic operations</div>
