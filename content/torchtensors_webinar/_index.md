@@ -78,10 +78,16 @@ Modified from Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with
 ---
 
 ## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">All these numbers need to be stored and organized in a data structure</div></center>
-{{<br size="5">}}
+{{<br size="3">}}
 
 {{%fragment%}}
 <center>{{<e>}}PyTorch tensors are Python objects holding multidimensional arrays{{</e>}}</center>
+{{<br size="2">}}
+
+{{<img8 src="/img/torchtensors/tensor.png" margin="rem" title="" width="85%" line-height="2.2rem">}}
+Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
+{{</img8>}}
+
 {{%/fragment%}}
 
 ---
