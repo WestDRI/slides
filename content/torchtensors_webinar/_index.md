@@ -141,6 +141,250 @@ The very popular {{<a "https://numpy.org/" "NumPy library">}} has at its core a 
 
 But the PyTorch tensor has additional efficiency characteristics ideal for machine learning & it can be converted to/from NumPy's ndarray if needed
 
+---
+
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- What is a PyTorch tensor?</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #e6e6e6">- Memory storage</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Basic operations</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Working with NumPy ndarrays</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Distributed operations</div>
+## <div style="font-size: 3rem; line-height: 3.7rem; color: #727274">- Linear algebra</div>
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Efficient memory storage</div></center>
+{{<br size="1">}}
+
+In Python, collections (lists, tuples) are groupings of boxed Python objects
+{{<br size="1">}}
+
+PyTorch tensors and NumPy ndarrays are made of unboxed C numeric types
+{{<br size="2.5">}}
+
+{{<img8 src="/img/torchtensors/memory_storage.png" margin="rem" title="" width="60%" line-height="2.2rem">}}
+Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
+{{</img8>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Efficient memory storage</div></center>
+{{<br size="1">}}
+
+They are usually contiguous memory blocks, but the main difference is that they are unboxed: floats will thus take 4 or 8 bytes each
+{{<br size="1">}}
+
+Boxed values take up more memory (memory for the pointer and memory for the primitive)
+{{<br size="2.5">}}
+
+{{<img8 src="/img/torchtensors/memory_storage.png" margin="rem" title="" width="60%" line-height="2.2rem">}}
+Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
+{{</img8>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Implementation</div></center>
+{{<br size="2">}}
+
+Under the hood, the values of a PyTorch tensor are stored as a {{%c%}}torch.Storage{{%/c%}} instance which is a {{<emph_inline>}}one-dimensional array{{</emph_inline>}}
+{{<br size="2">}}
+
+{{%fragment%}}
+```{py}
+import torch
+t = torch.stack((torch.arange(5.), torch.arange(5., 10.)))
+t
+```
+{{<out>}}
+```{py}
+tensor([[ 0.,  1.,  2., 3.,  4.],
+        [ 5.,  6.,  7.,  8.,  9.]])
+```
+{{%/fragment%}}
+
+---
+
+## <center><div style="font-size: 3rem; line-height: 5rem; color: #e6e6e6">Implementation</div></center>
+
+```{py}
+storage = t.storage()
+storage
+```
+{{<out>}}
+```{py}
+ 0.0
+ 1.0
+ 2.0
+ 3.0
+ 4.0
+ 5.0
+ 6.0
+ 7.0
+ 8.0
+ 9.0
+[torch.FloatStorage of size 10]
+```
+
+---
+
+## <center><div style="font-size: 3rem; line-height: 5rem; color: #e6e6e6">Implementation</div></center>
+{{<br size="2">}}
+
+Storage can be indexed
+{{<br size="3">}}
+
+```{py}
+storage[3]
+```
+{{<out>}}
+```{py}
+3.0
+```
+
+---
+
+## <center><div style="font-size: 3rem; line-height: 5rem; color: #e6e6e6">Implementation</div></center>
+{{<br size="2">}}
+
+```{py}
+storage[3] = 10.0
+storage
+```
+{{<out>}}
+```{py}
+ 0.0
+ 1.0
+ 2.0
+ 10.0
+ 4.0
+ 5.0
+ 6.0
+ 7.0
+ 8.0
+ 9.0
+[torch.FloatStorage of size 10]
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Implementation</div></center>
+{{<br size="2">}}
+
+To view a multidimensional array from storage, we need {{<emph_inline>}}metadata{{</emph_inline>}}:
+{{<br size="2">}}
+
+- the {{<emph_inline>}}size{{</emph_inline>}} (*shape* in NumPy) sets the number of elements in each dimension
+{{<br size="0.5">}}
+- the {{<emph_inline>}}offset{{</emph_inline>}} indicates where the first element of the tensor is in the storage
+{{<br size="0.5">}}
+- the {{<emph_inline>}}stride{{</emph_inline>}} establishes the increment between each element
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
+{{<br size="1">}}
+
+{{<img8 src="/img/torchtensors/tensor_metadata.png" margin="rem" title="" width="60%" line-height="2.2rem">}}
+Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
+{{</img8>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
+{{<br size="1">}}
+
+```{py}
+t.size()
+```
+{{<out>}}
+```{py}
+torch.Size([2, 5])
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
+{{<br size="1">}}
+
+```{py}
+t.storage_offset()
+```
+{{<out>}}
+```{py}
+0
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
+{{<br size="1">}}
+
+```{py}
+t.stride()
+```
+{{<out>}}
+```{py}
+(5, 1)
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
+{{<br size="1">}}
+
+<center>
+{{<simpleboxdark>}}
+size: (2, 5) <br>
+offset: 0 <br>
+stride: (5, 1)
+{{</simpleboxdark>}}
+</center>
+
+{{<img8 src="/img/torchtensors/my_tensor_metadata.png" margin="rem" title="" width="%" line-height="2.2rem">}}
+Me &nbsp;:D
+{{</img8>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Sharing storage</div></center>
+
+Multiple tensors can use the same storage, saving a lot of memory since the metadata is a lot lighter than a whole new array
+{{<br size="2">}}
+
+{{<img8 src="/img/torchtensors/sharing_storage.png" margin="rem" title="" width="60%" line-height="2.2rem">}}
+Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
+{{</img8>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in 2 dimensions</div></center>
+{{<br size="1.5">}}
+
+```{py}
+
+```
+{{<out>}}
+```{py}
+
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in 2 dimensions</div></center>
+{{<br size="1.5">}}
+
+<center>= flipping the stride elements around</center>
+{{<br size="3">}}
+
+{{<img8 src="/img/torchtensors/transpose.png" margin="rem" title="" width="50%" line-height="2.2rem">}}
+Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
+{{</img8>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in higher dimensions</div></center>
+{{<br size="1.5">}}
+
 <table>
 <tr><td>torch.float16 / torch.half</td><td>&emsp;&emsp;</td><td>16-bit / half-precision floating-point</td></tr>
 <tr><td>torch.float32 / torch.float</td><td></td><td>32-bit / single-precision floating-point</td></tr>
