@@ -185,7 +185,7 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 They are usually contiguous memory blocks, but the main difference is that they are unboxed: floats will thus take 4 or 8 bytes each
 {{<br size="1">}}
 
-Boxed values take up more memory (memory for the pointer and memory for the primitive)
+Boxed values take up more memory (memory for the pointer + memory for the primitive)
 {{<br size="2.5">}}
 
 {{<img8 src="/img/torchtensors/memory_storage.png" margin="rem" title="" width="60%" line-height="2.2rem">}}
@@ -488,7 +488,7 @@ Note that, by contrast, NumPy ndarrays use 64-bit as their default
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Device attribute</div></center>
 {{<br size="2.5">}}
 
-As we mentioned earlier, tensor data can be placed in the memory of various processor types:
+Tensor data can be placed in the memory of various processor types:
 {{<br size="3">}}
 
 - the RAM of CPU
@@ -576,7 +576,7 @@ t_gpu = t_cpu.cuda(1)  # move to a specific GPU
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Working with NumPy</div></center>
 {{<br size="2">}}
 
-PyTorch tensors can be converted to NumPy arrays and vice-versa efficiently
+PyTorch tensors can be converted to NumPy ndarrays and vice-versa efficiently
 
 ```{py}
 t = torch.rand(2, 3)
@@ -586,8 +586,8 @@ torch.equal(t, t2)
 ```
 
 {{<note>}}
-PyTorch tensors use 32-bit floating points by default <br>
-NumPy uses 64-bit by default <br>
+Remember that PyTorch tensors use 32-bit floating points by default <br>
+While NumPy uses 64-bit by default <br>
 In neural networks, 32-bit is what you want to use
 {{</note>}}
 
