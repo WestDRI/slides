@@ -434,6 +434,122 @@ Note that, by contrast, NumPy ndarrays use 64-bit as their default
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
 {{<br size="2">}}
 
+Many functions, e.g.:
+{{<br size="2">}}
+
+- `torch.tensor`: input individual values
+- `torch.rand`: random numbers from a uniform distribution on `[0, 1)`
+- `torch.randn`: numbers from the standard normal distribution
+- `torch.empty`: uninitialized tensor
+- `torch.zeros`: tensor filled with `0`
+- `torch.ones`: tensor filled with `1`
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+{{<br size="3">}}
+
+```{py}
+torch.manual_seed(0)  # if you want to reproduce the result
+torch.rand(1)
+
+torch.manual_seed(0)  # run before each operation to get the same result
+torch.rand(1).item()  # extract the value from a tensor
+```
+{{<out>}}
+```{py}
+tensor([0.4963])
+
+0.49625658988952637
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+{{<br size="2.5">}}
+
+```{py}
+torch.rand(1)
+torch.rand(1, 1)
+torch.rand(1, 1, 1)
+torch.rand(1, 1, 1, 1)
+```
+{{<out>}}
+```{py}
+tensor([0.6984])
+tensor([[0.5675]])
+tensor([[[0.8352]]])
+tensor([[[[0.2056]]]])
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+
+```{py}
+torch.rand(2)
+
+torch.rand(2, 2, 2, 2)
+```
+{{<out>}}
+```{py}
+tensor([0.5932, 0.1123])
+
+tensor([[[[0.1147, 0.3168],
+          [0.6965, 0.9143]],
+         [[0.9351, 0.9412],
+          [0.5995, 0.0652]]],
+        [[[0.5460, 0.1872],
+          [0.0340, 0.9442]],
+         [[0.8802, 0.0012],
+          [0.5936, 0.4158]]]])
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+{{<br size="1">}}
+
+```{py}
+torch.rand(2)
+torch.rand(3)
+torch.rand(1, 1)
+torch.rand(1, 1, 1)
+torch.rand(2, 6)
+```
+{{<out>}}
+```{py}
+tensor([0.7682, 0.0885])
+tensor([0.1320, 0.3074, 0.6341])
+tensor([[0.4901]])
+tensor([[[0.8964]]])
+tensor([[0.4556, 0.6323, 0.3489, 0.4017, 0.0223, 0.1689],
+        [0.2939, 0.5185, 0.6977, 0.8000, 0.1610, 0.2823]])
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+
+```{py}
+torch.rand(2, 4, dtype=torch.float64)  # you can set dtype
+torch.ones(2, 1, 4, 5)
+```
+{{<out>}}
+```{py}
+tensor([[0.6650, 0.7849, 0.2104, 0.6767],
+        [0.1097, 0.5238, 0.2260, 0.5582]], dtype=torch.float64)
+tensor([[[[1., 1., 1., 1., 1.],
+          [1., 1., 1., 1., 1.],
+          [1., 1., 1., 1., 1.],
+          [1., 1., 1., 1., 1.]]],
+
+        [[[1., 1., 1., 1., 1.],
+          [1., 1., 1., 1., 1.],
+          [1., 1., 1., 1., 1.],
+          [1., 1., 1., 1., 1.]]]])
+```
+
 ---
 
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
