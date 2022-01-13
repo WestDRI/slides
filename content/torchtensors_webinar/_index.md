@@ -562,7 +562,6 @@ tensor([[[[1., 1., 1., 1., 1.],
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Named tensors</div></center>
 {{<br size="2">}}
 
 ---
