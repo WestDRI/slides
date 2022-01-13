@@ -302,45 +302,19 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
-{{<br size="1">}}
 
 ```{py}
 t.size()
-```
-{{<out>}}
-```{py}
-torch.Size([2, 5])
-```
-
----
-
-## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
-{{<br size="1">}}
-
-```{py}
 t.storage_offset()
-```
-{{<out>}}
-```{py}
-0
-```
-
----
-
-## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
-{{<br size="1">}}
-
-```{py}
 t.stride()
 ```
 {{<out>}}
 ```{py}
+torch.Size([2, 5])
+0
 (5, 1)
 ```
-
----
-
-## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
+{{<br size="2">}}
 
 <center>
 {{<simpleboxdark>}}
@@ -349,9 +323,13 @@ offset: 0 <br>
 stride: (5, 1)
 {{</simpleboxdark>}}
 </center>
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
 {{<br size="1">}}
 
-{{<img8 src="/img/torchtensors/my_tensor_metadata.jpg" margin="rem" title="" width="60%" line-height="2.2rem">}}
+{{<img8 src="/img/torchtensors/my_tensor_metadata.jpg" margin="rem" title="" width="80%" line-height="2.2rem">}}
 {{</img8>}}
 
 ---
