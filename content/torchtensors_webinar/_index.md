@@ -749,7 +749,7 @@ torch.allclose(A @ x, b)
 ## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
 {{<br size="1.5">}}
 
-And if we print the various outputs we get:
+Here are the printed outputs:
 {{<br size="2.5">}}
 
 ```{py}
