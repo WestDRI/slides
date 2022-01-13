@@ -204,7 +204,7 @@ Under the hood, the values of a PyTorch tensor are stored as a {{%c%}}torch.Stor
 ```{py}
 import torch
 t = torch.stack((torch.arange(5.), torch.arange(5., 10.)))
-t
+print(t)
 ```
 {{<out>}}
 ```{py}
@@ -219,7 +219,7 @@ tensor([[ 0.,  1.,  2., 3.,  4.],
 
 ```{py}
 storage = t.storage()
-storage
+print(storage)
 ```
 {{<out>}}
 ```{py}
@@ -259,7 +259,7 @@ storage[3]
 
 ```{py}
 storage[3] = 10.0
-storage
+print(storage)
 ```
 {{<out>}}
 ```{py}
