@@ -574,9 +574,10 @@ t_gpu = t_cpu.cuda(1)  # move to a specific GPU
 ---
 
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Working with NumPy</div></center>
-{{<br size="2">}}
+{{<br size="1.5">}}
 
-PyTorch tensors can be converted to NumPy ndarrays and vice-versa efficiently
+PyTorch tensors can be converted to NumPy ndarrays and vice-versa in a very efficient manner as both objects will share the same memory
+{{<br size="2">}}
 
 ```{py}
 t = torch.rand(2, 3)
