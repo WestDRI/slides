@@ -838,7 +838,7 @@ berlin1_lr_t.shape
 berlin1_hr_t.shape
 ```
 
-{{<jodark>}}
+{{<odark>}}
 ```{py}
 torch.Size([3, 267, 256])
 torch.Size([3, 267, 256])
@@ -881,7 +881,7 @@ batch_berlin1_lr_t.shape
 batch_berlin1_hr_t.shape
 ```
 
-{{<jodark>}}
+{{<odark>}}
 ```{py}
 torch.Size([1, 3, 267, 256])
 torch.Size([1, 3, 267, 256])
@@ -897,7 +897,7 @@ torch.Size([1, 3, 267, 256])
 psnr_value = kornia.metrics.psnr(batch_berlin1_lr_t, batch_berlin1_hr_t, max_val=1.0)
 psnr_value.item()
 ```
-{{<jodark>}}
+{{<odark>}}
 ```{py}
 33.379642486572266
 ```
@@ -913,7 +913,7 @@ ssim_map = kornia.metrics.ssim(batch_berlin1_lr_t, batch_berlin1_hr_t, window_si
 ssim_map.mean().item()
 ```
 
-{{<jodark>}}
+{{<odark>}}
 ```{py}
 0.9868119359016418
 ```
