@@ -406,6 +406,27 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Default dtype</div></center>
+{{<br size="3">}}
+
+Since PyTorch tensors were built with utmost efficiency in mind for neural networks, the default data type is {{<e>}}32-bit floating points{{</e>}}
+{{<br size="3">}}
+
+This is sufficient for accuracy and much faster than 64-bit floating points
+{{<br size="3">}}
+
+{{<note>}}
+Note that, by contrast, NumPy ndarrays use 64-bit as their default
+{{</note>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">List of PyTorch tensor dtypes</div></center>
+{{<br size="3">}}
+
 <table>
 <tr><td>torch.float16 / torch.half</td><td>&emsp;&emsp;</td><td>16-bit / half-precision floating-point</td></tr>
 <tr><td>torch.float32 / torch.float</td><td></td><td>32-bit / single-precision floating-point</td></tr>
@@ -420,10 +441,54 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 <tr><td>torch.bool</td><td></td><td>boolean</td></tr>
 </table>
 
+---
+
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Memory storage</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Data type (dtype)</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Basic operations</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+{{<br size="2">}}
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
+{{<br size="2">}}
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Vectorized operations</div></center>
+{{<br size="2">}}
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Named tensors</div></center>
+{{<br size="2">}}
+
+---
+
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Memory storage</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Data type (dtype)</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
+
+---
+
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Device attribute</div></center>
 {{<br size="2.5">}}
 
-Tensor data can be placed in the memory of various processor types:
+As we mentioned earlier, tensor data can be placed in the memory of various processor types:
 {{<br size="3">}}
 
 - the RAM of CPU
@@ -435,7 +500,7 @@ Tensor data can be placed in the memory of various processor types:
 - the RAM of a GPU with {{<a "https://pytorch.org/blog/pytorch-for-amd-rocm-platform-now-available-as-python-package/" "AMD's ROCm support">}}
 {{<br size="1">}}
 
-- the RAM of an XLA device (e.g. Cloud TPU) with the {{<a "https://github.com/pytorch/xla/" "torch_xla package">}}
+- the RAM of an {{<a "https://www.tensorflow.org/xla" "XLA device">}} (e.g. {{<a "https://cloud.google.com/tpu" "Cloud TPU">}}) with the {{<a "https://github.com/pytorch/xla/" "torch_xla package">}}
 
 ---
 
@@ -495,3 +560,73 @@ t_gpu = t_cpu.cuda(1)  # move to a specific GPU
 ```
 {{%/fragment%}}
 
+---
+
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Memory storage</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Data type (dtype)</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Working with NumPy ndarrays</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Working with NumPy</div></center>
+{{<br size="2">}}
+
+PyTorch tensors can be converted to NumPy arrays and vice-versa efficiently
+
+```{py}
+t = torch.rand(2, 3)
+t_np = t.numpy()
+t2 = torch.from_numpy(t_np)
+torch.equal(t, t2)
+```
+
+{{<note>}}
+PyTorch tensors use 32-bit floating points by default <br>
+NumPy uses 64-bit by default <br>
+In neural networks, 32-bit is what you want to use
+{{</note>}}
+
+{{<note>}}
+Note that NumPy arrays only work on CPU, so to convert a tensor allocated to the GPU, the content will be copied to the CPU first
+{{</note>}}
+
+---
+
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Memory storage</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Data type (dtype)</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Distributed operations</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6"></div></center>
+{{<br size="2">}}
+
+---
+
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Memory storage</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Data type (dtype)</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Linear algebra</div>
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6"></div></center>
+{{<br size="2">}}
+
+---
+
+# <center><span style="font-size: 7.0rem; color: #e6e6e6;">Questions?</span></center>
