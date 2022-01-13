@@ -555,6 +555,26 @@ tensor([[[[1., 1., 1., 1., 1.],
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
 {{<br size="2">}}
 
+```{py}
+x = torch.rand(5, 4)
+print(x)
+
+print(x[:, 2])
+print(x[3, :])
+print(x[2, 3])
+```
+{{<out>}}
+```{py}
+tensor([[0.5861, 0.5608, 0.0164, 0.6003],
+        [0.9770, 0.6439, 0.4973, 0.3963],
+        [0.6329, 0.2772, 0.9924, 0.9322],
+        [0.7336, 0.3138, 0.0305, 0.2122],
+        [0.9861, 0.0411, 0.0226, 0.4640]])
+tensor([0.0164, 0.4973, 0.9924, 0.0305, 0.0226])
+tensor([0.7336, 0.3138, 0.0305, 0.2122])
+tensor(0.9322)
+```
+
 ---
 
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Various tensor operations</div></center>
