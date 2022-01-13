@@ -39,6 +39,14 @@ custom_theme_compile = true
 
 ---
 
+<center>The section on storage is also highly inspired by it</center>
+{{<br size="3">}}
+
+{{<img8 src="/img/torchtensors/book_cover.png" margin="rem" title="" width="45%" line-height="0.5rem">}}
+{{</img8>}}
+
+---
+
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Memory storage</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Data type (dtype)</div>
