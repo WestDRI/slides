@@ -689,8 +689,8 @@ tensor([ 5., 21., -1.])
 Solving this system is as simple as running the `torch.linalg.solve` function:
 
 ```{py}
-X = torch.linalg.solve(A, b)
-print(X)
+x = torch.linalg.solve(A, b)
+print(x)
 ```
 {{<out>}}
 ```{py}
@@ -716,7 +716,7 @@ We can verify our result with:
 {{<br size="2">}}
 
 ```{py}
-torch.allclose(A @ X, b)
+torch.allclose(A @ x, b)
 ```
 {{<out>}}
 ```{py}
@@ -738,10 +738,10 @@ A = torch.randn(4, 4)
 b = torch.randn(4)
 
 # solve the system
-X = torch.linalg.solve(A, b)
+x = torch.linalg.solve(A, b)
 
 # verify
-torch.allclose(A @ X, b)
+torch.allclose(A @ x, b)
 ```
 
 ---
@@ -760,7 +760,7 @@ tensor([[ 1.5091,  2.0820,  1.7067,  2.3804],  # A (coefficients)
 
 tensor([-1.0886, -0.2666,  0.1894, -0.2190])  # b (right hand side values)
 
-tensor([ 0.1992, -0.7011,  0.2541, -0.1526])  # X (our solution)
+tensor([ 0.1992, -0.7011,  0.2541, -0.1526])  # x (our solution)
 
 True									      # verification
 ```
