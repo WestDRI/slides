@@ -893,6 +893,16 @@ torch.allclose(A @ X, B)
 ```
 
 ---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Matrix inversions</div></center>
+{{<br size="3">}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Eigenvectors</div></center>
+{{<br size="3">}}
+
+
 ---
 
 # <center><span style="font-size: 7.0rem; color: #e6e6e6;">Questions?</span></center>
