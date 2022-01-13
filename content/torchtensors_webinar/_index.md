@@ -341,7 +341,6 @@ t.stride()
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
-{{<br size="1">}}
 
 <center>
 {{<simpleboxdark>}}
@@ -350,9 +349,9 @@ offset: 0 <br>
 stride: (5, 1)
 {{</simpleboxdark>}}
 </center>
+{{<br size="1">}}
 
-{{<img8 src="/img/torchtensors/my_tensor_metadata.png" margin="rem" title="" width="%" line-height="2.2rem">}}
-Me &nbsp;:D
+{{<img8 src="/img/torchtensors/my_tensor_metadata.jpg" margin="rem" title="" width="60%" line-height="2.2rem">}}
 {{</img8>}}
 
 ---
