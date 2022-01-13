@@ -34,7 +34,7 @@ custom_theme_compile = true
 <center>All drawings in this webinar come from the book:</center>
 {{<br size="3">}}
 
-{{<img8 src="/img/torchtensors/book_cover.png" margin="rem" title="" width="45%" line-height="0.5rem">}}
+{{<img8 src="/img/torchtensors/book_cover.jpg" margin="rem" title="" width="45%" line-height="0.5rem">}}
 {{</img8>}}
 
 ---
@@ -42,7 +42,7 @@ custom_theme_compile = true
 <center>The section on storage is also highly inspired by it</center>
 {{<br size="3">}}
 
-{{<img8 src="/img/torchtensors/book_cover.png" margin="rem" title="" width="45%" line-height="0.5rem">}}
+{{<img8 src="/img/torchtensors/book_cover.jpg" margin="rem" title="" width="45%" line-height="0.5rem">}}
 {{</img8>}}
 
 ---
