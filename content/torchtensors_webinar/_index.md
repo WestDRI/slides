@@ -625,9 +625,147 @@ Note that NumPy arrays only work on CPU, so to convert a tensor allocated to the
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6"></div></center>
+## <center><div style="font-size: 3rem; color: #e6e6e6">{{<a "https://pytorch.org/docs/master/linalg.html?highlight=linalg#module-torch.linalg" "torch.linalg">}} module</div></center>
+{{<br size="3">}}
+
+- All functions from {{<a "https://numpy.org/doc/stable/reference/routines.linalg.html" "numpy.linalg">}} implemented <br>
+(with accelerator, CUDA support, & automatic differentiation support)
+{{<br size="3">}}
+
+- Some additional functions
+{{<br size="4">}}
+
+{{<note>}}
+Requires torch >= 1.9 <br>
+Linear algebra support less developed before introduction of this module
+{{</note>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
+{{<br size="3">}}
+
+Let's have a look at an extremely basic example:
+{{<br size="4">}}
+
+<center>
+{{<simpleboxdark>}}
+2x + 3y - z = 5 <br>
+x - 2y + 8z = 21 <br>
+6x + y - 3z = -1
+{{</simpleboxdark>}}
+</center>
+{{<br size="4">}}
+
+We are looking for the values of `x`, `y`, and `z` that would satisfy this system
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
+
+We create a 2D tensor `A` of size `(3, 3)` with the coefficients of the equations <br>
+& a 1D tensor `b` of size `3` with the right hand sides values of the equations
+
+```{py}
+A = torch.tensor([[2., 3., -1.], [1., -2., 8.], [6., 1., -3.]])
+b = torch.tensor([5., 21., -1.])
+print(A)
+print(b)
+```
+{{<out>}}
+```{py}
+tensor([[ 2.,  3., -1.],
+        [ 1., -2.,  8.],
+        [ 6.,  1., -3.]])
+
+tensor([ 5., 21., -1.])
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
+{{<br size="1">}}
+
+Solving this system is as simple as running the `torch.linalg.solve` function:
+
+```{py}
+X = torch.linalg.solve(A, b)
+print(X)
+```
+{{<out>}}
+```{py}
+tensor([1., 2., 3.])
+```
+
+Our solution is:
+
+<center>
+{{<simpleboxdark>}}
+x = 1 <br>
+y = 2 <br>
+z = 3
+{{</simpleboxdark>}}
+</center>
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
+{{<br size="3">}}
+
+We can verify our result with:
 {{<br size="2">}}
 
+```{py}
+torch.allclose(A @ X, b)
+```
+{{<out>}}
+```{py}
+True
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
+{{<br size="1.5">}}
+
+Here is another simple example:
+{{<br size="2.5">}}
+
+```{py}
+# create a square normal random matrix
+A = torch.randn(4, 4)
+# create a tensor of right hand side values
+b = torch.randn(4)
+
+# solve the system
+X = torch.linalg.solve(A, b)
+
+# verify
+torch.allclose(A @ X, b)
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
+{{<br size="1.5">}}
+
+And if we print the various outputs we get:
+{{<br size="2.5">}}
+
+```{py}
+tensor([[ 1.5091,  2.0820,  1.7067,  2.3804],  # A (coefficients)
+        [-1.1256, -0.3170, -1.0925, -0.0852],
+        [ 0.3276, -0.7607, -1.5991,  0.0185],
+        [-0.7504,  0.1854,  0.6211,  0.6382]])
+
+tensor([-1.0886, -0.2666,  0.1894, -0.2190])  # b (right hand side values)
+
+tensor([ 0.1992, -0.7011,  0.2541, -0.1526])  # X (our solution)
+
+True									      # verification
+```
+
+---
 ---
 
 # <center><span style="font-size: 7.0rem; color: #e6e6e6;">Questions?</span></center>
