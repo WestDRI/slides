@@ -557,11 +557,12 @@ tensor([[[[1., 1., 1., 1., 1.],
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Vectorized operations</div></center>
+## <center><div style="font-size: 4rem; color: #e6e6e6">Various tensor operations</div></center>
 {{<br size="2">}}
 
 ---
 
+## <center><div style="font-size: 4rem; color: #e6e6e6">Vectorized operations</div></center>
 {{<br size="2">}}
 
 ---
@@ -855,6 +856,22 @@ tensor([-1.0886, -0.2666,  0.1894, -0.2190])  # b (right hand side values)
 tensor([ 0.1992, -0.7011,  0.2541, -0.1526])  # x (our solution)
 
 True									      # verification
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
+{{<br size="2.5">}}
+
+With 2 multidimensional tensors:
+{{<br size="2.5">}}
+
+```{py}
+A = torch.randn(2, 3, 3)      # must be batches of square matrices
+B = torch.randn(2, 3, 5)      # matrices must be of compatible dimensions
+X = torch.linalg.solve(A, B)
+X
+torch.allclose(A @ X, B)
 ```
 
 ---
