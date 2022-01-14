@@ -575,6 +575,67 @@ tensor(0.7724)
 
 ---
 
+## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
+
+```{py}
+x[-1:]         # Last element (implicit comma, so all columns)
+x[-1]          # No range, so no implicit comma: we are indexing a tensor
+# from a list of tensors, so the result is a one dimensional tensor
+# (Each dimension is a list of tensors of the previous dimension)
+x[-1].size()   # Same number of dimensions than x (2 dimensions)
+x[-1:].size()  # We dropped one dimension
+```
+{{<out>}}
+```{py}
+tensor([[0.8168, 0.0879, 0.2642, 0.3777]])
+tensor([0.8168, 0.0879, 0.2642, 0.3777])
+
+torch.Size([4])
+torch.Size([1, 4])
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
+{{<br size="2.5">}}
+
+```{py}
+x[0:1]     # Python ranges are inclusive to the left, not the right
+x[:-1]     # From start to one before last (and implicit comma)
+x[0:3:2]   # From 0th (included) to 3rd (excluded) in increment of 2
+```
+{{<out>}}
+```{py}
+tensor([[0.5873, 0.0225, 0.7234, 0.4538]])
+tensor([[0.5873, 0.0225, 0.7234, 0.4538],
+        [0.9525, 0.0111, 0.6421, 0.4647]])
+tensor([[0.5873, 0.0225, 0.7234, 0.4538],
+        [0.8168, 0.0879, 0.2642, 0.3777]])
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
+{{<br size="2">}}
+
+```{py}
+x[None]          # Adds a dimension of size one as the 1st dimension
+
+x.size()
+x[None].size()
+```
+{{<out>}}
+```{py}
+tensor([[[0.5873, 0.0225, 0.7234, 0.4538],
+         [0.9525, 0.0111, 0.6421, 0.4647],
+         [0.8168, 0.0879, 0.2642, 0.3777]]])
+
+torch.Size([3, 4])
+torch.Size([1, 3, 4])
+```
+
+---
+
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Various tensor operations</div></center>
 {{<br size="2">}}
 
