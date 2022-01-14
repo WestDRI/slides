@@ -717,10 +717,10 @@ t_gpu = torch.rand(2, 3, device='cuda')
 {{<br size="2">}}
 
 ```{py}
-t_cpu = t_gpu.to(device='cpu')     # move to CPU
-t_gpu = t_cpu.to(device='cuda')    # move to GPU
-t_gpu = t_cpu.to(device='cuda:0')  # move to a specific GPU
-t_gpu = t_cpu.to(device='cuda:1')  # move to a specific GPU
+t_cpu = t_gpu.to(device='cpu')     # Move to CPU
+t_gpu = t_cpu.to(device='cuda')    # Move to GPU
+t_gpu = t_cpu.to(device='cuda:0')  # Move to a specific GPU
+t_gpu = t_cpu.to(device='cuda:1')  # Move to a specific GPU
 ```
 {{<br size="2">}}
 
@@ -729,10 +729,10 @@ Or the equivalent short forms:
 {{<br size="2">}}
 
 ```{py}
-t_cpu = t_gpu.cpu()    # move to CPU
-t_gpu = t_cpu.cuda()   # move to GPU
-t_gpu = t_cpu.cuda(0)  # move to a specific GPU
-t_gpu = t_cpu.cuda(1)  # move to a specific GPU
+t_cpu = t_gpu.cpu()                # Move to CPU
+t_gpu = t_cpu.cuda()               # Move to GPU
+t_gpu = t_cpu.cuda(0)              # Move to a specific GPU
+t_gpu = t_cpu.cuda(1)              # Move to a specific GPU
 ```
 {{%/fragment%}}
 
@@ -908,15 +908,15 @@ Here is another simple example:
 {{<br size="2.5">}}
 
 ```{py}
-# create a square normal random matrix
+# Create a square normal random matrix
 A = torch.randn(4, 4)
-# create a tensor of right hand side values
+# Create a tensor of right hand side values
 b = torch.randn(4)
 
-# solve the system
+# Solve the system
 x = torch.linalg.solve(A, b)
 
-# verify
+# Verify
 torch.allclose(A @ x, b)
 ```
 
@@ -929,7 +929,7 @@ Here are the printed outputs:
 {{<br size="2.5">}}
 
 ```{py}
-tensor([[ 1.5091,  2.0820,  1.7067,  2.3804],  # A (coefficients)
+tensor([[ 1.5091,  2.0820,  1.7067,  2.3804], # A (coefficients)
         [-1.1256, -0.3170, -1.0925, -0.0852],
         [ 0.3276, -0.7607, -1.5991,  0.0185],
         [-0.7504,  0.1854,  0.6211,  0.6382]])
@@ -938,7 +938,7 @@ tensor([-1.0886, -0.2666,  0.1894, -0.2190])  # b (right hand side values)
 
 tensor([ 0.1992, -0.7011,  0.2541, -0.1526])  # x (our solution)
 
-True									      # verification
+True									      # Verification
 ```
 
 ---
@@ -950,8 +950,8 @@ With 2 multidimensional tensors:
 {{<br size="2.5">}}
 
 ```{py}
-A = torch.randn(2, 3, 3)      # must be batches of square matrices
-B = torch.randn(2, 3, 5)      # matrices must be of compatible dimensions
+A = torch.randn(2, 3, 3)      # Must be batches of square matrices
+B = torch.randn(2, 3, 5)      # Matrices must be of compatible dimensions
 X = torch.linalg.solve(A, B)
 X
 torch.allclose(A @ X, B)
