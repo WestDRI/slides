@@ -282,21 +282,22 @@ print(storage)
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Implementation</div></center>
-{{<br size="2">}}
+{{<br size="3">}}
 
 To view a multidimensional array from storage, we need {{<emph_inline>}}metadata{{</emph_inline>}}:
-{{<br size="2">}}
+{{<br size="3">}}
 
 - the {{<emph_inline>}}size{{</emph_inline>}} (*shape* in NumPy) sets the number of elements in each dimension
-{{<br size="0.5">}}
+{{<br size="1">}}
 - the {{<emph_inline>}}offset{{</emph_inline>}} indicates where the first element of the tensor is in the storage
-{{<br size="0.5">}}
+{{<br size="1">}}
 - the {{<emph_inline>}}stride{{</emph_inline>}} establishes the increment between each element
+{{<br size="3">}}
 
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Storage metadata</div></center>
-{{<br size="1">}}
+{{<br size="1.5">}}
 
 {{<img8 src="/img/torchtensors/tensor_metadata.png" margin="rem" title="" width="60%" line-height="2.2rem">}}
 Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
@@ -338,6 +339,7 @@ stride: (5, 1)
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Sharing storage</div></center>
+{{<br size="1">}}
 
 Multiple tensors can use the same storage, saving a lot of memory since the metadata is a lot lighter than a whole new array
 {{<br size="2">}}
@@ -446,6 +448,7 @@ Many functions, e.g.:
 - `torch.empty`: uninitialized tensor
 - `torch.zeros`: tensor filled with `0`
 - `torch.ones`: tensor filled with `1`
+{{<br size="2">}}
 
 ---
 
@@ -612,6 +615,7 @@ tensor([[0.5873, 0.0225, 0.7234, 0.4538],
 tensor([[0.5873, 0.0225, 0.7234, 0.4538],
         [0.8168, 0.0879, 0.2642, 0.3777]])
 ```
+{{<br size="2.5">}}
 
 ---
 
