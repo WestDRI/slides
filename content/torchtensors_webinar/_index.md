@@ -558,11 +558,10 @@ tensor([[[[1., 1., 1., 1., 1.],
 
 ```{py}
 x = torch.rand(3, 4)
-print(x)
-
-print(x[:, 2])
-print(x[1, :])
-print(x[2, 3])
+x[:]                 # With a range, the comma is implicit: same as x[:, ]
+x[:, 2]
+x[1, :]
+x[2, 3]
 ```
 {{<out>}}
 ```{py}
