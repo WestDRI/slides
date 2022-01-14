@@ -450,11 +450,11 @@ Many functions, e.g.:
 {{<br size="3">}}
 
 ```{py}
-torch.manual_seed(0)  # if you want to reproduce the result
+torch.manual_seed(0)  # If you want to reproduce the result
 torch.rand(1)
 
-torch.manual_seed(0)  # run before each operation to get the same result
-torch.rand(1).item()  # extract the value from a tensor
+torch.manual_seed(0)  # Run before each operation to get the same result
+torch.rand(1).item()  # Extract the value from a tensor
 ```
 {{<out>}}
 ```{py}
@@ -532,7 +532,7 @@ tensor([[0.4556, 0.6323, 0.3489, 0.4017, 0.0223, 0.1689],
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
 
 ```{py}
-torch.rand(2, 4, dtype=torch.float64)  # you can set dtype
+torch.rand(2, 4, dtype=torch.float64)  # You can set dtype
 torch.ones(2, 1, 4, 5)
 ```
 {{<out>}}
