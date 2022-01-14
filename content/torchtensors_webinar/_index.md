@@ -109,6 +109,9 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 - Can run on GPUs
 {{<br size="1.5">}}
 
+- Computations are accelerated
+{{<br size="1.5">}}
+
 - Operations can be distributed
 {{<br size="1.5">}}
 
@@ -543,7 +546,6 @@ tensor([[[[1., 1., 1., 1., 1.],
           [1., 1., 1., 1., 1.],
           [1., 1., 1., 1., 1.],
           [1., 1., 1., 1., 1.]]],
-
         [[[1., 1., 1., 1., 1.],
           [1., 1., 1., 1., 1.],
           [1., 1., 1., 1., 1.],
@@ -553,7 +555,6 @@ tensor([[[[1., 1., 1., 1., 1.],
 ---
 
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
-{{<br size="2">}}
 
 ```{py}
 x = torch.rand(3, 4)
