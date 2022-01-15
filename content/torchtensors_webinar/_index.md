@@ -527,6 +527,27 @@ Note that, by contrast, NumPy ndarrays use 64-bit as their default
 
 ---
 
+## <center><div style="font-size: 3rem; color: #e6e6e6">Checking & changing dtype</div></center>
+{{<br size="2.5">}}
+
+```{py}
+t = torch.rand(2, 3); print(t)
+t.dtype   # remember that the default dtype for PyTorch tensors is float32
+t2 = t.type(torch.float64); print(t2) # if dtype ≠ default, it is printed
+t2.dtype
+```
+{{<out>}}
+```{py}
+tensor([[0.8130, 0.3757, 0.7682],
+        [0.3482, 0.0516, 0.3772]])
+torch.float32
+tensor([[0.8130, 0.3757, 0.7682],
+        [0.3482, 0.0516, 0.3772]], dtype=torch.float64)
+torch.float64
+```
+
+---
+
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Memory storage</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Data type (dtype)</div>
