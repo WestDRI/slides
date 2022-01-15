@@ -354,11 +354,21 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 {{<br size="1.5">}}
 
 ```{py}
-
+t = torch.tensor([[3, 1, 2], [4, 1, 7]])
+print(t)
+t.size()
+t.t()
+t.t().size()
 ```
 {{<out>}}
 ```{py}
-
+tensor([[3, 1, 2],
+        [4, 1, 7]])
+torch.Size([2, 3])
+tensor([[3, 4],
+        [1, 1],
+        [2, 7]])
+torch.Size([3, 2])
 ```
 
 ---
@@ -375,8 +385,100 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in higher dimensions</div></center>
-{{<br size="1.5">}}
+## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in higher dimension tensors</div></center>
+{{<br size="2">}}
+
+`torch.t()` is a shorthand for `torch.transpose(0, 1)`:
+{{<br size="2.5">}}
+
+```{py}
+torch.equal(t.t(), t.transpose(0, 1))
+```
+{{<out>}}
+```{py}
+True
+```
+{{<br size="2.5">}}
+
+While `torch.t()` only works for 2D tensors, `torch.transpose()` can be used to transpose 2 dimensions in tensors of any number of dimensions
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in higher dimension tensors</div></center>
+{{<br size="2.5">}}
+
+```{py}
+t = torch.zeros(1, 2, 3)
+print(t)
+
+t.size()
+```
+{{<out>}}
+```{py}
+tensor([[[0., 0., 0.],
+         [0., 0., 0.]]])
+
+torch.Size([1, 2, 3])
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in higher dimension tensors</div></center>
+{{<br size="2.5">}}
+
+```{py}
+t.transpose(0, 1)
+
+t.transpose(0, 1).size()
+```
+{{<out>}}
+```{py}
+tensor([[[0., 0., 0.]],
+        [[0., 0., 0.]]])
+
+torch.Size([2, 1, 3])
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in higher dimension tensors</div></center>
+{{<br size="2">}}
+
+```{py}
+t.transpose(0, 2)
+
+t.transpose(0, 2).size()
+```
+{{<out>}}
+```{py}
+tensor([[[0.],
+         [0.]],
+        [[0.],
+         [0.]],
+        [[0.],
+         [0.]]])
+
+torch.Size([3, 2, 1])
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in higher dimension tensors</div></center>
+{{<br size="2">}}
+
+```{py}
+t.transpose(1, 2)
+
+t.transpose(1, 2).size()
+```
+{{<out>}}
+```{py}
+tensor([[[0., 0.],
+         [0., 0.],
+         [0., 0.]]])
+
+torch.Size([1, 3, 2])
+```
 
 ---
 
