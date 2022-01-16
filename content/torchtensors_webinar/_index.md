@@ -1104,6 +1104,29 @@ Limit matrix inversions to situations where it is truly necessary
 ---
 
 ## <center><div style="font-size: 3rem; line-height: 3rem; color: #e6e6e6">Matrix inversions</div></center>
+
+```{py}
+A = torch.rand(3, 3, 3)
+A_inv = torch.linalg.inv(A)
+A @ A_inv
+```
+{{<out>}}
+```{py}
+tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
+         [ 5.5627e-08,  1.0000e+00,  1.0795e-06],
+         [-1.4133e-07,  7.9992e-08,  1.0000e+00]],
+
+        [[ 1.0000e+00, -1.3301e-07, -1.3090e-07],
+         [ 4.2567e-08,  1.0000e+00, -5.0706e-09],
+         [ 3.2889e-08, -2.6357e-09,  1.0000e+00]],
+
+        [[ 1.0000e+00,  4.3329e-08, -3.6741e-09],
+         [-7.4627e-08,  1.0000e+00,  1.4579e-07],
+         [-6.3580e-08,  8.2354e-08,  1.0000e+00]]])
+```
+
+---
+
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Eigenvectors</div></center>
 {{<br size="3">}}
 
