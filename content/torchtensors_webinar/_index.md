@@ -206,8 +206,7 @@ Under the hood, the values of a PyTorch tensor are stored as a {{%c%}}torch.Stor
 {{%fragment%}}
 ```{py}
 import torch
-t = torch.stack((torch.arange(5.), torch.arange(5., 10.)))
-print(t)
+t = torch.stack((torch.arange(5.), torch.arange(5., 10.))); print(t)
 ```
 {{<out>}}
 ```{py}
@@ -216,13 +215,14 @@ tensor([[ 0.,  1.,  2., 3.,  4.],
 ```
 {{%/fragment%}}
 
+{{<br size="3">}}
+
 ---
 
 ## <center><div style="font-size: 3rem; line-height: 5rem; color: #e6e6e6">Implementation</div></center>
 
 ```{py}
-storage = t.storage()
-print(storage)
+storage = t.storage(); print(storage)
 ```
 {{<out>}}
 ```{py}
@@ -261,8 +261,7 @@ storage[3]
 {{<br size="2">}}
 
 ```{py}
-storage[3] = 10.0
-print(storage)
+storage[3] = 10.0; print(storage)
 ```
 {{<out>}}
 ```{py}
@@ -351,11 +350,10 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in 2 dimensions</div></center>
-{{<br size="1.5">}}
+{{<br size="2">}}
 
 ```{py}
-t = torch.tensor([[3, 1, 2], [4, 1, 7]])
-print(t)
+t = torch.tensor([[3, 1, 2], [4, 1, 7]]); print(t)
 t.size()
 t.t()
 t.t().size()
@@ -408,8 +406,7 @@ While `torch.t()` only works for 2D tensors, `torch.transpose()` can be used to 
 {{<br size="2.5">}}
 
 ```{py}
-t = torch.zeros(1, 2, 3)
-print(t)
+t = torch.zeros(1, 2, 3); print(t)
 
 t.size()
 ```
@@ -614,16 +611,15 @@ tensor([[[[0.2056]]]])
 ---
 
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+{{<br size="2">}}
 
 ```{py}
 torch.rand(2)
-
 torch.rand(2, 2, 2, 2)
 ```
 {{<out>}}
 ```{py}
 tensor([0.5932, 0.1123])
-
 tensor([[[[0.1147, 0.3168],
           [0.6965, 0.9143]],
          [[0.9351, 0.9412],
@@ -961,15 +957,15 @@ We are looking for the values of `x`, `y`, and `z` that would satisfy this syste
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
+{{<br size="1">}}
 
 We create a 2D tensor `A` of size `(3, 3)` with the coefficients of the equations <br>
 & a 1D tensor `b` of size `3` with the right hand sides values of the equations
+{{<br size="2">}}
 
 ```{py}
-A = torch.tensor([[2., 3., -1.], [1., -2., 8.], [6., 1., -3.]])
-b = torch.tensor([5., 21., -1.])
-print(A)
-print(b)
+A = torch.tensor([[2., 3., -1.], [1., -2., 8.], [6., 1., -3.]]); print(A)
+b = torch.tensor([5., 21., -1.]); print(b)
 ```
 {{<out>}}
 ```{py}
@@ -983,13 +979,12 @@ tensor([ 5., 21., -1.])
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
-{{<br size="1">}}
+{{<br size="1.5">}}
 
 Solving this system is as simple as running the `torch.linalg.solve` function:
 
 ```{py}
-x = torch.linalg.solve(A, b)
-print(x)
+x = torch.linalg.solve(A, b); print(x)
 ```
 {{<out>}}
 ```{py}
@@ -1032,12 +1027,12 @@ Here is another simple example:
 
 ```{py}
 # Create a square normal random matrix
-A = torch.randn(4, 4)
+A = torch.randn(4, 4); print(A)
 # Create a tensor of right hand side values
-b = torch.randn(4)
+b = torch.randn(4); print(b)
 
 # Solve the system
-x = torch.linalg.solve(A, b)
+x = torch.linalg.solve(A, b); print(x)
 
 # Verify
 torch.allclose(A @ x, b)
@@ -1048,7 +1043,7 @@ torch.allclose(A @ x, b)
 ## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
 {{<br size="1.5">}}
 
-Here are the printed outputs:
+Here are the outputs:
 {{<br size="2.5">}}
 
 ```{py}
@@ -1067,17 +1062,24 @@ True									      # Verification
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
-{{<br size="2.5">}}
 
 With 2 multidimensional tensors:
-{{<br size="2.5">}}
 
 ```{py}
-A = torch.randn(2, 3, 3)      # Must be batches of square matrices
-B = torch.randn(2, 3, 5)      # Matrices must be of compatible dimensions
-X = torch.linalg.solve(A, B)
-X
+A = torch.randn(2, 3, 3)              # Must be batches of square matrices
+B = torch.randn(2, 3, 5)              # Dimensions must be compatible
+X = torch.linalg.solve(A, B); print(X)
 torch.allclose(A @ X, B)
+```
+{{<out>}}
+```{py}
+tensor([[[-0.0545, -0.1012,  0.7863, -0.0806, -0.0191],
+         [-0.9846, -0.0137, -1.7521, -0.4579, -0.8178],
+         [-1.9142, -0.6225, -1.9239, -0.6972,  0.7011]],
+        [[ 3.2094,  0.3432, -1.6604, -0.7885,  0.0088],
+         [ 7.9852,  1.4605, -1.7037, -0.7713,  2.7319],
+         [-4.1979,  0.0849,  1.0864,  0.3098, -1.0347]]])
+True
 ```
 
 ---
