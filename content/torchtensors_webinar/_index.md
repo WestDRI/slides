@@ -1133,4 +1133,18 @@ tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
 
 ---
 
+## <center><div style="font-size: 3rem; line-height: 3rem; color: #e6e6e6">Other linear algebra functions</div></center>
+{{<br size="3">}}
+
+{{<a "https://pytorch.org/docs/master/linalg.html?highlight=linalg#module-torch.linalg" "torch.linalg">}} contains many more functions, including for instance:
+{{<br size="2">}}
+
+- {{<a "https://pytorch.org/docs/master/generated/torch.tensordot.html#torch.tensordot" "torch.tensordot">}} which generalizes matrix products
+{{<br size="1.5">}}
+
+- {{<a "https://pytorch.org/docs/master/generated/torch.linalg.tensorsolve.html#torch.linalg.tensorsolve" "torch.linalg.tensorsolve">}} which computes the solution `X` to the system `torch.tensordot(A, X) = B`
+{{<br size="2">}}
+
+---
+
 # <center><span style="font-size: 7.0rem; color: #e6e6e6;">Questions?</span></center>
