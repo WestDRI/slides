@@ -1084,11 +1084,26 @@ True
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Matrix inversions</div></center>
-{{<br size="3">}}
+## <center><div style="font-size: 3rem; line-height: 3rem; color: #e6e6e6">Matrix inversions</div></center>
+{{<br size="5">}}
+
+{{%fragment%}}
+{{<note>}}
+It is faster and more numerically stable to solve a system of linear equations directly than to compute the inverse matrix first
+{{</note>}}
+{{%/fragment%}}
+
+{{<br size="5">}}
+
+{{%fragment%}}
+{{<emph>}}
+Limit matrix inversions to situations where it is truly necessary
+{{</emph>}}
+{{%/fragment%}}
 
 ---
 
+## <center><div style="font-size: 3rem; line-height: 3rem; color: #e6e6e6">Matrix inversions</div></center>
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Eigenvectors</div></center>
 {{<br size="3">}}
 
