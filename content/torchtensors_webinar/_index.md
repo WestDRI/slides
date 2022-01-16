@@ -103,20 +103,19 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 ---
 
 ## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">Why a new object when NumPy ndarray already exists?</div></center>
-{{<br size="5">}}
+{{<br size="4.5">}}
 
 {{%fragment%}}
 - Can run on GPUs
-{{<br size="1.5">}}
-
-- Computations are accelerated
-{{<br size="1.5">}}
+{{<br size="2">}}
 
 - Operations can be distributed
-{{<br size="1.5">}}
+{{<br size="2">}}
 
 - Keep track of computation graphs for automatic differentiation
 {{%/fragment%}}
+
+{{<br size="2">}}
 
 ---
 
@@ -908,7 +907,7 @@ Note that NumPy arrays only work on CPU, so to convert a tensor allocated to the
 {{<br size="3">}}
 
 - All functions from {{<a "https://numpy.org/doc/stable/reference/routines.linalg.html" "numpy.linalg">}} implemented <br>
-(with accelerator, CUDA support, & automatic differentiation support)
+(with accelerator & automatic differentiation support)
 {{<br size="3">}}
 
 - Some additional functions
