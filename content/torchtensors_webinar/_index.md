@@ -1138,7 +1138,16 @@ tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6"></div></center>
+## <center><div style="font-size: 3rem; color: #e6e6e6">Parallel tensor operations</div></center>
+{{<br size="2">}}
+
+PyTorch already allows for {{<a "https://pytorch.org/tutorials/beginner/dist_overview.html" "distributed training of ML models">}}
+{{<br size="2">}}
+
+The implementation of distributed tensor operations—for instance for linear algebra—is {{<a "https://github.com/pytorch/pytorch/issues/69971" "in the work through the use of a ShardedTensor primitive">}} that can be sharded across nodes
+{{<br size="2">}}
+
+See also {{<a "https://github.com/pytorch/pytorch/issues/55207" "this issue">}} for more comments about upcoming developments on (among other things) tensor sharding
 {{<br size="2">}}
 
 ---
