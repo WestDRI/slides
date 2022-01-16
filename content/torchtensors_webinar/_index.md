@@ -1127,12 +1127,6 @@ tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Eigenvectors</div></center>
-{{<br size="3">}}
-
-
----
-
 ## <center><div style="font-size: 3rem; line-height: 3rem; color: #e6e6e6">Other linear algebra functions</div></center>
 {{<br size="3">}}
 
@@ -1143,6 +1137,9 @@ tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
 {{<br size="1.5">}}
 
 - {{<a "https://pytorch.org/docs/master/generated/torch.linalg.tensorsolve.html#torch.linalg.tensorsolve" "torch.linalg.tensorsolve">}} which computes the solution `X` to the system `torch.tensordot(A, X) = B`
+{{<br size="1.5">}}
+
+- {{<a "https://pytorch.org/docs/master/generated/torch.linalg.eigvals.html#torch.linalg.eigvals" "torch.linalg.eigvals">}} which computes the eigenvalues of a square matrix
 {{<br size="2">}}
 
 ---
