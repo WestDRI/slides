@@ -780,8 +780,116 @@ torch.Size([1, 3, 4])
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Various tensor operations</div></center>
+## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor information</div></center>
+{{<br size="2.5">}}
+
+```{py}
+t = torch.rand(2, 3); print(t)
+
+t.size()
+t.dim()
+```
+{{<out>}}
+```{py}
+tensor([[0.5885, 0.7005, 0.1048],
+        [0.1115, 0.7526, 0.0658]])
+
+torch.Size([2, 3])
+2
+```
+{{<br size="2.5">}}
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Basic tensor operations</div></center>
 {{<br size="2">}}
+
+```{py}
+t1 = torch.tensor([[1, 2], [3, 4]]); print(t1)
+t2 = torch.tensor([[1, 1], [2, 2]]); print(t2)
+t1 + t2
+torch.equal(t1 + t2, torch.add(t1, t2))
+```
+{{<out>}}
+```{py}
+tensor([[1, 2],
+        [3, 4]])
+tensor([[1, 1],
+        [2, 2]])
+tensor([[2, 3],
+        [5, 6]])
+True
+```
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">In-place operations</div></center>
+{{<br size="1.5">}}
+
+With operators post-fixed with `_`:
+{{<br size="1">}}
+
+```{py}
+t1 = torch.tensor([[1, 2]]); print(t1)
+t2 = torch.tensor([[1, 1]]); print(t2)
+
+t1.add_(t2); print(t1)
+t1.zero_(); print(t1)
+```
+{{<out>}}
+```{py}
+tensor([[1, 2]])
+tensor([[1, 1]])
+
+tensor([[2, 3]])
+tensor([[0, 0]])
+```
+
+---
+
+## <center><div style="font-size: 4rem; line-height: 4.5rem; color: #e6e6e6">Tensor views</div></center>
+
+```{py}
+t = torch.tensor([[1, 2, 3], [4, 5, 6]]); print(t)
+t.size()
+t.view(6)
+t.view(3, 2)
+# With -1, the size is inferred from other dimensions
+t.view(3, -1)  # Same as previous
+```
+{{<out>}}
+```{py}
+tensor([[1, 2, 3],
+        [4, 5, 6]])
+torch.Size([2, 3])
+tensor([1, 2, 3, 4, 5, 6])
+tensor([[1, 2],
+        [3, 4],
+        [5, 6]])
+```
+
+---
+
+## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">*Note the difference*</div></center>
+
+```{py}
+t1 = torch.tensor([[1, 2, 3], [4, 5, 6]]); print(t1)
+
+t2 = t1.t(); print(t2)
+t3 = t1.view(3, 2); print(t3)
+```
+{{<out>}}
+```{py}
+tensor([[1, 2, 3],
+        [4, 5, 6]])
+
+tensor([[1, 4],
+        [2, 5],
+        [3, 6]])
+tensor([[1, 2],
+        [3, 4],
+        [5, 6]])
+```
 
 ---
 
