@@ -675,6 +675,28 @@ tensor([[[[1., 1., 1., 1., 1.],
 
 ---
 
+## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+
+```{py}
+t = torch.rand(2, 3); print(t)
+torch.zeros_like(t)             # matches the size of t
+torch.ones_like(t)
+torch.randn_like(t)
+```
+{{<out>}}
+```{py}
+tensor([[0.4051, 0.6394, 0.0871],
+        [0.4509, 0.5255, 0.5057]])
+tensor([[0., 0., 0.],
+        [0., 0., 0.]])
+tensor([[1., 1., 1.],
+        [1., 1., 1.]])
+tensor([[-0.3088, -0.0104,  1.0461],
+        [ 0.9233,  0.0236, -2.1217]])
+```
+
+---
+
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
 
 ```{py}
