@@ -48,7 +48,7 @@ custom_theme_compile = true
 ---
 
 ## <center><div style="font-size: 3.3rem; color: #b2b2b3">*Using tensors locally*</div></center>
-{{<br size="3">}}
+{{<br size="2.5">}}
 
 You need to have {{<a "https://www.python.org/downloads/" "Python">}} and {{<a "https://pytorch.org/get-started/locally/" "PyTorch">}} installed
 {{<br size="2">}}
@@ -107,25 +107,25 @@ You can leave the Python virtual env with `deactivate`
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">ANN do not process information directly</div></center>
-{{<br size="2">}}
+## <center><div style="font-size: 2.8rem; color: #e6e6e6">ANN do not process information directly</div></center>
+{{<br size="1.5">}}
 
-{{<img8 src="/img/torchtensors/ml1.png" margin="rem" title="" width="85%" line-height="2.2rem">}}
+{{<img8 src="/img/torchtensors/ml1.png" margin="rem" title="" width="90%" line-height="2.2rem">}}
 Modified from Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
 {{</img8>}}
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">It needs to be converted to numbers</div></center>
-{{<br size="2">}}
+## <center><div style="font-size: 2.8rem; color: #e6e6e6">It needs to be converted to numbers</div></center>
+{{<br size="1.5">}}
 
-{{<img8 src="/img/torchtensors/ml2.png" margin="rem" title="" width="85%" line-height="2.2rem">}}
+{{<img8 src="/img/torchtensors/ml2.png" margin="rem" title="" width="90%" line-height="2.2rem">}}
 Modified from Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
 {{</img8>}}
 
 ---
 
-## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">All these numbers need to be stored and organized in a data structure</div></center>
+## <center><div style="font-size: 2.8rem; line-height: 3.5rem; color: #e6e6e6">All these numbers need to be stored <br> in a data structure</div></center>
 {{<br size="3">}}
 
 {{%fragment%}}
@@ -135,25 +135,26 @@ Modified from Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with
 {{<img8 src="/img/torchtensors/tensor.png" margin="rem" title="" width="85%" line-height="2.2rem">}}
 Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Manning Publications
 {{</img8>}}
-
 {{%/fragment%}}
+
+{{<br size="1">}}
 
 ---
 
-## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">Why a new object when NumPy ndarray already exists?</div></center>
-{{<br size="4.5">}}
+## <center><div style="font-size: 2.8rem; line-height: 3.5rem; color: #e6e6e6">Why a new object when NumPy ndarray already exists?</div></center>
+{{<br size="4">}}
 
 {{%fragment%}}
 - Can run on GPUs
-{{<br size="2">}}
+{{<br size="2.5">}}
 
 - Operations can be distributed
-{{<br size="2">}}
+{{<br size="2.5">}}
 
 - Keep track of computation graphs for automatic differentiation
 {{%/fragment%}}
 
-{{<br size="2">}}
+{{<br size="4">}}
 
 ---
 
@@ -539,11 +540,12 @@ This is sufficient for accuracy and much faster than 64-bit floating points
 {{<note>}}
 Note that, by contrast, NumPy ndarrays use 64-bit as their default
 {{</note>}}
+{{<br size="5">}}
 
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">List of PyTorch tensor dtypes</div></center>
-{{<br size="3">}}
+{{<br size="2.5">}}
 
 <table>
 <tr><td>torch.float16 / torch.half</td><td>&emsp;&emsp;</td><td>16-bit / half-precision floating-point</td></tr>
@@ -558,11 +560,12 @@ Note that, by contrast, NumPy ndarrays use 64-bit as their default
 <tr><td></td><td></td><td></td></tr>
 <tr><td>torch.bool</td><td></td><td>boolean</td></tr>
 </table>
+{{<br size="2">}}
 
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Checking & changing dtype</div></center>
-{{<br size="2.5">}}
+{{<br size="2">}}
 
 ```{py}
 t = torch.rand(2, 3); print(t)
@@ -593,24 +596,26 @@ torch.float64
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
-{{<br size="2">}}
-
-Many functions, e.g.:
-{{<br size="2">}}
+## <center><div style="font-size: 3.3rem; color: #e6e6e6">Creating tensors</div></center>
+{{<br size="2.5">}}
 
 - `torch.tensor`: input individual values
+{{<br size="1">}}
 - `torch.rand`: random numbers from a uniform distribution on `[0, 1)`
+{{<br size="1">}}
 - `torch.randn`: numbers from the standard normal distribution
+{{<br size="1">}}
 - `torch.empty`: uninitialized tensor
+{{<br size="1">}}
 - `torch.zeros`: tensor filled with `0`
+{{<br size="1">}}
 - `torch.ones`: tensor filled with `1`
-{{<br size="2">}}
+{{<br size="3">}}
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
-{{<br size="3">}}
+## <center><div style="font-size: 3.3rem; color: #e6e6e6">Creating tensors</div></center>
+{{<br size="2.5">}}
 
 ```{py}
 torch.manual_seed(0)  # If you want to reproduce the result
@@ -625,10 +630,11 @@ tensor([0.4963])
 
 0.49625658988952637
 ```
+{{<br size="4">}}
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+## <center><div style="font-size: 3.3rem; color: #e6e6e6">Creating tensors</div></center>
 {{<br size="2.5">}}
 
 ```{py}
@@ -644,11 +650,12 @@ tensor([[0.5675]])
 tensor([[[0.8352]]])
 tensor([[[[0.2056]]]])
 ```
+{{<br size="4">}}
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
-{{<br size="2">}}
+## <center><div style="font-size: 3.3rem; color: #e6e6e6">Creating tensors</div></center>
+{{<br size="1">}}
 
 ```{py}
 torch.rand(2)
@@ -669,7 +676,7 @@ tensor([[[[0.1147, 0.3168],
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+## <center><div style="font-size: 3.3rem; color: #e6e6e6">Creating tensors</div></center>
 {{<br size="1">}}
 
 ```{py}
@@ -691,7 +698,7 @@ tensor([[0.4556, 0.6323, 0.3489, 0.4017, 0.0223, 0.1689],
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+## <center><div style="font-size: 3.3rem; color: #e6e6e6">Creating tensors</div></center>
 
 ```{py}
 torch.rand(2, 4, dtype=torch.float64)  # You can set dtype
@@ -713,7 +720,7 @@ tensor([[[[1., 1., 1., 1., 1.],
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Creating tensors</div></center>
+## <center><div style="font-size: 3.3rem; color: #e6e6e6">Creating tensors</div></center>
 
 ```{py}
 t = torch.rand(2, 3); print(t)
@@ -735,7 +742,7 @@ tensor([[-0.3088, -0.0104,  1.0461],
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
+## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor indexing</div></center>
 
 ```{py}
 x = torch.rand(3, 4)
@@ -756,7 +763,7 @@ tensor(0.7724)
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
+## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor indexing</div></center>
 
 ```{py}
 x[-1:]         # Last element (implicit comma, so all columns)
@@ -777,8 +784,8 @@ torch.Size([1, 4])
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
-{{<br size="2.5">}}
+## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor indexing</div></center>
+{{<br size="2">}}
 
 ```{py}
 x[0:1]     # Python ranges are inclusive to the left, not the right
@@ -793,12 +800,12 @@ tensor([[0.5873, 0.0225, 0.7234, 0.4538],
 tensor([[0.5873, 0.0225, 0.7234, 0.4538],
         [0.8168, 0.0879, 0.2642, 0.3777]])
 ```
-{{<br size="2.5">}}
+{{<br size="4">}}
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor indexing</div></center>
-{{<br size="2">}}
+## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor indexing</div></center>
+{{<br size="1">}}
 
 ```{py}
 x[None]          # Adds a dimension of size one as the 1st dimension
@@ -815,11 +822,12 @@ tensor([[[0.5873, 0.0225, 0.7234, 0.4538],
 torch.Size([3, 4])
 torch.Size([1, 3, 4])
 ```
+{{<br size="3">}}
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Tensor information</div></center>
-{{<br size="2.5">}}
+## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor information</div></center>
+{{<br size="1.5">}}
 
 ```{py}
 t = torch.rand(2, 3); print(t)
@@ -835,12 +843,12 @@ tensor([[0.5885, 0.7005, 0.1048],
 torch.Size([2, 3])
 2
 ```
-{{<br size="2.5">}}
+{{<br size="3">}}
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Basic tensor operations</div></center>
-{{<br size="2">}}
+## <center><div style="font-size: 3rem; color: #e6e6e6">Simple tensor operations</div></center>
+{{<br size="1.5">}}
 
 ```{py}
 t1 = torch.tensor([[1, 2], [3, 4]]); print(t1)
@@ -861,8 +869,8 @@ True
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">In-place operations</div></center>
-{{<br size="1.5">}}
+## <center><div style="font-size: 3rem; color: #e6e6e6">In-place operations</div></center>
+{{<br size="1">}}
 
 With operators post-fixed with `_`:
 {{<br size="1">}}
@@ -885,7 +893,7 @@ tensor([[0, 0]])
 
 ---
 
-## <center><div style="font-size: 4rem; line-height: 4.5rem; color: #e6e6e6">Tensor views</div></center>
+## <center><div style="font-size: 3rem; line-height: 4.5rem; color: #e6e6e6">Tensor views</div></center>
 
 ```{py}
 t = torch.tensor([[1, 2, 3], [4, 5, 6]]); print(t)
@@ -908,7 +916,7 @@ tensor([[1, 2],
 
 ---
 
-## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">*Note the difference*</div></center>
+## <center><div style="font-size: 2.5rem; line-height: 4rem; color: #e6e6e6">*Note the difference*</div></center>
 
 ```{py}
 t1 = torch.tensor([[1, 2, 3], [4, 5, 6]]); print(t1)
@@ -931,7 +939,7 @@ tensor([[1, 2],
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Vectorized operations</div></center>
+## <center><div style="font-size: 3rem; color: #e6e6e6">Vectorized operations</div></center>
 {{<br size="2">}}
 
 
@@ -949,11 +957,11 @@ tensor([[1, 2],
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Device attribute</div></center>
-{{<br size="2.5">}}
+## <center><div style="font-size: 3rem; color: #e6e6e6">Device attribute</div></center>
+{{<br size="2">}}
 
 Tensor data can be placed in the memory of various processor types:
-{{<br size="3">}}
+{{<br size="2.5">}}
 
 - the RAM of CPU
 {{<br size="1">}}
@@ -965,14 +973,15 @@ Tensor data can be placed in the memory of various processor types:
 {{<br size="1">}}
 
 - the RAM of an {{<a "https://www.tensorflow.org/xla" "XLA device">}} (e.g. {{<a "https://cloud.google.com/tpu" "Cloud TPU">}}) with the {{<a "https://github.com/pytorch/xla/" "torch_xla package">}}
+{{<br size="3">}}
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Device attribute</div></center>
-{{<br size="2.5">}}
+## <center><div style="font-size: 3rem; color: #e6e6e6">Device attribute</div></center>
+{{<br size="1">}}
 
 The values for the device attributes are:
-{{<br size="2">}}
+{{<br size="1.5">}}
 
 - CPU: &nbsp;`'cpu'`
 {{<br size="1">}}
@@ -989,6 +998,7 @@ This last option requires to load the {{<a "https://github.com/pytorch/xla/" "to
 import torch_xla
 import torch_xla.core.xla_model as xm
 ```
+{{<br size="2.5">}}
 
 ---
 
@@ -1037,8 +1047,7 @@ t_gpu = t_cpu.cuda(1)              # Move to a specific GPU
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Working with NumPy</div></center>
-{{<br size="1.5">}}
+## <center><div style="font-size: 3rem; color: #e6e6e6">Working with NumPy</div></center>
 
 PyTorch tensors can be converted to NumPy ndarrays and vice-versa in a very efficient manner as both objects will share the same memory
 {{<br size="2">}}
@@ -1074,11 +1083,11 @@ Note that NumPy arrays only work on CPU, so to convert a tensor allocated to the
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">{{<a "https://pytorch.org/docs/master/linalg.html?highlight=linalg#module-torch.linalg" "torch.linalg">}} module</div></center>
-{{<br size="3">}}
+{{<br size="2">}}
 
 - All functions from {{<a "https://numpy.org/doc/stable/reference/routines.linalg.html" "numpy.linalg">}} implemented <br>
 (with accelerator & automatic differentiation support)
-{{<br size="3">}}
+{{<br size="2">}}
 
 - Some additional functions
 {{<br size="4">}}
@@ -1087,14 +1096,15 @@ Note that NumPy arrays only work on CPU, so to convert a tensor allocated to the
 Requires torch >= 1.9 <br>
 Linear algebra support less developed before introduction of this module
 {{</note>}}
+{{<br size="3">}}
 
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
-{{<br size="3">}}
+{{<br size="2">}}
 
 Let's have a look at an extremely basic example:
-{{<br size="4">}}
+{{<br size="2">}}
 
 <center>
 {{<simpleboxdark>}}
@@ -1106,6 +1116,7 @@ x - 2y + 8z = 21 <br>
 {{<br size="4">}}
 
 We are looking for the values of `x`, `y`, and `z` that would satisfy this system
+{{<br size="3">}}
 
 ---
 
@@ -1156,11 +1167,8 @@ z = 3
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
+## <center><div style="font-size: 3rem; color: #e6e6e6">Verify our result</div></center>
 {{<br size="3">}}
-
-We can verify our result with:
-{{<br size="2">}}
 
 ```{py}
 torch.allclose(A @ x, b)
@@ -1169,6 +1177,7 @@ torch.allclose(A @ x, b)
 ```{py}
 True
 ```
+{{<br size="3">}}
 
 ---
 
@@ -1196,9 +1205,7 @@ torch.allclose(A @ x, b)
 ## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
 {{<br size="1.5">}}
 
-Here are the outputs:
-{{<br size="2.5">}}
-
+{{<out>}}
 ```{py}
 tensor([[ 1.5091,  2.0820,  1.7067,  2.3804], # A (coefficients)
         [-1.1256, -0.3170, -1.0925, -0.0852],
@@ -1214,9 +1221,7 @@ True									      # Verification
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">System of linear equations solver</div></center>
-
-With 2 multidimensional tensors:
+## <center><div style="font-size: 2.8rem; color: #e6e6e6">With 2 multidimensional tensors</div></center>
 
 ```{py}
 A = torch.randn(2, 3, 3)              # Must be batches of square matrices
@@ -1280,8 +1285,8 @@ tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
 
 ---
 
-## <center><div style="font-size: 3rem; line-height: 3rem; color: #e6e6e6">Other linear algebra functions</div></center>
-{{<br size="3">}}
+## <center><div style="font-size: 3.3rem; line-height: 3rem; color: #e6e6e6">Other linear algebra functions</div></center>
+{{<br size="4">}}
 
 {{<a "https://pytorch.org/docs/master/linalg.html?highlight=linalg#module-torch.linalg" "torch.linalg">}} contains many more functions, including for instance:
 {{<br size="2">}}
@@ -1308,7 +1313,7 @@ tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Parallel tensor operations</div></center>
+## <center><div style="font-size: 3.3rem; color: #e6e6e6">Parallel tensor operations</div></center>
 {{<br size="2">}}
 
 PyTorch already allows for {{<a "https://pytorch.org/tutorials/beginner/dist_overview.html" "distributed training of ML models">}}
