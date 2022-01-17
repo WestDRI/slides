@@ -47,6 +47,44 @@ custom_theme_compile = true
 
 ---
 
+## <center><div style="font-size: 4rem; color: #e6e6e6">Using tensors locally</div></center>
+{{<br size="3">}}
+
+You need to have {{<a "https://www.python.org/downloads/" "Python">}} and {{<a "https://pytorch.org/get-started/locally/" "PyTorch">}} installed
+{{<br size="2">}}
+Additionally, you might want to use an IDE such as {{<a "https://github.com/jorgenschaefer/elpy" "elpy">}} if you are an Emacs user, {{<a "https://jupyter.org/" "JupyterLab">}}, etc.
+{{<br size="4.5">}}
+
+{{<note>}}
+Note that PyTorch does not yet support Python 3.10 except in some Linux distributions or on systems where a wheel has been built <br><br>
+For the time being, you might have to use it with Python 3.9
+{{</note>}}
+
+---
+
+## <center><div style="font-size: 4rem; color: #e6e6e6">Using tensors on CC clusters</div></center>
+{{<br size="1.5">}}
+
+In the cluster terminal:
+```sh
+avail_wheels "torch*" # List available wheels & compatible Python versions
+module avail python	  # List available Python versions
+module load python/3.9.6             # Load a sensible Python version
+virtualenv --no-download env         # Create a virtual env
+source env/bin/activate		         # Activate the virtual env
+pip install --no-index --upgrade pip # Update pip
+pip install --no-index torch		 # Install PyTorch
+```
+{{<br size="2">}}
+
+You can then run jobs with `sbatch` or `salloc`
+{{<br size="1">}}
+
+You can leave the Python virtual env with `deactivate`
+{{<br size="2">}}
+
+---
+
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Memory storage</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Data type (dtype)</div>
@@ -895,6 +933,8 @@ tensor([[1, 2],
 
 ## <center><div style="font-size: 4rem; color: #e6e6e6">Vectorized operations</div></center>
 {{<br size="2">}}
+
+
 
 ---
 
