@@ -47,7 +47,7 @@ custom_theme_compile = true
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Using tensors locally</div></center>
+## <center><div style="font-size: 3.3rem; color: #b2b2b3">*Using tensors locally*</div></center>
 {{<br size="3">}}
 
 You need to have {{<a "https://www.python.org/downloads/" "Python">}} and {{<a "https://pytorch.org/get-started/locally/" "PyTorch">}} installed
@@ -62,7 +62,7 @@ For the time being, you might have to use it with Python 3.9
 
 ---
 
-## <center><div style="font-size: 4rem; color: #e6e6e6">Using tensors on CC clusters</div></center>
+## <center><div style="font-size: 3.3rem; color: #b2b2b3">*Using tensors on CC clusters*</div></center>
 {{<br size="1.5">}}
 
 In the cluster terminal:
