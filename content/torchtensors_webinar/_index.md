@@ -889,6 +889,65 @@ tensor([[2, 3],
 
 ---
 
+## <center><div style="font-size: 3rem; color: #e6e6e6">Reduction</div></center>
+
+```{py}
+t = torch.ones(2, 3, 4); print(t)
+t.sum()   # Reduction over all entries
+```
+{{<out>}}
+```{py}
+tensor([[[1., 1., 1., 1.],
+         [1., 1., 1., 1.],
+         [1., 1., 1., 1.]],
+        [[1., 1., 1., 1.],
+         [1., 1., 1., 1.],
+         [1., 1., 1., 1.]]])
+tensor(24.)
+```
+{{<br size="2.5">}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Reduction</div></center>
+
+```{py}
+# Reduction over a specific dimension
+t.sum(0)  
+t.sum(1)
+t.sum(2)
+```
+{{<out>}}
+```{py}
+tensor([[2., 2., 2., 2.],
+        [2., 2., 2., 2.],
+        [2., 2., 2., 2.]])
+tensor([[3., 3., 3., 3.],
+        [3., 3., 3., 3.]])
+tensor([[4., 4., 4.],
+        [4., 4., 4.]])
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Reduction</div></center>
+
+```{py}
+# Reduction over multiple dimensions
+t.sum((0, 1))
+t.sum((0, 2))
+t.sum((1, 2))
+```
+{{<out>}}
+```{py}
+tensor([6., 6., 6., 6.])
+tensor([8., 8., 8.])
+tensor([12., 12.])
+```
+{{<br size="3.5">}}
+
+---
+
 ## <center><div style="font-size: 3rem; color: #e6e6e6">In-place operations</div></center>
 {{<br size="1">}}
 
