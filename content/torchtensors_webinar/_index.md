@@ -1025,8 +1025,23 @@ tensor([[1, 2],
 
 ---
 
+## <center><div style="font-size: 3rem; color: #e6e6e6">Logical operations</div></center>
 {{<br size="2">}}
 
+```{py}
+t1 = torch.randperm(5); print(t1)
+t2 = torch.randperm(5); print(t2)
+t1 > 3                            # Test each element
+t1 < t2                           # Test corresponding pairs of elements
+```
+{{<out>}}
+```{py}
+tensor([4, 1, 0, 2, 3])
+tensor([0, 4, 2, 1, 3])
+tensor([ True, False, False, False, False])
+tensor([False,  True,  True, False, False])
+```
+{{<br size="2.5">}}
 
 
 ---
