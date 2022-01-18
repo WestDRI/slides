@@ -742,6 +742,28 @@ tensor([[-0.3088, -0.0104,  1.0461],
 
 ---
 
+## <center><div style="font-size: 3.3rem; color: #e6e6e6">Creating tensors</div></center>
+
+```{py}
+torch.arange(2, 10, 4)    # from 2 to 10 in increments of 4
+torch.linspace(2, 10, 4)  # 4 elements from 2 to 10 on the linear scale
+torch.logspace(2, 10, 4)  # Same on the log scale
+torch.randperm(4)
+torch.eye(3)
+```
+{{<out>}}
+```{py}
+tensor([2, 6])
+tensor([2.0000,  4.6667,  7.3333, 10.0000])
+tensor([1.0000e+02, 4.6416e+04, 2.1544e+07, 1.0000e+10])
+tensor([1, 3, 2, 0])
+tensor([[1., 0., 0.],
+        [0., 1., 0.],
+        [0., 0., 1.]])
+```
+
+---
+
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor indexing</div></center>
 
 ```{py}
