@@ -1076,75 +1076,115 @@ tensor([False,  True,  True, False, False])
 
 ---
 
+## <center><div style="font-size: 3rem; color: #e6e6e6">Conversion without copy</div></center>
 
+PyTorch tensors can be converted to NumPy ndarrays & vice-versa in a very efficient manner as both objects will share the same memory
+{{<br size="2">}}
 
+```{py}
+t = torch.rand(2, 3); print(t)
+t_np = t.numpy(); print(t_np)      # From PyTorch tensor to NumPy ndarray
+```
+{{<out>}}
+```{py}
+tensor([[0.8434, 0.0876, 0.7507],
+        [0.1457, 0.3638, 0.0563]])   # PyTorch Tensor
 
+[[0.84344184 0.08764815 0.7506627 ]
+ [0.14567494 0.36384273 0.05629885]] # NumPy ndarray
+```
 
 ---
 
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Mind the different defaults*</div></center>
 
+```{py}
+t_np.dtype
+```
+{{<out>}}
+```{py}
+dtype('float32')
+```
+{{<br size="3.5">}}
 
+{{<note>}}
+Remember that PyTorch tensors use 32-bit floating points by default <br>
+(because this is what you want in neural networks) <br><br>
 
+But NumPy defaults to 64-bit <br>
+Depending on your workflow, you might have to change dtype
+{{</note>}}
 {{<br size="3">}}
 
 
 ---
 
+## <center><div style="font-size: 3rem; color: #e6e6e6">From NumPy to PyTorch</div></center>
 
 ```{py}
+import numpy as np
+a = np.random.rand(2, 3); print(a)
+a_pt = torch.from_numpy(a); print(a_pt)    # From ndarray to tensor
 ```
 {{<out>}}
 ```{py}
+[[0.55892276 0.06026952 0.72496545]
+ [0.65659463 0.27697739 0.29141587]]
+
+tensor([[0.5589, 0.0603, 0.7250],
+        [0.6566, 0.2770, 0.2914]], dtype=torch.float64)
 ```
+
 {{<note>}}
+Here again, you might have to change dtype
 {{</note>}}
 
 ---
 
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Notes about conversion without copy*</div></center>
 {{<br size="1.5">}}
 
+`t` and `t_np` are objects of different Python types, so, as far as Python is concerned, they have different addresses
+{{<br size="3">}}
 
 ```{py}
+hex(id(t)) == hex(id(t_np))
 ```
 {{<out>}}
 ```{py}
+False
 ```
+{{<br size="3.5">}}
 
 ---
 
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Notes about conversion without copy*</div></center>
 {{<br size="1">}}
 
+However—{{<a "https://stackoverflow.com/q/61526297/9210961" "and that's quite confusing">}}—they share an underlying C array in memory & modifying one in-place also modifies the other
 {{<br size="2">}}
 
 ```{py}
+t.zero_()
+print(t_np)
 ```
+{{<out>}}
 ```{py}
+tensor([[0., 0., 0.],
+        [0., 0., 0.]])
 
+[[0. 0. 0.]
+ [0. 0. 0.]]
 ```
+{{<br size="3">}}
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Working with NumPy</div></center>
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Notes about conversion without copy*</div></center>
+{{<br size="4">}}
 
-PyTorch tensors can be converted to NumPy ndarrays and vice-versa in a very efficient manner as both objects will share the same memory
-{{<br size="2">}}
-
-```{py}
-t = torch.rand(2, 3)
-t_np = t.numpy()
-t2 = torch.from_numpy(t_np)
-torch.equal(t, t2)
-```
-
-{{<note>}}
-Remember that PyTorch tensors use 32-bit floating points by default <br>
-While NumPy uses 64-bit by default <br>
-In neural networks, 32-bit is what you want to use
-{{</note>}}
-
-{{<note>}}
-Note that NumPy arrays only work on CPU, so to convert a tensor allocated to the GPU, the content will be copied to the CPU first
-{{</note>}}
+Lastly, as NumPy only works on CPU, to convert a PyTorch tensor allocated to the GPU, the content will have to be copied to the CPU first
+{{<br size="5">}}
 
 ---
 
