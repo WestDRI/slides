@@ -1103,34 +1103,82 @@ import torch_xla.core.xla_model as xm
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Creating a tensor on a specific device</div></center>
-{{<br size="3">}}
+{{<br size="1.5">}}
+
+By default, tensors are created on the CPU
+{{<br size="2">}}
 
 ```{py}
-t_gpu = torch.rand(2, 3, device='cuda')
+t1 = torch.rand(2); print(t1)
 ```
+{{<out>}}
+```{py}
+tensor([0.1606, 0.9771])  # Implicit: device='cpu'
+```
+{{<note>}}
+Printing a tensor only displays attributes ≠ default values
+{{</note>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Creating a tensor on a specific device</div></center>
+{{<br size="1.5">}}
+
+You can create a tensor on an accelerator by specifying the device attribute
+{{<br size="2">}}
+
+```{py}
+t2_gpu = torch.rand(2, device='cuda'); print(t2_gpu)
+```
+{{<out>}}
+```{py}
+tensor([0.0664, 0.7829], device='cuda:0')  # :0 means the 1st GPU
+```
+{{<br size="7.5">}}
 
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Copying a tensor to a specific device</div></center>
-{{<br size="2">}}
+{{<br size="1">}}
 
+You can also make copies of a tensor on other devices
+{{<br size="2">}}
 ```{py}
-t_cpu = t_gpu.to(device='cpu')     # Move to CPU
-t_gpu = t_cpu.to(device='cuda')    # Move to GPU
-t_gpu = t_cpu.to(device='cuda:0')  # Move to a specific GPU
-t_gpu = t_cpu.to(device='cuda:1')  # Move to a specific GPU
+# Make a copy of t1 on the GPU
+t1_gpu = t1.to(device='cuda'); print(t1_gpu)
+t1_gpu = t1.cuda()  # Same as above written differently
+
+# Make a copy of t2_gpu on the CPU
+t2 = t2_gpu.to(device='cpu'); print(t2)
+t2 = t2_gpu.cpu()   # For the altenative form
+```
+{{<out>}}
+```{py}
+tensor([0.1606, 0.9771], device='cuda:0')
+tensor([0.0664, 0.7829]) # Implicit: device='cpu'
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Multiple GPUs</div></center>
+{{<br size="1">}}
+
+If you have multiple GPUs, you can optionally specify which GPU a tensor should be created on or copied to
+{{<br size="2">}}
+```{py}
+t3_gpu = torch.rand(2, device='cuda:0')  # Create a tensor on 1st GPU
+t4_gpu = t1.to(device='cuda:0')          # Make a copy of t1 on 1st GPU
+t5_gpu = t1.to(device='cuda:1')          # Make a copy of t1 on 2nd GPU
 ```
 {{<br size="2">}}
 
 {{%fragment%}}
-Or the equivalent short forms:
+Or the equivalent short forms for the last two:
 {{<br size="2">}}
 
 ```{py}
-t_cpu = t_gpu.cpu()                # Move to CPU
-t_gpu = t_cpu.cuda()               # Move to GPU
-t_gpu = t_cpu.cuda(0)              # Move to a specific GPU
-t_gpu = t_cpu.cuda(1)              # Move to a specific GPU
+t4_gpu = t1.cuda(0)
+t5_gpu = t1.cuda(1)
 ```
 {{%/fragment%}}
 
