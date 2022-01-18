@@ -867,6 +867,14 @@ torch.Size([2, 3])
 
 ---
 
+## <center><div style="font-size: 3rem; color: #e6e6e6">Vectorized operations</div></center>
+{{<br size="2.5">}}
+
+Since PyTorch tensors are homogeneous (i.e. made of a single data type), {{<a "https://www.pythonlikeyoumeanit.com/Module3_IntroducingNumpy/VectorizedOperations.html#Vectorized-Operations" "as with NumPy's ndarrays">}}, operations are vectorized & thus staggeringly fast
+{{<br size="5">}}
+
+---
+
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Simple mathematical operations</div></center>
 
 ```{py}
@@ -1014,7 +1022,6 @@ tensor([[1, 2],
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Vectorized operations</div></center>
 {{<br size="2">}}
 
 
