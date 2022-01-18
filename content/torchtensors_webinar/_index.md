@@ -856,6 +856,7 @@ t = torch.rand(2, 3); print(t)
 
 t.size()
 t.dim()
+t.numel()
 ```
 {{<out>}}
 ```{py}
@@ -864,6 +865,7 @@ tensor([[0.5885, 0.7005, 0.1048],
 
 torch.Size([2, 3])
 2
+6
 ```
 {{<br size="3">}}
 
