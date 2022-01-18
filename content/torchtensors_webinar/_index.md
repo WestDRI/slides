@@ -900,19 +900,19 @@ With operators post-fixed with `_`:
 {{<br size="1">}}
 
 ```{py}
-t1 = torch.tensor([[1, 2]]); print(t1)
-t2 = torch.tensor([[1, 1]]); print(t2)
+t1 = torch.tensor([1, 2]); print(t1)
+t2 = torch.tensor([1, 1]); print(t2)
 
 t1.add_(t2); print(t1)  # Same as t1 = t1 + t2 or t1 = t1.add(t2)
 t1.zero_(); print(t1)
 ```
 {{<out>}}
 ```{py}
-tensor([[1, 2]])
-tensor([[1, 1]])
+tensor([1, 2])
+tensor([1, 1])
 
-tensor([[2, 3]])
-tensor([[0, 0]])
+tensor([2, 3])
+tensor([0, 0])
 ```
 
 ---
