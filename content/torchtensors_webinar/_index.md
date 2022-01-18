@@ -91,7 +91,7 @@ You can leave the Python virtual env with `deactivate`
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
-## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Harvesting the power of GPUs</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
 
 ---
@@ -102,7 +102,7 @@ You can leave the Python virtual env with `deactivate`
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
-## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Harvesting the power of GPUs</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
 
 ---
@@ -200,7 +200,7 @@ But the PyTorch tensor has additional efficiency characteristics ideal for machi
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
-## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Harvesting the power of GPUs</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
 
 ---
@@ -523,7 +523,7 @@ torch.Size([1, 3, 2])
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
-## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Harvesting the power of GPUs</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
 
 ---
@@ -591,7 +591,7 @@ torch.float64
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Basic operations</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
-## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Harvesting the power of GPUs</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
 
 ---
@@ -1071,12 +1071,13 @@ tensor([False,  True,  True, False, False])
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Working with NumPy ndarrays</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
-## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Harvesting the power of GPUs</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
 
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Conversion without copy</div></center>
+{{<br size="1">}}
 
 PyTorch tensors can be converted to NumPy ndarrays & vice-versa in a very efficient manner as both objects will share the same memory
 {{<br size="2">}}
@@ -1093,6 +1094,7 @@ tensor([[0.8434, 0.0876, 0.7507],
 [[0.84344184 0.08764815 0.7506627 ]
  [0.14567494 0.36384273 0.05629885]] # NumPy ndarray
 ```
+{{<br size="3">}}
 
 ---
 
@@ -1194,7 +1196,7 @@ Lastly, as NumPy only works on CPU, to convert a PyTorch tensor allocated to the
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Linear algebra</div>
-## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Harvesting the power of GPUs</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
 
 ---
@@ -1422,7 +1424,7 @@ tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
-## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Harvesting the power of GPUs</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
 
 ---
@@ -1560,7 +1562,7 @@ t5_gpu = t1.cuda(1)
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Basic operations</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with NumPy ndarrays</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
-## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Working with GPUs</div>
+## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Harvesting the power of GPUs</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Distributed operations</div>
 
 ---
