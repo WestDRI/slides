@@ -244,7 +244,7 @@ Under the hood, the values of a PyTorch tensor are stored as a {{%c%}}torch.Stor
 {{%fragment%}}
 ```{py}
 import torch
-t = torch.stack((torch.arange(5.), torch.arange(5., 10.))); print(t)
+t = torch.arange(10.).view(2, 5); print(t) # Functions explained later
 ```
 {{<out>}}
 ```{py}
@@ -872,10 +872,9 @@ torch.Size([2, 3])
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Simple mathematical operations</div></center>
-{{<br size="1.5">}}
 
 ```{py}
-t1 = torch.tensor([[1, 2], [3, 4]]); print(t1)
+t1 = torch.arange(1, 5).view(2, 2); print(t1)
 t2 = torch.tensor([[1, 1], [0, 0]]); print(t2)
 t1 + t2 # Operation performed between elements at corresponding locations
 t1 + 1  # Operation applied to each element of the tensor
