@@ -788,12 +788,12 @@ tensor(0.7724)
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor indexing</div></center>
 
 ```{py}
-x[-1:]         # Last element (implicit comma, so all columns)
-x[-1]          # No range, so no implicit comma: we are indexing a tensor
+x[-1:]        # Last element (implicit comma, so all columns)
+x[-1]         # No range, no implicit comma: we are indexing 
 # from a list of tensors, so the result is a one dimensional tensor
 # (Each dimension is a list of tensors of the previous dimension)
-x[-1].size()   # Same number of dimensions than x (2 dimensions)
-x[-1:].size()  # We dropped one dimension
+x[-1].size()  # Same number of dimensions than x (2 dimensions)
+x[-1:].size() # We dropped one dimension
 ```
 {{<out>}}
 ```{py}
@@ -827,11 +827,10 @@ tensor([[0.5873, 0.0225, 0.7234, 0.4538],
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor indexing</div></center>
-{{<br size="1">}}
+{{<br size="2">}}
 
 ```{py}
 x[None]          # Adds a dimension of size one as the 1st dimension
-
 x.size()
 x[None].size()
 ```
@@ -840,11 +839,10 @@ x[None].size()
 tensor([[[0.5873, 0.0225, 0.7234, 0.4538],
          [0.9525, 0.0111, 0.6421, 0.4647],
          [0.8168, 0.0879, 0.2642, 0.3777]]])
-
 torch.Size([3, 4])
 torch.Size([1, 3, 4])
 ```
-{{<br size="3">}}
+{{<br size="4">}}
 
 ---
 
@@ -853,7 +851,6 @@ torch.Size([1, 3, 4])
 
 ```{py}
 t = torch.rand(2, 3); print(t)
-
 t.size()
 t.dim()
 t.numel()
@@ -862,7 +859,6 @@ t.numel()
 ```{py}
 tensor([[0.5885, 0.7005, 0.1048],
         [0.1115, 0.7526, 0.0658]])
-
 torch.Size([2, 3])
 2
 6
@@ -902,7 +898,6 @@ With operators post-fixed with `_`:
 ```{py}
 t1 = torch.tensor([1, 2]); print(t1)
 t2 = torch.tensor([1, 1]); print(t2)
-
 t1.add_(t2); print(t1)  # Same as t1 = t1 + t2 or t1 = t1.add(t2)
 t1.zero_(); print(t1)
 ```
@@ -910,7 +905,6 @@ t1.zero_(); print(t1)
 ```{py}
 tensor([1, 2])
 tensor([1, 1])
-
 tensor([2, 3])
 tensor([0, 0])
 ```
@@ -924,8 +918,7 @@ t = torch.tensor([[1, 2, 3], [4, 5, 6]]); print(t)
 t.size()
 t.view(6)
 t.view(3, 2)
-# With -1, the size is inferred from other dimensions
-t.view(3, -1)  # Same as previous
+t.view(3, -1) # Same: with -1, the size is inferred from other dimensions
 ```
 {{<out>}}
 ```{py}
@@ -941,10 +934,10 @@ tensor([[1, 2],
 ---
 
 ## <center><div style="font-size: 2.5rem; line-height: 4rem; color: #e6e6e6">*Note the difference*</div></center>
+{{<br size="2">}}
 
 ```{py}
 t1 = torch.tensor([[1, 2, 3], [4, 5, 6]]); print(t1)
-
 t2 = t1.t(); print(t2)
 t3 = t1.view(3, 2); print(t3)
 ```
@@ -952,7 +945,6 @@ t3 = t1.view(3, 2); print(t3)
 ```{py}
 tensor([[1, 2, 3],
         [4, 5, 6]])
-
 tensor([[1, 4],
         [2, 5],
         [3, 6]])
@@ -1160,7 +1152,6 @@ b = torch.tensor([5., 21., -1.]); print(b)
 tensor([[ 2.,  3., -1.],
         [ 1., -2.,  8.],
         [ 6.,  1., -3.]])
-
 tensor([ 5., 21., -1.])
 ```
 
@@ -1285,7 +1276,7 @@ Limit matrix inversions to situations where it is truly necessary
 
 ---
 
-## <center><div style="font-size: 3rem; line-height: 3rem; color: #e6e6e6">Matrix inversions</div></center>
+## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">Matrix inversions</div></center>
 
 ```{py}
 A = torch.rand(3, 3, 3)
@@ -1297,11 +1288,9 @@ A @ A_inv
 tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
          [ 5.5627e-08,  1.0000e+00,  1.0795e-06],
          [-1.4133e-07,  7.9992e-08,  1.0000e+00]],
-
         [[ 1.0000e+00, -1.3301e-07, -1.3090e-07],
          [ 4.2567e-08,  1.0000e+00, -5.0706e-09],
          [ 3.2889e-08, -2.6357e-09,  1.0000e+00]],
-
         [[ 1.0000e+00,  4.3329e-08, -3.6741e-09],
          [-7.4627e-08,  1.0000e+00,  1.4579e-07],
          [-6.3580e-08,  8.2354e-08,  1.0000e+00]]])
