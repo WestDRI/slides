@@ -597,19 +597,19 @@ torch.float64
 ---
 
 ## <center><div style="font-size: 3.3rem; color: #e6e6e6">Creating tensors</div></center>
-{{<br size="2.5">}}
+{{<br size="1">}}
 
-- `torch.tensor`: input individual values
-{{<br size="1">}}
-- `torch.rand`: random numbers from a uniform distribution on `[0, 1)`
-{{<br size="1">}}
-- `torch.randn`: numbers from the standard normal distribution
-{{<br size="1">}}
-- `torch.empty`: uninitialized tensor
-{{<br size="1">}}
-- `torch.zeros`: tensor filled with `0`
-{{<br size="1">}}
-- `torch.ones`: tensor filled with `1`
+- `torch.tensor`: &ensp;&nbsp;&nbsp;&nbsp;Input individual values
+- `torch.arange`: &ensp;&nbsp;&nbsp;&nbsp;Similar to `range` but creates a 1D tensor
+- `torch.linspace`: &nbsp;&nbsp;1D linear scale tensor
+- `torch.logspace`: &nbsp;&nbsp;1D log scale tensor
+- `torch.rand`: &emsp;&nbsp;&nbsp;&ensp;Random numbers from a uniform distribution on `[0, 1)`
+- `torch.randn`: &emsp;&ensp;Numbers from the standard normal distribution
+- `torch.randperm`: &nbsp;&nbsp;Random permutation of integers
+- `torch.empty`: &emsp;&ensp;Uninitialized tensor
+- `torch.zeros`: &emsp;&ensp;Tensor filled with `0`
+- `torch.ones`: &emsp;&nbsp;&nbsp;&ensp;Tensor filled with `1`
+- `torch.eye`: &emsp;&ensp;&nbsp;&nbsp;&ensp;Identity matrix
 {{<br size="3">}}
 
 ---
