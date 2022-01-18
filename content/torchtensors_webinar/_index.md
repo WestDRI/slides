@@ -913,7 +913,10 @@ tensor([[[1., 1., 1., 1.],
          [1., 1., 1., 1.]]])
 tensor(24.)
 ```
-{{<br size="2.5">}}
+{{<note>}}
+Other reduction functions (e.g. mean) behave the same way
+{{</note>}}
+
 
 ---
 
