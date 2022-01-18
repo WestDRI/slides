@@ -968,7 +968,7 @@ With operators post-fixed with `_`:
 ```{py}
 t1 = torch.tensor([1, 2]); print(t1)
 t2 = torch.tensor([1, 1]); print(t2)
-t1.add_(t2); print(t1)  # Same as t1 = t1 + t2 or t1 = t1.add(t2)
+t1.add_(t2); print(t1)
 t1.zero_(); print(t1)
 ```
 {{<out>}}
@@ -978,6 +978,26 @@ tensor([1, 1])
 tensor([2, 3])
 tensor([0, 0])
 ```
+
+---
+
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*In-place operations vs reassignments*</div></center>
+{{<br size="1.5">}}
+
+```{py}
+t1 = torch.ones(1); t1, hex(id(t1))
+t1.add_(1); t1, hex(id(t1))        # In-place operation: same address
+t1 = t1.add(1); t1, hex(id(t1))    # Reassignment: new address in memory
+t1 = t1 + 1; t1, hex(id(t1))       # Reassignment: new address in memory
+```
+{{<out>}}
+```{py}
+(tensor([1.]), '0x7fc61accc3b0')
+(tensor([2.]), '0x7fc61accc3b0')
+(tensor([3.]), '0x7fc61accc5e0')
+(tensor([4.]), '0x7fc61accc6d0')
+```
+{{<br size="3">}}
 
 ---
 
