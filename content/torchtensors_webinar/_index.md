@@ -871,24 +871,25 @@ torch.Size([2, 3])
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Simple tensor operations</div></center>
+## <center><div style="font-size: 3rem; color: #e6e6e6">Simple mathematical operations</div></center>
 {{<br size="1.5">}}
 
 ```{py}
 t1 = torch.tensor([[1, 2], [3, 4]]); print(t1)
-t2 = torch.tensor([[1, 1], [2, 2]]); print(t2)
-t1 + t2
-torch.equal(t1 + t2, torch.add(t1, t2))
+t2 = torch.tensor([[1, 1], [0, 0]]); print(t2)
+t1 + t2 # Operation performed between elements at corresponding locations
+t1 + 1  # Operation applied to each element of the tensor
 ```
 {{<out>}}
 ```{py}
 tensor([[1, 2],
         [3, 4]])
 tensor([[1, 1],
-        [2, 2]])
+        [0, 0]])
 tensor([[2, 3],
-        [5, 6]])
-True
+        [3, 4]])
+tensor([[2, 3],
+        [4, 5]])
 ```
 
 ---
@@ -903,7 +904,7 @@ With operators post-fixed with `_`:
 t1 = torch.tensor([[1, 2]]); print(t1)
 t2 = torch.tensor([[1, 1]]); print(t2)
 
-t1.add_(t2); print(t1)
+t1.add_(t2); print(t1)  # Same as t1 = t1 + t2 or t1 = t1.add(t2)
 t1.zero_(); print(t1)
 ```
 {{<out>}}
