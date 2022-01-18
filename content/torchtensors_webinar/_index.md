@@ -1063,7 +1063,6 @@ tensor([False,  True,  True, False, False])
 ```
 {{<br size="2.5">}}
 
-
 ---
 
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
@@ -1077,131 +1076,51 @@ tensor([False,  True,  True, False, False])
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Device attribute</div></center>
-{{<br size="2">}}
 
-Tensor data can be placed in the memory of various processor types:
-{{<br size="2.5">}}
 
-- the RAM of CPU
-{{<br size="1">}}
 
-- the RAM of a GPU with CUDA support
-{{<br size="1">}}
-
-- the RAM of a GPU with {{<a "https://pytorch.org/blog/pytorch-for-amd-rocm-platform-now-available-as-python-package/" "AMD's ROCm support">}}
-{{<br size="1">}}
-
-- the RAM of an {{<a "https://www.tensorflow.org/xla" "XLA device">}} (e.g. {{<a "https://cloud.google.com/tpu" "Cloud TPU">}}) with the {{<a "https://github.com/pytorch/xla/" "torch_xla package">}}
-{{<br size="3">}}
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Device attribute</div></center>
-{{<br size="1">}}
 
-The values for the device attributes are:
-{{<br size="1.5">}}
 
-- CPU: &nbsp;`'cpu'`
-{{<br size="1">}}
 
-- GPU (CUDA and AMD's ROCm): &nbsp;`'cuda'`
-{{<br size="1">}}
-
-- XLA: &nbsp;`xm.xla_device()`
 {{<br size="3">}}
 
-This last option requires to load the {{<a "https://github.com/pytorch/xla/" "torch_xla package">}} first:
-
-```{py}
-import torch_xla
-import torch_xla.core.xla_model as xm
-```
-{{<br size="2.5">}}
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Creating a tensor on a specific device</div></center>
-{{<br size="1.5">}}
-
-By default, tensors are created on the CPU
-{{<br size="2">}}
 
 ```{py}
-t1 = torch.rand(2); print(t1)
 ```
 {{<out>}}
 ```{py}
-tensor([0.1606, 0.9771])  # Implicit: device='cpu'
 ```
 {{<note>}}
-Printing a tensor only displays attributes ≠ default values
 {{</note>}}
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Creating a tensor on a specific device</div></center>
 {{<br size="1.5">}}
 
-You can create a tensor on an accelerator by specifying the device attribute
-{{<br size="2">}}
 
 ```{py}
-t2_gpu = torch.rand(2, device='cuda'); print(t2_gpu)
 ```
 {{<out>}}
 ```{py}
-tensor([0.0664, 0.7829], device='cuda:0')  # :0 means the 1st GPU
-```
-{{<br size="7.5">}}
-
----
-
-## <center><div style="font-size: 3rem; color: #e6e6e6">Copying a tensor to a specific device</div></center>
-{{<br size="1">}}
-
-You can also make copies of a tensor on other devices
-{{<br size="2">}}
-```{py}
-# Make a copy of t1 on the GPU
-t1_gpu = t1.to(device='cuda'); print(t1_gpu)
-t1_gpu = t1.cuda()  # Same as above written differently
-
-# Make a copy of t2_gpu on the CPU
-t2 = t2_gpu.to(device='cpu'); print(t2)
-t2 = t2_gpu.cpu()   # For the altenative form
-```
-{{<out>}}
-```{py}
-tensor([0.1606, 0.9771], device='cuda:0')
-tensor([0.0664, 0.7829]) # Implicit: device='cpu'
 ```
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Multiple GPUs</div></center>
 {{<br size="1">}}
 
-If you have multiple GPUs, you can optionally specify which GPU a tensor should be created on or copied to
-{{<br size="2">}}
-```{py}
-t3_gpu = torch.rand(2, device='cuda:0')  # Create a tensor on 1st GPU
-t4_gpu = t1.to(device='cuda:0')          # Make a copy of t1 on 1st GPU
-t5_gpu = t1.to(device='cuda:1')          # Make a copy of t1 on 2nd GPU
-```
-{{<br size="2">}}
-
-{{%fragment%}}
-Or the equivalent short forms for the last two:
 {{<br size="2">}}
 
 ```{py}
-t4_gpu = t1.cuda(0)
-t5_gpu = t1.cuda(1)
 ```
-{{%/fragment%}}
+```{py}
 
+```
 
 ---
 
@@ -1465,6 +1384,134 @@ tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Linear algebra</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #e6e6e6">- Working with GPUs</div>
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- Distributed operations</div>
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Device attribute</div></center>
+{{<br size="2">}}
+
+Tensor data can be placed in the memory of various processor types:
+{{<br size="2.5">}}
+
+- the RAM of CPU
+{{<br size="1">}}
+
+- the RAM of a GPU with CUDA support
+{{<br size="1">}}
+
+- the RAM of a GPU with {{<a "https://pytorch.org/blog/pytorch-for-amd-rocm-platform-now-available-as-python-package/" "AMD's ROCm support">}}
+{{<br size="1">}}
+
+- the RAM of an {{<a "https://www.tensorflow.org/xla" "XLA device">}} (e.g. {{<a "https://cloud.google.com/tpu" "Cloud TPU">}}) with the {{<a "https://github.com/pytorch/xla/" "torch_xla package">}}
+{{<br size="3">}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Device attribute</div></center>
+{{<br size="1">}}
+
+The values for the device attributes are:
+{{<br size="1.5">}}
+
+- CPU: &nbsp;`'cpu'`
+{{<br size="1">}}
+
+- GPU (CUDA and AMD's ROCm): &nbsp;`'cuda'`
+{{<br size="1">}}
+
+- XLA: &nbsp;`xm.xla_device()`
+{{<br size="3">}}
+
+This last option requires to load the {{<a "https://github.com/pytorch/xla/" "torch_xla package">}} first:
+
+```{py}
+import torch_xla
+import torch_xla.core.xla_model as xm
+```
+{{<br size="2.5">}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Creating a tensor on a specific device</div></center>
+{{<br size="1.5">}}
+
+By default, tensors are created on the CPU
+{{<br size="2">}}
+
+```{py}
+t1 = torch.rand(2); print(t1)
+```
+{{<out>}}
+```{py}
+tensor([0.1606, 0.9771])  # Implicit: device='cpu'
+```
+{{<note>}}
+Printing a tensor only displays attributes ≠ default values
+{{</note>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Creating a tensor on a specific device</div></center>
+{{<br size="1.5">}}
+
+You can create a tensor on an accelerator by specifying the device attribute
+{{<br size="2">}}
+
+```{py}
+t2_gpu = torch.rand(2, device='cuda'); print(t2_gpu)
+```
+{{<out>}}
+```{py}
+tensor([0.0664, 0.7829], device='cuda:0')  # :0 means the 1st GPU
+```
+{{<br size="7.5">}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Copying a tensor to a specific device</div></center>
+{{<br size="1">}}
+
+You can also make copies of a tensor on other devices
+{{<br size="2">}}
+```{py}
+# Make a copy of t1 on the GPU
+t1_gpu = t1.to(device='cuda'); print(t1_gpu)
+t1_gpu = t1.cuda()  # Same as above written differently
+
+# Make a copy of t2_gpu on the CPU
+t2 = t2_gpu.to(device='cpu'); print(t2)
+t2 = t2_gpu.cpu()   # For the altenative form
+```
+{{<out>}}
+```{py}
+tensor([0.1606, 0.9771], device='cuda:0')
+tensor([0.0664, 0.7829]) # Implicit: device='cpu'
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Multiple GPUs</div></center>
+{{<br size="1">}}
+
+If you have multiple GPUs, you can optionally specify which GPU a tensor should be created on or copied to
+{{<br size="2">}}
+```{py}
+t3_gpu = torch.rand(2, device='cuda:0')  # Create a tensor on 1st GPU
+t4_gpu = t1.to(device='cuda:0')          # Make a copy of t1 on 1st GPU
+t5_gpu = t1.to(device='cuda:1')          # Make a copy of t1 on 2nd GPU
+```
+{{<br size="2">}}
+
+{{%fragment%}}
+Or the equivalent short forms for the last two:
+{{<br size="2">}}
+
+```{py}
+t4_gpu = t1.cuda(0)
+t5_gpu = t1.cuda(1)
+```
+{{%/fragment%}}
+
 ---
 
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
