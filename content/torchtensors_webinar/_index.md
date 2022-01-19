@@ -50,7 +50,7 @@ custom_theme_compile = true
 ## <center><div style="font-size: 3.3rem; color: #b2b2b3">*Using tensors locally*</div></center>
 {{<br size="2.5">}}
 
-You need to have {{<a "https://www.python.org/downloads/" "Python">}} and {{<a "https://pytorch.org/get-started/locally/" "PyTorch">}} installed
+You need to have {{<a "https://www.python.org/downloads/" "Python">}} & {{<a "https://pytorch.org/get-started/locally/" "PyTorch">}} installed
 {{<br size="2">}}
 Additionally, you might want to use an IDE such as {{<a "https://github.com/jorgenschaefer/elpy" "elpy">}} if you are an Emacs user, {{<a "https://jupyter.org/" "JupyterLab">}}, etc.
 {{<br size="4.5">}}
@@ -211,7 +211,7 @@ But the PyTorch tensor has additional efficiency characteristics ideal for machi
 In Python, collections (lists, tuples) are groupings of boxed Python objects
 {{<br size="1">}}
 
-PyTorch tensors and NumPy ndarrays are made of unboxed C numeric types
+PyTorch tensors & NumPy ndarrays are made of unboxed C numeric types
 {{<br size="2.5">}}
 
 {{<img8 src="/img/torchtensors/memory_storage.png" margin="rem" title="" width="60%" line-height="2.2rem">}}
@@ -541,7 +541,7 @@ torch.Size([1, 3, 2])
 Since PyTorch tensors were built with utmost efficiency in mind for neural networks, the default data type is {{<e>}}32-bit floating points{{</e>}}
 {{<br size="3">}}
 
-This is sufficient for accuracy and much faster than 64-bit floating points
+This is sufficient for accuracy & much faster than 64-bit floating points
 {{<br size="3">}}
 
 {{<note>}}
@@ -818,7 +818,7 @@ torch.Size([1, 4])
 
 ```{py}
 x[0:1]     # Python ranges are inclusive to the left, not the right
-x[:-1]     # From start to one before last (and implicit comma)
+x[:-1]     # From start to one before last (& implicit comma)
 x[0:3:2]   # From 0th (included) to 3rd (excluded) in increment of 2
 ```
 {{<out>}}
@@ -1153,7 +1153,7 @@ Here again, you might have to change dtype
 ## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Notes about conversion without copy*</div></center>
 {{<br size="1.5">}}
 
-`t` and `t_np` are objects of different Python types, so, as far as Python is concerned, they have different addresses
+`t` & `t_np` are objects of different Python types, so, as far as Python is concerned, they have different addresses
 {{<br size="3">}}
 
 ```{py}
@@ -1170,7 +1170,7 @@ False
 ## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Notes about conversion without copy*</div></center>
 {{<br size="1">}}
 
-However—{{<a "https://stackoverflow.com/q/61526297/9210961" "and that's quite confusing">}}—they share an underlying C array in memory & modifying one in-place also modifies the other
+However—{{<a "https://stackoverflow.com/q/61526297/9210961" "& that's quite confusing">}}—they share an underlying C array in memory & modifying one in-place also modifies the other
 {{<br size="2">}}
 
 ```{py}
@@ -1241,7 +1241,7 @@ x - 2y + 8z = 21 <br>
 </center>
 {{<br size="4">}}
 
-We are looking for the values of `x`, `y`, and `z` that would satisfy this system
+We are looking for the values of `x`, `y`, & `z` that would satisfy this system
 {{<br size="3">}}
 
 ---
@@ -1372,7 +1372,7 @@ True
 
 {{%fragment%}}
 {{<note>}}
-It is faster and more numerically stable to solve a system of linear equations directly than to compute the inverse matrix first
+It is faster & more numerically stable to solve a system of linear equations directly than to compute the inverse matrix first
 {{</note>}}
 {{%/fragment%}}
 
@@ -1463,7 +1463,7 @@ The values for the device attributes are:
 - CPU: &nbsp;`'cpu'`
 {{<br size="1">}}
 
-- GPU (CUDA and AMD's ROCm): &nbsp;`'cuda'`
+- GPU (CUDA & AMD's ROCm): &nbsp;`'cuda'`
 {{<br size="1">}}
 
 - XLA: &nbsp;`xm.xla_device()`
