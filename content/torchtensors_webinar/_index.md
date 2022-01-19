@@ -77,10 +77,10 @@ pip install --no-index torch		 # Install PyTorch
 ```
 {{<br size="2">}}
 
-You can then run jobs with `sbatch` or `salloc`
+You can then launch jobs with `sbatch` or `salloc`
 {{<br size="1">}}
 
-You can leave the Python virtual env with `deactivate`
+Leave the virtual env with the command: `deactivate`
 {{<br size="2">}}
 
 ---
@@ -166,9 +166,9 @@ PyTorch is foremost a {{<e>}}deep learning library{{</e>}}
 
 In deep learning, the information contained in objects of interest (e.g. images, texts, sounds) is converted to {{<e>}}floating-point numbers{{</e>}} (e.g. pixel values, token values, frequencies) {{<br size="2">}}
 
-As this information is complex, {{<e>}}multiple dimensions are required{{</e>}} (e.g. 2 dimensions for the width & height of an image, plus 1 dimension for the 3 RGB colour channels) {{<br size="2">}}
+As this information is complex, {{<e>}}multiple dimensions are required{{</e>}} (e.g. two dimensions for the width & height of an image, plus one dimension for the RGB colour channels) {{<br size="2">}}
 
-Additionally, as various objects are grouped into batches to be processed together, batch size adds yet another dimension
+Additionally, items are grouped into batches to be processed together, adding yet another dimension
 {{<br size="2">}}
 
 {{<e>}}Multidimensional arrays are thus particularly well suited for deep learning{{</e>}}
@@ -184,10 +184,10 @@ Artificial neurons perform basic computations on these tensors
 Their number however is huge & computing efficiency is paramount
 {{<br size="2">}}
 
-GPUs are particularly well suited to perform many simple operations in parallel <br>
+GPUs/TPUs are particularly well suited to perform many simple operations in parallel <br>
 {{<br size="2">}}
 
-The very popular {{<a "https://numpy.org/" "NumPy library">}} has at its core a mature multidimensional array object well integrated into the scientific Python ecosystem
+The very popular {{<a "https://numpy.org/" "NumPy library">}} has, at its core, a mature multidimensional array object well integrated into the scientific Python ecosystem
 {{<br size="2">}}
 
 But the PyTorch tensor has additional efficiency characteristics ideal for machine learning & it can be converted to/from NumPy's ndarray if needed
@@ -223,10 +223,10 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Efficient memory storage</div></center>
 {{<br size="1">}}
 
-They are usually contiguous memory blocks, but the main difference is that they are unboxed: floats will thus take 4 or 8 bytes each
+They are usually contiguous memory blocks, but the main difference is that they are unboxed: floats will thus take 4 (32-bit) or 8 (64-bit) bytes each
 {{<br size="1">}}
 
-Boxed values take up more memory (memory for the pointer + memory for the primitive)
+Boxed values take up more memory <br>(memory for the pointer + memory for the primitive)
 {{<br size="2.5">}}
 
 {{<img8 src="/img/torchtensors/memory_storage.png" margin="rem" title="" width="60%" line-height="2.2rem">}}
@@ -282,7 +282,7 @@ storage = t.storage(); print(storage)
 ## <center><div style="font-size: 3rem; line-height: 5rem; color: #e6e6e6">Implementation</div></center>
 {{<br size="2">}}
 
-Storage can be indexed
+The storage can be indexed
 {{<br size="3">}}
 
 ```{py}
@@ -447,6 +447,7 @@ While `torch.t()` only works for 2D tensors, `torch.transpose()` can be used to 
 t = torch.zeros(1, 2, 3); print(t)
 
 t.size()
+t.stride()
 ```
 {{<out>}}
 ```{py}
@@ -454,6 +455,7 @@ tensor([[[0., 0., 0.],
          [0., 0., 0.]]])
 
 torch.Size([1, 2, 3])
+(6, 3, 1)
 ```
 
 ---
@@ -465,6 +467,7 @@ torch.Size([1, 2, 3])
 t.transpose(0, 1)
 
 t.transpose(0, 1).size()
+t.transpose(0, 1).stride()
 ```
 {{<out>}}
 ```{py}
@@ -472,17 +475,18 @@ tensor([[[0., 0., 0.]],
         [[0., 0., 0.]]])
 
 torch.Size([2, 1, 3])
+(3, 6, 1)  # Notice how transposing flipped 2 elements of the stride
 ```
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Transposing in higher dimensions</div></center>
-{{<br size="2">}}
+## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">Transposing in higher dimensions</div></center>
 
 ```{py}
 t.transpose(0, 2)
 
 t.transpose(0, 2).size()
+t.transpose(0, 2).stride()
 ```
 {{<out>}}
 ```{py}
@@ -494,6 +498,7 @@ tensor([[[0.],
          [0.]]])
 
 torch.Size([3, 2, 1])
+(1, 3, 6)
 ```
 
 ---
@@ -505,6 +510,7 @@ torch.Size([3, 2, 1])
 t.transpose(1, 2)
 
 t.transpose(1, 2).size()
+t.transpose(1, 2).stride()
 ```
 {{<out>}}
 ```{py}
@@ -513,6 +519,7 @@ tensor([[[0., 0.],
          [0., 0.]]])
 
 torch.Size([1, 3, 2])
+(6, 1, 3)
 ```
 
 ---
