@@ -145,13 +145,13 @@ Stevens, E., Antiga, L., & Viehmann, T. (2020). Deep learning with PyTorch. Mann
 {{<br size="4">}}
 
 {{%fragment%}}
-- Can run on GPUs
+- Can run on accelerators (GPUs, TPUs...)
 {{<br size="2.5">}}
 
-- Operations can be distributed
+- Keep track of computation graphs, allowing automatic differentiation
 {{<br size="2.5">}}
 
-- Keep track of computation graphs for automatic differentiation
+- Future plan for sharded tensors to run distributed computations
 {{%/fragment%}}
 
 {{<br size="4">}}
@@ -1079,7 +1079,7 @@ tensor([False,  True,  True, False, False])
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Conversion without copy</div></center>
 {{<br size="1">}}
 
-PyTorch tensors can be converted to NumPy ndarrays & vice-versa in a very efficient manner as both objects will share the same memory
+PyTorch tensors can be converted to NumPy ndarrays & vice-versa in a very efficient manner as both objects share the same memory
 {{<br size="2">}}
 
 ```{py}
@@ -1150,7 +1150,7 @@ Here again, you might have to change dtype
 {{<br size="3">}}
 
 ```{py}
-hex(id(t)) == hex(id(t_np))
+id(t) == id(t_np)
 ```
 {{<out>}}
 ```{py}
@@ -1213,7 +1213,7 @@ Lastly, as NumPy only works on CPU, to convert a PyTorch tensor allocated to the
 
 {{<note>}}
 Requires torch >= 1.9 <br>
-Linear algebra support less developed before introduction of this module
+Linear algebra support was less developed before the introduction of this module
 {{</note>}}
 {{<br size="3">}}
 
@@ -1380,20 +1380,18 @@ Limit matrix inversions to situations where it is truly necessary
 ---
 
 ## <center><div style="font-size: 3rem; line-height: 4rem; color: #e6e6e6">Matrix inversions</div></center>
+{{<br size="2.5">}}
 
 ```{py}
-A = torch.rand(3, 3, 3)
-A_inv = torch.linalg.inv(A)
-A @ A_inv
+A = torch.rand(2, 3, 3)      # Batch of square matrices
+A_inv = torch.linalg.inv(A)  # Batch of inverse matrices
+A @ A_inv                    # Batch of identity matrices
 ```
 {{<out>}}
 ```{py}
 tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
          [ 5.5627e-08,  1.0000e+00,  1.0795e-06],
          [-1.4133e-07,  7.9992e-08,  1.0000e+00]],
-        [[ 1.0000e+00, -1.3301e-07, -1.3090e-07],
-         [ 4.2567e-08,  1.0000e+00, -5.0706e-09],
-         [ 3.2889e-08, -2.6357e-09,  1.0000e+00]],
         [[ 1.0000e+00,  4.3329e-08, -3.6741e-09],
          [-7.4627e-08,  1.0000e+00,  1.4579e-07],
          [-6.3580e-08,  8.2354e-08,  1.0000e+00]]])
