@@ -576,8 +576,8 @@ Note that, by contrast, NumPy ndarrays use 64-bit as their default
 
 ```{py}
 t = torch.rand(2, 3); print(t)
-t.dtype   # remember that the default dtype for PyTorch tensors is float32
-t2 = t.type(torch.float64); print(t2) # if dtype ≠ default, it is printed
+t.dtype   # Remember that the default dtype for PyTorch tensors is float32
+t2 = t.type(torch.float64); print(t2) # If dtype ≠ default, it is printed
 t2.dtype
 ```
 {{<out>}}
@@ -731,7 +731,7 @@ tensor([[[[1., 1., 1., 1., 1.],
 
 ```{py}
 t = torch.rand(2, 3); print(t)
-torch.zeros_like(t)             # matches the size of t
+torch.zeros_like(t)             # Matches the size of t
 torch.ones_like(t)
 torch.randn_like(t)
 ```
@@ -752,7 +752,7 @@ tensor([[-0.3088, -0.0104,  1.0461],
 ## <center><div style="font-size: 3.3rem; color: #e6e6e6">Creating tensors</div></center>
 
 ```{py}
-torch.arange(2, 10, 4)    # from 2 to 10 in increments of 4
+torch.arange(2, 10, 4)    # From 2 to 10 in increments of 4
 torch.linspace(2, 10, 4)  # 4 elements from 2 to 10 on the linear scale
 torch.logspace(2, 10, 4)  # Same on the log scale
 torch.randperm(4)
@@ -1170,7 +1170,7 @@ False
 ## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Notes about conversion without copy*</div></center>
 {{<br size="1">}}
 
-However—{{<a "https://stackoverflow.com/q/61526297/9210961" "& that's quite confusing">}}—they share an underlying C array in memory & modifying one in-place also modifies the other
+However—{{<a "https://stackoverflow.com/q/61526297/9210961" "that's quite confusing">}}—they share an underlying C array in memory & modifying one in-place also modifies the other
 {{<br size="2">}}
 
 ```{py}
@@ -1409,7 +1409,7 @@ tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
 ## <center><div style="font-size: 3.3rem; line-height: 3rem; color: #e6e6e6">Other linear algebra functions</div></center>
 {{<br size="4">}}
 
-{{<a "https://pytorch.org/docs/master/linalg.html?highlight=linalg#module-torch.linalg" "torch.linalg">}} contains many more functions, including for instance:
+{{<a "https://pytorch.org/docs/master/linalg.html?highlight=linalg#module-torch.linalg" "torch.linalg">}} contains many more functions:
 {{<br size="2">}}
 
 - {{<a "https://pytorch.org/docs/master/generated/torch.tensordot.html#torch.tensordot" "torch.tensordot">}} which generalizes matrix products
@@ -1419,6 +1419,9 @@ tensor([[[ 1.0000e+00, -6.0486e-07,  1.3859e-06],
 {{<br size="1.5">}}
 
 - {{<a "https://pytorch.org/docs/master/generated/torch.linalg.eigvals.html#torch.linalg.eigvals" "torch.linalg.eigvals">}} which computes the eigenvalues of a square matrix
+{{<br size="1.5">}}
+
+- ...
 {{<br size="2">}}
 
 ---
@@ -1493,7 +1496,7 @@ t1 = torch.rand(2); print(t1)
 tensor([0.1606, 0.9771])  # Implicit: device='cpu'
 ```
 {{<note>}}
-Printing a tensor only displays attributes ≠ default values
+Printed tensors only display attributes with values ≠ default values
 {{</note>}}
 
 ---
@@ -1540,7 +1543,7 @@ tensor([0.0664, 0.7829]) # Implicit: device='cpu'
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Multiple GPUs</div></center>
 {{<br size="1">}}
 
-If you have multiple GPUs, you can optionally specify which GPU a tensor should be created on or copied to
+If you have multiple GPUs, you can optionally specify which one a tensor should be created on or copied to
 {{<br size="2">}}
 ```{py}
 t3_gpu = torch.rand(2, device='cuda:0')  # Create a tensor on 1st GPU
@@ -1586,7 +1589,7 @@ I ran the code on my laptop with a dedicated GPU & 32GB RAM
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Timing</div></center>
 {{<br size="1">}}
 
-Let's time 100 runs
+Let's time 100 runs to have a reliable benchmark
 {{<br size="2">}}
 
 ```{py}
@@ -1605,7 +1608,6 @@ print(t1.timeit(100))
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Timing</div></center>
-{{<br size="1">}}
 
 {{<out>}}
 ```{py}
@@ -1623,11 +1625,12 @@ Speedup:
 ```{py}
 (2.29 * 10**-3)/(108.02 * 10**-6) = 21
 ```
+This computation was 21 times faster on my GPU than on CPU
+{{<br size="1">}}
 
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Timing</div></center>
-{{<br size="1">}}
 
 By replacing `500` with `5000`, we get:
 ```{py}
@@ -1645,6 +1648,8 @@ Speedup:
 ```{py}
 2.21/(57.88 * 10**-3) = 38
 ```
+The larger the computation, the greater the benefit: now 38 times faster
+{{<br size="1">}}
 
 ---
 
