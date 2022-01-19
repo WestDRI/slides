@@ -1555,6 +1555,92 @@ t5_gpu = t1.cuda(1)
 {{%/fragment%}}
 
 ---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Timing</div></center>
+{{<br size="1">}}
+
+Let's compare the timing of some matrix multiplications on CPU & GPU with PyTorch built-in benchmark utility
+{{<br size="2">}}
+
+```{py}
+# Load utility
+import torch.utils.benchmark as benchmark
+# Define tensors on the CPU
+A = torch.randn(500, 500)
+B = torch.randn(500, 500)
+# Define tensors on the GPU
+A_gpu = torch.randn(500, 500, device='cuda')
+B_gpu = torch.randn(500, 500, device='cuda')
+```
+{{<note>}}
+I ran the code on my laptop with a dedicated GPU & 32GB RAM
+{{</note>}}
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Timing</div></center>
+{{<br size="1">}}
+
+Let's time 100 runs
+{{<br size="2">}}
+
+```{py}
+t0 = benchmark.Timer(
+    stmt='A @ B',
+    globals={'A': A, 'B': B})
+
+t1 = benchmark.Timer(
+    stmt='A_gpu @ B_gpu',
+    globals={'A_gpu': A_gpu, 'B_gpu': B_gpu})
+
+print(t0.timeit(100))
+print(t1.timeit(100))
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Timing</div></center>
+{{<br size="1">}}
+
+{{<out>}}
+```{py}
+A @ B
+  2.29 ms
+  1 measurement, 100 runs , 1 thread
+
+A_gpu @ B_gpu
+  108.02 us
+  1 measurement, 100 runs , 1 thread
+```
+
+Speedup:
+
+```{py}
+(2.29 * 10**-3)/(108.02 * 10**-6) = 21
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Timing</div></center>
+{{<br size="1">}}
+
+By replacing `500` with `5000`, we get:
+```{py}
+A @ B
+  2.21 s
+  1 measurement, 100 runs , 1 thread
+
+A_gpu @ B_gpu
+  57.88 ms
+  1 measurement, 100 runs , 1 thread
+```
+
+Speedup:
+
+```{py}
+2.21/(57.88 * 10**-3) = 38
+```
+
 ---
 
 ## <div style="font-size: 2.8rem; line-height: 3.3rem; color: #727274">- What is a PyTorch tensor?</div>
