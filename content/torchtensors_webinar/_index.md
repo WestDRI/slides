@@ -880,14 +880,18 @@ torch.Size([1, 3, 4])
 While indexing elements of a tensor to extract some of the data as a final step of some computation is fine, {{<emph_inline>}}you should not use indexing to run operations on tensor elements in a loop{{</emph_inline>}} as this would be extremely inefficient
 {{<br size="2">}}
 Instead, you want to use {{<emph_inline>}}vectorized operations{{</emph_inline>}}
-{{<br size="3">}}
+{{<br size="3.5">}}
 
 ---
 
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Vectorized operations</div></center>
-{{<br size="2.5">}}
+{{<br size="2">}}
 
 Since PyTorch tensors are homogeneous (i.e. made of a single data type), {{<a "https://www.pythonlikeyoumeanit.com/Module3_IntroducingNumpy/VectorizedOperations.html#Vectorized-Operations" "as with NumPy's ndarrays">}}, operations are vectorized & thus staggeringly fast
+{{<br size="2.5">}}
+NumPy is mostly written in C & PyTorch in C++. With either library, when you run vectorized operations on arrays/tensors, you don't use raw Python (slow) but compiled C/C++ code (much faster)
+{{<br size="2.5">}}
+{{<a "https://pythonspeed.com/articles/vectorization-python/" "Here">}} is an excellent post explaining Python vectorization & why it makes such a big difference
 {{<br size="5">}}
 
 ---
