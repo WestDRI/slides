@@ -933,9 +933,25 @@ tensor(500023.0789, dtype=torch.float64)
 tensor(500023.0789, dtype=torch.float64)
 ```
 
-```{py}
+---
 
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Vectorized operations: timing*</div></center>
+{{<br size="1.5">}}
+
+Let's compare the timing with PyTorch built-in benchmark utility
+```{py}
+import torch.utils.benchmark as benchmark
+
+# Create timers
+t0 = benchmark.Timer(
+    stmt='for i in range(len(t)): sum + t[i]',
+    globals={'t': t, 'sum': sum})
+
+t1 = benchmark.Timer(
+    stmt='t.sum()',
+    globals={'t': t})
 ```
+{{<br size="2.5">}}
 
 ---
 
@@ -944,8 +960,20 @@ tensor(500023.0789, dtype=torch.float64)
 
 Raw Python method timing: 4.2s
 {{<br size="3">}}
+Let's time 100 runs to have a reliable benchmark
+{{<br size="2">}}
 
 Vectorized function timing: 0.04s
+```{py}
+print(t0.timeit(100))
+print(t1.timeit(100))
+```
+{{<br size="4">}}
+
+{{<note>}}
+I ran the code on my laptop with a dedicated GPU & 32GB RAM
+{{</note>}}
+
 {{<br size="3">}}
 
 ---
