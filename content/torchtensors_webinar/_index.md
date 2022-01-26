@@ -896,7 +896,7 @@ NumPy is mostly written in C & PyTorch in C++. With either library, when you run
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Vectorized operations: timing</div></center>
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Vectorized operations: comparison*</div></center>
 
 Raw Python method
 
@@ -919,7 +919,7 @@ t.sum()
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Vectorized operations: timing</div></center>
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Vectorized operations: comparison*</div></center>
 {{<br size="2">}}
 Both methods give the same result
 {{<br size="3">}}
@@ -934,7 +934,7 @@ tensor(500420.3750)
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Vectorized operations: timing</div></center>
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Vectorized operations: timing*</div></center>
 {{<br size="2.5">}}
 
 Raw Python method timing: 4.2s
