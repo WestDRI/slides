@@ -993,6 +993,24 @@ t.sum()
   1 measurement, 100 runs , 1 thread
 ```
 
+---
+
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Vectorized operations: timing*</div></center>
+{{<br size="2.5">}}
+
+Speedup:
+
+```{py}
+4.52/(226.13 * 10**-6) = 19989
+```
+{{<br size="5">}}
+
+{{%fragment%}}
+{{<emph>}}
+The vectorized function runs 20,000 times faster!!!
+{{</emph>}}
+{{%/fragment%}}
+
 {{<br size="3">}}
 
 ---
