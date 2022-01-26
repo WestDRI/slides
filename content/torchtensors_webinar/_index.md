@@ -901,14 +901,14 @@ NumPy is mostly written in C & PyTorch in C++. With either library, when you run
 Raw Python method
 
 ```{py}
-# Create tensor
-t = torch.rand(10**6)
-# Initialize sum
+# Create tensor. We use float64 here to avoid truncation errors
+t = torch.rand(10**6, dtype=torch.float64)
+# Initialize the sum
 sum = 0
 # Run loop
 for i in range(len(t)):
     sum = sum + t[i]
-# Check result
+# Print result
 print(sum)
 ```
 Vectorized function
