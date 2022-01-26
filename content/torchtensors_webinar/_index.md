@@ -921,14 +921,20 @@ t.sum()
 ## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Vectorized operations: comparison*</div></center>
 {{<br size="2">}}
 Both methods give the same result
-{{<br size="3">}}
-
-
+{{<note>}}
+This is why we used float64:<br>
+While the accuracy remains excellent with float32 if we use the PyTorch function torch.sum(),
+the raw Python loop gives a fairly inaccurate result
+{{</note>}}
 {{<out>}}
 ```{py}
-tensor(500420.3750)
+tensor(500023.0789, dtype=torch.float64)
 
-tensor(500420.3750)
+tensor(500023.0789, dtype=torch.float64)
+```
+
+```{py}
+
 ```
 
 ---
