@@ -958,12 +958,9 @@ t1 = benchmark.Timer(
 ## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Vectorized operations: timing*</div></center>
 {{<br size="2.5">}}
 
-Raw Python method timing: 4.2s
-{{<br size="3">}}
 Let's time 100 runs to have a reliable benchmark
 {{<br size="2">}}
 
-Vectorized function timing: 0.04s
 ```{py}
 print(t0.timeit(100))
 print(t1.timeit(100))
@@ -973,6 +970,28 @@ print(t1.timeit(100))
 {{<note>}}
 I ran the code on my laptop with a dedicated GPU & 32GB RAM
 {{</note>}}
+
+---
+
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Vectorized operations: timing*</div></center>
+{{<br size="1.5">}}
+
+Timing of raw Python loop
+
+```{py}
+for i in range(len(t)): sum + t[i]
+  4.52 s
+  1 measurement, 100 runs , 1 thread
+```
+{{<br size="4">}}
+
+Timing of vectorized function
+
+```{py}
+t.sum()
+  226.13 us
+  1 measurement, 100 runs , 1 thread
+```
 
 {{<br size="3">}}
 
