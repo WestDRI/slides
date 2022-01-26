@@ -771,6 +771,27 @@ tensor([[1., 0., 0.],
 
 ---
 
+## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor information</div></center>
+{{<br size="1.5">}}
+
+```{py}
+t = torch.rand(2, 3); print(t)
+t.size()
+t.dim()
+t.numel()
+```
+{{<out>}}
+```{py}
+tensor([[0.5885, 0.7005, 0.1048],
+        [0.1115, 0.7526, 0.0658]])
+torch.Size([2, 3])
+2
+6
+```
+{{<br size="3">}}
+
+---
+
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor indexing</div></center>
 
 ```{py}
@@ -853,23 +874,7 @@ torch.Size([1, 3, 4])
 
 ---
 
-## <center><div style="font-size: 3rem; color: #e6e6e6">Tensor information</div></center>
-{{<br size="1.5">}}
 
-```{py}
-t = torch.rand(2, 3); print(t)
-t.size()
-t.dim()
-t.numel()
-```
-{{<out>}}
-```{py}
-tensor([[0.5885, 0.7005, 0.1048],
-        [0.1115, 0.7526, 0.0658]])
-torch.Size([2, 3])
-2
-6
-```
 {{<br size="3">}}
 
 ---
