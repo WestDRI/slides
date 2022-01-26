@@ -874,7 +874,12 @@ torch.Size([1, 3, 4])
 
 ---
 
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*A word of caution about indexing*</div></center>
+{{<br size="2.5">}}
 
+While indexing elements of a tensor to extract some of the data as a final step of some computation is fine, {{<emph_inline>}}you should not use indexing to run operations on tensor elements in a loop{{</emph_inline>}} as this would be extremely inefficient
+{{<br size="2">}}
+Instead, you want to use {{<emph_inline>}}vectorized operations{{</emph_inline>}}
 {{<br size="3">}}
 
 ---
