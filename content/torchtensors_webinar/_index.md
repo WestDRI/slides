@@ -896,6 +896,55 @@ NumPy is mostly written in C & PyTorch in C++. With either library, when you run
 
 ---
 
+## <center><div style="font-size: 3rem; color: #e6e6e6">Vectorized operations: timing</div></center>
+
+Raw Python method
+
+```{py}
+# Create tensor
+t = torch.rand(10**6)
+# Initialize sum
+sum = 0
+# Run loop
+for i in range(len(t)):
+    sum = sum + t[i]
+# Check result
+print(sum)
+```
+Vectorized function
+
+```{py}
+t.sum()
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Vectorized operations: timing</div></center>
+{{<br size="2">}}
+Both methods give the same result
+{{<br size="3">}}
+
+
+{{<out>}}
+```{py}
+tensor(500420.3750)
+
+tensor(500420.3750)
+```
+
+---
+
+## <center><div style="font-size: 3rem; color: #e6e6e6">Vectorized operations: timing</div></center>
+{{<br size="2.5">}}
+
+Raw Python method timing: 4.2s
+{{<br size="3">}}
+
+Vectorized function timing: 0.04s
+{{<br size="3">}}
+
+---
+
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Simple mathematical operations</div></center>
 
 ```{py}
