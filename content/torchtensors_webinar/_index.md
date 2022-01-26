@@ -906,8 +906,7 @@ t = torch.rand(10**6, dtype=torch.float64)
 # Initialize the sum
 sum = 0
 # Run loop
-for i in range(len(t)):
-    sum = sum + t[i]
+for i in range(len(t)): sum += t[i]
 # Print result
 print(sum)
 ```
