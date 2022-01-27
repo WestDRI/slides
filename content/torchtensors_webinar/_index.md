@@ -1035,6 +1035,57 @@ The vectorized function runs more than 7,000 times faster!!!
 
 ---
 
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Even more important on GPUs*</div></center>
+
+*We will talk about GPUs in detail later*
+{{<br size="1">}}
+
+Timing of raw Python loop on GPU {{<emph_inline>}}(actually slower on GPU!){{</emph_inline>}}
+
+```{py}
+sum_loop(t, sum)
+setup: from __main__ import sum_loop
+  4.54 s
+  1 measurement, 100 runs , 1 thread
+```
+{{<br size="2">}}
+
+Timing of vectorized function on GPU (here we do get a speedup)
+
+```{py}
+t.sum()
+  50.62 us
+  1 measurement, 100 runs , 1 thread
+```
+
+---
+
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Even more important on GPUs*</div></center>
+{{<br size="1">}}
+
+Speedup:
+
+```{py}
+4.54/(50.62 * 10**-6) = 89688
+```
+{{<br size="3.5">}}
+
+{{%fragment%}}
+**On GPUs, it is even more important not to index repeatedly from a tensor**
+{{%/fragment%}}
+
+{{<br size="3">}}
+
+{{%fragment%}}
+{{<emph>}}
+On GPUs, the vectorized function runs almost 90,000 times faster!!!
+{{</emph>}}
+{{%/fragment%}}
+
+{{<br size="3.5">}}
+
+---
+
 ## <center><div style="font-size: 3rem; color: #e6e6e6">Simple mathematical operations</div></center>
 
 ```{py}
