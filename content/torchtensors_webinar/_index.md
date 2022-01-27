@@ -939,19 +939,37 @@ tensor(500023.0789, dtype=torch.float64)
 {{<br size="1.5">}}
 
 Let's compare the timing with PyTorch built-in benchmark utility
+{{<br size="2.5">}}
+
 ```{py}
+# Load utility
 import torch.utils.benchmark as benchmark
 
-# Create timers
+# Create a function for our loop
+def sum_loop(t, sum):
+    for i in range(len(t)): sum += t[i]
+```
+{{<br size="4">}}
+
+---
+
+## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Vectorized operations: timing*</div></center>
+{{<br size="1">}}
+
+Now we can create the timers
+{{<br size="2">}}
+
+```{py}
 t0 = benchmark.Timer(
-    stmt='for i in range(len(t)): sum + t[i]',
+    stmt='sum_loop(t, sum)',
+    setup='from __main__ import sum_loop',
     globals={'t': t, 'sum': sum})
 
 t1 = benchmark.Timer(
     stmt='t.sum()',
     globals={'t': t})
 ```
-{{<br size="2.5">}}
+{{<br size="3.5">}}
 
 ---
 
@@ -970,6 +988,7 @@ print(t1.timeit(100))
 {{<note>}}
 I ran the code on my laptop with a dedicated GPU & 32GB RAM
 {{</note>}}
+{{<br size="4">}}
 
 ---
 
@@ -979,8 +998,9 @@ I ran the code on my laptop with a dedicated GPU & 32GB RAM
 Timing of raw Python loop
 
 ```{py}
-for i in range(len(t)): sum + t[i]
-  4.52 s
+sum_loop(t, sum)
+setup: from __main__ import sum_loop
+  1.37 s
   1 measurement, 100 runs , 1 thread
 ```
 {{<br size="4">}}
@@ -989,7 +1009,7 @@ Timing of vectorized function
 
 ```{py}
 t.sum()
-  226.13 us
+  191.26 us
   1 measurement, 100 runs , 1 thread
 ```
 
@@ -1001,13 +1021,13 @@ t.sum()
 Speedup:
 
 ```{py}
-4.52/(226.13 * 10**-6) = 19989
+1.37/(191.26 * 10**-6) = 7163
 ```
 {{<br size="5">}}
 
 {{%fragment%}}
 {{<emph>}}
-The vectorized function runs 20,000 times faster!!!
+The vectorized function runs more than 7,000 times faster!!!
 {{</emph>}}
 {{%/fragment%}}
 
