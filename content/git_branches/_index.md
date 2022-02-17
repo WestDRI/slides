@@ -120,6 +120,10 @@ Example:
 git switch test
 ```
 
+---
+
+# <center>How to switch between branches?</center>
+
 {{<img src="/img/git/git_timetravel/03.png" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
 
@@ -150,7 +154,6 @@ git branch -d <branch-name>
 ---
 
 # <center>Getting information on branches</center>
-{{<br size="3">}}
 
 ### List local branches (current branch marked with *)
 
@@ -159,14 +162,14 @@ git branch
 git branch -v   # show sha1 and commit message for each head
 git branch -vv  # also show upstream branch
 ```
-{{<br size="3">}}
+{{<br size="2">}}
 
 ### List remote branches
 
 ```sh
 git branch -r
 ```
-{{<br size="3">}}
+{{<br size="2">}}
 
 ### List all branches
 
@@ -184,7 +187,6 @@ Here is a classic workflow with branches
 {{<br size="2">}}
 
 You just switched to the branch `test`:
-{{<br size="2">}}
 
 {{<img src="/img/git/git_timetravel/03.png" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
@@ -216,16 +218,23 @@ Now you make a series of commits on that branch:
 # <center>Merging branches</center>
  
 ## Fast-forward merge
+{{<br size="1">}}
 
 You want to merge them back into the main branch
 {{<br size="2">}}
 
-
 First, you switch to `main` (to merge, you need to be on the branch you want to merge *into*):
+{{<br size="3">}}
 
 ```sh
 git switch main
 ```
+
+---
+
+# <center>Merging branches</center>
+ 
+## Fast-forward merge
 
 {{<img src="/img/git/git_timetravel/06.png" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
@@ -235,12 +244,20 @@ git switch main
 # <center>Merging branches</center>
  
 ## Fast-forward merge
+{{<br size="1">}}
 
 Then you merge `test` into `main`:
+{{<br size="3">}}
 
 ```sh
 git merge test
 ```
+
+---
+
+# <center>Merging branches</center>
+ 
+## Fast-forward merge
 
 {{<img src="/img/git/git_timetravel/07.png" title="" width="%" line-height="0.5rem">}}
 {{</img>}}
@@ -250,17 +267,25 @@ git merge test
 # <center>Merging branches</center>
  
 ## Fast-forward merge
+{{<br size="1">}}
 
 This merge is called a *fast-forward merge*: the branch `main` could be fast-forwarded to the branch `test`
 {{<br size="2">}}
 
 Now, you can delete the branch `test` which has become useless:
+{{<br size="3">}}
 
 ```sh
 git branch -d test
 ```
 
-{{<img src="/img/git/git_timetravel/08.png" title="" width="%" line-height="0.5rem">}}
+---
+
+# <center>Merging branches</center>
+ 
+## Fast-forward merge
+
+{{<img src="/img/git/git_timetravel/08.png" title="" width="%" line-height="0rem">}}
 {{</img>}}
 
 ---
@@ -339,12 +364,23 @@ and you create commits on `main`:
 # <center>Merging branches</center>
 
 ## Merge commit
+{{<br size="1">}}
 
-To merge `test2` into `main`, you need to be on `main`, but that's already the case. So you can run:
+To merge `test2` into `main`, you need to be on `main`, but that's already the case.
+{{<br size="2">}}
+
+So you can run:
+{{<br size="3">}}
 
 ```sh
 git merge test2
 ```
+
+---
+
+# <center>Merging branches</center>
+
+## Merge commit
 
 and you get:
 
@@ -368,7 +404,7 @@ Finally, you can now delete the `test2` branch with `git branch -d test2`:
 ---
 
 # <center>Resolving conflicts</center>
-{{<br size="4">}}
+{{<br size="2.5">}}
  
 If the same section of a file is changed on different branches, Git cannot know which version you would like to keep. The merge gets interrupted until you resolve the conflict
 {{<br size="2">}}
@@ -381,7 +417,6 @@ Many GUI applications for Git as well as powerful text editors such as Emacs and
 ---
 
 # <center>Resolving conflicts</center>
-{{<br size="4">}}
 
 You can also resolve the conflict manually in any text editor:
 
