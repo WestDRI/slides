@@ -11,8 +11,6 @@ custom_theme = "mh8.scss"
 custom_theme_compile = true
 +++
 
-# <center><div style="font-size: 4rem; line-height: 2rem; color: #e6e6e6">Bat</div></center>
-# <center><div style="font-size: 2rem; color: #e6e6e6">("A cat clone with wings")</div></center>
 {{<br size="1">}}
 
 {{<img src="/img/tools/bat.png" margin="rem" title="" width="80%" line-height="0.5rem">}}
