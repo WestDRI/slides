@@ -22,6 +22,16 @@ custom_theme_compile = true
 
 ---
 
+<center>{{<a "https://github.com/jesseduffield/lazygit" "lazygit">}} brings the ease of use of a visual Git tool to the command line</center>
+{{<br size="3">}}
+
+<center>Unlike slow, buggy, & limited Git GUIs, it is nimble, portable, & super fast</center>
+{{<br size="3">}}
+
+<center>In the following demo, as an additional visual goody, I will introduce {{<a "https://github.com/so-fancy/diff-so-fancy" "diff-so-fancy">}} to display the outputs of `git diff`</center>
+
+---
+
 # <center><div style="font-size: 4rem; line-height: 2rem; color: #e6e6e6">Bat</div></center>
 # <center><div style="font-size: 2rem; line-height: 5.5rem; color: #e6e6e6">("A cat clone with wings")</div></center>
 {{<br size="0.5">}}
