@@ -210,6 +210,14 @@ bat --list-themes             # List themes with examples
 
 ---
 
+<center>{{<a "https://github.com/emacs-helm/helm" "Helm">}} provides an incremental completion & narrowing selection API for search applications in Emacs</center>
+{{<br size="3">}}
+
+<center>Virtually every Emacs search application has built-in integration with Helm</center>
+{{<br size="3">}}
+
+---
+
 # <center><div style="font-size: 3rem; line-height: 7.7rem; color: #cccccc">Grep equivalent</div></center>
 {{<br size="0.5">}}
 
