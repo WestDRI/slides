@@ -41,10 +41,10 @@ custom_theme_compile = true
 
 ---
 
-{{<a "https://github.com/sharkdp/bat" "bat">}} is a great tool to display the content of files in your terminal
+<center>{{<a "https://github.com/sharkdp/bat" "bat">}} is a great tool to display the content of files in your terminal</center>
 {{<br size="2">}}
 
-The standard Unix utility for this task is {{<a "https://en.wikipedia.org/wiki/Cat_(Unix)" "cat,">}} but bat adds a lot to it
+<center>The standard Unix utility for this task is {{<a "https://en.wikipedia.org/wiki/Cat_(Unix)" "cat,">}} but bat adds a lot to it</center>
 
 ---
 
@@ -85,11 +85,13 @@ bat /home/marie/parvus/prog/slides/static/files/tools/julia.jl
 ---
 
 # <center><div style="font-size: 3rem; line-height: 8rem; color: #cccccc">Smart behaviour with pager</div></center>
+{{<br size="1.5">}}
 
 Uses {{<a "https://en.wikipedia.org/wiki/Less_(Unix)" "less">}} by default with options `-RFX`
-{{<br size="2">}}
+{{<br size="3">}}
 
 Very convenient: quits the pager automatically if the entire content fits on one script
+{{<br size="3">}}
 
 ---
 
@@ -112,14 +114,15 @@ bat -d
 ---
 
 # <center><div style="font-size: 3rem; line-height: 8rem; color: #cccccc">Man page syntax highlighting</div></center>
-{{<br size="1">}}
+{{<br size="1.5">}}
 
 Even colourizes your man pages if you set the `MANPAGER` environment variable (e.g. in your `.bashrc` or equivalent):
-{{<br size="3">}}
+{{<br size="3.5">}}
 
 ```sh
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 ```
+{{<br size="3">}}
 
 ---
 
