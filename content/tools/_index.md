@@ -195,6 +195,12 @@ bat --list-themes             # List themes with examples
 {{<img src="/img/tools/fd.png" margin="rem" title="" width="40%" line-height="0.5rem">}}
 {{</img>}}
 
+---
+
+<center>{{<a "https://github.com/sharkdp/fd" "fd">}} has an intuitive syntax & it is **super fast**</center>
+
+---
+
 # <center><div style="font-size: 4rem; line-height: 2rem; color: #e6e6e6">Helm</div></center>
 # <center><div style="font-size: 2rem; line-height: 5.5rem; color: #e6e6e6">("Incremental completion & selection narrowing framework")</div></center>
 {{<br size="0.5">}}
