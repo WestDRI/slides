@@ -91,7 +91,7 @@ Uses {{<a "https://en.wikipedia.org/wiki/Less_(Unix)" "less">}} by default with 
 {{<br size="3">}}
 
 Very convenient: quits the pager automatically if the entire content fits on one script
-{{<br size="3">}}
+{{<br size="5">}}
 
 ---
 
@@ -116,17 +116,17 @@ bat -d
 # <center><div style="font-size: 3rem; line-height: 8rem; color: #cccccc">Man page syntax highlighting</div></center>
 {{<br size="1.5">}}
 
-Even colourizes your man pages if you set the `MANPAGER` environment variable (e.g. in your `.bashrc` or equivalent):
+Even colourizes your man pages if you set the `MANPAGER` environment variable (e.g. in your `.bashrc`):
 {{<br size="3.5">}}
 
 ```sh
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 ```
-{{<br size="3">}}
+{{<br size="6">}}
 
 ---
 
-# <center><div style="font-size: 3rem; line-height: 6rem; color: #cccccc">Useful flags</div></center>
+# <center><div style="font-size: 3rem; line-height: 5rem; color: #cccccc">Useful flags</div></center>
 
 ```sh
 bat -n              # Remove frame
@@ -138,7 +138,7 @@ bat -p              # Remove frame & line numbers
 ```
 
 I personally have an alias for this: `alias rat='bat -p'`
-{{<br size="2">}}
+{{<br size="3">}}
 
 ```sh
 bat -pp             # Remove frame & line numbers & don't use pager
@@ -149,7 +149,7 @@ bat -pp             # Remove frame & line numbers & don't use pager
 bat -f              # Keep colour highlighting after piping
 ```
 
-I made this the default behaviour of `bat` with the alias: `alias bat='bat -f'`
+I made this the default behaviour for `bat` with the alias: `alias bat='bat -f'`
 
 ---
 
@@ -173,6 +173,7 @@ bat --generate-config-file    # Create config file template
 ```sh
 bat --list-themes             # List themes with examples
 ```
+{{<br size="3">}}
 
 ---
 {{<br size="0.5">}}
@@ -197,7 +198,7 @@ bat --list-themes             # List themes with examples
 
 ---
 
-<center>{{<a "https://github.com/sharkdp/fd" "fd">}} has an intuitive syntax & it is **super fast**</center>
+<center>{{<a "https://github.com/sharkdp/fd" "fd">}} has an intuitive syntax & is **super fast**</center>
 
 ---
 
@@ -210,7 +211,7 @@ bat --list-themes             # List themes with examples
 
 ---
 
-<center>{{<a "https://github.com/emacs-helm/helm" "Helm">}} provides an incremental completion & narrowing selection API for search applications in Emacs</center>
+<center>The {{<a "https://github.com/emacs-helm/helm" "Helm">}} package provides an incremental completion & narrowing selection API for search applications in Emacs</center>
 {{<br size="3">}}
 
 <center>Virtually every Emacs search application has built-in integration with Helm</center>
