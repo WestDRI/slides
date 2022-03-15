@@ -212,6 +212,11 @@ bat --list-themes             # List themes with examples
 {{<br size="1.5">}}
 
 ---
+
+<center>{{<a "https://www.passwordstore.org/" "pass">}} is a simple command line password manager using {{<a "https://en.wikipedia.org/wiki/GNU_Privacy_Guard" "GnuPG">}} for encryption</center>
+{{<br size="3">}}
+
+---
 # <center><div style="font-size: 4rem; line-height: 2rem; color: #e6e6e6">Helm</div></center>
 # <center><div style="font-size: 2rem; line-height: 5.5rem; color: #e6e6e6">("Incremental completion & selection narrowing framework")</div></center>
 {{<br size="0.5">}}
