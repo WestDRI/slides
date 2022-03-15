@@ -2,11 +2,13 @@
 
 # go to repo /home/marie/parvus/ptmp/git_workshop_collab
 
+# bat #############################################################################
+
 cat /home/marie/parvus/prog/slides/static/files/tools/julia.jl
 
 bat /home/marie/parvus/prog/slides/static/files/tools/julia.jl
 
-##############################################################################
+#################
 
 bat /home/marie/parvus/prog/slides/static/files/tools/two_layer_net_tensor.py
 
@@ -18,8 +20,12 @@ bat /home/marie/parvus/prog/slides/static/files/tools/julia.jl
 
 less /home/marie/parvus/prog/slides/static/files/tools/julia.jl
 
-##############################################################################
+# rg #############################################################################
 
 hyperfine -i --prepare 'sync; echo 3 | sudo tee /proc/sys/vm/drop_caches' 'grep -r Unix ~/parvus/prog/tcl'
 
 hyperfine --prepare 'sync; echo 3 | sudo tee /proc/sys/vm/drop_caches' 'rg Unix ~/parvus/prog/tcl'
+# pass ##############################################################################
+
+# tramp ##############################################################################
+# helm ##############################################################################
