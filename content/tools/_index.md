@@ -217,6 +217,24 @@ bat --list-themes             # List themes with examples
 {{<br size="3">}}
 
 ---
+
+# <center><div style="font-size: 3rem; line-height: 8rem; color: #cccccc">Main pass commands</div></center>
+
+```sh
+pass init your-gpg-id                    # Initialize password store
+pass insert somesite.ca/your@email       # Enter password for a site
+pass somesite.ca/your@email              # Print password
+pass -c somesite.ca/your@email           # Copy password to clipboard
+pass edit somesite.ca/your@email         # Edit password
+pass generate othersite.com/userid 12    # Generate password of size 12
+pass generate -c othersite.com/userid 12 # Same, but copy to clipboard
+pass generate -n othersite.com/userid 12 # Same, without special characters
+pass rm othersite.com/userid             # Delete password
+pass                                     # Print content of password store
+```
+{{<br size="2.5">}}
+
+---
 # <center><div style="font-size: 4rem; line-height: 2rem; color: #e6e6e6">Helm</div></center>
 # <center><div style="font-size: 2rem; line-height: 5.5rem; color: #e6e6e6">("Incremental completion & selection narrowing framework")</div></center>
 {{<br size="0.5">}}
