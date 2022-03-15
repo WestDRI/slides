@@ -268,6 +268,14 @@ pass                                     # Print content of password store
 
 ---
 
+# <center><div style="font-size: 3rem; line-height: 7.7rem; color: #cccccc">Navigate kill ring</div></center>
+{{<br size="0.5">}}
+
+{{<img src="/img/tools/helm15.png" margin="rem" title="" width="80%" line-height="0.5rem">}}
+{{</img>}}
+
+---
+
 # <center><div style="font-size: 3rem; line-height: 7.7rem; color: #cccccc">Navigate open & recent files</div></center>
 {{<br size="0.5">}}
 
