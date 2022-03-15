@@ -202,6 +202,16 @@ bat --list-themes             # List themes with examples
 
 ---
 
+# <center><div style="font-size: 4rem; line-height: 2.8rem; color: #e6e6e6">pass</div></center>
+{{<br size="1">}}
+# <center><div style="font-size: 2rem; line-height: 5.5rem; color: #e6e6e6">(A command line password manager for Unix systems)</div></center>
+{{<br size="1.5">}}
+
+<center>{{<img src="/img/tools/pass.png" margin="rem" title="" width="60%" line-height="0.5rem">}}
+{{</img>}}</center>
+{{<br size="1.5">}}
+
+---
 # <center><div style="font-size: 4rem; line-height: 2rem; color: #e6e6e6">Helm</div></center>
 # <center><div style="font-size: 2rem; line-height: 5.5rem; color: #e6e6e6">("Incremental completion & selection narrowing framework")</div></center>
 {{<br size="0.5">}}
