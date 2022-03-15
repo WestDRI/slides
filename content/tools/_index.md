@@ -216,6 +216,12 @@ bat --list-themes             # List themes with examples
 <center>{{<a "https://www.passwordstore.org/" "pass">}} is a simple command line password manager using {{<a "https://en.wikipedia.org/wiki/GNU_Privacy_Guard" "GnuPG">}} for encryption</center>
 {{<br size="3">}}
 
+<center>pass integrates with Git and many other tools</center>
+{{<br size="3">}}
+
+<center>It is also very easy to use it as part of scripts</center>
+{{<br size="2.5">}}
+
 ---
 
 # <center><div style="font-size: 3rem; line-height: 8rem; color: #cccccc">Main pass commands</div></center>
