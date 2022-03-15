@@ -193,8 +193,8 @@ bat --list-themes             # List themes with examples
 # <center><div style="font-size: 2rem; line-height: 5.5rem; color: #e6e6e6">(Fast & friendly alternative to find)</div></center>
 {{<br size="0.5">}}
 
-{{<img src="/img/tools/fd.png" margin="rem" title="" width="40%" line-height="0.5rem">}}
-{{</img>}}
+<center>{{<img src="/img/tools/fd.png" margin="rem" title="" width="40%" line-height="0.5rem">}}
+{{</img>}}</center>
 
 ---
 
