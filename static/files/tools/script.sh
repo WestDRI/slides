@@ -1,3 +1,7 @@
+# lazygit ##############################################################################
+
+# go to repo /home/marie/parvus/ptmp/git_workshop_collab
+
 cat /home/marie/parvus/prog/slides/static/files/tools/julia.jl
 
 bat /home/marie/parvus/prog/slides/static/files/tools/julia.jl
