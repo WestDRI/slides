@@ -55,6 +55,11 @@ pass rm newsite.ca/your@email
 pass
 
 # tramp ##############################################################################
+
+emacsclient -c /ssh:mhburle@cedar.computecanada.ca:/home/mhburle/.bash_history
+
+emacsclient -c /sudo::/etc/ssh/sshd_config
+
 # helm ##############################################################################
 
 # open .emacs and show:
