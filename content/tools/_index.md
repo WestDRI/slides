@@ -201,6 +201,7 @@ bat --list-themes             # List themes with examples
 
 ---
 
+
 # <center><div style="font-size: 3rem; line-height: 5rem; color: #cccccc">What makes rg fast?</div></center>
 {{<br size="3">}}
 
@@ -214,11 +215,48 @@ Uses Rust regex engine with finite automata, SIMD, & aggressive literal optimiza
 {{<br size="3">}}
 {{%/fragment%}}
 
-{{%fragment%}}
-Let's test speed using {{<a "https://github.com/sharkdp/hyperfine" "hyperfine">}} for benchmarking
-{{%/fragment%}}
 
-{{<br size="4">}}
+---
+
+# <center><div style="font-size: 3rem; line-height: 8rem; color: #cccccc">Benchmarks</div></center>
+
+I will compare `grep` and `rg` to recursively search the word "Unix" in my directory "~/parvus/prog/tcl"
+{{<br size="2">}}
+
+```sh
+grep -r Unix ~/parvus/prog/tcl
+rg Unix ~/parvus/prog/tcl
+```
+{{<br size="2">}}
+
+I will do a cold test (clearing my computer cache before each run) using {{<a "https://github.com/sharkdp/hyperfine" "hyperfine">}} 
+{{<br size="2">}}
+
+```sh
+hyperfine -i --prepare 'sync; echo 3 | sudo tee /proc/sys/vm/drop_caches' \
+		  'grep -r Unix ~/parvus/prog/tcl' \
+		  'rg Unix ~/parvus/prog/tcl'
+```
+{{<br size="3">}}
+
+---
+
+# <center><div style="font-size: 3rem; line-height: 7rem; color: #cccccc">Results</div></center>
+
+```
+Benchmark 1: grep -r Unix ~/parvus/prog/tcl
+Time (mean ± σ):      1.027 s ±  0.016 s  [User: 0.269 s, System: 0.222 s]
+Range (min … max):    1.007 s …  1.052 s  10 runs
+
+Benchmark 2: rg Unix ~/parvus/prog/tcl
+Time (mean ± σ):      76.0 ms ±   5.6 ms  [User: 21.5 ms, System: 29.6 ms]
+Range (min … max):    63.0 ms …  82.4 ms  10 runs
+
+Summary
+'rg Unix ~/parvus/prog/tcl' ran
+13.51 ± 1.02 times faster than 'grep -r Unix ~/parvus/prog/tcl'
+```
+{{<br size="3">}}
 
 ---
 
