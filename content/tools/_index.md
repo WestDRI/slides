@@ -201,7 +201,14 @@ bat --list-themes             # List themes with examples
 
 ---
 
+# <center><div style="font-size: 3rem; line-height: 5rem; color: #cccccc">Syntax</div></center>
+{{<br size="3">}}
 
+The syntax is similar to that of `grep`
+{{<br size="3">}}
+
+Because, by default, `rg` is recursive (`grep` isn't) & ignores some files, `rg -uuu` is equivalent to `grep -r`
+{{<br size="4">}}
 
 ---
 
@@ -265,6 +272,8 @@ By default, ignores files in .gitignore & similar, hidden files/directories, & b
 {{%/fragment%}}
 
 {{<br size="3">}}
+
+---
 
 # <center><div style="font-size: 4rem; line-height: 2.8rem; color: #e6e6e6">fd</div></center>
 # <center><div style="font-size: 2rem; line-height: 5.5rem; color: #e6e6e6">(Fast & friendly alternative to find)</div></center>
