@@ -247,6 +247,7 @@ pass                                     # Print content of password store
 {{<br size="5">}}
 
 ---
+
 <center>The {{<a "https://www.emacswiki.org/emacs/TrampMode" "TRAMP">}} (Transparent Remote Access, Multiple Protocol) Emacs package allows to edit remote files as if they were local</center>
 {{<br size="3">}}
 
@@ -258,6 +259,42 @@ pass                                     # Print content of password store
 
 <center>It is a convenient alternative to using Emacs on a remote host after you have `ssh`ed into it or to using `sudo emacs` to edit root files</center>
 {{<br size="2">}}
+
+---
+
+# <center><div style="font-size: 3rem; line-height: 8rem; color: #cccccc">Using TRAMP from within Emacs</div></center>
+{{<br size="1">}}
+
+#### Remote file
+{{<br size="1.5">}}
+
+C-x C-f emacs /ssh:user@server:/home/user/path/to/file RET
+{{<br size="3">}}
+
+#### Root
+{{<br size="1.5">}}
+
+C-x C-f emacs /sudo::/path/to/file RET
+{{<br size="5">}}
+
+---
+
+# <center><div style="font-size: 3rem; line-height: 8rem; color: #cccccc">Using TRAMP from the command line</div></center>
+
+#### Remote file
+{{<br size="1.5">}}
+
+```sh
+emacs /ssh:user@server:/home/user/path/to/file
+```
+
+#### Root
+{{<br size="1.5">}}
+
+```sh
+emacs /sudo::/path/to/file
+```
+{{<br size="4">}}
 
 ---
 
