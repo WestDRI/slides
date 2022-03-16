@@ -201,6 +201,27 @@ bat --list-themes             # List themes with examples
 
 ---
 
+# <center><div style="font-size: 3rem; line-height: 5rem; color: #cccccc">What makes rg fast?</div></center>
+{{<br size="3">}}
+
+{{%fragment%}}
+Uses parallelism
+{{<br size="3">}}
+{{%/fragment%}}
+
+{{%fragment%}}
+Uses Rust regex engine with finite automata, SIMD, & aggressive literal optimizations (*regular expressions follow the syntax of `grep -E`; see {{<a "https://docs.rs/regex/1.5.4/regex/#syntax" "this">}} & {{<a "https://docs.rs/regex/1.5.4/regex/bytes/index.html#syntax" "this">}} for details)*
+{{<br size="3">}}
+{{%/fragment%}}
+
+{{%fragment%}}
+Let's test speed using {{<a "https://github.com/sharkdp/hyperfine" "hyperfine">}} for benchmarking
+{{%/fragment%}}
+
+{{<br size="4">}}
+
+---
+
 # <center><div style="font-size: 4rem; line-height: 2.8rem; color: #e6e6e6">fd</div></center>
 # <center><div style="font-size: 2rem; line-height: 5.5rem; color: #e6e6e6">(Fast & friendly alternative to find)</div></center>
 {{<br size="0.5">}}
