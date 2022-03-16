@@ -242,7 +242,11 @@ pass                                     # Print content of password store
 
 ---
 
+# <center><div style="font-size: 4rem; line-height: 2.8rem; color: #e6e6e6">TRAMP</div></center>
+# <center><div style="font-size: 2rem; line-height: 5.5rem; color: #e6e6e6">("A remote file editing package for Emacs")</div></center>
+{{<br size="5">}}
 
+---
 <center>The {{<a "https://www.emacswiki.org/emacs/TrampMode" "TRAMP">}} (Transparent Remote Access, Multiple Protocol) Emacs package allows to edit remote files as if they were local</center>
 {{<br size="3">}}
 
