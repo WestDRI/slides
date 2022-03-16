@@ -11,6 +11,16 @@ custom_theme = "mh8.scss"
 custom_theme_compile = true
 +++
 
+##### <center><div style="line-height: 10rem; font-size: 4.2rem; color: #e6e6e6">A few of our favourite tools</div></center>
+{{<img src="/img/tools/frontpage.jpg" margin="rem" title="" width="%" line-height="0rem">}}
+{{</img>}}
+{{<br size="3">}}
+##### <center><div style="line-height: 2.5rem; font-size: 2.3rem; color: #e6e6e6">Marie-Hélène Burle \& Alex Razoumov</div></center>
+##### <center><div style="line-height: 2.5rem; font-size: 1.8rem; color: #e6e6e6">training@westgrid.ca</div></center>
+##### <center><div style="line-height: 2.5rem; font-size: 1.8rem; color: #e6e6e6">March 16, 2022</div></center>
+{{<br size="5">}}
+
+---
 
 # <center><div style="font-size: 4rem; line-height: 2rem; color: #e6e6e6">lazygit</div></center>
 {{<br size="1.5">}}
