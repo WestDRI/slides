@@ -197,6 +197,8 @@ bat --list-themes             # List themes with examples
 
 ---
 
+<center>{{<a "https://github.com/BurntSushi/ripgrep" "ripgrep">}} provides the utility `rg`: <br>an alternative to grep very fast for recursive searches</center>
+
 ---
 
 # <center><div style="font-size: 4rem; line-height: 2.8rem; color: #e6e6e6">fd</div></center>
