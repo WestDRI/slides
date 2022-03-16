@@ -443,3 +443,7 @@ emacs /sudo::/path/to/file
 {{<img src="/img/tools/helm03.png" margin="rem" title="" width="80%" line-height="0.5rem">}}
 {{</img>}}
 
+---
+
+##### <center><div style="line-height: 10rem; font-size: 6rem; color: #e6e6e6">Questions?</div></center>
+{{<br size="3">}}
