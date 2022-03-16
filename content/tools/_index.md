@@ -301,13 +301,13 @@ pass                                     # Print content of password store
 #### Remote file
 {{<br size="1.5">}}
 
-C-x C-f emacs /ssh:user@server:/home/user/path/to/file RET
+C-x C-f /ssh:user@server:/home/user/path/to/file RET
 {{<br size="3">}}
 
 #### Root
 {{<br size="1.5">}}
 
-C-x C-f emacs /sudo::/path/to/file RET
+C-x C-f /sudo::/path/to/file RET
 {{<br size="5">}}
 
 ---
