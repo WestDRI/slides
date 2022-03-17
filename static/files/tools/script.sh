@@ -19,9 +19,8 @@ bat -p /home/marie/parvus/ptmp/git_workshop_collab/src/test_manuel.py
 bat -pp /home/marie/parvus/ptmp/git_workshop_collab/src/test_manuel.py
 bat -pp /home/marie/parvus/ptmp/git_workshop_collab/src/test_manuel.py | more
 bat -fpp /home/marie/parvus/ptmp/git_workshop_collab/src/test_manuel.py | more
-hyperfine -i --prepare 'sync; echo 3 | sudo tee /proc/sys/vm/drop_caches' 'grep -r Unix ~/parvus/prog/tcl'
-hyperfine --prepare 'sync; echo 3 | sudo tee /proc/sys/vm/drop_caches' 'rg Unix ~/parvus/prog/tcl'
 # rg #######################################################################
+hyperfine -i --prepare 'sync; echo 3 | sudo tee /proc/sys/vm/drop_caches' 'grep -r Unix ~/parvus/prog/tcl' 'rg Unix ~/parvus/prog/tcl'
 # pass ######################################################################
 bat /usr/bin/pass
 pass
