@@ -603,9 +603,9 @@ fns = get_image_files(path)
 fns
 ```
 
-{{<note>}}
+{{<notes>}}
 (#65) [Path('dataset/monet/Image_63.jpg'),Path('dataset/monet/Image_31.jpg')...]
-{{</note>}}
+{{</notes>}}
 
 Note that this last output is of a fastai class `L`: a Python list with added functionality.
 
@@ -624,9 +624,9 @@ fns = get_image_files(path)
 fns
 ```
 
-{{<note>}}
+{{<notes>}}
 (#89) [Path('dataset/vangogh/Image_13.jpg'),Path('dataset/vangogh/Image_42.jpg')...]
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -892,9 +892,9 @@ To start tracking all operations performed on our model parameters:
 params = tensor.requires_grad_()
 ```
 
-{{<note>}}
+{{<notes>}}
 Underscore at the end of a method in PyTorch: in place operation.
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -944,11 +944,11 @@ params.data -= params.grad.data * lr
 {{%/fragment%}}
 
 {{%fragment%}}
-{{<note>}}
+{{<notes>}}
 <b>Which learning rate?</b> <br>
 Usually between 0.0001 and 1. <br>
 Deeper networks are more bumpy and require lower learning rates (e.g. 0.01 instead of 0.1).
-{{</note>}}
+{{</notes>}}
 {{%/fragment%}}
 
 ---

@@ -104,18 +104,18 @@ git remote add <remote-name> <remote-address>
 # <center>Adding a GitHub remote</center>
 {{<br size="4">}}
 
-{{<note>}}
+{{<notes>}}
 Example (using an SSH address):
-{{</note>}}
+{{</notes>}}
 
 
 ```sh
 git remote add origin git@github.com:<user>/<repo>.git
 ```
 
-{{<note>}}
+{{<notes>}}
 Example (using an HTTPS address):
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git remote add origin https://github.com/<user>/<repo>.git
@@ -182,9 +182,9 @@ git remote show <remote-name>
 ```
 {{<br size="5">}}
 
-{{<note>}}
+{{<notes>}}
 For instance, to inspect your new remote, run:
-{{</note>}}
+{{</notes>}}
 
 
 ```sh
@@ -244,9 +244,9 @@ git fetch <remote-name>
 
 The branches on the remote are now accessible locally as `<remote-name>/<branch>`. You can inspect them or you can merge them into your local branches.
 
-{{<note>}}
+{{<notes>}}
 Example: To fetch from your new GitHub remote, you would run:
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git fetch origin
@@ -263,9 +263,9 @@ git fetch origin
 git pull <remote-name> <branch>
 ```
 
-{{<note>}}
+{{<notes>}}
 Example:
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git pull origin main

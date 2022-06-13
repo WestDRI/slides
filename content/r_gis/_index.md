@@ -86,9 +86,9 @@ library(ggplot2)            # alternative to tmap for map production
 library(raster)             # gridded spatial data manipulation
 ```
 
-{{<note>}}
+{{<notes>}}
 Packages need to be installed before they can be loaded in a session.
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -124,9 +124,9 @@ Data get imported and turned into `sf` objects with the function `sf::st_read()`
 ak <- st_read("01_rgi60_Alaska")
 wes <- st_read("02_rgi60_WesternCanadaUS")
 ```
-{{<note>}}
+{{<notes>}}
 Make sure to use the absolute paths or the paths relative to your working directory (which can be obtained with {{%c%}}getwd(){{%/c%}})
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -239,9 +239,9 @@ $ geometry:sfc_POLYGON of length 27108; first list element: List of 1
 
 ### <center>Combining datasets</center>
 
-{{<note>}}
+{{<notes>}}
 The Coordinate Reference Systems (CRS) must be the same
-{{</note>}}
+{{</notes>}}
 
 ```r
 > st_crs(ak) == st_crs(wes)
@@ -458,9 +458,9 @@ dirs <- grep("GNPglaciers_.*", list.dirs(), value = T)
 gnp <- map(dirs, prep)
 ```
 
-{{<note>}}
+{{<notes>}}
 We use {{%c%}}dplyr::select(){{%/c%}} because <b>raster</b> also has a {{%c%}}select(){{%/c%}} function.
-{{</note>}}
+{{</notes>}}
 
 
 ---
@@ -844,9 +844,9 @@ basemap <- get_map(
 )
 ```
 
-{{<note>}}
+{{<notes>}}
 <b>ggmap</b> is a powerful package, but Google now requires an API key obtained through registration.
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -1056,9 +1056,9 @@ Change to `view` mode:
 tmap_mode("view")
 ```
 
-{{<note>}}
+{{<notes>}}
 you can also toggle between modes with {{%c%}}ttm(){{%/c%}}
-{{</note>}}
+{{</notes>}}
 
 Re-plot the last map we plotted with **tmap**:
 

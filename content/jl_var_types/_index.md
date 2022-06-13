@@ -138,17 +138,17 @@ typeof(ans)
 
 Type safety (catching errors of inadequate type) performed at compile time
 
-{{<note>}}
+{{<notes>}}
 Examples: C, C++, Java, Fortran, Haskell
-{{</note>}}
+{{</notes>}}
 
 ## Dynamic type-checking
 
 Type safety done at runtime
 
-{{<note>}}
+{{<notes>}}
 Examples: Python, JavaScript, PHP, Ruby, Lisp
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -215,9 +215,9 @@ We get an error message here:
 
 ## <center>Illustration of type safety</center>
 
-{{<note>}}
+{{<notes>}}
 Type declaration is not supported on global variables; this is used in local contexts. Example:
-{{</note>}}
+{{</notes>}}
 
 ```{jl}
 function floatsum(a, b)
@@ -236,9 +236,9 @@ floatsum(2.3, 1.0)
 
 ## <center>Illustration of type safety</center>
 
-{{<note>}}
+{{<notes>}}
 Type declaration is not supported on global variables; this is used in local contexts. Example:
-{{</note>}}
+{{</notes>}}
 
 ```{jl}
 function floatsum(a, b)

@@ -24,9 +24,9 @@ custom_theme_compile = true
 # <center>Metaprogramming</center>
 {{<br size="5">}}
 
-{{<note>}}
+{{<notes>}}
 Julia code is itself data and can be manipulated by the language while it is running
-{{</note>}}
+{{</notes>}}
 
 ---
 

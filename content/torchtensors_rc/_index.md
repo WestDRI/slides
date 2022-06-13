@@ -55,10 +55,10 @@ You need to have {{<a "https://www.python.org/downloads/" "Python">}} & {{<a "ht
 Additionally, you might want to use an IDE such as {{<a "https://github.com/jorgenschaefer/elpy" "elpy">}} if you are an Emacs user, {{<a "https://jupyter.org/" "JupyterLab">}}, etc.
 {{<br size="4.5">}}
 
-{{<note>}}
+{{<notes>}}
 Note that PyTorch does not yet support Python 3.10 except in some Linux distributions or on systems where a wheel has been built <br><br>
 For the time being, you might have to use it with Python 3.9
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -544,9 +544,9 @@ Since PyTorch tensors were built with utmost efficiency in mind for neural netwo
 This is sufficient for accuracy & much faster than 64-bit floating points
 {{<br size="3">}}
 
-{{<note>}}
+{{<notes>}}
 Note that, by contrast, NumPy ndarrays use 64-bit as their default
-{{</note>}}
+{{</notes>}}
 {{<br size="5">}}
 
 ---
@@ -921,11 +921,11 @@ t.sum()
 ## <center><div style="font-size: 2.5rem; color: #e6e6e6">*Vectorized operations: comparison*</div></center>
 {{<br size="2">}}
 Both methods give the same result
-{{<note>}}
+{{<notes>}}
 This is why we used float64:<br>
 While the accuracy remains excellent with float32 if we use the PyTorch function torch.sum(),
 the raw Python loop gives a fairly inaccurate result
-{{</note>}}
+{{</notes>}}
 {{<out>}}
 ```{py}
 tensor(500023.0789, dtype=torch.float64)
@@ -985,9 +985,9 @@ print(t1.timeit(100))
 ```
 {{<br size="4">}}
 
-{{<note>}}
+{{<notes>}}
 I ran the code on my laptop with a dedicated GPU & 32GB RAM
-{{</note>}}
+{{</notes>}}
 {{<br size="4">}}
 
 ---
@@ -1124,9 +1124,9 @@ tensor([[[1., 1., 1., 1.],
          [1., 1., 1., 1.]]])
 tensor(24.)
 ```
-{{<note>}}
+{{<notes>}}
 Other reduction functions (e.g. mean) behave the same way
-{{</note>}}
+{{</notes>}}
 
 
 ---
@@ -1320,13 +1320,13 @@ dtype('float32')
 ```
 {{<br size="3.5">}}
 
-{{<note>}}
+{{<notes>}}
 Remember that PyTorch tensors use 32-bit floating points by default <br>
 (because this is what you want in neural networks) <br><br>
 
 But NumPy defaults to 64-bit <br>
 Depending on your workflow, you might have to change dtype
-{{</note>}}
+{{</notes>}}
 {{<br size="3">}}
 
 
@@ -1348,9 +1348,9 @@ tensor([[0.5589, 0.0603, 0.7250],
         [0.6566, 0.2770, 0.2914]], dtype=torch.float64)
 ```
 
-{{<note>}}
+{{<notes>}}
 Here again, you might have to change dtype
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -1422,10 +1422,10 @@ Lastly, as NumPy only works on CPU, to convert a PyTorch tensor allocated to the
 - Some additional functions
 {{<br size="4">}}
 
-{{<note>}}
+{{<notes>}}
 Requires torch >= 1.9 <br>
 Linear algebra support was less developed before the introduction of this module
-{{</note>}}
+{{</notes>}}
 {{<br size="3">}}
 
 ---
@@ -1575,9 +1575,9 @@ True
 {{<br size="5">}}
 
 {{%fragment%}}
-{{<note>}}
+{{<notes>}}
 It is faster & more numerically stable to solve a system of linear equations directly than to compute the inverse matrix first
-{{</note>}}
+{{</notes>}}
 {{%/fragment%}}
 
 {{<br size="5">}}
@@ -1699,9 +1699,9 @@ t1 = torch.rand(2); print(t1)
 ```{py}
 tensor([0.1606, 0.9771])  # Implicit: device='cpu'
 ```
-{{<note>}}
+{{<notes>}}
 Printed tensors only display attributes with values ≠ default values
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -1784,9 +1784,9 @@ B = torch.randn(500, 500)
 A_gpu = torch.randn(500, 500, device='cuda')
 B_gpu = torch.randn(500, 500, device='cuda')
 ```
-{{<note>}}
+{{<notes>}}
 I ran the code on my laptop with a dedicated GPU & 32GB RAM
-{{</note>}}
+{{</notes>}}
 
 ---
 

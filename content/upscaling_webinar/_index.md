@@ -213,15 +213,15 @@ Followed by the ESRGAN and many other flavours of SRGANs
 ## <center><div style="font-size: 3.5rem; color: #e6e6e6"">Attention</div></center>
 {{<br size="3">}}
 
-{{<note>}}
+{{<notes>}}
 Mnih, V., Heess, N., & Graves, A. (2014). Recurrent models of visual attention. In Advances in neural information processing systems (pp. 2204-2212)
-{{</note>}}
+{{</notes>}}
 
 (cited 2769 times)
 
-{{<note>}}
+{{<notes>}}
 Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008)
-{{</note>}}
+{{</notes>}}
 
 (cited 30999 times...)
 

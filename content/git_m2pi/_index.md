@@ -575,18 +575,18 @@ git remote add <remote-name> <remote-address>
 # <center>Create a remote on GitHub</center>
 {{<br size="4">}}
 
-{{<note>}}
+{{<notes>}}
 Example (using an SSH address):
-{{</note>}}
+{{</notes>}}
 
 
 ```sh
 git remote add origin git@github.com:<user>/<repo>.git
 ```
 
-{{<note>}}
+{{<notes>}}
 Example (using an HTTPS address):
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git remote add origin https://github.com/<user>/<repo>.git
@@ -696,9 +696,9 @@ git remote show <remote-name>
 ```
 {{<br size="5">}}
 
-{{<note>}}
+{{<notes>}}
 Example:
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git remote show origin
@@ -757,9 +757,9 @@ git fetch <remote-name>
 
 The branches on the remote are now accessible locally as `<remote-name>/<branch>`. You can inspect them or you can merge them into your local branches
 
-{{<note>}}
+{{<notes>}}
 Example:
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git fetch origin
@@ -776,9 +776,9 @@ git fetch origin
 git pull <remote-name> <branch>
 ```
 
-{{<note>}}
+{{<notes>}}
 Example:
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git pull origin main
@@ -802,9 +802,9 @@ git push <remote-name> <branch-name>
 ```
 {{<br size="4">}}
 
-{{<note>}}
+{{<notes>}}
 Example:
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git push origin main
@@ -821,9 +821,9 @@ You can set an upstream branch to track a local branch with the `-u` flag
 git push -u <remote-name> <branch-name>
 ```
 
-{{<note>}}
+{{<notes>}}
 Example:
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git push -u origin main

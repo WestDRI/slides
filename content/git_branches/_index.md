@@ -84,9 +84,9 @@ git branch <branch-name>
 ```
 {{<br size="4">}}
 
-{{<note>}}
+{{<notes>}}
 Example:
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git branch test
@@ -112,9 +112,9 @@ You switch to a branch with:
 git switch <branch-name>
 ```
 
-{{<note>}}
+{{<notes>}}
 Example:
-{{</note>}}
+{{</notes>}}
 
 ```sh
 git switch test

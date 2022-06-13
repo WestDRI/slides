@@ -684,9 +684,9 @@ ak <- st_read("data/01_rgi60_Alaska")
 
 {{<br size="4">}}
 
-{{<note>}}
+{{<notes>}}
 Make sure to use the absolute paths or the paths relative to your working directory (which can be obtained with {{%cdark%}}getwd{{%/cdark%}})
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -863,9 +863,9 @@ gnp <- map(dirs, prep)
 ```
 [//]:codesnippet14
 
-{{<note>}}
+{{<notes>}}
 We use {{%cdark%}}dplyr::select{{%/cdark%}} because <b>terra</b> also has a {{%cdark%}}select{{%/cdark%}} function
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -1232,9 +1232,9 @@ states_all <- ne_states(
 [//]:codesnippet10
 {{<br size="5">}}
 
-{{<note>}}
+{{<notes>}}
 {{%cdark%}}ne_{{%/cdark%}} stands for "Natural Earth"
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -1359,11 +1359,11 @@ tmap_style("classic")
 ```
 {{<br size="4">}}
 
-{{<note>}}
+{{<notes>}}
 Other options are: <br>
 
 "white" (default), "gray", "natural", "cobalt", "col_blind", "albatross", "beaver", "bw", "watercolor"
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -2072,9 +2072,9 @@ basemap <- get_map(
 ```
 [//]:codesnippet35
 
-{{<note>}}
+{{<notes>}}
 <b>ggmap</b> is a powerful package, but Google now requires an API key obtained through registration
-{{</note>}}
+{{</notes>}}
 
 ---
 
@@ -2175,9 +2175,9 @@ Change to `view` mode:
 tmap_mode("view")
 ```
 
-{{<note>}}
+{{<notes>}}
 you can also toggle between modes with {{%cdark%}}ttm{{%/cdark%}}
-{{</note>}}
+{{</notes>}}
 
 Re-plot the last map we plotted with **tmap**:
 
