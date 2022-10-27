@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en"
-title = "WestGrid slides"
+title = "WestDRI slides"
 theme = "reveal-hugo"
 footnotereturnlinkcontents = "↩"
 relativeURLs = true
